@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EntityData
+public interface IChatable
 {
-    public static Dictionary<string, GameEntity> EntitiesDic;
+    public void ArouseChat();
 }

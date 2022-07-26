@@ -6,10 +6,10 @@ using Articy.Unity.Interfaces;
 
 public class GameEntity : MonoBehaviour, ITalkable,IInit
 {
-    //[ArticyTypeConstraint(typeof(Entity))]
     public ArticyRef entity;
-    public IArticyObject startCenter;
+    public IArticyObject dialog;
     private string entityName;
+    public IArticyFlowPlayerCallbacks atFlow = null;
 
     public void Init()
     {
@@ -27,20 +27,20 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit
 
         if(entityName!=null)
         {
-            if(EntityData.NPCDic.ContainsKey(entityName))
+            if(EntityData.EntitiesDic.ContainsKey(entityName))
             {
                 Debug.Log("Warning: Entity Name equals");
             }
             else
             {
-                EntityData.NPCDic.Add(entityName, this);
+                EntityData.EntitiesDic.Add(entityName, this);
             }
         }
     }
 
-    public void RaiseConversation()
+    public void RaiseDialog()
     {
-        DialogManager.flowPlayer.StartOn = startCenter;
+        DialogManager.flowPlayer.StartOn = dialog;
         DialogManager.flowPlayer.Play();
     }
 }

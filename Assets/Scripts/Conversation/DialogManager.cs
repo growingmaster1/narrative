@@ -5,10 +5,15 @@ using UnityEngine;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 
+/// <summary>
+/// 注意：该类不是所有对话的管理器！
+/// 这里的对话指的是游戏中特有的，玩家和NPC的对话系统，不包括旁听和备忘录
+/// 由对话专用对话框进行播放
+/// </summary>
 public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 {
-    private SpeakInfo info;
-    public ISpeak speaker;
+    public GameEntity speaker;
+    public string text;
     public static DialogManager instance;
     public static ArticyFlowPlayer flowPlayer;
 
@@ -34,30 +39,27 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
             return;
         }
 
-        DefineSpeaker(aObject);
-        DefineText(aObject);
-        PrintWords();
+        //确定说话人
+        speaker = DefineSpeaker(aObject);
+        //确定文本
+        text = DefineText(aObject);
+        //TODO:处理文本输入
     }
 
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
-        if(aBranches.Count<2)
-        {
-            return;
-        }
-
         //TODO:找到所有带有SingleBranch的组件并赋值
     }
 
-    private void DefineSpeaker(IFlowObject aObject)
+    public GameEntity DefineSpeaker(IFlowObject aObject)
     {
         var withSpeaker = aObject as IObjectWithSpeaker;
         if (withSpeaker != null)
         {
             var speakerEntity = withSpeaker.Speaker as IObjectWithDisplayName;
-            if (EntityData.NPCDic.ContainsKey(speakerEntity.DisplayName))
+            if (EntityData.EntitiesDic.ContainsKey(speakerEntity.DisplayName))
             {
-                info.speaker = EntityData.NPCDic[speakerEntity.DisplayName];
+                return EntityData.EntitiesDic[speakerEntity.DisplayName];
             }
             else
             {
@@ -69,25 +71,22 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
             var withDisplayName = aObject as IObjectWithDisplayName;
             if (withDisplayName != null)
             {
-                if(EntityData.NPCDic.ContainsKey(withDisplayName.DisplayName))
+                if(EntityData.EntitiesDic.ContainsKey(withDisplayName.DisplayName))
                 {
-                    info.speaker = EntityData.NPCDic[withDisplayName.DisplayName];
+                    return EntityData.EntitiesDic[withDisplayName.DisplayName];
                 }
             }
-            else
-            {
-                info.speaker = null;
-            }
         }
+        return null;
     }
 
-    private void DefineText(IFlowObject aObject)
+    public string DefineText(IFlowObject aObject)
     {
-        info.words = (aObject as IObjectWithText)?.Text;
+        return (aObject as IObjectWithText)?.Text;
     }
 
-    private void PrintWords()
+    public void SetStart(IArticyObject start)
     {
-        speaker.speak(info);
+        flowPlayer.StartOn = start;
     }
 }
