@@ -7,6 +7,7 @@ using Articy.Unity.Interfaces;
 
 /// <summary>
 /// 所有游戏中具有行为树的，有行为安排的个体
+/// 亦或会发出旁听的个体（如坏掉的水管）
 /// </summary>
 public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
 {
@@ -18,6 +19,7 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
 
     private SmartEntity speaker;
 
+    //每次发出声音调用该函数，理论上每句话会调用一次
     public bool ArouseSound(string text)
     {
         if(sound.text=="")
@@ -33,6 +35,7 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         }
     }
 
+    //每句话说完
     public void FinishSound()
     {
         sound.text = "";
@@ -44,6 +47,7 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         }
     }
 
+    //开始一段旁听对话
     public void ArouseChat()
     {
         flowPlayer.StartOn = state;
