@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 
+/// <summary>
+/// 所有游戏中具有行为树的，有行为安排的个体
+/// </summary>
 public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
 {
     private Text sound;

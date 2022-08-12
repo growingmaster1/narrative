@@ -12,6 +12,7 @@ using Articy.Unity.Interfaces;
 /// </summary>
 public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 {
+    //发出对话的实体
     public GameEntity speaker;
     public string text;
     public static DialogManager instance;

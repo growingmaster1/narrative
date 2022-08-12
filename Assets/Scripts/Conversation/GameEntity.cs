@@ -4,6 +4,9 @@ using UnityEngine;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 
+/// <summary>
+/// 游戏中所有的可与玩家交互的对象，包括物品，地标等
+/// </summary>
 public class GameEntity : MonoBehaviour, ITalkable,IInit
 {
     public ArticyRef entity;
