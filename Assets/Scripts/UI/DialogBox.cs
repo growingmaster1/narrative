@@ -48,14 +48,14 @@ public class DialogBox : MonoBehaviour,IInit
 
     public void DefineSpeaker(string inSpeaker)
     {
-        speaker.text = inSpeaker;
+        speaker.text = inSpeaker + ":¡¡";
     }
 
     public void PrintText(string content)
     {
         continueButton.SetActive(false);
         TimeManager.instance.ContinueTime();
-        text.DOText(content, content.Length * speekSpeed).OnComplete(Paused);
+        text.DOText("¡¡¡¡" + content, content.Length * speekSpeed).OnComplete(Paused);
     }
 
     public void Paused()
