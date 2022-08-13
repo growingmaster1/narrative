@@ -11,6 +11,11 @@ public class SingleBranch : MonoBehaviour
     private IFlowObject target;
     private string menuWords;
 
+    public SingleBranch()
+    {
+
+    }
+
     public SingleBranch(Branch inBranch)
     {
         branch = inBranch;

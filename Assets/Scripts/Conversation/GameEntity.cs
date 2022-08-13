@@ -44,12 +44,20 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 
     public void RaiseDialog()
     {
-        DialogManager.flowPlayer.StartOn = dialog;
-        DialogManager.flowPlayer.Play();
+        if(dialog!=null)
+        {
+            DialogManager.instance.SetStart(dialog);
+            DialogManager.flowPlayer.Play();
+            Player.instance.moveable = false;
+        }
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        
+        float dis = (transform.position - Player.instance.transform.position).magnitude;
+        if(dis<20)
+        {
+            RaiseDialog();
+        }
     }
 }

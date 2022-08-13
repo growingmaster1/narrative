@@ -13,8 +13,14 @@ using Articy.Unity.Interfaces;
 public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 {
     //发出对话的实体
+    [HideInInspector]
     public GameEntity speaker;
+    [HideInInspector]
     public string text;
+
+    public GameObject branchButton;
+    public GameObject branchParent;
+
     public static DialogManager instance;
     public static ArticyFlowPlayer flowPlayer;
 
@@ -29,15 +35,6 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
         if(flowPlayer == null)
         {
             Debug.Log("Error: FlowPlayer hasn't onload");
-        }
-    }
-
-    public void ArouseTalkTo(GameEntity entity)
-    {
-        if(entity.dialog!=null)
-        {
-            SetStart(entity.dialog);
-            DialogBox.instance.startDialog();
         }
     }
 
@@ -60,7 +57,26 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
-        //TODO:找到所有带有SingleBranch的组件并赋值
+        if(aBranches.Count==0)
+        {
+            DialogBox.instance.finishDialog();
+            Player.instance.moveable = true;
+            return;
+        }
+
+        foreach(Transform item in branchParent.transform)
+        {
+            Destroy(item.gameObject);
+        }
+
+        //找到所有带有SingleBranch的组件并赋值
+        for (int i = 0; i < aBranches.Count; ++i)
+        {
+            GameObject btn = Instantiate<GameObject>(branchButton);
+            btn.transform.SetParent(branchParent.transform);
+
+            btn.GetComponent<SingleBranch>().AssignBranch(aBranches[i]);
+        }
     }
 
     public GameEntity DefineSpeaker(IFlowObject aObject)
@@ -99,6 +115,7 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 
     public void SetStart(IArticyObject start)
     {
+        DialogBox.instance.startDialog();
         flowPlayer.StartOn = start;
     }
 }
