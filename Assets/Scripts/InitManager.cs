@@ -4,5 +4,9 @@ using UnityEngine;
 
 public class InitManager : MonoBehaviour
 {
-    
+    private void Start()
+    {
+        LayerSorter.instance.Init();
+        TimeManager.instance.Init();
+    }
 }

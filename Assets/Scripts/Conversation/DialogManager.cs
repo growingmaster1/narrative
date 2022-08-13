@@ -32,6 +32,15 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
         }
     }
 
+    public void ArouseTalkTo(GameEntity entity)
+    {
+        if(entity.dialog!=null)
+        {
+            SetStart(entity.dialog);
+            DialogBox.instance.startDialog();
+        }
+    }
+
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
         if(aObject == null)
@@ -44,7 +53,9 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
         speaker = DefineSpeaker(aObject);
         //确定文本
         text = DefineText(aObject);
-        //TODO:处理文本输入
+        //处理文本输入
+        DialogBox.instance.DefineSpeaker(speaker.name);
+        DialogBox.instance.PrintText(text);
     }
 
     public void OnBranchesUpdated(IList<Branch> aBranches)

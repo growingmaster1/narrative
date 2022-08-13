@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// 游戏中所有的可与玩家交互的对象，包括物品，地标等
 /// </summary>
-public class GameEntity : MonoBehaviour, ITalkable,IInit
+public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 {
     public ArticyRef entity;
     public IArticyObject dialog;
@@ -45,5 +46,10 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit
     {
         DialogManager.flowPlayer.StartOn = dialog;
         DialogManager.flowPlayer.Play();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        
     }
 }
