@@ -11,8 +11,11 @@ public class DialogBox : MonoBehaviour,IInit
     public GameObject dialogBox;
     public GameObject buttonHolder;
     public GameObject continueButton;
+
     public Text speaker;
     public Text text;
+
+    private Vector3 continueButtonStart;
     private float speekSpeed = 0.1f;
 
     private void Awake()
@@ -25,13 +28,14 @@ public class DialogBox : MonoBehaviour,IInit
 
     public void Init()
     {
-
+        continueButtonStart = continueButton.transform.position;
     }
 
     public void startDialog()
     {
         joystick.SetActive(false);
         dialogBox.SetActive(true);
+        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).From();
     }
 
     public void finishDialog()
@@ -39,6 +43,7 @@ public class DialogBox : MonoBehaviour,IInit
         TimeManager.instance.ContinueTime();
         joystick.SetActive(true);
         dialogBox.SetActive(false);
+        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f);
     }
 
     public void DefineSpeaker(string inSpeaker)
@@ -48,7 +53,16 @@ public class DialogBox : MonoBehaviour,IInit
 
     public void PrintText(string content)
     {
+        continueButton.SetActive(false);
         TimeManager.instance.ContinueTime();
-        text.DOText(content, content.Length * speekSpeed).OnComplete(TimeManager.instance.PauseTime);
+        text.DOText(content, content.Length * speekSpeed).OnComplete(Paused);
+    }
+
+    public void Paused()
+    {
+        TimeManager.instance.PauseTime();
+        continueButton.SetActive(true);
+        continueButton.transform.position = continueButtonStart;
+        continueButton.transform.DOMove(continueButtonStart + new Vector3(0, 1, 0), 0.8f).SetLoops(-1,LoopType.Yoyo);
     }
 }
