@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour,IInit
 {
     public static Player instance;
-    public bool moveable;
+    public bool moveable = true;
     public FixedJoystick joystick;
 
     private SpriteRenderer spRenderer;
@@ -41,13 +41,13 @@ public class Player : MonoBehaviour,IInit
     {
         if(moveable)
         {
-            float xMove = Input.GetAxis("Horizontal");
-            float yMove = Input.GetAxis("Vertical");
+            float xMove = Input.GetAxisRaw("Horizontal");
+            float yMove = Input.GetAxisRaw("Vertical");
 
             xMove = xMove == 0 ? joystick.Horizontal : xMove;
             yMove = yMove == 0 ? joystick.Vertical : yMove;
 
-            transform.Translate(xMove, yMove, 0);
+            transform.Translate(xMove * Time.deltaTime, yMove * Time.deltaTime, 0);
 
             anim.enabled = true;
             if(xMove > 0)

@@ -21,6 +21,7 @@ public class ArticyReader : MonoBehaviour
         return (bool)(variables.GetType().GetProperty(name).GetValue(variables));
     }
 
+    [Button("getInt")]
     public int GetInteger(string group, string name)
     {
         IArticyNamespace variables = globalVariables.GetType().GetProperty(group).GetValue(globalVariables) as IArticyNamespace;
