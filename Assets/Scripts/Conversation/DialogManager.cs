@@ -85,9 +85,9 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
         if (withSpeaker != null)
         {
             var speakerEntity = withSpeaker.Speaker as IObjectWithDisplayName;
-            if (EntityData.EntitiesDic.ContainsKey(speakerEntity.DisplayName))
+            if (EntityManager.EntitiesDic.ContainsKey(speakerEntity.DisplayName))
             {
-                return EntityData.EntitiesDic[speakerEntity.DisplayName];
+                return EntityManager.EntitiesDic[speakerEntity.DisplayName];
             }
             else
             {
@@ -99,9 +99,9 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
             var withDisplayName = aObject as IObjectWithDisplayName;
             if (withDisplayName != null)
             {
-                if(EntityData.EntitiesDic.ContainsKey(withDisplayName.DisplayName))
+                if(EntityManager.EntitiesDic.ContainsKey(withDisplayName.DisplayName))
                 {
-                    return EntityData.EntitiesDic[withDisplayName.DisplayName];
+                    return EntityManager.EntitiesDic[withDisplayName.DisplayName];
                 }
             }
         }

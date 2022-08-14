@@ -12,8 +12,8 @@ public class TaskDialogChange : ActionTask
     protected override void OnExecute()
     {
         base.OnExecute();
-        SmartEntity entity = agent as SmartEntity;
-        entity.state = dialogState as IArticyObject;
+        //SmartEntity entity = agent as SmartEntity;
+        //entity.state = dialogState as IArticyObject;
         //TODO：设置此时与玩家对话时触发的对话
 
         EndAction(true);

@@ -8,5 +8,7 @@ public class InitManager : MonoBehaviour
     {
         LayerSorter.instance.Init();
         TimeManager.instance.Init();
+        Player.instance.Init();
+        EntityManager.instance.Init();
     }
 }
