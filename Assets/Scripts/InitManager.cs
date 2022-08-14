@@ -6,9 +6,9 @@ public class InitManager : MonoBehaviour
 {
     private void Start()
     {
-        LayerSorter.instance.Init();
+        //LayerSorter.instance.Init();
         TimeManager.instance.Init();
         Player.instance.Init();
-        EntityManager.instance.Init();
+        //EntityManager.instance.Init();
     }
 }
