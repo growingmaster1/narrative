@@ -5,16 +5,16 @@ using NodeCanvas.Framework;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 
-public class TaskDialogChange : ActionTask
+public class TaskSounding : ActionTask
 {
-    public ArticyRef dialogState;
+    public string dialogState;
 
     protected override void OnExecute()
     {
         base.OnExecute();
-        //SmartEntity entity = agent as SmartEntity;
-        //entity.state = dialogState as IArticyObject;
-        //TODO：设置此时与玩家对话时触发的对话
+        SmartEntity entity = agent.gameObject.GetComponent<SmartEntity>();
+        entity.state = ArticyDatabase.GetObject(dialogState);
+        entity.ArouseChat();
 
         EndAction(true);
     }
