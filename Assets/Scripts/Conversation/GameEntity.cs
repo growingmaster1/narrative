@@ -11,7 +11,8 @@ using UnityEngine.EventSystems;
 public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 {
     public ArticyRef entity;
-    public ArticyRef dialog;
+    public ArticyRef givenDialog;
+    public IArticyObject dialog;
     private string entityName;
     public IArticyFlowPlayerCallbacks atFlow = null;
 
@@ -39,6 +40,11 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
             {
                 EntityManager.EntitiesDic.Add(entityName, this);
             }
+        }
+
+        if(givenDialog!=null)
+        {
+            dialog = givenDialog as IArticyObject;
         }
     }
 
