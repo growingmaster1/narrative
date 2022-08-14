@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 {
     public ArticyRef entity;
-    public IArticyObject dialog;
+    public ArticyRef dialog;
     private string entityName;
     public IArticyFlowPlayerCallbacks atFlow = null;
 
@@ -31,13 +31,13 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 
         if(entityName!=null)
         {
-            if(EntityData.EntitiesDic.ContainsKey(entityName))
+            if(EntityManager.EntitiesDic.ContainsKey(entityName))
             {
                 Debug.Log("Warning: Entity Name equals");
             }
             else
             {
-                EntityData.EntitiesDic.Add(entityName, this);
+                EntityManager.EntitiesDic.Add(entityName, this);
             }
         }
     }
@@ -46,7 +46,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
     {
         if(dialog!=null)
         {
-            DialogManager.instance.SetStart(dialog);
+            DialogManager.instance.SetStart(dialog as IArticyObject);
             DialogManager.flowPlayer.Play();
             Player.instance.moveable = false;
         }
@@ -54,6 +54,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        //TODO£ºÑ°Â·
         float dis = (transform.position - Player.instance.transform.position).magnitude;
         if(dis<20)
         {
