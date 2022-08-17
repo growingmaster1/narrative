@@ -62,7 +62,7 @@ public class TimeManager : MonoBehaviour,IInit
         ArticyGlobalVariables.Default.day_and_time.hours = hours;
         ArticyGlobalVariables.Default.day_and_time.minutes = minutes;
         ArticyGlobalVariables.Default.day_and_time.seconds = seconds;
-        Debug.Log(ArticyGlobalVariables.Default.day_and_time.seconds);
+        //Debug.Log(ArticyGlobalVariables.Default.day_and_time.seconds);
     }
 
     public void PauseTime()

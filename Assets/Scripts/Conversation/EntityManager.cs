@@ -8,11 +8,12 @@ using UnityEngine;
 public class EntityManager:MonoBehaviour,IInit
 {
     public static EntityManager instance;
-    public static Dictionary<string, GameEntity> EntitiesDic;
+    public static Dictionary<string, IWithEntity> EntitiesDic;
 
     public void Init()
     {
         GameEntity[] entities = transform.GetComponentsInChildren<GameEntity>();
+        EntitiesDic = new Dictionary<string, IWithEntity>();
         foreach(GameEntity item in entities)
         {
             item.Init();

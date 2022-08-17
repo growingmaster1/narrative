@@ -14,23 +14,23 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 {
     //发出对话的实体
     [HideInInspector]
-    public GameEntity speaker;
+    public IWithEntity speaker;
     [HideInInspector]
     public string text;
-
-    public GameObject branchButton;
-    public GameObject branchParent;
 
     public static DialogManager instance;
     public static ArticyFlowPlayer flowPlayer;
 
-    public void Init()
+    private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
+    }
 
+    public void Init()
+    {
         flowPlayer = GetComponent<ArticyFlowPlayer>();
         if(flowPlayer == null)
         {
@@ -51,35 +51,16 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
         //确定文本
         text = DefineText(aObject);
         //处理文本输入
-        DialogBox.instance.DefineSpeaker(speaker.name);
+        DialogBox.instance.DefineSpeaker(speaker.entityName);
         DialogBox.instance.PrintText(text);
     }
 
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
-        if(aBranches.Count==0)
-        {
-            DialogBox.instance.finishDialog();
-            Player.instance.moveable = true;
-            return;
-        }
-
-        foreach(Transform item in branchParent.transform)
-        {
-            Destroy(item.gameObject);
-        }
-
-        //找到所有带有SingleBranch的组件并赋值
-        for (int i = 0; i < aBranches.Count; ++i)
-        {
-            GameObject btn = Instantiate<GameObject>(branchButton);
-            btn.transform.SetParent(branchParent.transform);
-
-            btn.GetComponent<SingleBranch>().AssignBranch(aBranches[i]);
-        }
+        DialogBox.instance.ParseBranches(aBranches);
     }
 
-    public GameEntity DefineSpeaker(IFlowObject aObject)
+    public IWithEntity DefineSpeaker(IFlowObject aObject)
     {
         var withSpeaker = aObject as IObjectWithSpeaker;
         if (withSpeaker != null)

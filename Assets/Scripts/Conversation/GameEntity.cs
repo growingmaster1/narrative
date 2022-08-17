@@ -8,16 +8,21 @@ using UnityEngine.EventSystems;
 /// <summary>
 /// 游戏中所有的可与玩家交互的对象，包括物品，地标等
 /// </summary>
-public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
+public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IWithEntity
 {
-    public ArticyRef entity;
+    public ArticyRef givenEntity;
     public ArticyRef givenDialog;
+    public IArticyObject entity { get; set; }
     public IArticyObject dialog;
-    private string entityName;
+
+    [HideInInspector]
+    public string entityName { get; set; }
     public IArticyFlowPlayerCallbacks atFlow = null;
 
     public void Init()
     {
+        dialog = givenDialog.GetObject();
+        entity = givenEntity.GetObject();
         if(entity == null)
         {
             Debug.Log("Warning: an NPC doesn't have an entity");
@@ -41,11 +46,6 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
                 EntityManager.EntitiesDic.Add(entityName, this);
             }
         }
-
-        if(givenDialog!=null)
-        {
-            dialog = givenDialog as IArticyObject;
-        }
     }
 
     public void RaiseDialog()
@@ -53,7 +53,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
         if(dialog!=null)
         {
             DialogManager.instance.SetStart(dialog as IArticyObject);
-            DialogManager.flowPlayer.Play();
+            //DialogManager.flowPlayer.Play();
             Player.instance.moveable = false;
         }
     }

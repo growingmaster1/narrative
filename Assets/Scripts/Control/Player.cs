@@ -1,8 +1,10 @@
+using Articy.Unity;
+using Articy.Unity.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour,IInit
+public class Player : MonoBehaviour,IInit,IWithEntity
 {
     public static Player instance;
     public bool moveable = true;
@@ -17,6 +19,10 @@ public class Player : MonoBehaviour,IInit
     public Sprite idle_e;
     public Sprite idle_n;
 
+    public ArticyRef givenEntity;
+    public IArticyObject entity { get; set; }
+    public string entityName { get; set; }
+
     private void Awake()
     {
         if(instance == null)
@@ -27,8 +33,11 @@ public class Player : MonoBehaviour,IInit
 
     public void Init()
     {
+        entity = givenEntity.GetObject();
+        entityName = "Íæ¼Ò";
         anim = GetComponent<Animator>();
         spRenderer = GetComponent<SpriteRenderer>();
+        EntityManager.EntitiesDic.Add("Íæ¼Ò", this);
     }
 
     // Update is called once per frame

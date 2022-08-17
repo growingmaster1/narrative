@@ -67,7 +67,7 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         speaker = DialogManager.instance.DefineSpeaker(aObject) as SmartEntity;
         if (speaker == null)
         {
-            Debug.Log("talking to " + DialogManager.instance.DefineSpeaker(aObject).name + " is wooden");
+            Debug.Log("talking to " + DialogManager.instance.DefineSpeaker(aObject).entityName + " is wooden");
         }
         if (!speaker.ArouseSound(DialogManager.instance.DefineText(aObject)))
         {
