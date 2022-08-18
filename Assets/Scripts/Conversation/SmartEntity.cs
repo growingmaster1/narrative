@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
+using Sirenix.OdinInspector;
 
 /// <summary>
 /// 所有游戏中具有行为树的，有行为安排的个体
@@ -11,20 +12,42 @@ using Articy.Unity.Interfaces;
 /// </summary>
 public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
 {
-    private Text sound;
+    public ArticyRef givenSounding;
+    private GameObject soundPos;
+    private GameObject sound;
+    private Text soundText;
     private string storedWords;
     public IArticyObject state;
     private ArticyFlowPlayer flowPlayer;
+
     private bool playing = false;
+    private SmartEntity playLock = null;
 
     private SmartEntity speaker;
+
+    private void Start()
+    {
+        state = givenSounding.GetObject();
+    }
+
+    private void Update()
+    {
+        if(sound!=null)
+        {
+            SoundingManager.instance.PutText(sound, soundPos.transform.position);
+        }
+    }
 
     //每次发出声音调用该函数，理论上每句话会调用一次
     public bool ArouseSound(string text)
     {
-        if(sound.text=="")
+        if(sound == null)
         {
-            sound.text = text;
+            AssignText();
+        }
+        if(soundText.text=="")
+        {
+            soundText.text = text;
             Invoke("FinishSound", 2);
             return true;
         }
@@ -38,16 +61,28 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
     //每句话说完
     public void FinishSound()
     {
-        sound.text = "";
+        soundText.text = "";
         if(storedWords!="")
         {
             storedWords = "";
             ArouseSound(storedWords);
             Invoke("ContinueChat", 1);
         }
+        else
+        {
+            soundText.text = "";
+            SoundingManager.instance.ReturnText(sound);
+        }
+    }
+
+    private void AssignText()
+    {
+        sound = SoundingManager.instance.GetText();
+        soundText = sound.GetComponent<Text>();
     }
 
     //开始一段旁听对话
+    [Button]
     public void ArouseChat()
     {
         flowPlayer.StartOn = state;
@@ -86,9 +121,18 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
             }
             else
             {
-                Invoke("ContinueChat", 1);
+                Invoke("PlayChat", 1);
             }
         }
+        else
+        {
+            LockChat(speaker);
+        }
+    }
+
+    public void PlayChat()
+    {
+        flowPlayer.Play();
     }
 
     public void ContinueChat()
@@ -96,8 +140,17 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         SmartEntity flow = atFlow as SmartEntity;
         if(flow != null)
         {
-            flow.playing = true;
-            flow.flowPlayer.Play();
+            if(flow.playLock == this)
+            {
+                flow.playLock = null;
+                flow.playing = true;
+                flow.PlayChat();
+            }
         }
+    }
+
+    private void LockChat(SmartEntity lockAt)
+    {
+        playLock = lockAt;
     }
 }
