@@ -16,5 +16,7 @@ public class TaskTalking : ActionTask
         entity.dialog = ArticyDatabase.GetObject(dialogName);
 
         EndAction(true);
+        Debug.Log("Hello");
     }
+    
 }
