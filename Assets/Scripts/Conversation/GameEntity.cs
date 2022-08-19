@@ -8,15 +8,21 @@ using UnityEngine.EventSystems;
 /// <summary>
 /// 游戏中所有的可与玩家交互的对象，包括物品，地标等
 /// </summary>
-public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
+public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IWithEntity
 {
-    public ArticyRef entity;
+    public ArticyRef givenEntity;
+    public ArticyRef givenDialog;
+    public IArticyObject entity { get; set; }
     public IArticyObject dialog;
-    private string entityName;
-    public IArticyFlowPlayerCallbacks atFlow = null;
 
-    public void Init()
+    [HideInInspector]
+    public string entityName { get; set; }
+    public IMyFlowPlayer atFlow = null;
+
+    public virtual void Init()
     {
+        dialog = givenDialog.GetObject();
+        entity = givenEntity.GetObject();
         if(entity == null)
         {
             Debug.Log("Warning: an NPC doesn't have an entity");
@@ -31,29 +37,30 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler
 
         if(entityName!=null)
         {
-            if(EntityData.EntitiesDic.ContainsKey(entityName))
+            if(EntityManager.EntitiesDic.ContainsKey(entityName))
             {
                 Debug.Log("Warning: Entity Name equals");
             }
             else
             {
-                EntityData.EntitiesDic.Add(entityName, this);
+                EntityManager.EntitiesDic.Add(entityName, this);
             }
         }
     }
 
-    public void RaiseDialog()
+    public virtual void RaiseDialog()
     {
         if(dialog!=null)
         {
-            DialogManager.instance.SetStart(dialog);
-            DialogManager.flowPlayer.Play();
+            DialogManager.instance.SetStart(dialog as IArticyObject);
+            //DialogManager.flowPlayer.Play();
             Player.instance.moveable = false;
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
+        //TODO：寻路
         float dis = (transform.position - Player.instance.transform.position).magnitude;
         if(dis<20)
         {

@@ -6,7 +6,6 @@ using UnityEngine.Tilemaps;
 public class LayerSorter : MonoBehaviour,IInit
 {
     public static LayerSorter instance;
-    public bool dynamicFolder;
 
     private void Awake()
     {
@@ -38,18 +37,6 @@ public class LayerSorter : MonoBehaviour,IInit
         {
             tileRenderer.sortingOrder = Mathf.RoundToInt(tileRenderer.transform.position.y * -1000);
             return;
-        }
-    }
-
-    private void Update()
-    {
-        if(dynamicFolder)
-        {
-            Renderer[] renderers = GetComponentsInChildren<Renderer>();
-            foreach (Renderer item in renderers)
-            {
-                DefineLayer(item);
-            }
         }
     }
 }
