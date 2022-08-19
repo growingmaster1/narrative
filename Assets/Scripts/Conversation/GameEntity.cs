@@ -17,9 +17,9 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
 
     [HideInInspector]
     public string entityName { get; set; }
-    public IArticyFlowPlayerCallbacks atFlow = null;
+    public IMyFlowPlayer atFlow = null;
 
-    public void Init()
+    public virtual void Init()
     {
         dialog = givenDialog.GetObject();
         entity = givenEntity.GetObject();
@@ -48,7 +48,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         }
     }
 
-    public void RaiseDialog()
+    public virtual void RaiseDialog()
     {
         if(dialog!=null)
         {
@@ -58,7 +58,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         }
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public virtual void OnPointerClick(PointerEventData eventData)
     {
         //TODO£ºÑ°Â·
         float dis = (transform.position - Player.instance.transform.position).magnitude;

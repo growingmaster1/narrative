@@ -187,7 +187,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         {
             if (next != null)
             {
-                DialogManager.flowPlayer.Play(next);
+                DialogManager.FlowPlayer.Play(next);
             }
             if(next == null)
             {

@@ -10,7 +10,7 @@ using Articy.Unity.Interfaces;
 /// 这里的对话指的是游戏中特有的，玩家和NPC的对话系统，不包括旁听和备忘录
 /// 由对话专用对话框进行播放
 /// </summary>
-public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
+public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 {
     //发出对话的实体
     [HideInInspector]
@@ -19,7 +19,20 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
     public string text;
 
     public static DialogManager instance;
-    public static ArticyFlowPlayer flowPlayer;
+    public static ArticyFlowPlayer FlowPlayer;
+    public ArticyFlowPlayer flowPlayer
+    {
+        get
+        {
+            return FlowPlayer;
+        }
+        set
+        {
+            FlowPlayer = value;
+        }
+    }
+
+    public List<SmartEntity> speakers { get; set; }
 
     private void Awake()
     {
@@ -31,6 +44,7 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 
     public void Init()
     {
+        speakers = new List<SmartEntity>();
         flowPlayer = GetComponent<ArticyFlowPlayer>();
         if(flowPlayer == null)
         {
@@ -48,6 +62,12 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
 
         //确定说话人
         speaker = DefineSpeaker(aObject);
+        SmartEntity speakEntity = speaker as SmartEntity;
+        if(speakEntity!=null&&!speakers.Contains(speakEntity))
+        {
+            speakers.Add(speakEntity);
+            speakEntity.SetFlow(this);
+        }
         //确定文本
         text = DefineText(aObject);
         //处理文本输入
@@ -58,6 +78,14 @@ public class DialogManager : MonoBehaviour,IArticyFlowPlayerCallbacks,IInit
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
         DialogBox.instance.ParseBranches(aBranches);
+    }
+
+    public void CompleteDialog()
+    {
+        foreach (SmartEntity item in speakers)
+        {
+            item.SetFlow(null);
+        }
     }
 
     public IWithEntity DefineSpeaker(IFlowObject aObject)

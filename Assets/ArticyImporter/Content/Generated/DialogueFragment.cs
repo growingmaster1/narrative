@@ -34,6 +34,9 @@ namespace Articy.Littletown
         private ArticyValueArticyObject mSpeaker = new ArticyValueArticyObject();
         
         [SerializeField()]
+        private Single mSplitHeight;
+        
+        [SerializeField()]
         private Color mColor;
         
         [SerializeField()]
@@ -115,6 +118,20 @@ namespace Articy.Littletown
                 var oldValue = mSpeaker;
                 mSpeaker.SetValue(value);
                 Articy.Unity.ArticyDatabase.ObjectNotifications.ReportChanged(Id, InstanceId, "Speaker", oldValue.GetValue(), mSpeaker.GetValue());
+            }
+        }
+        
+        public Single SplitHeight
+        {
+            get
+            {
+                return mSplitHeight;
+            }
+            set
+            {
+                var oldValue = mSplitHeight;
+                mSplitHeight = value;
+                Articy.Unity.ArticyDatabase.ObjectNotifications.ReportChanged(Id, InstanceId, "SplitHeight", oldValue, mSplitHeight);
             }
         }
         
@@ -271,6 +288,7 @@ namespace Articy.Littletown
             {
                 newClone.mSpeaker = ((ArticyValueArticyObject)(mSpeaker.CloneObject(newClone, aFirstClassParent)));
             }
+            newClone.SplitHeight = SplitHeight;
             newClone.Color = Color;
             newClone.Text = Unresolved_Text;
             newClone.ExternalId = ExternalId;
@@ -315,6 +333,11 @@ namespace Articy.Littletown
             if ((aProperty == "Speaker"))
             {
                 Speaker = Articy.Unity.Interfaces.BaseScriptFragments.ObjectToModelRep(aValue);
+                return;
+            }
+            if ((aProperty == "SplitHeight"))
+            {
+                SplitHeight = System.Convert.ToSingle(aValue);
                 return;
             }
             if ((aProperty == "Color"))
@@ -378,6 +401,10 @@ namespace Articy.Littletown
             if ((aProperty == "Speaker"))
             {
                 return new Articy.Unity.Interfaces.ScriptDataProxy(Speaker);
+            }
+            if ((aProperty == "SplitHeight"))
+            {
+                return new Articy.Unity.Interfaces.ScriptDataProxy(SplitHeight);
             }
             if ((aProperty == "Color"))
             {

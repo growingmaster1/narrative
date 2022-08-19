@@ -20,7 +20,46 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-5234494177952762212
+--- !u!114 &-3911988873250973206
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: -3911988873250973206}
+  mLocalization: {fileID: -6731010819860249535}
+  mInternalProject:
+    mName: littleTown
+    mDetailName: 
+    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
+    mTechnicalName: Littletown
+  mImportedAssets: []
+  mDefaultGlobalVariables: {fileID: 2870541339483709362}
+  mScriptFragments: {fileID: 3299367409868805698}
+  mPackages:
+  - PackageName: "\u6240\u6709\u5BF9\u8C61"
+    PackagePath: "\u6240\u6709\u5BF9\u8C61"
+    mIsDefaultPackage: 1
+--- !u!114 &2870541339483709362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -76,14 +115,14 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mPlayer_to_als:
-    _VariableStorage: {fileID: -5234494177952762212}
+    _VariableStorage: {fileID: 2870541339483709362}
   mDay_and_time:
-    _VariableStorage: {fileID: -5234494177952762212}
+    _VariableStorage: {fileID: 2870541339483709362}
   mAls:
-    _VariableStorage: {fileID: -5234494177952762212}
+    _VariableStorage: {fileID: 2870541339483709362}
   mWorldDialogue:
-    _VariableStorage: {fileID: -5234494177952762212}
---- !u!114 &-4669645304391243310
+    _VariableStorage: {fileID: 2870541339483709362}
+--- !u!114 &3299367409868805698
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,42 +134,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
   m_Name: ArticyScriptFragments
   m_EditorClassIdentifier: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 2346586434849386994}
-  mLocalization: {fileID: -6731010819860249535}
-  mInternalProject:
-    mName: littleTown
-    mDetailName: 
-    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
-    mTechnicalName: Littletown
-  mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -5234494177952762212}
-  mScriptFragments: {fileID: -4669645304391243310}
-  mPackages:
-  - PackageName: "\u6240\u6709\u5BF9\u8C61"
-    PackagePath: "\u6240\u6709\u5BF9\u8C61"
-    mIsDefaultPackage: 1
---- !u!114 &2346586434849386994
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes: []
