@@ -5,29 +5,39 @@ using UnityEngine.UI;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Sirenix.OdinInspector;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// 所有游戏中具有行为树的，有行为安排的个体
 /// 亦或会发出旁听的个体（如坏掉的水管）
 /// </summary>
-public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
+public class SmartEntity : GameEntity, IMyFlowPlayer
 {
     public ArticyRef givenSounding;
-    private GameObject soundPos;
+    public GameObject soundPos;
     private GameObject sound;
     private Text soundText;
     private string storedWords;
     public IArticyObject state;
-    private ArticyFlowPlayer flowPlayer;
+    public ArticyFlowPlayer flowPlayer { get; set; }
+    public List<SmartEntity> speakers { get; set; }
 
     private bool playing = false;
     private SmartEntity playLock = null;
 
+    private List<ArticyObject> attachedDialog;
+    private int attachTalkPlace;
+
+    private bool blocked = false;
+
     private SmartEntity speaker;
 
-    private void Start()
+    public override void Init()
     {
+        base.Init();
         state = givenSounding.GetObject();
+        flowPlayer = GetComponent<ArticyFlowPlayer>();
+        speakers = new List<SmartEntity>();
     }
 
     private void Update()
@@ -64,14 +74,14 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         soundText.text = "";
         if(storedWords!="")
         {
-            storedWords = "";
             ArouseSound(storedWords);
+            storedWords = "";
             Invoke("ContinueChat", 1);
         }
         else
         {
             soundText.text = "";
-            SoundingManager.instance.ReturnText(sound);
+            //SoundingManager.instance.ReturnText(sound);
         }
     }
 
@@ -81,11 +91,50 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         soundText = sound.GetComponent<Text>();
     }
 
+    public void ReturnText()
+    {
+        soundText.text = "";
+        sound = null;
+        SoundingManager.instance.ReturnText(sound);
+    }
+
+    public void SetFlow(IMyFlowPlayer flow)
+    {
+        atFlow = flow;
+    }
+
+    public void CompleteChat()
+    {
+        foreach(SmartEntity item in speakers)
+        {
+            item.ReturnText();
+            item.SetFlow(null);
+        }
+    }
+
+    public void ExitFlow()
+    {
+        atFlow.speakers.Remove(this);
+        atFlow = null;
+    }
+
     //开始一段旁听对话
     [Button]
-    public void ArouseChat()
+    public void SetState(string stateTechName)
     {
-        flowPlayer.StartOn = state;
+        //if(state != ArticyDatabase.GetObject(stateTechName))
+        //{
+            //state = ArticyDatabase.GetObject(stateTechName);
+            IObjectWithAttachments attached = state as IObjectWithAttachments;
+            if (attached != null)
+            {
+                attachedDialog = attached.Attachments;
+                attachTalkPlace = 0;
+                dialog = attachedDialog[attachTalkPlace];
+            }
+            flowPlayer.StartOn = state;
+        //}
+        blocked = false;
         playing = true;
         //TODO:获取所有发言者并设置其对话状态
     }
@@ -103,10 +152,16 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
         if (speaker == null)
         {
             Debug.Log("talking to " + DialogManager.instance.DefineSpeaker(aObject).entityName + " is wooden");
+            return;
         }
         if (!speaker.ArouseSound(DialogManager.instance.DefineText(aObject)))
         {
             playing = false;
+        }
+        if(speaker.atFlow == null)
+        {
+            speaker.SetFlow(this);
+            speakers.Add(speaker);
         }
     }
 
@@ -132,7 +187,10 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
 
     public void PlayChat()
     {
-        flowPlayer.Play();
+        if(!blocked)
+        {
+            flowPlayer.Play();
+        }
     }
 
     public void ContinueChat()
@@ -152,5 +210,24 @@ public class SmartEntity : GameEntity,IChatable, IArticyFlowPlayerCallbacks
     private void LockChat(SmartEntity lockAt)
     {
         playLock = lockAt;
+    }
+
+    public override void RaiseDialog()
+    {
+        if (dialog != null)
+        {
+            blocked = true;
+            if (atFlow!=null)
+            {
+                (atFlow as SmartEntity).blocked = true;
+            }
+            DialogManager.instance.SetStart(dialog as IArticyObject);
+            if(attachTalkPlace+1<attachedDialog.Count)
+            {
+                attachTalkPlace++;
+            }
+            
+            Player.instance.moveable = false;
+        }
     }
 }

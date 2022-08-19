@@ -54,6 +54,27 @@ public class Pool
         }
     }
 
+    public Pool(GameObject content, string name, int len, GameObject inFolder)
+    {
+        category = name;
+        head = 0;
+        pool = new Queue<GameObject>();
+        length = len;
+
+        folder = inFolder;
+        folder.name = name;
+        sample = content;
+
+        GameObject newBorn;
+
+        for (int i = 0; i < len; ++i)
+        {
+            newBorn = MonoBehaviour.Instantiate<GameObject>(sample, folder.transform);
+            newBorn.SetActive(false);
+            pool.Enqueue(newBorn);
+        }
+    }
+
     public GameObject CreateFromPool()
     {
         GameObject toReturn = null;

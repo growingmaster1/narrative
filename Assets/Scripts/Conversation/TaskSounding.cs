@@ -13,8 +13,8 @@ public class TaskSounding : ActionTask
     {
         base.OnExecute();
         SmartEntity entity = agent.gameObject.GetComponent<SmartEntity>();
-        entity.state = ArticyDatabase.GetObject(dialogState);
-        entity.ArouseChat();
+        //entity.state = ArticyDatabase.GetObject(dialogState);
+        entity.SetState(dialogState);
 
         EndAction(true);
     }

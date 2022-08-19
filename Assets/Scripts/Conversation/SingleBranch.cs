@@ -76,7 +76,7 @@ public class SingleBranch : MonoBehaviour
     {
         if(branch!=null)
         {
-            DialogManager.flowPlayer.Play(branch);
+            DialogManager.FlowPlayer.Play(branch);
         }
     }
 }
