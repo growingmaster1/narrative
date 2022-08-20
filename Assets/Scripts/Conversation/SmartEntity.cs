@@ -17,7 +17,7 @@ public class SmartEntity : GameEntity
     public GameObject soundPos;
     private GameObject sound;
     private Text soundText;
-    private string lastText;
+    private Queue<string> lastText;
 
     [HideInInspector]
     public bool atDialog = false;
@@ -25,9 +25,11 @@ public class SmartEntity : GameEntity
     public override void Init()
     {
         base.Init();
-        if(givenState!=null)
+        lastText = new Queue<string>();
+        if(givenState!=null&&givenState.GetObject()!=null)
         {
             atFlow = SoundingManager.instance.PutState(entityName, givenState.GetObject().TechnicalName);
+            (atFlow as StatePlayer).StartSounding();
         }
     }
 
@@ -47,14 +49,14 @@ public class SmartEntity : GameEntity
             AssignText();
         }
         soundText.text = text;
-        lastText = text;
-        Invoke("TryFinishSound", 4);
+        lastText.Enqueue(text);
+        Invoke("TryFinishSound", 3);
     }
 
     //每句话说完
     public void TryFinishSound()
     {
-        if(soundText.text == lastText)
+        if(soundText.text == lastText.Dequeue())
         {
             FinishSound();
         }

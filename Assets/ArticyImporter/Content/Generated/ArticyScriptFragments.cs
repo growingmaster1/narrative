@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637964179613647381)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637966315482125140)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -159,7 +159,7 @@ namespace Articy.Littletown.GlobalVariables
         /// </summary>
         public bool Script_0x1000000000014AEText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return aGlobalVariablesState.WorldDialogue.poet_visible == false;
+            return aGlobalVariablesState.player_to_als.poet_visible == false;
         }
         
         /// <summary>
@@ -168,7 +168,7 @@ namespace Articy.Littletown.GlobalVariables
         /// </summary>
         public bool Script_0x10000000000165BText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return aGlobalVariablesState.WorldDialogue.poet_canSeeSprite == true;
+            return aGlobalVariablesState.player_to_als.poet_canSeeSprite == true;
         }
         
         /// <summary>
@@ -177,7 +177,7 @@ namespace Articy.Littletown.GlobalVariables
         /// </summary>
         public bool Script_0x100000000001661Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return aGlobalVariablesState.WorldDialogue.poet_canSeeSprite == false;
+            return aGlobalVariablesState.player_to_als.poet_canSeeSprite == false;
         }
         
         /// <summary>
@@ -204,16 +204,7 @@ namespace Articy.Littletown.GlobalVariables
         /// </summary>
         public void Script_0x100000000001623Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.WorldDialogue.poet_visible = true;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000DBF
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037931455?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x100000000000DBFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return true;
+            aGlobalVariablesState.player_to_als.poet_visible = true;
         }
         
         /// <summary>
@@ -222,7 +213,18 @@ namespace Articy.Littletown.GlobalVariables
         /// </summary>
         public bool Script_0x100000000000DC4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return true;
+            return //此前已完成瓦桑相关对话
+true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000004B84
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037947268?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000004B84Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.nextState="Dlg_0E06C6BE";
+aGlobalVariablesState.Emily.NextState="";
         }
         #endregion
         
@@ -254,8 +256,8 @@ namespace Articy.Littletown.GlobalVariables
             Instructions.Add(17u, this.Script_0x1000000000001EEText);
             Instructions.Add(18u, this.Script_0x100000000000236Text);
             Instructions.Add(19u, this.Script_0x100000000001623Text);
-            Conditions.Add(20u, this.Script_0x100000000000DBFExpression);
-            Conditions.Add(21u, this.Script_0x100000000000DC4Expression);
+            Conditions.Add(20u, this.Script_0x100000000000DC4Expression);
+            Instructions.Add(21u, this.Script_0x100000000004B84Expression);
         }
         #endregion
         
