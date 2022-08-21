@@ -40,21 +40,36 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private WorldDialogue mWorldDialogue = new WorldDialogue();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Emily mEmily = new Emily();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Harry mHarry = new Harry();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
             variableNames.Add("player_to_als.interfere");
             variableNames.Add("player_to_als.interfere_time");
             variableNames.Add("player_to_als.interfere_order");
+            variableNames.Add("player_to_als.poet_canSeeSprite");
+            variableNames.Add("player_to_als.poet_canSeeSpriteEnsured");
+            variableNames.Add("player_to_als.poet_visible");
             variableNames.Add("day_and_time.weekend");
             variableNames.Add("day_and_time.day");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
             variableNames.Add("day_and_time.seconds");
             variableNames.Add("als.bean");
-            variableNames.Add("WorldDialogue.poet_visible");
-            variableNames.Add("WorldDialogue.poet_canSeeSprite");
-            variableNames.Add("WorldDialogue.poet_canSeeSpriteEnsured");
+            variableNames.Add("als.als_walked_to_player");
+            variableNames.Add("WorldDialogue.random");
+            variableNames.Add("Emily.Emily_meet_player_times");
+            variableNames.Add("Emily.NextState");
+            variableNames.Add("Harry.nextState");
+            variableNames.Add("Harry.action_walk_aside");
+            variableNames.Add("Harry.refresh");
         }
         #endregion
         
@@ -90,6 +105,22 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Emily Emily
+        {
+            get
+            {
+                return mEmily;
+            }
+        }
+        
+        public Harry Harry
+        {
+            get
+            {
+                return mHarry;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -104,6 +135,8 @@ namespace Articy.Littletown.GlobalVariables
             day_and_time.RegisterVariables(this);
             als.RegisterVariables(this);
             WorldDialogue.RegisterVariables(this);
+            Emily.RegisterVariables(this);
+            Harry.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

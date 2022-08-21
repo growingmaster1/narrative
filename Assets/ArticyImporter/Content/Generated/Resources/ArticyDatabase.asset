@@ -20,6 +20,19 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
+--- !u!114 &-2006976895808145830
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 6164494172822233953}
+  mHierarchy: {fileID: -2006976895808145830}
   mLocalization: {fileID: -6731010819860249535}
   mInternalProject:
     mName: littleTown
@@ -40,13 +53,25 @@ MonoBehaviour:
     mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
     mTechnicalName: Littletown
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: 2870541339483709362}
-  mScriptFragments: {fileID: 3299367409868805698}
+  mDefaultGlobalVariables: {fileID: 3818569549953388246}
+  mScriptFragments: {fileID: 2415054808616698439}
   mPackages:
   - PackageName: "\u6240\u6709\u5BF9\u8C61"
     PackagePath: "\u6240\u6709\u5BF9\u8C61"
     mIsDefaultPackage: 1
---- !u!114 &2870541339483709362
+--- !u!114 &2415054808616698439
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &3818569549953388246
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,19 +87,34 @@ MonoBehaviour:
   - mFullQualifiedName: player_to_als.interfere
     mVar:
       values: 00
+  - mFullQualifiedName: player_to_als.poet_canSeeSprite
+    mVar:
+      values: 00
+  - mFullQualifiedName: player_to_als.poet_canSeeSpriteEnsured
+    mVar:
+      values: 00
+  - mFullQualifiedName: player_to_als.poet_visible
+    mVar:
+      values: 00
   - mFullQualifiedName: day_and_time.weekend
     mVar:
       values: 00
   - mFullQualifiedName: als.bean
     mVar:
       values: 00
-  - mFullQualifiedName: WorldDialogue.poet_visible
+  - mFullQualifiedName: als.als_walked_to_player
     mVar:
       values: 00
-  - mFullQualifiedName: WorldDialogue.poet_canSeeSprite
+  - mFullQualifiedName: WorldDialogue.random
     mVar:
       values: 00
-  - mFullQualifiedName: WorldDialogue.poet_canSeeSpriteEnsured
+  - mFullQualifiedName: Emily.Emily_meet_player_times
+    mVar:
+      values: 00
+  - mFullQualifiedName: Harry.action_walk_aside
+    mVar:
+      values: 00
+  - mFullQualifiedName: Harry.refresh
     mVar:
       values: 00
   IntVariableCache:
@@ -96,41 +136,28 @@ MonoBehaviour:
   - mFullQualifiedName: day_and_time.seconds
     mVar:
       values: 00000000
-  StringVariableCache: []
+  StringVariableCache:
+  - mFullQualifiedName: Emily.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Harry.nextState
+    mVar:
+      values:
+      - 
   LiveBoolVariableCache: []
   LiveIntVariableCache: []
   LiveStringVariableCache: []
   isInitialized: 1
   mPlayer_to_als:
-    _VariableStorage: {fileID: 2870541339483709362}
+    _VariableStorage: {fileID: 3818569549953388246}
   mDay_and_time:
-    _VariableStorage: {fileID: 2870541339483709362}
+    _VariableStorage: {fileID: 3818569549953388246}
   mAls:
-    _VariableStorage: {fileID: 2870541339483709362}
+    _VariableStorage: {fileID: 3818569549953388246}
   mWorldDialogue:
-    _VariableStorage: {fileID: 2870541339483709362}
---- !u!114 &3299367409868805698
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &6164494172822233953
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes: []
+    _VariableStorage: {fileID: 3818569549953388246}
+  mEmily:
+    _VariableStorage: {fileID: 3818569549953388246}
+  mHarry:
+    _VariableStorage: {fileID: 3818569549953388246}

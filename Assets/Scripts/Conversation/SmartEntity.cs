@@ -11,33 +11,26 @@ using UnityEngine.EventSystems;
 /// 所有游戏中具有行为树的，有行为安排的个体
 /// 亦或会发出旁听的个体（如坏掉的水管）
 /// </summary>
-public class SmartEntity : GameEntity, IMyFlowPlayer
+public class SmartEntity : GameEntity
 {
-    public ArticyRef givenSounding;
+    public ArticyRef givenState;
     public GameObject soundPos;
     private GameObject sound;
     private Text soundText;
-    private string storedWords;
-    public IArticyObject state;
-    public ArticyFlowPlayer flowPlayer { get; set; }
-    public List<SmartEntity> speakers { get; set; }
+    private Queue<string> lastText;
 
-    private bool playing = false;
-    private SmartEntity playLock = null;
-
-    private List<ArticyObject> attachedDialog;
-    private int attachTalkPlace;
-
-    private bool blocked = false;
-
-    private SmartEntity speaker;
+    [HideInInspector]
+    public bool atDialog = false;
 
     public override void Init()
     {
         base.Init();
-        state = givenSounding.GetObject();
-        flowPlayer = GetComponent<ArticyFlowPlayer>();
-        speakers = new List<SmartEntity>();
+        lastText = new Queue<string>();
+        if(givenState!=null&&givenState.GetObject()!=null)
+        {
+            atFlow = SoundingManager.instance.PutState(entityName, givenState.GetObject().TechnicalName);
+            (atFlow as StatePlayer).StartSounding();
+        }
     }
 
     private void Update()
@@ -49,40 +42,29 @@ public class SmartEntity : GameEntity, IMyFlowPlayer
     }
 
     //每次发出声音调用该函数，理论上每句话会调用一次
-    public bool ArouseSound(string text)
+    public void ArouseSound(string text)
     {
-        if(sound == null)
+        if (sound == null)
         {
             AssignText();
         }
-        if(soundText.text=="")
-        {
-            soundText.text = text;
-            Invoke("FinishSound", 2);
-            return true;
-        }
-        else
-        {
-            storedWords = text;
-            return false;
-        }
+        soundText.text = text;
+        lastText.Enqueue(text);
+        Invoke("TryFinishSound", 3);
     }
 
     //每句话说完
+    public void TryFinishSound()
+    {
+        if(soundText.text == lastText.Dequeue())
+        {
+            FinishSound();
+        }
+    }
+
     public void FinishSound()
     {
         soundText.text = "";
-        if(storedWords!="")
-        {
-            ArouseSound(storedWords);
-            storedWords = "";
-            Invoke("ContinueChat", 1);
-        }
-        else
-        {
-            soundText.text = "";
-            //SoundingManager.instance.ReturnText(sound);
-        }
     }
 
     private void AssignText()
@@ -98,136 +80,28 @@ public class SmartEntity : GameEntity, IMyFlowPlayer
         SoundingManager.instance.ReturnText(sound);
     }
 
-    public void SetFlow(IMyFlowPlayer flow)
-    {
-        atFlow = flow;
-    }
-
-    public void CompleteChat()
-    {
-        foreach(SmartEntity item in speakers)
-        {
-            item.ReturnText();
-            item.SetFlow(null);
-        }
-    }
-
-    public void ExitFlow()
-    {
-        atFlow.speakers.Remove(this);
-        atFlow = null;
-    }
-
     //开始一段旁听对话
     [Button]
     public void SetState(string stateTechName)
     {
-        //if(state != ArticyDatabase.GetObject(stateTechName))
-        //{
-            //state = ArticyDatabase.GetObject(stateTechName);
-            IObjectWithAttachments attached = state as IObjectWithAttachments;
-            if (attached != null)
-            {
-                attachedDialog = attached.Attachments;
-                attachTalkPlace = 0;
-                dialog = attachedDialog[attachTalkPlace];
-            }
-            flowPlayer.StartOn = state;
-        //}
-        blocked = false;
-        playing = true;
-        //TODO:获取所有发言者并设置其对话状态
-    }
-
-    public void OnFlowPlayerPaused(IFlowObject aObject)
-    {
-        playing = true;
-        if (aObject == null)
+        StatePlayer statePlayer = atFlow as StatePlayer;
+        if(statePlayer!=null)
         {
-            Debug.Log("Warning: aObject is null");
-            return;
-        }
-
-        speaker = DialogManager.instance.DefineSpeaker(aObject) as SmartEntity;
-        if (speaker == null)
-        {
-            Debug.Log("talking to " + DialogManager.instance.DefineSpeaker(aObject).entityName + " is wooden");
-            return;
-        }
-        if (!speaker.ArouseSound(DialogManager.instance.DefineText(aObject)))
-        {
-            playing = false;
-        }
-        if(speaker.atFlow == null)
-        {
-            speaker.SetFlow(this);
-            speakers.Add(speaker);
-        }
-    }
-
-    public void OnBranchesUpdated(IList<Branch> aBranches)
-    {
-        if(playing)
-        {
-            if(aBranches.Count<1)
-            {
-                flowPlayer.FinishCurrentPausedObject();
-                flowPlayer.StartOn = null;
-            }
-            else
-            {
-                Invoke("PlayChat", 1);
-            }
+            statePlayer.RemoveEntity(entityName);
         }
         else
         {
-            LockChat(speaker);
-        }
-    }
 
-    public void PlayChat()
-    {
-        if(!blocked)
-        {
-            flowPlayer.Play();
         }
-    }
-
-    public void ContinueChat()
-    {
-        SmartEntity flow = atFlow as SmartEntity;
-        if(flow != null)
-        {
-            if(flow.playLock == this)
-            {
-                flow.playLock = null;
-                flow.playing = true;
-                flow.PlayChat();
-            }
-        }
-    }
-
-    private void LockChat(SmartEntity lockAt)
-    {
-        playLock = lockAt;
+        atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
     public override void RaiseDialog()
     {
-        if (dialog != null)
+        StatePlayer statePlayer = atFlow as StatePlayer;
+        if(statePlayer!=null)
         {
-            blocked = true;
-            if (atFlow!=null)
-            {
-                (atFlow as SmartEntity).blocked = true;
-            }
-            DialogManager.instance.SetStart(dialog as IArticyObject);
-            if(attachTalkPlace+1<attachedDialog.Count)
-            {
-                attachTalkPlace++;
-            }
-            
-            Player.instance.moveable = false;
+            statePlayer.PlayDialog();
         }
     }
 }

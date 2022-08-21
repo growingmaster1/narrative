@@ -66,7 +66,6 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
         if(speakEntity!=null&&!speakers.Contains(speakEntity))
         {
             speakers.Add(speakEntity);
-            speakEntity.SetFlow(this);
         }
         //确定文本
         text = DefineText(aObject);
@@ -78,14 +77,6 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
         DialogBox.instance.ParseBranches(aBranches);
-    }
-
-    public void CompleteDialog()
-    {
-        foreach (SmartEntity item in speakers)
-        {
-            item.SetFlow(null);
-        }
     }
 
     public IWithEntity DefineSpeaker(IFlowObject aObject)
@@ -124,6 +115,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public void SetStart(IArticyObject start)
     {
+        speakers.Clear();
         DialogBox.instance.startDialog();
         flowPlayer.StartOn = start;
     }
