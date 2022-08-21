@@ -21,6 +21,6 @@ public class Floating : MonoBehaviour
             startPos = transform.position;
         }
         transform.position = startPos;
-        tweener = transform.DOMove(startPos + new Vector3(0, offset, 0), duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo);
+        tweener = transform.DOMove(startPos + new Vector3(0, offset, 0), duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
     }
 }
