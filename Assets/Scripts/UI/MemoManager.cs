@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class MemoManager : MonoBehaviour,IInit
 {
@@ -14,6 +15,8 @@ public class MemoManager : MonoBehaviour,IInit
 
     public GameObject memoContainer;
     public GameObject memoContent;
+
+    public GameObject memoMessage;
 
     private void Awake()
     {
@@ -33,6 +36,19 @@ public class MemoManager : MonoBehaviour,IInit
         memoData.memos.Add(memo);
         Instantiate(memoContent, memoContainer.transform);
         memoContent.GetComponent<Text>().text = memo;
+        ShowMessage("您有新的备忘录");
+    }
+
+    private void ShowMessage(string message)
+    {
+        memoMessage.GetComponent<Text>().text = message;
+        Sequence messageSeq = DOTween.Sequence();
+        memoMessage.SetActive(true);
+        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up, 0.2f).From());
+        messageSeq.Join(memoMessage.GetComponent<Text>().DOFade(1, 0.2f));
+        messageSeq.AppendInterval(2);
+        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up, 0.2f).OnComplete(()=> { memoMessage.SetActive(false); }));
+        messageSeq.Join(memoMessage.GetComponent<Text>().DOFade(0, 0.2f));
     }
 
     public void UnlockAchievement(string achieve)
