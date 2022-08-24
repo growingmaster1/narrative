@@ -21,11 +21,16 @@ public class ArticyReader : MonoBehaviour
         return (bool)(variables.GetType().GetProperty(name).GetValue(variables));
     }
 
-    [Button("getInt")]
     public int GetInteger(string group, string name)
     {
         IArticyNamespace variables = globalVariables.GetType().GetProperty(group).GetValue(globalVariables) as IArticyNamespace;
         return (int)(variables.GetType().GetProperty(name).GetValue(variables));
+    }
+
+    public string GetString(string group, string name)
+    {
+        IArticyNamespace variables = globalVariables.GetType().GetProperty(group).GetValue(globalVariables) as IArticyNamespace;
+        return (string)(variables.GetType().GetProperty(name).GetValue(variables));
     }
 
     public void SetBoolean(string group, string name, bool value)
@@ -38,5 +43,11 @@ public class ArticyReader : MonoBehaviour
     {
         IArticyNamespace variables = globalVariables.GetType().GetProperty(group).GetValue(globalVariables) as IArticyNamespace;
         variables.GetType().GetProperty(name).SetValue(variables,value);
+    }
+
+    public void SetString(string group, string name, string value)
+    {
+        IArticyNamespace variables = globalVariables.GetType().GetProperty(group).GetValue(globalVariables) as IArticyNamespace;
+        variables.GetType().GetProperty(name).SetValue(variables, value);
     }
 }
