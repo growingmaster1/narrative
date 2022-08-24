@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7987570376786397110
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes: []
 --- !u!114 &-6731010819860249535
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -20,19 +33,6 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-2562748946165443948
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -2562748946165443948}
+  mHierarchy: {fileID: -7987570376786397110}
   mLocalization: {fileID: -6731010819860249535}
   mInternalProject:
     mName: littleTown
@@ -55,10 +55,7 @@ MonoBehaviour:
   mImportedAssets: []
   mDefaultGlobalVariables: {fileID: 3818569549953388246}
   mScriptFragments: {fileID: 2415054808616698439}
-  mPackages:
-  - PackageName: "\u6240\u6709\u5BF9\u8C61"
-    PackagePath: "\u6240\u6709\u5BF9\u8C61"
-    mIsDefaultPackage: 1
+  mPackages: []
 --- !u!114 &2415054808616698439
 MonoBehaviour:
   m_ObjectHideFlags: 3

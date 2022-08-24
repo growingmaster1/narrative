@@ -20,288 +20,11 @@ namespace Articy.Littletown.GlobalVariables
     
     
     [Serializable()]
-    public class player_to_als : IArticyNamespace
+    public class Harry : IArticyNamespace
     {
         
         [SerializeField()]
         private BaseGlobalVariables _VariableStorage;
-        
-        // 玩家是否干预
-        public bool interfere
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(0);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(0, value);
-            }
-        }
-        
-        // 
-        public int interfere_time
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(0);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(0, value);
-            }
-        }
-        
-        // 
-        public int interfere_order
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(1);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(1, value);
-            }
-        }
-        
-        // 
-        public bool poet_canSeeSprite
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(1);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
-            }
-        }
-        
-        // 
-        public bool poet_canSeeSpriteEnsured
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(2);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
-            }
-        }
-        
-        // 
-        public bool poet_visible
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(3);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("player_to_als.interfere", false);
-            aStorage.RegisterVariable("player_to_als.interfere_time", 0);
-            aStorage.RegisterVariable("player_to_als.interfere_order", 1);
-            aStorage.RegisterVariable("player_to_als.poet_canSeeSprite", false);
-            aStorage.RegisterVariable("player_to_als.poet_canSeeSpriteEnsured", false);
-            aStorage.RegisterVariable("player_to_als.poet_visible", false);
-        }
-    }
-}
-namespace Articy.Littletown.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class day_and_time : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool weekend
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(4);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
-            }
-        }
-        
-        // 
-        public int day
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(2);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(2, value);
-            }
-        }
-        
-        // 
-        public int hours
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(3);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(3, value);
-            }
-        }
-        
-        // 
-        public int minutes
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(4);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(4, value);
-            }
-        }
-        
-        // 
-        public int seconds
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueInt32(5);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(5, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("day_and_time.weekend", false);
-            aStorage.RegisterVariable("day_and_time.day", 1);
-            aStorage.RegisterVariable("day_and_time.hours", 7);
-            aStorage.RegisterVariable("day_and_time.minutes", 0);
-            aStorage.RegisterVariable("day_and_time.seconds", 0);
-        }
-    }
-}
-namespace Articy.Littletown.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class als : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool bean
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(5);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(5, value);
-            }
-        }
-        
-        // 
-        public bool als_walked_to_player
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(6);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(6, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("als.bean", false);
-            aStorage.RegisterVariable("als.als_walked_to_player", false);
-        }
-    }
-}
-namespace Articy.Littletown.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class WorldDialogue : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool random
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(7);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(7, value);
-            }
-        }
-        
-        public void RegisterVariables(BaseGlobalVariables aStorage)
-        {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("WorldDialogue.random", false);
-        }
-    }
-}
-namespace Articy.Littletown.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class Emily : IArticyNamespace
-    {
-        
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        // 
-        public bool Emily_meet_player_times
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(8);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
-            }
-        }
         
         public string NextState
         {
@@ -324,26 +47,20 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        public void RegisterVariables(BaseGlobalVariables aStorage)
+        // 
+        public bool Refresh
         {
-            _VariableStorage = aStorage;
-            aStorage.RegisterVariable("Emily.Emily_meet_player_times", false);
-            aStorage.RegisterVariable("Emily.NextState", "");
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(0, value);
+            }
         }
-    }
-}
-namespace Articy.Littletown.GlobalVariables
-{
-    
-    
-    [Serializable()]
-    public class Harry : IArticyNamespace
-    {
         
-        [SerializeField()]
-        private BaseGlobalVariables _VariableStorage;
-        
-        public string nextState
+        public string Action
         {
             get
             {
@@ -356,7 +73,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public string Unresolved_nextState
+        public string Unresolved_Action
         {
             get
             {
@@ -364,38 +81,340 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        // 
-        public bool action_walk_aside
+        public string Expression
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+                return _VariableStorage.Internal_GetVariableValueString(2, true);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+                _VariableStorage.Internal_SetVariableValueString(2, value);
             }
         }
         
         // 
-        public bool refresh
+        public string Unresolved_Expression
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(10);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
+                return _VariableStorage.Internal_GetVariableValueString(2, false);
             }
         }
         
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
-            aStorage.RegisterVariable("Harry.nextState", "");
-            aStorage.RegisterVariable("Harry.action_walk_aside", false);
-            aStorage.RegisterVariable("Harry.refresh", false);
+            aStorage.RegisterVariable("Harry.NextState", "");
+            aStorage.RegisterVariable("Harry.Refresh", false);
+            aStorage.RegisterVariable("Harry.Action", "");
+            aStorage.RegisterVariable("Harry.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Emily : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(3, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(3, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(3, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(1);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(4, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(4, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(4, false);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(5, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(5, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(5, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Emily.NextState", "");
+            aStorage.RegisterVariable("Emily.Refresh", false);
+            aStorage.RegisterVariable("Emily.Expression", "");
+            aStorage.RegisterVariable("Emily.Action", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Shihuangren : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(6, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(6, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(6, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(2);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(7, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(7, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(7, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Shihuangren.NextState", "");
+            aStorage.RegisterVariable("Shihuangren.Refresh", false);
+            aStorage.RegisterVariable("Shihuangren.Action", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Player : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(8, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(8, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(8, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(9, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(9, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(9, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Player.Action", "");
+            aStorage.RegisterVariable("Player.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class day_and_time : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // 
+        public int days
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(0, value);
+            }
+        }
+        
+        // 
+        public int hours
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(1);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(1, value);
+            }
+        }
+        
+        // 
+        public int minutes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(2);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(2, value);
+            }
+        }
+        
+        // 
+        public int seconds
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(3);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(3, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("day_and_time.days", 0);
+            aStorage.RegisterVariable("day_and_time.hours", 0);
+            aStorage.RegisterVariable("day_and_time.minutes", 0);
+            aStorage.RegisterVariable("day_and_time.seconds", 0);
         }
     }
 }
