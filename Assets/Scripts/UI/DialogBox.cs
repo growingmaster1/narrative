@@ -141,6 +141,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         dialogBox.transform.position = basePos;
         dialogBox.SetActive(false);
         joystick.SetActive(true);
+        DialogManager.instance.CompleteDialog();
     }
 
     public void DefineSpeaker(string inSpeaker)
