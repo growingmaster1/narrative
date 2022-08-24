@@ -3,22 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 [Serializable]
 public class MemoData
 {
     [SerializeField]
-    public Dictionary<string, MemoThemeData> memos;
-
-    [SerializeField]
-    public List<string> memoKeys;
-    [SerializeField]
     private List<MemoThemeData> memoValues;
-
+    
     [SerializeField]
     private List<string> achieveKeys;
     [SerializeField]
     private List<MemoThemeData> achieveValues;
-
+    
     public Dictionary<string, MemoThemeData> achievements;
 
     public MemoData()
@@ -46,16 +42,19 @@ public class MemoData
             }
         }
     }
+}*/
 
-    public void AddMemo(string theme, string memo)
-    {
-        if (!memos.ContainsKey(theme))
-        {
-            memos.Add(theme, new MemoThemeData());
-            memoKeys.Add(theme);
-        }
-        memos[theme].memos.Add(memo);
-    }
+[Serializable]
+public class AchievementData
+{
+    public List<Achievement> achievements;
+}
+
+[Serializable]
+public class Achievement
+{
+    public string name;
+    public string content;
 }
 
 [Serializable]

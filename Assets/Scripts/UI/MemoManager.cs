@@ -7,7 +7,6 @@ using DG.Tweening;
 public class MemoManager : MonoBehaviour,IInit
 {
     public static MemoManager instance;
-    public static MemoData memoData;
 
     public GameObject greyPanel;
     public List<GameObject> toHideUI;
@@ -25,10 +24,18 @@ public class MemoManager : MonoBehaviour,IInit
     public GameObject memoTheme;
     public GameObject memoUnit;
 
+    public Dictionary<string, MemoThemeData> memos = new Dictionary<string, MemoThemeData>();
+    public List<string> memoKeys = new List<string>();
+
+    public Dictionary<string, MemoThemeData> achievements = new Dictionary<string, MemoThemeData>();
+    public List<string> achieveKeys = new List<string>();
+
     public MemoTheme onTheme;
     public MemoTheme onAchieve;
 
     public GameObject memoMessage;
+    private Queue<string> messages = new Queue<string>();
+    private bool messageOn = false;
 
     private void Awake()
     {
@@ -40,10 +47,10 @@ public class MemoManager : MonoBehaviour,IInit
 
     public void Init()
     {
-        memoData = new MemoData();
         panelOn = "memo";
-        memoData.AddMemo("我想交朋友", "好想交朋友啊");
-        memoData.AddMemo("迷迭小镇", "我住在A区");
+        AddMemo("我想交朋友-好想交朋友啊");
+        AddMemo("迷迭小镇-我住在A区");
+        ReadAchievements();
         hidUI = new List<GameObject>();
     }
 
@@ -63,6 +70,11 @@ public class MemoManager : MonoBehaviour,IInit
         memoView.SetActive(true);
         TimeManager.instance.PauseTime();
 
+        memoMessage.SetActive(false);
+        messages.Clear();
+        messageOn = false;
+
+        panelOn = "memo";
         ReadThemes();
         ReadContents();
     }
@@ -79,31 +91,45 @@ public class MemoManager : MonoBehaviour,IInit
         TimeManager.instance.ContinueTime();
     }
 
-    public void SwitchPanel()
+    public void SwitchPanel(string panelName)
     {
+        panelOn = panelName;
+        ReadThemes();
+        ReadContents();
+    }
 
+    public void ReadAchievements()
+    {
+        TextAsset jsonText = Resources.Load<TextAsset>("achievements");
+        AchievementData achievementData = JsonUtility.FromJson<AchievementData>(jsonText.text);
+        foreach(Achievement item in achievementData.achievements)
+        {
+            achieveKeys.Add(item.name);
+            achievements.Add(item.name, new MemoThemeData());
+            achievements[item.name].name = item.name;
+            achievements[item.name].memos.Add(item.content);
+        }
     }
 
     public void ReadThemes()
     {
-        foreach(Transform item in memoThemeContainer.transform)
+        foreach (Transform item in memoThemeContainer.transform)
         {
             Destroy(item.gameObject);
         }
-        if(panelOn == "memo")
+        List<string> onKeys = panelOn == "memo" ? memoKeys : achieveKeys;
+        Dictionary<string, MemoThemeData> onDic = panelOn == "memo" ? memos : achievements;
+        foreach (string item in onKeys)
         {
-            foreach(string item in memoData.memoKeys)
+            GameObject theme = Instantiate(memoTheme);
+            theme.transform.SetParent(memoThemeContainer.transform);
+            theme.GetComponent<MemoTheme>().AssignData(onDic[item]);
+            if (item == onKeys[0])
             {
-                GameObject theme = Instantiate(memoTheme);
-                theme.transform.SetParent(memoThemeContainer.transform);
-                theme.GetComponent<MemoTheme>().AssignName(item);
-                if(item == memoData.memoKeys[0])
-                {
-                    theme.GetComponent<MemoTheme>().Select();
-                    onTheme = theme.GetComponent<MemoTheme>();
-                }
-                theme.GetComponent<Text>().text = item;
+                theme.GetComponent<MemoTheme>().Select();
+                onTheme = theme.GetComponent<MemoTheme>();
             }
+            theme.GetComponent<Text>().text = item;
         }
     }
 
@@ -113,14 +139,12 @@ public class MemoManager : MonoBehaviour,IInit
         {
             Destroy(item.gameObject);
         }
-        if (panelOn == "memo")
+        Dictionary<string, MemoThemeData> onDic = panelOn == "memo" ? memos : achievements;
+        foreach (string item in onDic[onTheme.themeName].memos)
         {
-            foreach (string item in memoData.memos[onTheme.themeName].memos)
-            {
-                GameObject memo = Instantiate(memoUnit);
-                memo.transform.SetParent(memoContent.transform);
-                memo.GetComponent<Text>().text = item;
-            }
+            GameObject memo = Instantiate(memoUnit);
+            memo.transform.SetParent(memoContent.transform);
+            memo.GetComponent<Text>().text = item;
         }
         contentScroll.verticalNormalizedPosition = 1;
     }
@@ -129,38 +153,63 @@ public class MemoManager : MonoBehaviour,IInit
     {
         string theme = newMemo.Split("-")[0];
         string memo = newMemo.Split("-")[1];
-        memoData.AddMemo(theme, memo);
-        ShowMessage("您在\""+theme+"\"下有新的备忘录");
+        if (!memos.ContainsKey(theme))
+        {
+            memos.Add(theme, new MemoThemeData());
+            memoKeys.Add(theme);
+            memos[theme].name = theme;
+        }
+        memos[theme].memos.Add(memo);
+        memos[theme].read = false;
+        messages.Enqueue("您在\"" + theme + "\"下有新的备忘录");
+        if(!messageOn)
+        {
+            ShowMessage();
+        }
     }
 
     public void SwitchTheme(MemoTheme theme)
     {
-        if(panelOn == "memo")
+        Dictionary<string, MemoThemeData> onDic = panelOn == "memo" ? memos : achievements;
+        if (theme != onTheme)
         {
-            if(theme!=onTheme)
-            {
-                onTheme.UnSelect();
-                onTheme = theme;
-                ReadContents();
-            }
+            onTheme.UnSelect();
+            onTheme = theme;
+            onDic[onTheme.themeName].read = true;
+            ReadContents();
         }
     }
 
-    private void ShowMessage(string message)
+    private void ShowMessage()
     {
-        memoMessage.GetComponent<Text>().text = message;
+        if(messageOn)
+        {
+            return;
+        }
+        messageOn = true;
+        Vector3 initPos = memoMessage.transform.position;
+        memoMessage.GetComponent<Text>().text = messages.Dequeue();
         Sequence messageSeq = DOTween.Sequence();
         memoMessage.SetActive(true);
-        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up, 0.2f).From());
+        messageSeq.Append(memoMessage.GetComponent<Text>().DOFade(0, 0));
+        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up * 30, 0.2f).From());
         messageSeq.Join(memoMessage.GetComponent<Text>().DOFade(1, 0.2f));
         messageSeq.AppendInterval(2);
-        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up, 0.2f).OnComplete(()=> { memoMessage.SetActive(false); }));
+        messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up * 30, 0.2f).OnComplete(()=> {
+            memoMessage.transform.position = initPos;
+            memoMessage.SetActive(false);
+            messageOn = false;
+            if(messages.Count>0)
+            {
+                ShowMessage();
+            }
+        }));
         messageSeq.Join(memoMessage.GetComponent<Text>().DOFade(0, 0.2f));
     }
 
     public void UnlockAchievement(string achieve)
     {
-        memoData.achievements[achieve].achieved = true;
+        achievements[achieve].achieved = true;
     }
 
     public void ReadData()

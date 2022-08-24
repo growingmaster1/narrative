@@ -16,14 +16,28 @@ public class MemoTheme : MonoBehaviour,IPointerClickHandler
         
     }
 
-    public void AssignName(string inName)
+    public void AssignData(MemoThemeData data)
     {
-        themeName = inName;
+        themeName = data.name;
+        read = data.read;
+        if(!read)
+        {
+            redPoint.SetActive(true);
+        }
+        else
+        {
+            redPoint.SetActive(false);
+        }
     }
 
     public void Select()
     {
         GetComponent<Text>().color = Color.yellow;
+        if(read == false)
+        {
+            read = true;
+            redPoint.SetActive(false);
+        }
     }
 
     public void UnSelect()
