@@ -10,4 +10,5 @@ public interface IWithEntity
 
     public IArticyObject entity { get; set; }
     public string entityName { get; set; }
+    public bool atDialog { get; set; }
 }

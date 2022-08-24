@@ -22,6 +22,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
     public ArticyRef givenEntity;
     public IArticyObject entity { get; set; }
     public string entityName { get; set; }
+    public bool atDialog { get; set; }
 
     private void Awake()
     {

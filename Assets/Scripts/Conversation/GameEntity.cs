@@ -17,6 +17,8 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
 
     [HideInInspector]
     public string entityName { get; set; }
+    public bool atDialog { get; set; }
+
     public IMyFlowPlayer atFlow = null;
 
     public virtual void Init()

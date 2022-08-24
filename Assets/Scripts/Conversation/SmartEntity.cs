@@ -19,9 +19,6 @@ public class SmartEntity : GameEntity
     private Text soundText;
     private Queue<string> lastText;
 
-    [HideInInspector]
-    public bool atDialog = false;
-
     public override void Init()
     {
         base.Init();
@@ -106,10 +103,13 @@ public class SmartEntity : GameEntity
 
     public override void RaiseDialog()
     {
-        StatePlayer statePlayer = atFlow as StatePlayer;
-        if(statePlayer!=null)
+        if(!atDialog)
         {
-            statePlayer.PlayDialog();
+            StatePlayer statePlayer = atFlow as StatePlayer;
+            if (statePlayer != null)
+            {
+                statePlayer.PlayDialog();
+            }
         }
     }
 }
