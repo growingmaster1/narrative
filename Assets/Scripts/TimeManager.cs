@@ -28,7 +28,7 @@ public class TimeManager : MonoBehaviour,IInit
 
     public void Init()
     {
-        days = ArticyGlobalVariables.Default.day_and_time.day;
+        days = ArticyGlobalVariables.Default.day_and_time.days;
         hours = ArticyGlobalVariables.Default.day_and_time.hours;
         minutes = ArticyGlobalVariables.Default.day_and_time.minutes;
         seconds = ArticyGlobalVariables.Default.day_and_time.seconds;
