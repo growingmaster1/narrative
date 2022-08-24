@@ -96,6 +96,11 @@ public class SmartEntity : GameEntity
         atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
+    public void StartSounding()
+    {
+        (atFlow as StatePlayer).StartSounding();
+    }
+
     public override void RaiseDialog()
     {
         StatePlayer statePlayer = atFlow as StatePlayer;

@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Articy.Unity;
 using Articy.Littletown.GlobalVariables;
 
 public class TimeManager : MonoBehaviour,IInit
 {
     public static TimeManager instance;
+    public int days;
     public int hours;
     public int minutes;
     public int seconds;
+    public Text timeText;
+    public Text daysText;
     private bool paused = false;
 
     private float timer=1.0f;
@@ -24,9 +28,12 @@ public class TimeManager : MonoBehaviour,IInit
 
     public void Init()
     {
+        days = ArticyGlobalVariables.Default.day_and_time.day;
         hours = ArticyGlobalVariables.Default.day_and_time.hours;
         minutes = ArticyGlobalVariables.Default.day_and_time.minutes;
         seconds = ArticyGlobalVariables.Default.day_and_time.seconds;
+        timeText.text = hours.ToString("D2")+":"+minutes.ToString("D2")+":"+seconds.ToString("D2");
+        daysText.text = "Day" + days;
     }
 
     private void Update()
@@ -57,10 +64,11 @@ public class TimeManager : MonoBehaviour,IInit
                 {
                     //TODO:时间超过晚上23点时的处理。
                 }
+                ArticyGlobalVariables.Default.day_and_time.hours = hours;
             }
+            ArticyGlobalVariables.Default.day_and_time.minutes = minutes;
         }
-        ArticyGlobalVariables.Default.day_and_time.hours = hours;
-        ArticyGlobalVariables.Default.day_and_time.minutes = minutes;
+        timeText.text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2");
         ArticyGlobalVariables.Default.day_and_time.seconds = seconds;
         //Debug.Log(ArticyGlobalVariables.Default.day_and_time.seconds);
     }
@@ -68,10 +76,12 @@ public class TimeManager : MonoBehaviour,IInit
     public void PauseTime()
     {
         paused = true;
+        Time.timeScale = 0;
     }
 
     public void ContinueTime()
     {
         paused = false;
+        Time.timeScale = 1;
     }
 }
