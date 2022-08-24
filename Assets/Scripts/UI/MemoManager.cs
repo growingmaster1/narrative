@@ -82,7 +82,7 @@ public class MemoManager : MonoBehaviour,IInit
     public void ShutPanel()
     {
         int i = 0;
-        for (i = 0; i < toHideUI.Count; ++i)
+        for (i = 0; i < hidUI.Count; ++i)
         {
             hidUI[i].SetActive(true);
         }
@@ -189,7 +189,7 @@ public class MemoManager : MonoBehaviour,IInit
         messageOn = true;
         Vector3 initPos = memoMessage.transform.position;
         memoMessage.GetComponent<Text>().text = messages.Dequeue();
-        Sequence messageSeq = DOTween.Sequence();
+        Sequence messageSeq = DOTween.Sequence().SetUpdate(true);
         memoMessage.SetActive(true);
         messageSeq.Append(memoMessage.GetComponent<Text>().DOFade(0, 0));
         messageSeq.Append(memoMessage.transform.DOMove(memoMessage.transform.position + Vector3.up * 30, 0.2f).From());

@@ -138,6 +138,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         if (dialog != null)
         {
             playing = false;
+            foreach(SmartEntity entity in speakers)
+            {
+                entity.ReturnText();
+            }
             DialogManager.instance.SetStart(dialog);
             if (attachTalkPlace + 1 < attachedDialog.Count)
             {

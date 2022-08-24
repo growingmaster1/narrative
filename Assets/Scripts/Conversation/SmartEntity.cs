@@ -64,7 +64,7 @@ public class SmartEntity : GameEntity
 
     public void FinishSound()
     {
-        soundText.text = "";
+        ReturnText();
     }
 
     private void AssignText()
@@ -75,9 +75,12 @@ public class SmartEntity : GameEntity
 
     public void ReturnText()
     {
-        soundText.text = "";
-        sound = null;
-        SoundingManager.instance.ReturnText(sound);
+        if(soundText!=null)
+        {
+            soundText.text = "";
+            sound = null;
+            SoundingManager.instance.ReturnText(sound);
+        }
     }
 
     //开始一段旁听对话
