@@ -135,7 +135,12 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 
     public void PlayDialog()
     {
-        IArticyObject dialog = attachedDialog[attachTalkPlace];
+        IArticyObject dialog = null;
+        if (attachedDialog.Count>attachTalkPlace)
+        {
+            dialog = attachedDialog[attachTalkPlace];
+        }
+        
         if (dialog != null)
         {
             playing = false;
