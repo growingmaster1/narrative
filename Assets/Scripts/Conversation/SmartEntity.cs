@@ -79,8 +79,9 @@ public class SmartEntity : GameEntity
         if(soundText!=null)
         {
             soundText.text = "";
-            sound = null;
             SoundingManager.instance.ReturnText(sound);
+            sound.SetActive(false);
+            sound = null;
         }
     }
 
