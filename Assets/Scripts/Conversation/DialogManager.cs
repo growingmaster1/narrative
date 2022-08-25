@@ -116,9 +116,9 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public void SetStart(IArticyObject start)
     {
-        speakers.Clear();
-        DialogBox.instance.startDialog();
         flowPlayer.StartOn = start;
+        flowPlayer.StartOn = start;
+        DialogBox.instance.startDialog();
     }
 
     public void CompleteDialog()
@@ -127,5 +127,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
         {
             entity.atDialog = false;
         }
+        speakers.Clear();
+        flowPlayer.FinishCurrentPausedObject();
     }
 }
