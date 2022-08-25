@@ -16,6 +16,9 @@ public class SmartEntity : GameEntity
     public ArticyRef givenState;
     public GameObject soundPos;
     private GameObject sound;
+
+    [HideInInspector]
+    public string givenTechnicalName;
     private Text soundText;
     private Queue<string> lastText;
 
@@ -25,7 +28,8 @@ public class SmartEntity : GameEntity
         lastText = new Queue<string>();
         if(givenState!=null&&givenState.GetObject()!=null)
         {
-            atFlow = SoundingManager.instance.PutState(entityName, givenState.GetObject().TechnicalName);
+            givenTechnicalName = givenState.GetObject().TechnicalName;
+            atFlow = SoundingManager.instance.PutState(entityName, givenTechnicalName);
             (atFlow as StatePlayer).StartSounding();
         }
     }
