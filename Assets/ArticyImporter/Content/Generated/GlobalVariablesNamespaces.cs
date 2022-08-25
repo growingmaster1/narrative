@@ -411,8 +411,8 @@ namespace Articy.Littletown.GlobalVariables
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
-            aStorage.RegisterVariable("day_and_time.days", 0);
-            aStorage.RegisterVariable("day_and_time.hours", 0);
+            aStorage.RegisterVariable("day_and_time.days", 1);
+            aStorage.RegisterVariable("day_and_time.hours", 7);
             aStorage.RegisterVariable("day_and_time.minutes", 0);
             aStorage.RegisterVariable("day_and_time.seconds", 0);
         }
