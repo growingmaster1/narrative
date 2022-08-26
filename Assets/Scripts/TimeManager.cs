@@ -11,12 +11,12 @@ public class TimeManager : MonoBehaviour,IInit
     public int days;
     public int hours;
     public int minutes;
-    public int seconds;
+    //public int seconds;
     public Text timeText;
     public Text daysText;
     private bool paused = false;
 
-    private float timer=1.0f;
+    private float timer=2.5f;
 
     private void Awake()
     {
@@ -31,8 +31,8 @@ public class TimeManager : MonoBehaviour,IInit
         days = ArticyGlobalVariables.Default.day_and_time.days;
         hours = ArticyGlobalVariables.Default.day_and_time.hours;
         minutes = ArticyGlobalVariables.Default.day_and_time.minutes;
-        seconds = ArticyGlobalVariables.Default.day_and_time.seconds;
-        timeText.text = hours.ToString("D2")+":"+minutes.ToString("D2")+":"+seconds.ToString("D2");
+        //seconds = ArticyGlobalVariables.Default.day_and_time.seconds;
+        timeText.text = hours.ToString("D2") + ":" + minutes.ToString("D2");// +":"+seconds.ToString("D2");
         daysText.text = "Day" + days;
     }
 
@@ -44,32 +44,32 @@ public class TimeManager : MonoBehaviour,IInit
             if (timer <= 0)
             {
                 addSecond();
-                timer += 1f;
+                timer += 2.5f;
             }
         }
     }
 
     private void addSecond()
     {
-        seconds += 1;
-        if(seconds >= 60)
+        //seconds += 1;
+        //if(seconds >= 60)
+        //{
+        //    seconds -= 60;
+        minutes += 1;
+        if (minutes >= 60)
         {
-            seconds -= 60;
-            minutes += 1;
-            if(minutes >= 60)
+            hours += 1;
+            minutes -= 60;
+            if (hours >= 23)
             {
-                hours += 1;
-                minutes -= 60;
-                if(hours >= 23)
-                {
-                    //TODO:时间超过晚上23点时的处理。
-                }
-                ArticyGlobalVariables.Default.day_and_time.hours = hours;
+                //TODO:时间超过晚上23点时的处理。
             }
-            ArticyGlobalVariables.Default.day_and_time.minutes = minutes;
+            ArticyGlobalVariables.Default.day_and_time.hours = hours;
         }
-        timeText.text = hours.ToString("D2") + ":" + minutes.ToString("D2") + ":" + seconds.ToString("D2");
-        ArticyGlobalVariables.Default.day_and_time.seconds = seconds;
+        ArticyGlobalVariables.Default.day_and_time.minutes = minutes;
+        //}
+        timeText.text = hours.ToString("D2") + ":" + minutes.ToString("D2");// + ":" + seconds.ToString("D2");
+        //ArticyGlobalVariables.Default.day_and_time.seconds = seconds;
         //Debug.Log(ArticyGlobalVariables.Default.day_and_time.seconds);
     }
 

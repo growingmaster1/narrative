@@ -1,6 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8130389808649242908
+--- !u!114 &-6731010819860249535
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &-6689446824179353080
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -78,79 +98,19 @@ MonoBehaviour:
       - 
   LiveBoolVariableCache: []
   LiveIntVariableCache: []
-  LiveStringVariableCache:
-  - mFullQualifiedName: Harry.NextState
-    mVar:
-      values:
-      - HarryReturnHome
-  - mFullQualifiedName: Harry.Action
-    mVar:
-      values:
-      - Magic
-  - mFullQualifiedName: Harry.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Emily.NextState
-    mVar:
-      values:
-      - EmilyGabageStationWanderingDay1Morning
-  - mFullQualifiedName: Emily.Expression
-    mVar:
-      values:
-      - Amazed
-  - mFullQualifiedName: Emily.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Shihuangren.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Shihuangren.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Player.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Player.Expression
-    mVar:
-      values:
-      - 
+  LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: -8130389808649242908}
+    _VariableStorage: {fileID: -6689446824179353080}
   mEmily:
-    _VariableStorage: {fileID: -8130389808649242908}
+    _VariableStorage: {fileID: -6689446824179353080}
   mShihuangren:
-    _VariableStorage: {fileID: -8130389808649242908}
+    _VariableStorage: {fileID: -6689446824179353080}
   mPlayer:
-    _VariableStorage: {fileID: -8130389808649242908}
+    _VariableStorage: {fileID: -6689446824179353080}
   mDay_and_time:
-    _VariableStorage: {fileID: -8130389808649242908}
---- !u!114 &-6731010819860249535
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
---- !u!114 &-3490434565847800744
+    _VariableStorage: {fileID: -6689446824179353080}
+--- !u!114 &-2122457943323078313
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -3490434565847800744}
+  mHierarchy: {fileID: -2122457943323078313}
   mLocalization: {fileID: -6731010819860249535}
   mInternalProject:
     mName: littleTown
@@ -183,13 +143,13 @@ MonoBehaviour:
     mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
     mTechnicalName: Littletown
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -8130389808649242908}
-  mScriptFragments: {fileID: 4988249801749093993}
+  mDefaultGlobalVariables: {fileID: -6689446824179353080}
+  mScriptFragments: {fileID: 1146436665142796570}
   mPackages:
   - PackageName: "\u6240\u6709\u5BF9\u8C61"
     PackagePath: "\u6240\u6709\u5BF9\u8C61"
     mIsDefaultPackage: 1
---- !u!114 &4988249801749093993
+--- !u!114 &1146436665142796570
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

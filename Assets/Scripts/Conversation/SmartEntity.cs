@@ -22,6 +22,9 @@ public class SmartEntity : GameEntity
     private Text soundText;
     private Queue<string> lastText;
 
+    [HideInInspector]
+    public bool visible;
+
     public override void Init()
     {
         base.Init();
@@ -29,8 +32,8 @@ public class SmartEntity : GameEntity
         if(givenState!=null&&givenState.GetObject()!=null)
         {
             givenTechnicalName = givenState.GetObject().TechnicalName;
-            atFlow = SoundingManager.instance.PutState(entityName, givenTechnicalName);
-            (atFlow as StatePlayer).StartSounding();
+            //atFlow = SoundingManager.instance.PutState(entityName, givenTechnicalName);
+            //(atFlow as StatePlayer).StartSounding();
         }
     }
 
@@ -116,5 +119,15 @@ public class SmartEntity : GameEntity
                 statePlayer.PlayDialog();
             }
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        visible = false;
+    }
+
+    private void OnBecameVisible()
+    {
+        visible = true;
     }
 }
