@@ -44,6 +44,10 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private day_and_time mDay_and_time = new day_and_time();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Alex mAlex = new Alex();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -64,6 +68,10 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
             variableNames.Add("day_and_time.seconds");
+            variableNames.Add("Alex.Action");
+            variableNames.Add("Alex.Expression");
+            variableNames.Add("Alex.NextState");
+            variableNames.Add("Alex.Refresh");
         }
         #endregion
         
@@ -107,6 +115,14 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Alex Alex
+        {
+            get
+            {
+                return mAlex;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -122,6 +138,7 @@ namespace Articy.Littletown.GlobalVariables
             Shihuangren.RegisterVariables(this);
             Player.RegisterVariables(this);
             day_and_time.RegisterVariables(this);
+            Alex.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
