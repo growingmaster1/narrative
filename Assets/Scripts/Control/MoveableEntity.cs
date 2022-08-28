@@ -27,6 +27,8 @@ public class MoveableEntity : MonoBehaviour
     {
         spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -1000);
         dis = transform.position - lastPos;
+        lastPos = transform.position;
+        anim.enabled = true;
         if(dis.sqrMagnitude>float.Epsilon)
         {
             if(dis.x>float.Epsilon)
@@ -55,6 +57,7 @@ public class MoveableEntity : MonoBehaviour
         }
         else
         {
+            anim.enabled = false;
             switch (lastMoveDir)
             {
                 case "e":

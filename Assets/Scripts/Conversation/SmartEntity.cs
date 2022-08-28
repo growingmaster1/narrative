@@ -74,12 +74,13 @@ public class SmartEntity : GameEntity
     private void AssignText()
     {
         sound = SoundingManager.instance.GetText();
+        SoundingManager.instance.PutText(sound, soundPos.transform.position);
         soundText = sound.GetComponent<Text>();
     }
 
     public void ReturnText()
     {
-        if(soundText!=null)
+        if(sound!=null)
         {
             soundText.text = "";
             SoundingManager.instance.ReturnText(sound);

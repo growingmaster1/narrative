@@ -418,3 +418,100 @@ namespace Articy.Littletown.GlobalVariables
         }
     }
 }
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Alex : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(10, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(10, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(10, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(11, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(11, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(11, false);
+            }
+        }
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(12, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(12, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(12, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(3);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Alex.Action", "");
+            aStorage.RegisterVariable("Alex.Expression", "");
+            aStorage.RegisterVariable("Alex.NextState", "");
+            aStorage.RegisterVariable("Alex.Refresh", false);
+        }
+    }
+}
