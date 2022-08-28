@@ -11,6 +11,7 @@ public class InitManager : MonoBehaviour
         DialogManager.instance.Init();
         SoundingManager.instance.Init();
         DialogBox.instance.Init();
+        MemoManager.instance.Init();
         EntityManager.instance.Init();
         Player.instance.Init();
     }

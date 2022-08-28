@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637966315482125140)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637971325484373139)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -32,199 +32,1207 @@ namespace Articy.Littletown.GlobalVariables
         
         #region Script fragments
         /// <summary>
-        /// ObjectID: 0x100000000000154
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928276?pane=selected&amp;tab=current
+        /// ObjectID: 0x1000000000011A5
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037932453?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_0x100000000000154Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public bool Script_0x1000000000011A5Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return aGlobalVariablesState.player_to_als.interfere == false && aGlobalVariablesState.als.bean==false;;
+            return //此前已进行过小兔姐姐相关对话
+true;
         }
         
         /// <summary>
-        /// ObjectID: 0x100000000000155
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928277?pane=selected&amp;tab=current
+        /// ObjectID: 0x1000000000011AA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037932458?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_0x100000000000155Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.als.bean = true;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000001CB
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928395?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x1000000000001CBText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.interfere == true && aGlobalVariablesState.als.bean == false;
-;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000001E1
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928417?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x1000000000001E1Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.interfere == true && aGlobalVariablesState.als.bean == true && aGlobalVariablesState.player_to_als.interfere_time <1;
-;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000001E2
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928418?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x1000000000001E2Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time += 1;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000221
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928481?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x100000000000221Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.interfere == true && aGlobalVariablesState.als.bean == true && aGlobalVariablesState.player_to_als.interfere_time >= 1;
-;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000222
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928482?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000000222Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time += 1;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000022D
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928493?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x10000000000022DText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.interfere == true && aGlobalVariablesState.player_to_als.interfere_time >= 1;
-;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000022E
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928494?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x10000000000022EText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time += 1;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000024A
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928522?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x10000000000024AText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.interfere == true && aGlobalVariablesState.player_to_als.interfere_time < 1;
-;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000024B
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928523?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x10000000000024BText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time += 1;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000167
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928295?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x100000000000167Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.day_and_time.weekend == true;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000019A
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928346?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x10000000000019AText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.day_and_time.weekend == false;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000014AE
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037933230?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x1000000000014AEText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.poet_visible == false;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x10000000000165B
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037933659?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x10000000000165BText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.poet_canSeeSprite == true;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000001661
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037933665?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x100000000001661Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            return aGlobalVariablesState.player_to_als.poet_canSeeSprite == false;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000001EE
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928430?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x1000000000001EEText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time = 0;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000236
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037928502?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000000236Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.interfere_time = 0;;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000001623
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037933603?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000001623Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.player_to_als.poet_visible = true;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000000DC4
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037931460?pane=selected&amp;tab=current
-        /// </summary>
-        public bool Script_0x100000000000DC4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public bool Script_0x1000000000011AAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             return //此前已完成瓦桑相关对话
 true;
         }
         
         /// <summary>
-        /// ObjectID: 0x100000000004B84
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037947268?pane=selected&amp;tab=current
+        /// ObjectID: 0x100000000006CD6
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955798?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_0x100000000004B84Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_0x100000000006CD6Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Harry.nextState="Dlg_0E06C6BE";
-aGlobalVariablesState.Emily.NextState="";
+            aGlobalVariablesState.Emily.NextState = "EmilyGabageStationWanderingDay1Morning";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000068C0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954752?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000068C0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Shihuangren.Action="MoveToHarry";
+//拾荒人走到哈利身边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000691F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954847?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000691FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="MoveToHarry3";
+//艾米莉移动到哈利身边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006924
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954852?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006924Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006929
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954857?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006929Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000692E
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954862?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000692EExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006935
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954869?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006935Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="LeaveQuickly";
+//哈利快速离开（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B96
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955478?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B96Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+aGlobalVariablesState.Emily.Refresh=true;
+aGlobalVariablesState.Shihuangren.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BCD
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955533?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BCDExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryReturnHome";
+aGlobalVariablesState.Emily.NextState="EmilyGabageStationWanderingDay1Morning";
+aGlobalVariablesState.Shihuangren.NextState="ScavengersPickUpGarbage";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006846
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954630?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006846Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryEatSteel";
+aGlobalVariablesState.Emily.NextState="EmilyGabageStationWanderingDay1Morning";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000684D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954637?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000684DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage1";
+//哈利移动到垃圾桶1边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006854
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954644?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006854Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Apple";
+//哈利展示苹果
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006859
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954649?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006859Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006860
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954656?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006860Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006867
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954663?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006867Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Expression="Amazed";
+//艾米莉表情：惊讶
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000686E
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954670?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000686EExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Amazed";
+//哈利表情：惊讶
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006875
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954677?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006875Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveAside2";
+//哈利移动到另一边（位置4）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006902
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954818?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006902Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToEmily";
+//哈利回到艾米莉身边（位置2）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006917
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954839?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006917Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="Pace";
+//艾米莉来回踱步
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BBF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955519?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BBFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Refresh=true;
+aGlobalVariablesState.Harry.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006811
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954577?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006811Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000681F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954591?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000681FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="MoveToHarry1";
+//艾米莉移动到哈利身边（位置1）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006825
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954597?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006825Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryAndEmilyApple";
+aGlobalVariablesState.Emily.NextState="HarryAndEmilyApple";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000682C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954604?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000682CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveAside1";
+//哈利移动到另一边（位置2）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006839
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954617?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006839Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="MoveToHarry2";
+//艾米莉移动到哈利身边（位置2）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006841
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954625?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006841Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BAB
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955499?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BABExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+aGlobalVariablesState.Emily.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000687E
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954686?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000687EExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryArgueWithEmilyAndScavengers";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006888
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954696?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006888Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage2";
+//哈利移动到垃圾桶2边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006892
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954706?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006892Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006897
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954711?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006897Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000689F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954719?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000689FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BC4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955524?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BC4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AE6
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955302?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AE6Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AEB
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955307?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AEBExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AF0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955312?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AF0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AF4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955316?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AF4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AFF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955327?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AFFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="LeaveQuickly";
+//哈利快速离开（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C10
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955600?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C10Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryReturnHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C18
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955608?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C18Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A26
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955110?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A26Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="LeaveFromHarry";
+//玩家干预哈利事件之后艾米莉离开
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A3F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955135?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A3FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage2";
+//哈利移动到垃圾桶2边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A46
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955142?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A46Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Iron";
+//哈利展示铁皮
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A4B
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955147?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A4BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A4F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955151?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A4FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A55
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955157?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A55Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A5B
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955163?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A5BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A61
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955169?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A61Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A66
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955174?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A66Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry2";
+//玩家移动到哈利身边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A79
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955193?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A79Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage2";
+//哈利移动到垃圾桶2边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A7D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955197?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A7DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Iron";
+//哈利展示铁皮
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A81
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955201?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A81Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A85
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955205?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A85Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry2";
+//玩家移动到哈利身边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A9D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955229?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A9DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AA5
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955237?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AA5Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AAA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955242?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AAAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AB4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955252?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AB4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage2";
+//哈利移动到垃圾桶2边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AB8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955256?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AB8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Iron";
+//哈利展示铁皮
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006ABC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955260?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006ABCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006AC0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955264?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006AC0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry2";
+//玩家移动到哈利身边（位置5）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006ACA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955274?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006ACAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006ADC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955292?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006ADCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="LeaveQuickly";
+//哈利快速离开（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BFA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955578?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BFAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryReturnHome";
+aGlobalVariablesState.Emily.NextState="EmilyGabageStationWanderingDay1Morning";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C06
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955590?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C06Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+aGlobalVariablesState.Emily.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C69
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955689?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C69Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Expression="Amazed";
+//艾米莉表情：惊讶
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000695A
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954906?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000695AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="LeaveFromHarry";
+//玩家干预哈利事件之后艾米莉离开
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006969
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954921?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006969Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage1";
+//哈利移动到垃圾桶1边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000696E
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954926?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000696EExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Apple";
+//哈利展示苹果
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006973
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954931?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006973Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006978
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954936?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006978Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000698B
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954955?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000698BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006990
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954960?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006990Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006995
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954965?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006995Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069AF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954991?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069AFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry1";
+//玩家移动到哈利身边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069B5
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037954997?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069B5Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="Investigate";
+//玩家调查的表情（头顶冒放大镜）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069BA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955002?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069BAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry1";
+//玩家移动到哈利身边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069BF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955007?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069BFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Apple";
+//哈利展示苹果
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069C5
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955013?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069C5Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069CA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955018?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069CAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069D7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955031?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069D7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069DC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955036?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069DCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="LeaveQuickly";
+//哈利快速离开（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069E1
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955041?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069E1Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Apple";
+//哈利展示苹果
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069E6
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955046?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069E6Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069EA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955050?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069EAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069F0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955056?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069F0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000069FD
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955069?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000069FDExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToHarry1";
+//玩家移动到哈利身边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A02
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955074?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A02Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="MoveToGarbage1";
+//哈利移动到垃圾桶1边（位置3）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A07
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955079?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A07Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Apple";
+//哈利展示苹果
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A0B
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955083?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A0BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="Magic";
+//哈利展示魔法的小特效
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A0F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955087?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A0FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Spell";
+//哈利念咒语（头顶冒泡：@#￥%……&……%￥……%#@￥￥#￥%……）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A16
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955094?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A16Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Eat";
+//哈利吃东西（头顶冒：吃豆子黄人表情）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006A1B
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955099?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006A1BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BDF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955551?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BDFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryReturnHome";
+aGlobalVariablesState.Emily.NextState="EmilyGabageStationWanderingDay1Morning";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006BF0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955568?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006BF0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+aGlobalVariablesState.Emily.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C5F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955679?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C5FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Expression="Amazed";
+//艾米莉表情：惊讶
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C92
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955730?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C92Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006CFE
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955838?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006CFEExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState= "HarryGoToGarbageStationMorning";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006CD1
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955793?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006CD1Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState = "HarryReturnHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006CF7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955831?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006CF7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryBreakBottles";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B06
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955334?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B06Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Action="LeaveFromHarry";
+//玩家干预哈利事件之后艾米莉离开
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B0A
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955338?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B0AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.NextState="HarryReturnHome";
+aGlobalVariablesState.Emily.NextState="EmilyGabageStationWanderingDay1Morning";
+aGlobalVariablesState.Shihuangren.NextState="ScavengersPickUpGarbage";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B17
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955351?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B17Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B1C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955356?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B1CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B21
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955361?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B21Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Shihuangren.Action="LeaveFromHarry";
+//离开哈利（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B26
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955366?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B26Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Sad";
+//哈利表情：悲伤
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B2A
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955370?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B2AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Amazed";
+//哈利表情：惊讶
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B2F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955375?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B2FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Expression="Angry";
+//哈利表情：生气
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006B3A
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955386?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006B3AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Action="LeaveQuickly";
+//哈利快速离开（位置消失）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C26
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955622?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C26Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Harry.Refresh=true;
+aGlobalVariablesState.Emily.Refresh=true;
+aGlobalVariablesState.Shihuangren.Refresh=true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000006C6E
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955694?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000006C6EExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Emily.Expression="Amazed";
+//艾米莉表情：惊讶
+;
         }
         #endregion
         
@@ -237,27 +1245,118 @@ aGlobalVariablesState.Emily.NextState="";
         {
             Conditions = new System.Collections.Generic.Dictionary<uint, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<uint, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
-            Conditions.Add(1u, this.Script_0x100000000000154Text);
-            Instructions.Add(2u, this.Script_0x100000000000155Text);
-            Conditions.Add(3u, this.Script_0x1000000000001CBText);
-            Conditions.Add(4u, this.Script_0x1000000000001E1Text);
-            Instructions.Add(5u, this.Script_0x1000000000001E2Text);
-            Conditions.Add(6u, this.Script_0x100000000000221Text);
-            Instructions.Add(7u, this.Script_0x100000000000222Text);
-            Conditions.Add(8u, this.Script_0x10000000000022DText);
-            Instructions.Add(9u, this.Script_0x10000000000022EText);
-            Conditions.Add(10u, this.Script_0x10000000000024AText);
-            Instructions.Add(11u, this.Script_0x10000000000024BText);
-            Conditions.Add(12u, this.Script_0x100000000000167Text);
-            Conditions.Add(13u, this.Script_0x10000000000019AText);
-            Conditions.Add(14u, this.Script_0x1000000000014AEText);
-            Conditions.Add(15u, this.Script_0x10000000000165BText);
-            Conditions.Add(16u, this.Script_0x100000000001661Text);
-            Instructions.Add(17u, this.Script_0x1000000000001EEText);
-            Instructions.Add(18u, this.Script_0x100000000000236Text);
-            Instructions.Add(19u, this.Script_0x100000000001623Text);
-            Conditions.Add(20u, this.Script_0x100000000000DC4Expression);
-            Instructions.Add(21u, this.Script_0x100000000004B84Expression);
+            Conditions.Add(1u, this.Script_0x1000000000011A5Expression);
+            Conditions.Add(2u, this.Script_0x1000000000011AAExpression);
+            Instructions.Add(3u, this.Script_0x100000000006CD6Expression);
+            Instructions.Add(4u, this.Script_0x1000000000068C0Expression);
+            Instructions.Add(5u, this.Script_0x10000000000691FExpression);
+            Instructions.Add(6u, this.Script_0x100000000006924Expression);
+            Instructions.Add(7u, this.Script_0x100000000006929Expression);
+            Instructions.Add(8u, this.Script_0x10000000000692EExpression);
+            Instructions.Add(9u, this.Script_0x100000000006935Expression);
+            Instructions.Add(10u, this.Script_0x100000000006B96Expression);
+            Instructions.Add(11u, this.Script_0x100000000006BCDExpression);
+            Instructions.Add(12u, this.Script_0x100000000006846Expression);
+            Instructions.Add(13u, this.Script_0x10000000000684DExpression);
+            Instructions.Add(14u, this.Script_0x100000000006854Expression);
+            Instructions.Add(15u, this.Script_0x100000000006859Expression);
+            Instructions.Add(16u, this.Script_0x100000000006860Expression);
+            Instructions.Add(17u, this.Script_0x100000000006867Expression);
+            Instructions.Add(18u, this.Script_0x10000000000686EExpression);
+            Instructions.Add(19u, this.Script_0x100000000006875Expression);
+            Instructions.Add(20u, this.Script_0x100000000006902Expression);
+            Instructions.Add(21u, this.Script_0x100000000006917Expression);
+            Instructions.Add(22u, this.Script_0x100000000006BBFExpression);
+            Instructions.Add(23u, this.Script_0x100000000006811Expression);
+            Instructions.Add(24u, this.Script_0x10000000000681FExpression);
+            Instructions.Add(25u, this.Script_0x100000000006825Expression);
+            Instructions.Add(26u, this.Script_0x10000000000682CExpression);
+            Instructions.Add(27u, this.Script_0x100000000006839Expression);
+            Instructions.Add(28u, this.Script_0x100000000006841Expression);
+            Instructions.Add(29u, this.Script_0x100000000006BABExpression);
+            Instructions.Add(30u, this.Script_0x10000000000687EExpression);
+            Instructions.Add(31u, this.Script_0x100000000006888Expression);
+            Instructions.Add(32u, this.Script_0x100000000006892Expression);
+            Instructions.Add(33u, this.Script_0x100000000006897Expression);
+            Instructions.Add(34u, this.Script_0x10000000000689FExpression);
+            Instructions.Add(35u, this.Script_0x100000000006BC4Expression);
+            Instructions.Add(36u, this.Script_0x100000000006AE6Expression);
+            Instructions.Add(37u, this.Script_0x100000000006AEBExpression);
+            Instructions.Add(38u, this.Script_0x100000000006AF0Expression);
+            Instructions.Add(39u, this.Script_0x100000000006AF4Expression);
+            Instructions.Add(40u, this.Script_0x100000000006AFFExpression);
+            Instructions.Add(41u, this.Script_0x100000000006C10Expression);
+            Instructions.Add(42u, this.Script_0x100000000006C18Expression);
+            Instructions.Add(43u, this.Script_0x100000000006A26Expression);
+            Instructions.Add(44u, this.Script_0x100000000006A3FExpression);
+            Instructions.Add(45u, this.Script_0x100000000006A46Expression);
+            Instructions.Add(46u, this.Script_0x100000000006A4BExpression);
+            Instructions.Add(47u, this.Script_0x100000000006A4FExpression);
+            Instructions.Add(48u, this.Script_0x100000000006A55Expression);
+            Instructions.Add(49u, this.Script_0x100000000006A5BExpression);
+            Instructions.Add(50u, this.Script_0x100000000006A61Expression);
+            Instructions.Add(51u, this.Script_0x100000000006A66Expression);
+            Instructions.Add(52u, this.Script_0x100000000006A79Expression);
+            Instructions.Add(53u, this.Script_0x100000000006A7DExpression);
+            Instructions.Add(54u, this.Script_0x100000000006A81Expression);
+            Instructions.Add(55u, this.Script_0x100000000006A85Expression);
+            Instructions.Add(56u, this.Script_0x100000000006A9DExpression);
+            Instructions.Add(57u, this.Script_0x100000000006AA5Expression);
+            Instructions.Add(58u, this.Script_0x100000000006AAAExpression);
+            Instructions.Add(59u, this.Script_0x100000000006AB4Expression);
+            Instructions.Add(60u, this.Script_0x100000000006AB8Expression);
+            Instructions.Add(61u, this.Script_0x100000000006ABCExpression);
+            Instructions.Add(62u, this.Script_0x100000000006AC0Expression);
+            Instructions.Add(63u, this.Script_0x100000000006ACAExpression);
+            Instructions.Add(64u, this.Script_0x100000000006ADCExpression);
+            Instructions.Add(65u, this.Script_0x100000000006BFAExpression);
+            Instructions.Add(66u, this.Script_0x100000000006C06Expression);
+            Instructions.Add(67u, this.Script_0x100000000006C69Expression);
+            Instructions.Add(68u, this.Script_0x10000000000695AExpression);
+            Instructions.Add(69u, this.Script_0x100000000006969Expression);
+            Instructions.Add(70u, this.Script_0x10000000000696EExpression);
+            Instructions.Add(71u, this.Script_0x100000000006973Expression);
+            Instructions.Add(72u, this.Script_0x100000000006978Expression);
+            Instructions.Add(73u, this.Script_0x10000000000698BExpression);
+            Instructions.Add(74u, this.Script_0x100000000006990Expression);
+            Instructions.Add(75u, this.Script_0x100000000006995Expression);
+            Instructions.Add(76u, this.Script_0x1000000000069AFExpression);
+            Instructions.Add(77u, this.Script_0x1000000000069B5Expression);
+            Instructions.Add(78u, this.Script_0x1000000000069BAExpression);
+            Instructions.Add(79u, this.Script_0x1000000000069BFExpression);
+            Instructions.Add(80u, this.Script_0x1000000000069C5Expression);
+            Instructions.Add(81u, this.Script_0x1000000000069CAExpression);
+            Instructions.Add(82u, this.Script_0x1000000000069D7Expression);
+            Instructions.Add(83u, this.Script_0x1000000000069DCExpression);
+            Instructions.Add(84u, this.Script_0x1000000000069E1Expression);
+            Instructions.Add(85u, this.Script_0x1000000000069E6Expression);
+            Instructions.Add(86u, this.Script_0x1000000000069EAExpression);
+            Instructions.Add(87u, this.Script_0x1000000000069F0Expression);
+            Instructions.Add(88u, this.Script_0x1000000000069FDExpression);
+            Instructions.Add(89u, this.Script_0x100000000006A02Expression);
+            Instructions.Add(90u, this.Script_0x100000000006A07Expression);
+            Instructions.Add(91u, this.Script_0x100000000006A0BExpression);
+            Instructions.Add(92u, this.Script_0x100000000006A0FExpression);
+            Instructions.Add(93u, this.Script_0x100000000006A16Expression);
+            Instructions.Add(94u, this.Script_0x100000000006A1BExpression);
+            Instructions.Add(95u, this.Script_0x100000000006BDFExpression);
+            Instructions.Add(96u, this.Script_0x100000000006BF0Expression);
+            Instructions.Add(97u, this.Script_0x100000000006C5FExpression);
+            Instructions.Add(98u, this.Script_0x100000000006C92Expression);
+            Instructions.Add(99u, this.Script_0x100000000006CFEExpression);
+            Instructions.Add(100u, this.Script_0x100000000006CD1Expression);
+            Instructions.Add(101u, this.Script_0x100000000006CF7Expression);
+            Instructions.Add(102u, this.Script_0x100000000006B06Expression);
+            Instructions.Add(103u, this.Script_0x100000000006B0AExpression);
+            Instructions.Add(104u, this.Script_0x100000000006B17Expression);
+            Instructions.Add(105u, this.Script_0x100000000006B1CExpression);
+            Instructions.Add(106u, this.Script_0x100000000006B21Expression);
+            Instructions.Add(107u, this.Script_0x100000000006B26Expression);
+            Instructions.Add(108u, this.Script_0x100000000006B2AExpression);
+            Instructions.Add(109u, this.Script_0x100000000006B2FExpression);
+            Instructions.Add(110u, this.Script_0x100000000006B3AExpression);
+            Instructions.Add(111u, this.Script_0x100000000006C26Expression);
+            Instructions.Add(112u, this.Script_0x100000000006C6EExpression);
         }
         #endregion
         

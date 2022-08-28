@@ -42,7 +42,7 @@ public class SingleBranch : MonoBehaviour
     {
         menuWords = "";
         IObjectWithMenuText withMenuText = target as IObjectWithMenuText;
-        if (withMenuText != null)
+        if (withMenuText != null && withMenuText.MenuText != "")
         {
             menuWords = withMenuText.MenuText;
             return;

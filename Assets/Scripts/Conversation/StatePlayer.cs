@@ -11,6 +11,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 
     public ArticyFlowPlayer flowPlayer { get; set; }
     public List<SmartEntity> speakers { get; set; }
+    public bool atDialog { get; set; }
 
     private bool playing;
     private SmartEntity speaker;
@@ -134,17 +135,34 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 
     public void PlayDialog()
     {
-        IArticyObject dialog = attachedDialog[attachTalkPlace];
+        IArticyObject dialog = null;
+        if (attachedDialog.Count>attachTalkPlace)
+        {
+            dialog = attachedDialog[attachTalkPlace];
+        }
+        
         if (dialog != null)
         {
             playing = false;
-            DialogManager.instance.SetStart(dialog);
-            if (attachTalkPlace + 1 < attachedDialog.Count)
+            Player.instance.atDialog = true;
+            foreach(SmartEntity entity in speakers)
             {
-                attachTalkPlace++;
+                entity.ReturnText();
+                entity.atDialog = true;
+                DialogManager.instance.speakers.Add(entity);
             }
+            DialogManager.instance.SetStart(dialog);
+            //if (attachTalkPlace + 1 < attachedDialog.Count)
+            //{
+            //    attachTalkPlace++;
+            //}
 
             Player.instance.moveable = false;
         }
+    }
+
+    public bool IsInDialog()
+    {
+        return atDialog;
     }
 }

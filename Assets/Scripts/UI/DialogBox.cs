@@ -119,7 +119,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
     {
         joystick.SetActive(false);
         dialogBox.SetActive(true);
-        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).From().OnComplete(Arrived);
+        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).From().SetUpdate(true).OnComplete(Arrived);
     }
 
     public void Arrived()
@@ -132,7 +132,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         arrived = false;
         TimeManager.instance.ContinueTime();
         Player.instance.moveable = true;
-        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).OnComplete(BackArrived);
+        dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).SetUpdate(true).OnComplete(BackArrived);
     }
 
     public void BackArrived()
@@ -141,6 +141,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         dialogBox.transform.position = basePos;
         dialogBox.SetActive(false);
         joystick.SetActive(true);
+        DialogManager.instance.CompleteDialog();
     }
 
     public void DefineSpeaker(string inSpeaker)
@@ -166,7 +167,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         continuable = true;
         if(buttonHolder.transform.childCount != 0)
         {
-            Sequence fadingSeq = DOTween.Sequence();
+            Sequence fadingSeq = DOTween.Sequence().SetUpdate(true);
             for(int i=0;i<buttonHolder.GetComponentsInChildren<Image>().Length;++i)
             {
                 fadingSeq.Append(buttonHolder.GetComponentsInChildren<Image>()[i].DOFade(1, 0.1f));

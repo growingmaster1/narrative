@@ -16,11 +16,14 @@ public class SmartEntity : GameEntity
     public ArticyRef givenState;
     public GameObject soundPos;
     private GameObject sound;
+
+    [HideInInspector]
+    public string givenTechnicalName;
     private Text soundText;
     private Queue<string> lastText;
 
     [HideInInspector]
-    public bool atDialog = false;
+    public bool visible;
 
     public override void Init()
     {
@@ -28,8 +31,9 @@ public class SmartEntity : GameEntity
         lastText = new Queue<string>();
         if(givenState!=null&&givenState.GetObject()!=null)
         {
-            atFlow = SoundingManager.instance.PutState(entityName, givenState.GetObject().TechnicalName);
-            (atFlow as StatePlayer).StartSounding();
+            givenTechnicalName = givenState.GetObject().TechnicalName;
+            //atFlow = SoundingManager.instance.PutState(entityName, givenTechnicalName);
+            //(atFlow as StatePlayer).StartSounding();
         }
     }
 
@@ -64,7 +68,7 @@ public class SmartEntity : GameEntity
 
     public void FinishSound()
     {
-        soundText.text = "";
+        ReturnText();
     }
 
     private void AssignText()
@@ -75,9 +79,13 @@ public class SmartEntity : GameEntity
 
     public void ReturnText()
     {
-        soundText.text = "";
-        sound = null;
-        SoundingManager.instance.ReturnText(sound);
+        if(soundText!=null)
+        {
+            soundText.text = "";
+            SoundingManager.instance.ReturnText(sound);
+            sound.SetActive(false);
+            sound = null;
+        }
     }
 
     //开始一段旁听对话
@@ -96,12 +104,30 @@ public class SmartEntity : GameEntity
         atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
+    public void StartSounding()
+    {
+        (atFlow as StatePlayer).StartSounding();
+    }
+
     public override void RaiseDialog()
     {
-        StatePlayer statePlayer = atFlow as StatePlayer;
-        if(statePlayer!=null)
+        if(!atDialog)
         {
-            statePlayer.PlayDialog();
+            StatePlayer statePlayer = atFlow as StatePlayer;
+            if (statePlayer != null)
+            {
+                statePlayer.PlayDialog();
+            }
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        visible = false;
+    }
+
+    private void OnBecameVisible()
+    {
+        visible = true;
     }
 }

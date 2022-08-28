@@ -66,6 +66,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
         if(speakEntity!=null&&!speakers.Contains(speakEntity))
         {
             speakers.Add(speakEntity);
+            speaker.atDialog = true;
         }
         //确定文本
         text = DefineText(aObject);
@@ -115,8 +116,18 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public void SetStart(IArticyObject start)
     {
-        speakers.Clear();
-        DialogBox.instance.startDialog();
         flowPlayer.StartOn = start;
+        flowPlayer.StartOn = start;
+        DialogBox.instance.startDialog();
+    }
+
+    public void CompleteDialog()
+    {
+        foreach(IWithEntity entity in speakers)
+        {
+            entity.atDialog = false;
+        }
+        speakers.Clear();
+        flowPlayer.FinishCurrentPausedObject();
     }
 }
