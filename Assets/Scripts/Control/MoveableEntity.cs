@@ -31,24 +31,24 @@ public class MoveableEntity : MonoBehaviour
         anim.enabled = true;
         if(dis.sqrMagnitude>float.Epsilon)
         {
-            if(dis.x>float.Epsilon)
+            if(dis.x>0.005f)
             {
                 anim.Play(name + "_move_e");
                 lastMoveDir = "e";
             }
-            else if(dis.x<-float.Epsilon)
+            else if(dis.x< -0.005f)
             {
                 anim.Play(name + "_move_w");
                 lastMoveDir = "w";
             }
             else
             {
-                if(dis.y>float.Epsilon)
+                if(dis.y> 0.005f)
                 {
                     anim.Play(name + "_move_n");
                     lastMoveDir = "n";
                 }
-                else if(dis.y<-float.Epsilon)
+                else if(dis.y<-0.005f)
                 {
                     anim.Play(name + "_move_s");
                     lastMoveDir = "s";
