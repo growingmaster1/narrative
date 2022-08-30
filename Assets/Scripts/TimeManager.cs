@@ -8,13 +8,20 @@ using Articy.Littletown.GlobalVariables;
 public class TimeManager : MonoBehaviour,IInit
 {
     public static TimeManager instance;
+
     public int days;
     public int hours;
     public int minutes;
+
     //public int seconds;
     public Text timeText;
     public Text daysText;
+
+    public Image pauseButton;
+    public Sprite pauseSprite;
+    public Sprite runningSprite;
     private bool paused = false;
+    private bool handyPaused = false;
 
     private float timer=2.5f;
 
@@ -76,12 +83,28 @@ public class TimeManager : MonoBehaviour,IInit
     public void PauseTime()
     {
         paused = true;
+        pauseButton.sprite = runningSprite;
         Time.timeScale = 0;
     }
 
     public void ContinueTime()
     {
         paused = false;
+        pauseButton.sprite = pauseSprite;
         Time.timeScale = 1;
+    }
+
+    public void SwitchPause()
+    {
+        if(handyPaused&&paused)
+        {
+            handyPaused = false;
+            ContinueTime();
+        }
+        else if(!paused&&!handyPaused)
+        {
+            handyPaused = true;
+            PauseTime();
+        }
     }
 }
