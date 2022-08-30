@@ -102,6 +102,7 @@ public class SmartEntity : GameEntity
         {
 
         }
+        givenTechnicalName = stateTechName;
         atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
