@@ -18,6 +18,8 @@ public class TimeManager : MonoBehaviour,IInit
     public Text daysText;
 
     public Image pauseButton;
+    public GameObject greyPanel;
+    public GameObject pausedText;
     public Sprite pauseSprite;
     public Sprite runningSprite;
     private bool paused = false;
@@ -99,11 +101,15 @@ public class TimeManager : MonoBehaviour,IInit
         if(handyPaused&&paused)
         {
             handyPaused = false;
+            greyPanel.SetActive(false);
+            pausedText.SetActive(false);
             ContinueTime();
         }
         else if(!paused&&!handyPaused)
         {
             handyPaused = true;
+            greyPanel.SetActive(true);
+            pausedText.SetActive(true);
             PauseTime();
         }
     }
