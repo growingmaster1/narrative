@@ -98,6 +98,10 @@ public class TimeManager : MonoBehaviour,IInit
 
     public void SwitchPause()
     {
+        if(Player.instance.atDialog)
+        {
+            return;
+        }
         if(handyPaused&&paused)
         {
             handyPaused = false;
