@@ -93,7 +93,7 @@ public class SmartEntity : GameEntity
     public void SetState(string stateTechName)
     {
         StatePlayer statePlayer = atFlow as StatePlayer;
-        if(statePlayer!=null && SoundingManager.instance.states[stateTechName]!=statePlayer)
+        if(statePlayer!=null && SoundingManager.instance.states.ContainsKey(stateTechName) && SoundingManager.instance.states[stateTechName]!=statePlayer)
         {
             statePlayer.RemoveEntity(entityName);
         }
