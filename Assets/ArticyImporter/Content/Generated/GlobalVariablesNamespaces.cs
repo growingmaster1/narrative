@@ -1281,6 +1281,32 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int CountTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(4, value);
+            }
+        }
+        
+        // 
+        public int SelectTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(5);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(5, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1288,6 +1314,537 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Wasang.Refresh", false);
             aStorage.RegisterVariable("Wasang.Action", "");
             aStorage.RegisterVariable("Wasang.Expression", "");
+            aStorage.RegisterVariable("Wasang.CountTimes", 0);
+            aStorage.RegisterVariable("Wasang.SelectTimes", 0);
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Kaka : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(37, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(37, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(37, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(12);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(12, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(38, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(38, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(38, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(39, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(39, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(39, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Kaka.NextState", "");
+            aStorage.RegisterVariable("Kaka.Refresh", false);
+            aStorage.RegisterVariable("Kaka.Action", "");
+            aStorage.RegisterVariable("Kaka.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Lisa : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(40, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(40, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(40, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(13);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(13, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(41, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(41, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(41, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(42, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(42, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(42, false);
+            }
+        }
+        
+        public string Intervene
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(43, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(43, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Intervene
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(43, false);
+            }
+        }
+        
+        public string Choose
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(44, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(44, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Choose
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(44, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Lisa.NextState", "");
+            aStorage.RegisterVariable("Lisa.Refresh", false);
+            aStorage.RegisterVariable("Lisa.Action", "");
+            aStorage.RegisterVariable("Lisa.Expression", "");
+            aStorage.RegisterVariable("Lisa.Intervene", "");
+            aStorage.RegisterVariable("Lisa.Choose", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Pidan : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(45, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(45, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(45, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(14);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(14, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(46, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(46, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(46, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(47, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(47, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(47, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Pidan.NextState", "");
+            aStorage.RegisterVariable("Pidan.Refresh", false);
+            aStorage.RegisterVariable("Pidan.Action", "");
+            aStorage.RegisterVariable("Pidan.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Hegel : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(48, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(48, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(48, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(15);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(15, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(49, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(49, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(49, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(50, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(50, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(50, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Hegel.NextState", "");
+            aStorage.RegisterVariable("Hegel.Refresh", false);
+            aStorage.RegisterVariable("Hegel.Action", "");
+            aStorage.RegisterVariable("Hegel.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Qingjiedashen : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(51, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(51, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(51, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(16);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(16, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(52, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(52, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(52, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(53, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(53, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(53, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Qingjiedashen.NextState", "");
+            aStorage.RegisterVariable("Qingjiedashen.Refresh", false);
+            aStorage.RegisterVariable("Qingjiedashen.Action", "");
+            aStorage.RegisterVariable("Qingjiedashen.Expression", "");
         }
     }
 }

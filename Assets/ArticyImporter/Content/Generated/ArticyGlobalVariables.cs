@@ -80,6 +80,26 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Wasang mWasang = new Wasang();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Kaka mKaka = new Kaka();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Lisa mLisa = new Lisa();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Pidan mPidan = new Pidan();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Hegel mHegel = new Hegel();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Qingjiedashen mQingjiedashen = new Qingjiedashen();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -136,6 +156,30 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.Refresh");
             variableNames.Add("Wasang.Action");
             variableNames.Add("Wasang.Expression");
+            variableNames.Add("Wasang.CountTimes");
+            variableNames.Add("Wasang.SelectTimes");
+            variableNames.Add("Kaka.NextState");
+            variableNames.Add("Kaka.Refresh");
+            variableNames.Add("Kaka.Action");
+            variableNames.Add("Kaka.Expression");
+            variableNames.Add("Lisa.NextState");
+            variableNames.Add("Lisa.Refresh");
+            variableNames.Add("Lisa.Action");
+            variableNames.Add("Lisa.Expression");
+            variableNames.Add("Lisa.Intervene");
+            variableNames.Add("Lisa.Choose");
+            variableNames.Add("Pidan.NextState");
+            variableNames.Add("Pidan.Refresh");
+            variableNames.Add("Pidan.Action");
+            variableNames.Add("Pidan.Expression");
+            variableNames.Add("Hegel.NextState");
+            variableNames.Add("Hegel.Refresh");
+            variableNames.Add("Hegel.Action");
+            variableNames.Add("Hegel.Expression");
+            variableNames.Add("Qingjiedashen.NextState");
+            variableNames.Add("Qingjiedashen.Refresh");
+            variableNames.Add("Qingjiedashen.Action");
+            variableNames.Add("Qingjiedashen.Expression");
         }
         #endregion
         
@@ -251,6 +295,46 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Kaka Kaka
+        {
+            get
+            {
+                return mKaka;
+            }
+        }
+        
+        public Lisa Lisa
+        {
+            get
+            {
+                return mLisa;
+            }
+        }
+        
+        public Pidan Pidan
+        {
+            get
+            {
+                return mPidan;
+            }
+        }
+        
+        public Hegel Hegel
+        {
+            get
+            {
+                return mHegel;
+            }
+        }
+        
+        public Qingjiedashen Qingjiedashen
+        {
+            get
+            {
+                return mQingjiedashen;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -275,6 +359,11 @@ namespace Articy.Littletown.GlobalVariables
             Grandpa_0.RegisterVariables(this);
             Grandpa_1.RegisterVariables(this);
             Wasang.RegisterVariables(this);
+            Kaka.RegisterVariables(this);
+            Lisa.RegisterVariables(this);
+            Pidan.RegisterVariables(this);
+            Hegel.RegisterVariables(this);
+            Qingjiedashen.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
