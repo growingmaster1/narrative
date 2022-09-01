@@ -35,7 +35,8 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
             attachedDialog = attached.Attachments;
             attachTalkPlace = 0;
         }
-        playing = true;
+        playing = false;
+        flowPlayer.StartOn = flow;
     }
 
     public void AddEntity(string entityName)
@@ -70,6 +71,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         playing = true;
         if (flowPlayer.StartOn==null)
         {
+            flowPlayer.StartOn = flow;
             flowPlayer.StartOn = flow;
         }
     }
@@ -135,6 +137,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 
     public void PlayDialog()
     {
+        if(Player.instance.atDialog)
+        {
+            return;
+        }
         IArticyObject dialog = null;
         if (attachedDialog.Count>attachTalkPlace)
         {
