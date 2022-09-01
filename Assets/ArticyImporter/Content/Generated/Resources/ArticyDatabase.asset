@@ -1,6 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2661607943769055424
+--- !u!114 &-6825310825276639620
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &-2564075389563201161
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &-368571369352899542
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23,6 +55,30 @@ MonoBehaviour:
     mVar:
       values: 00
   - mFullQualifiedName: Alex.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: AFather.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Ason.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Grandma_0.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Grandma_1.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Grandma_2.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Grandpa_0.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Grandpa_1.Refresh
+    mVar:
+      values: 00
+  - mFullQualifiedName: Wasang.Refresh
     mVar:
       values: 00
   IntVariableCache:
@@ -91,42 +147,134 @@ MonoBehaviour:
     mVar:
       values:
       - 
+  - mFullQualifiedName: AFather.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: AFather.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: AFather.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Ason.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Ason.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Ason.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_0.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_0.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_0.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_1.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_1.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_1.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_2.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_2.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandma_2.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_0.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_0.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_0.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_1.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_1.Expression
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Grandpa_1.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Wasang.NextState
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Wasang.Action
+    mVar:
+      values:
+      - 
+  - mFullQualifiedName: Wasang.Expression
+    mVar:
+      values:
+      - 
   LiveBoolVariableCache: []
   LiveIntVariableCache: []
   LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: -2661607943769055424}
+    _VariableStorage: {fileID: -368571369352899542}
   mEmily:
-    _VariableStorage: {fileID: -2661607943769055424}
+    _VariableStorage: {fileID: -368571369352899542}
   mShihuangren:
-    _VariableStorage: {fileID: -2661607943769055424}
+    _VariableStorage: {fileID: -368571369352899542}
   mPlayer:
-    _VariableStorage: {fileID: -2661607943769055424}
+    _VariableStorage: {fileID: -368571369352899542}
   mDay_and_time:
-    _VariableStorage: {fileID: -2661607943769055424}
+    _VariableStorage: {fileID: -368571369352899542}
   mAlex:
-    _VariableStorage: {fileID: -2661607943769055424}
---- !u!114 &-2564075389563201161
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
+    _VariableStorage: {fileID: -368571369352899542}
+  mAFather:
+    _VariableStorage: {fileID: -368571369352899542}
+  mAson:
+    _VariableStorage: {fileID: -368571369352899542}
+  mGrandma_0:
+    _VariableStorage: {fileID: -368571369352899542}
+  mGrandma_1:
+    _VariableStorage: {fileID: -368571369352899542}
+  mGrandma_2:
+    _VariableStorage: {fileID: -368571369352899542}
+  mGrandpa_0:
+    _VariableStorage: {fileID: -368571369352899542}
+  mGrandpa_1:
+    _VariableStorage: {fileID: -368571369352899542}
+  mWasang:
+    _VariableStorage: {fileID: -368571369352899542}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 3930592670384670741}
+  mHierarchy: {fileID: 7597673239900419105}
   mLocalization: {fileID: -2564075389563201161}
   mInternalProject:
     mName: littleTown
@@ -147,13 +295,13 @@ MonoBehaviour:
     mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
     mTechnicalName: Littletown
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -2661607943769055424}
-  mScriptFragments: {fileID: 6957236218991270387}
+  mDefaultGlobalVariables: {fileID: -368571369352899542}
+  mScriptFragments: {fileID: -6825310825276639620}
   mPackages:
   - PackageName: "\u6240\u6709\u5BF9\u8C61"
     PackagePath: "\u6240\u6709\u5BF9\u8C61"
     mIsDefaultPackage: 1
---- !u!114 &3930592670384670741
+--- !u!114 &7597673239900419105
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,16 +313,10 @@ MonoBehaviour:
   m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: HierarchyManager
   m_EditorClassIdentifier: 
-  serializedNodes: []
---- !u!114 &6957236218991270387
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Littletown
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1

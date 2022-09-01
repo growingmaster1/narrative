@@ -131,8 +131,6 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
     {
         arrived = false;
         TimeManager.instance.ContinueTime();
-        Player.instance.atDialog = false;
-        Player.instance.moveable = true;
         dialogBox.transform.DOMove(dialogBox.transform.position + new Vector3(dialogBox.GetComponent<RectTransform>().rect.width, 0, 0), 0.2f).SetUpdate(true).OnComplete(BackArrived);
     }
 

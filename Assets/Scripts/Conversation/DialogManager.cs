@@ -118,7 +118,6 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
     {
         flowPlayer.StartOn = start;
         flowPlayer.StartOn = start;
-        Player.instance.atDialog = true;
         DialogBox.instance.startDialog();
     }
 
@@ -129,6 +128,8 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
             entity.atDialog = false;
         }
         speakers.Clear();
+        Player.instance.atDialog = false;
+        Player.instance.moveable = true;
         flowPlayer.FinishCurrentPausedObject();
     }
 }

@@ -152,10 +152,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
                 DialogManager.instance.speakers.Add(entity);
             }
             DialogManager.instance.SetStart(dialog);
-            //if (attachTalkPlace + 1 < attachedDialog.Count)
-            //{
-            //    attachTalkPlace++;
-            //}
+            if (attachTalkPlace + 1 < attachedDialog.Count)
+            {
+                attachTalkPlace++;
+            }
 
             Player.instance.moveable = false;
         }

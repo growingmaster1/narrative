@@ -48,6 +48,38 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Alex mAlex = new Alex();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private AFather mAFather = new AFather();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Ason mAson = new Ason();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Grandma_0 mGrandma_0 = new Grandma_0();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Grandma_1 mGrandma_1 = new Grandma_1();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Grandma_2 mGrandma_2 = new Grandma_2();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Grandpa_0 mGrandpa_0 = new Grandpa_0();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Grandpa_1 mGrandpa_1 = new Grandpa_1();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Wasang mWasang = new Wasang();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -72,6 +104,38 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Alex.Expression");
             variableNames.Add("Alex.NextState");
             variableNames.Add("Alex.Refresh");
+            variableNames.Add("AFather.Action");
+            variableNames.Add("AFather.Expression");
+            variableNames.Add("AFather.NextState");
+            variableNames.Add("AFather.Refresh");
+            variableNames.Add("Ason.Refresh");
+            variableNames.Add("Ason.NextState");
+            variableNames.Add("Ason.Action");
+            variableNames.Add("Ason.Expression");
+            variableNames.Add("Grandma_0.Action");
+            variableNames.Add("Grandma_0.Expression");
+            variableNames.Add("Grandma_0.NextState");
+            variableNames.Add("Grandma_0.Refresh");
+            variableNames.Add("Grandma_1.Action");
+            variableNames.Add("Grandma_1.Expression");
+            variableNames.Add("Grandma_1.NextState");
+            variableNames.Add("Grandma_1.Refresh");
+            variableNames.Add("Grandma_2.Action");
+            variableNames.Add("Grandma_2.Expression");
+            variableNames.Add("Grandma_2.NextState");
+            variableNames.Add("Grandma_2.Refresh");
+            variableNames.Add("Grandpa_0.Action");
+            variableNames.Add("Grandpa_0.Expression");
+            variableNames.Add("Grandpa_0.NextState");
+            variableNames.Add("Grandpa_0.Refresh");
+            variableNames.Add("Grandpa_1.Action");
+            variableNames.Add("Grandpa_1.Expression");
+            variableNames.Add("Grandpa_1.NextState");
+            variableNames.Add("Grandpa_1.Refresh");
+            variableNames.Add("Wasang.NextState");
+            variableNames.Add("Wasang.Refresh");
+            variableNames.Add("Wasang.Action");
+            variableNames.Add("Wasang.Expression");
         }
         #endregion
         
@@ -123,6 +187,70 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public AFather AFather
+        {
+            get
+            {
+                return mAFather;
+            }
+        }
+        
+        public Ason Ason
+        {
+            get
+            {
+                return mAson;
+            }
+        }
+        
+        public Grandma_0 Grandma_0
+        {
+            get
+            {
+                return mGrandma_0;
+            }
+        }
+        
+        public Grandma_1 Grandma_1
+        {
+            get
+            {
+                return mGrandma_1;
+            }
+        }
+        
+        public Grandma_2 Grandma_2
+        {
+            get
+            {
+                return mGrandma_2;
+            }
+        }
+        
+        public Grandpa_0 Grandpa_0
+        {
+            get
+            {
+                return mGrandpa_0;
+            }
+        }
+        
+        public Grandpa_1 Grandpa_1
+        {
+            get
+            {
+                return mGrandpa_1;
+            }
+        }
+        
+        public Wasang Wasang
+        {
+            get
+            {
+                return mWasang;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -139,6 +267,14 @@ namespace Articy.Littletown.GlobalVariables
             Player.RegisterVariables(this);
             day_and_time.RegisterVariables(this);
             Alex.RegisterVariables(this);
+            AFather.RegisterVariables(this);
+            Ason.RegisterVariables(this);
+            Grandma_0.RegisterVariables(this);
+            Grandma_1.RegisterVariables(this);
+            Grandma_2.RegisterVariables(this);
+            Grandpa_0.RegisterVariables(this);
+            Grandpa_1.RegisterVariables(this);
+            Wasang.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

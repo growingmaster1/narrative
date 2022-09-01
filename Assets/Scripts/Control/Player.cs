@@ -57,7 +57,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
             xMove = xMove == 0 ? joystick.Horizontal : xMove;
             yMove = yMove == 0 ? joystick.Vertical : yMove;
 
-            transform.Translate(xMove * Time.deltaTime, yMove * Time.deltaTime, 0);
+            transform.Translate(xMove * Time.deltaTime * 4, yMove * Time.deltaTime * 4, 0);
 
             anim.enabled = true;
             if(xMove > 0)

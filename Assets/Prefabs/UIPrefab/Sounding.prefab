@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1567264765392133108}
   - component: {fileID: 192423591330497929}
   - component: {fileID: 731066895825313660}
+  - component: {fileID: 5195284361643667623}
+  - component: {fileID: 1726965630396559857}
   m_Layer: 5
   m_Name: Sounding
   m_TagString: Untagged
@@ -35,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000018597, y: -0.000018597}
-  m_SizeDelta: {x: 344.0946, y: 40.6863}
+  m_AnchoredPosition: {x: -0.00001859665, y: -0.000019073486}
+  m_SizeDelta: {x: 344.0946, y: 97.2952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &192423591330497929
 CanvasRenderer:
@@ -80,3 +82,50 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\u554A\u554A\u554A\u554A\u554A\u554A\u554A\u554A\u554A\u554A\u554A"
+--- !u!50 &5195284361643667623
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610297723649930123}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 2
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1726965630396559857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8610297723649930123}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.28198242, y: 0.080841064}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 343.6516, y: 97.12201}
+  m_EdgeRadius: 0

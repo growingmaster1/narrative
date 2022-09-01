@@ -37,13 +37,13 @@ public class SmartEntity : GameEntity
         }
     }
 
-    private void Update()
-    {
-        if(sound!=null)
-        {
-            SoundingManager.instance.PutText(sound, soundPos.transform.position);
-        }
-    }
+    //private void Update()
+    //{
+    //    if(sound!=null)
+    //    {
+    //        SoundingManager.instance.PutText(sound, soundPos.transform.position);
+    //    }
+    //}
 
     //每次发出声音调用该函数，理论上每句话会调用一次
     public void ArouseSound(string text)
@@ -54,6 +54,7 @@ public class SmartEntity : GameEntity
         }
         soundText.text = text;
         lastText.Enqueue(text);
+        SoundingManager.instance.PutText(sound, soundPos.transform.position);
         Invoke("TryFinishSound", 3);
     }
 
@@ -89,12 +90,10 @@ public class SmartEntity : GameEntity
         }
     }
 
-    //开始一段旁听对话
-    [Button]
     public void SetState(string stateTechName)
     {
         StatePlayer statePlayer = atFlow as StatePlayer;
-        if(statePlayer!=null)
+        if(statePlayer!=null && SoundingManager.instance.states[stateTechName]!=statePlayer)
         {
             statePlayer.RemoveEntity(entityName);
         }
