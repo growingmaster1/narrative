@@ -10,7 +10,7 @@ using UnityEngine.EventSystems;
 /// </summary>
 public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IWithEntity
 {
-    public ArticyRef givenEntity;
+    public List<ArticyRef> givenEntity = new List<ArticyRef>();
     public ArticyRef givenDialog;
     public IArticyObject entity { get; set; }
     public IArticyObject dialog;
@@ -24,28 +24,31 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
     public virtual void Init()
     {
         dialog = givenDialog.GetObject();
-        entity = givenEntity.GetObject();
-        if(entity == null)
+        for(int i=0;i<givenEntity.Count;++i)
         {
-            Debug.Log("Warning: an NPC doesn't have an entity");
-        }
-
-        entityName = (entity as IObjectWithDisplayName)?.DisplayName;
-        if(entityName == null)
-        {
-            entityName = ((ArticyObject)entity).TechnicalName;
-        }
-        
-
-        if(entityName!=null)
-        {
-            if(EntityManager.EntitiesDic.ContainsKey(entityName))
+            entity = givenEntity[i].GetObject();
+            if (entity == null)
             {
-                Debug.Log("Warning: Entity Name equals");
+                Debug.Log("Warning: an NPC doesn't have an entity");
             }
-            else
+
+            entityName = (entity as IObjectWithDisplayName)?.DisplayName;
+            if (entityName == null)
             {
-                EntityManager.EntitiesDic.Add(entityName, this);
+                entityName = (entity as ArticyObject)?.TechnicalName;
+            }
+
+
+            if (entityName != null)
+            {
+                if (EntityManager.EntitiesDic.ContainsKey(entityName))
+                {
+                    Debug.Log("Warning: Entity Name equals");
+                }
+                else
+                {
+                    EntityManager.EntitiesDic.Add(entityName, this);
+                }
             }
         }
     }
@@ -67,6 +70,21 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         if(dis<20)
         {
             RaiseDialog();
+        }
+    }
+
+    public void SwitchEntity(int i)
+    {
+        entity = givenEntity[i].GetObject();
+        if (entity == null)
+        {
+            Debug.Log("Warning: an NPC doesn't have an entity");
+        }
+
+        entityName = (entity as IObjectWithDisplayName)?.DisplayName;
+        if (entityName == null)
+        {
+            entityName = (entity as ArticyObject)?.TechnicalName;
         }
     }
 }

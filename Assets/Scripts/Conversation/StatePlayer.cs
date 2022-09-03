@@ -37,6 +37,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         }
         playing = false;
         flowPlayer.StartOn = flow;
+        flowPlayer.StartOn = null;
     }
 
     public void AddEntity(string entityName)
@@ -72,7 +73,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         if (flowPlayer.StartOn==null)
         {
             flowPlayer.StartOn = flow;
-            flowPlayer.StartOn = flow;
+            //flowPlayer.StartOn = flow;
         }
     }
 
@@ -81,6 +82,11 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         if (aObject == null)
         {
             Debug.Log("Warning: aObject is null");
+            return;
+        }
+
+        if(playing == false)
+        {
             return;
         }
 
