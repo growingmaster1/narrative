@@ -1,0 +1,46 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Wander2d : MonoBehaviour
+{
+    [Tooltip("The speed to wander with.")]
+    public BBParameter<float> speed = 4;
+    [Tooltip("The distance to keep from each wander point.")]
+    public BBParameter<float> keepDistance = 0.1f;
+    [Tooltip("A wander point can't be closer than this distance")]
+    public BBParameter<float> minWanderDistance = 1;
+    [Tooltip("A wander point can't be further than this distance")]
+    public BBParameter<float> maxWanderDistance = 3;
+    [Tooltip("If enabled, will keep wandering forever. If not, only one wander point will be performed.")]
+    public bool repeat = true;
+    private Vector3 initPos;
+    private Vector3 offSet;
+    private void Awake()
+    {
+        gameObject = GetComponent<GameObject>();
+        initPos = gameObject.transform.position;
+    }
+
+
+
+    void Update()
+    {
+        
+    }
+
+    void DoWander()
+    {
+        var min = minWanderDistance.value;
+        var max = maxWanderDistance.value;
+        min = Mathf.Clamp(min, 0.01f, max);
+        max = Mathf.Clamp(max, min, max);
+        var wanderPos = agent.transform.position;
+        while ((wanderPos - agent.transform.position).magnitude < min)
+        {
+            offSet=Random.insideUnitSphere * max;
+            offSet=new Vector3(offSet.x,offSet.y,0);
+            wanderPos = offSet + agent.transform.position;
+        }
+    }
+}
