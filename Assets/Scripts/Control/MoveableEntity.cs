@@ -109,5 +109,6 @@ public class MoveableEntity : MonoBehaviour
                     break;
                 }
         }
+        lastMoveDir = dir;
     }
 }
