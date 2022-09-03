@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6436405436924553300
+--- !u!114 &-2928694116879952676
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,26 +32,7 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-867981705295552431
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes:
-  - id: 72057594037927937
-    parent: 0
-    technicalName: Littletown
-    articyType: Project
-    childCount: 0
-    indexOfFirstChild: 1
---- !u!114 &-111944992475143071
+--- !u!114 &-2522769649671801750
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -132,6 +113,9 @@ MonoBehaviour:
     mVar:
       values: 00000000
   - mFullQualifiedName: Wasang.SelectTimes
+    mVar:
+      values: 00000000
+  - mFullQualifiedName: Wasang.InsectTimes
     mVar:
       values: 00000000
   StringVariableCache:
@@ -356,43 +340,43 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mEmily:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mShihuangren:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mPlayer:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mDay_and_time:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mAlex:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mAFather:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mAson:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mGrandma_0:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mGrandma_1:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mGrandma_2:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mGrandpa_0:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mGrandpa_1:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mWasang:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mKaka:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mLisa:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mPidan:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mHegel:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
   mQingjiedashen:
-    _VariableStorage: {fileID: -111944992475143071}
+    _VariableStorage: {fileID: -2522769649671801750}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +389,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -867981705295552431}
+  mHierarchy: {fileID: 7466836664909098466}
   mLocalization: {fileID: -2564075389563201161}
   mInternalProject:
     mName: littleTown
@@ -413,9 +397,28 @@ MonoBehaviour:
     mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
     mTechnicalName: Littletown
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -111944992475143071}
-  mScriptFragments: {fileID: -6436405436924553300}
+  mDefaultGlobalVariables: {fileID: -2522769649671801750}
+  mScriptFragments: {fileID: -2928694116879952676}
   mPackages:
   - PackageName: "\u6240\u6709\u5BF9\u8C61"
     PackagePath: "\u6240\u6709\u5BF9\u8C61"
     mIsDefaultPackage: 1
+--- !u!114 &7466836664909098466
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Littletown
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
