@@ -83,4 +83,32 @@ public class MoveableEntity : MonoBehaviour
             }
         }
     }
+
+    public void Turn(string dir)
+    {
+        switch(dir)
+        {
+            case "e":
+                {
+                    spRenderer.sprite = idle_e;
+                    break;
+                }
+            case "s":
+                {
+                    spRenderer.sprite = idle_s;
+                    break;
+                }
+            case "w":
+                {
+                    spRenderer.sprite = idle_w;
+                    break;
+                }
+            case "n":
+                {
+                    spRenderer.sprite = idle_n;
+                    break;
+                }
+        }
+        lastMoveDir = dir;
+    }
 }

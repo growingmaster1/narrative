@@ -128,6 +128,8 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
             entity.atDialog = false;
         }
         speakers.Clear();
+        Player.instance.atDialog = false;
+        Player.instance.moveable = true;
         flowPlayer.FinishCurrentPausedObject();
     }
 }

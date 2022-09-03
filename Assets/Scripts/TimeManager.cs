@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Sirenix.OdinInspector;
 using Articy.Unity;
 using Articy.Littletown.GlobalVariables;
 
@@ -18,12 +19,15 @@ public class TimeManager : MonoBehaviour,IInit
     public Text daysText;
 
     public Image pauseButton;
+    public GameObject greyPanel;
+    public GameObject pausedText;
     public Sprite pauseSprite;
     public Sprite runningSprite;
     private bool paused = false;
     private bool handyPaused = false;
 
     private float timer=2.5f;
+    private float timeScale = 1;
 
     private void Awake()
     {
@@ -91,20 +95,50 @@ public class TimeManager : MonoBehaviour,IInit
     {
         paused = false;
         pauseButton.sprite = pauseSprite;
-        Time.timeScale = 1;
+        Time.timeScale = timeScale;
     }
 
     public void SwitchPause()
     {
+        if(Player.instance.atDialog)
+        {
+            return;
+        }
         if(handyPaused&&paused)
         {
             handyPaused = false;
+            greyPanel.SetActive(false);
+            pausedText.SetActive(false);
             ContinueTime();
         }
         else if(!paused&&!handyPaused)
         {
             handyPaused = true;
+            greyPanel.SetActive(true);
+            pausedText.SetActive(true);
             PauseTime();
+        }
+    }
+
+    [Button]
+    public void SetTime(int day,int hour,int minute)
+    {
+        days = day;
+        hours = hour;
+        minutes = minute;
+
+        ArticyGlobalVariables.Default.day_and_time.days = day;
+        ArticyGlobalVariables.Default.day_and_time.hours = hour;
+        ArticyGlobalVariables.Default.day_and_time.minutes = minute;
+    }
+
+    [Button]
+    public void SetTimeScale(int scale)
+    {
+        if(!paused)
+        {
+            timeScale = scale;
+            Time.timeScale = scale;
         }
     }
 }

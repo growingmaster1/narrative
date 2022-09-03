@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637973842486811971)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637976539716189969)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -31,6 +31,17 @@ namespace Articy.Littletown.GlobalVariables
         #endregion
         
         #region Script fragments
+        /// <summary>
+        /// ObjectID: 0x100000000007C1C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959708?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007C1CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Player.Action=="MoveToTree"
+//到某一棵树旁（位置X）
+;
+        }
+        
         /// <summary>
         /// ObjectID: 0x1000000000011A5
         /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037932453?pane=selected&amp;tab=current
@@ -52,6 +63,225 @@ true;
         }
         
         /// <summary>
+        /// ObjectID: 0x100000000007C17
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959703?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007C17Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Player.Action=="FindOutKaka";
+//玩家找到卡卡并对话，如果不找卡卡，则回到瓦桑与卡卡自己玩的旁听
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DFB
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960187?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007DFBExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Wasang.SelectTimes == 1;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078E3
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958883?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x1000000000078E3Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return //玩家在游戏开始前干预
+true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DCA
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960138?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007DCAExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Wasang.CountTimes == 1;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DD1
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960145?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007DD1Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Wasang.CountTimes == 2;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DD8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960152?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007DD8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Wasang.CountTimes == 3;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078C5
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958853?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x1000000000078C5Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return //玩家第一次干预
+true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DDF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960159?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007DDFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Wasang.CountTimes == 4;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007C08
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959688?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007C08Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Lisa.Choose=="DFr_9C031D5F"
+//此前在“玩家干预：巧克力威化”对话中选择了斥责皮蛋
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007C0D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959693?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007C0DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Lisa.Choose=="DFr_C21B05AF"
+//此前在“玩家干预：巧克力威化”对话中选择了安抚莉莎
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007C12
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959698?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000007C12Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.Lisa.Intervene=="Dlg_E606FF11"
+//如果此前玩家没有触发“玩家干预：巧克力威化”对话
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B00
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959424?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B00Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Angry"
+//艾力士生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AEC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959404?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AECExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Ache"
+//艾力士疼痛的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AF4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959412?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AF4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Angry"
+//艾力士生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AF8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959416?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AF8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Angry"
+//艾力士生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B24
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959460?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B24Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Swing"
+//荡秋千，艾力士冒泡秋千
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B1C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959452?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B1CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Happy"
+//艾力士开心的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B20
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959456?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B20Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Swing"
+//荡秋千，艾力士冒泡秋千
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B8C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959564?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B8CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="LeaveFromSwing"
+//玩家下秋千
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B94
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959572?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B94Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToSwing"
+//玩家移动到秋千上
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B9C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959580?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B9CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Expression="Swing"
+//玩家荡秋千，玩家冒泡秋千
+;
+        }
+        
+        /// <summary>
         /// ObjectID: 0x100000000006D81
         /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955969?pane=selected&amp;tab=current
         /// </summary>
@@ -70,10 +300,217 @@ true;
         }
         
         /// <summary>
+        /// ObjectID: 0x100000000007AC0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959360?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AC0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="AppearFromTree"
+//艾力士从树后面窜出来
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AC8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959368?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AC8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="MoveAside"
+//艾力士走到一旁（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AD8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959384?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AD8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerAppear"
+//老虎出现
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AE0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959392?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AE0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerAroundAlex"
+//老虎绕艾力士
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AE4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959396?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AE4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerLeave"
+//老虎走到另一边（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AF0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959408?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AF0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Angry"
+//艾力士生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B08
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959432?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B08Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Bushoujia"
+//安装捕兽夹，冒泡捕兽夹
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B0C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959436?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B0CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="FunnyFace"
+//艾力士鬼脸的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B10
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959440?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B10Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="FunnyFace"
+//艾力士鬼脸的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007ABC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959356?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007ABCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="AppearFromTree"
+//艾力士从树后面窜出来
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007ACC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959372?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007ACCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="MoveAside"
+//艾力士走到一旁（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AD4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959380?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AD4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerAppear"
+//老虎出现
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007ADC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959388?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007ADCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerAroundAlex"
+//老虎绕艾力士
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AE8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959400?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AE8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="TigerLeave"
+//老虎走到另一边（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AFC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959420?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AFCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Angry"
+//艾力士生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B04
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959428?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B04Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="Bushoujia"
+//安装捕兽夹，冒泡捕兽夹
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B14
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959444?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B14Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="FunnyFace"
+//艾力士鬼脸的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B18
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959448?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B18Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Expression="FunnyFace"
+//艾力士鬼脸的表情
+;
+        }
+        
+        /// <summary>
         /// ObjectID: 0x100000000006D79
         /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037955961?pane=selected&amp;tab=current
         /// </summary>
         public void Script_0x100000000006D79Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoToSecretPlaceAlone";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B28
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959464?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B28Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.Alex.NextState = "AlexGoHome";;
         }
@@ -94,6 +531,72 @@ true;
         public void Script_0x100000000006D7DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.Alex.NextState = "AlexInLittleHuTong";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AC4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959364?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AC4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="CatMoveToAlex"
+//猫凑近艾力士（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007AD0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959376?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007AD0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Action="MoveToCat"
+//艾力士向猫走去（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B84
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959556?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B84Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="CatMoveToPlayer"
+//猫凑近玩家（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B88
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959560?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B88Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="CatMoveToPlayer"
+//猫凑近玩家（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B90
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959568?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B90Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Action="MoveToCat"
+//玩家向猫走去（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B98
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959576?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B98Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Player.Expression="Amazed"
+//艾力士惊讶的表情
+;
         }
         
         /// <summary>
@@ -1284,6 +1787,1087 @@ aGlobalVariablesState.Shihuangren.Refresh=true;
 //艾米莉表情：惊讶
 ;
         }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BD0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959632?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BD0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="Amazed";
+//瓦桑惊讶的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BF4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959668?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BF4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="Happy";
+//瓦桑开心的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BAC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959596?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BACExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="CircleAroundPlayer";
+//瓦桑绕玩家一圈
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BC0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959616?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BC0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="MoveAside";
+//瓦桑移动到另一侧（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BF8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959672?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BF8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="Happy";
+//瓦桑开心的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BCC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959628?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BCCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="Amazed";
+//瓦桑惊讶的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BF0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959664?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BF0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="Happy";
+//瓦桑开心的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B54
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959508?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B54Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Kaka.Action="Hide2";
+aGlobalVariablesState.Wasang.Action="Stay2"
+//卡卡藏到另一边（位置X）,瓦桑原地等待
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B5C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959516?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B5CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Kaka.Action="Hide";
+aGlobalVariablesState.Wasang.Action="Stay"
+//卡卡藏到另一边（位置X）,瓦桑原地等待
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BB0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959600?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BB0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="FindOutKaka2";
+//瓦桑在（位置X）找到卡卡
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BB4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959604?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BB4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="FindOutKaka";
+//瓦桑在（位置X）找到卡卡
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BB8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959608?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BB8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="LookForKaka";
+//到处找卡卡
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BBC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959612?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BBCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="LookForKaka";
+//到处找卡卡
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BC4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959620?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BC4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="MoveToPlay";
+aGlobalVariablesState.Kaka.Action="MoveToPlay";
+//瓦桑和卡卡移动到另一处去玩（位置X）-(位置X)
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BD4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959636?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BD4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessing";
+aGlobalVariablesState.Kaka.Expression="FingerGuessing"
+//卡卡、瓦桑猜拳，冒泡石头、剪刀、布轮换
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BE0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959648?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BE0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessing";
+aGlobalVariablesState.Kaka.Expression="FingerGuessing"
+//卡卡、瓦桑猜拳，冒泡石头、剪刀、布
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BE4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959652?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BE4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessingScissors";
+aGlobalVariablesState.Kaka.Expression="FingerGuessingStone"
+//瓦桑出剪刀，卡卡出石头，卡卡胜利
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BE8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959656?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BE8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessingStone";
+aGlobalVariablesState.Kaka.Expression="FingerGuessingScissors"
+//瓦桑出石头，卡卡出剪刀，卡卡胜利
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BFC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959676?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BFCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="StarWars";
+aGlobalVariablesState.Kaka.Expression="StarWars"
+//瓦桑、卡卡星际大战，冒泡盾、剑、三叉戟轮换
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007C04
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959684?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007C04Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="StarWarsSword";
+aGlobalVariablesState.Kaka.Expression="StarWarsShield"
+//瓦桑冒泡剑，卡卡冒泡盾，剑和盾旋转摇摆持续一段时间
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B50
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959504?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B50Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Kaka.Action="FindOutVasan"
+//卡卡找到瓦桑
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B58
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959512?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B58Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Kaka.Action="Hide";
+aGlobalVariablesState.Wasang.Action="Stay"
+//卡卡藏到另一边（位置X）,瓦桑原地等待
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B60
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959520?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B60Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Kaka.Action="Stay";
+aGlobalVariablesState.Wasang.Action="Hide"
+//瓦桑藏到另一边（位置X）,卡卡原地等待
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BC8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959624?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BC8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Action="MoveToPlayer";
+//玩家找到卡卡后，瓦桑来到玩家身边（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BD8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959640?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BD8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessing";
+aGlobalVariablesState.Kaka.Expression="FingerGuessing"
+//卡卡、瓦桑猜拳，冒泡石头、剪刀、布轮换
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BDC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959644?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BDCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessing";
+aGlobalVariablesState.Kaka.Expression="FingerGuessing"
+//卡卡、瓦桑猜拳，冒泡石头、剪刀、布轮换
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BEC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959660?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BECExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="FingerGuessingStone";
+aGlobalVariablesState.Kaka.Expression="FingerGuessingScissors"
+//瓦桑出石头，卡卡出剪刀，瓦桑胜利
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007C00
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959680?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007C00Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Expression="StarWarsSword";
+aGlobalVariablesState.Kaka.Expression="StarWarsShield"
+//瓦桑冒泡剑，卡卡冒泡盾，剑和盾旋转摇摆持续一段时间
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007854
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958740?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007854Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangCheckMaterials";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000787C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958780?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000787CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoToGarbageStation";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000785C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958748?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000785CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangCollectMouseShit";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007858
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958744?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007858Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangCollectMaterials";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007880
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958784?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007880Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoToWoods";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078A0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958816?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078A0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToChongzai";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007840
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958720?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007840Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="CollectMouseShit";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007864
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958756?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007864Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGameWithKaka";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007868
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958760?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007868Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGameWithTwo";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D38
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959992?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D38Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.NextState = "TheOldAtHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D33
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959987?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D33Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.Refresh = true;
+aGlobalVariablesState.Grandma_1.Refresh = true;
+aGlobalVariablesState.Grandma_2.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078B8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958840?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078B8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkWithFatherNight";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000786C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958764?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000786CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoHomeByCar";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D42
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960002?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D42Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_2.NextState = "TheOldAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007870
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958768?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007870Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoHomeByCar";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007890
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958800?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007890Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangSayHi";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007894
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958804?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007894Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangSayHiToPlayer";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078B4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958836?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078B4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToSpider";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007850
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958736?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007850Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangAtHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078AC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958828?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078ACExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToSpider";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078A8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958824?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078A8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToChongzai";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000788C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958796?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000788CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangSayHi";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007874
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958772?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007874Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoHomeByCar";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D3D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959997?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D3DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_1.NextState = "TheOldAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078A4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958820?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078A4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToChongzai";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078B0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958832?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078B0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkToSpider";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007848
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958728?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007848Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="TalkAboutMagicWater";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000784C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958732?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000784CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="TalkAboutSnake";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000078BC
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958844?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000078BCExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangTalkWithFather";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007844
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958724?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007844Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="GoToFindKakaMorning";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007878
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958776?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007878Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState="WasangGoToFactoryWithKaka";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007944
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958980?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007944Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.NextState = "Grandpa1Playing";
+aGlobalVariablesState.Grandpa_1.NextState =
+"Grandpa2Playing";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000794C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958988?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000794CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.Refresh = true;
+aGlobalVariablesState.Grandpa_1.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007934
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958964?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007934Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.NextState = "Grandma1GoHome";
+aGlobalVariablesState.Grandma_1.NextState = "Grandma2GoHome";
+aGlobalVariablesState.Grandma_2.NextState = "Grandma3GoHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007940
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958976?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007940Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.Refresh = true;
+aGlobalVariablesState.Grandma_1.Refresh = true;
+aGlobalVariablesState.Grandma_2.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007930
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958960?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007930Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.NextState = "Grandma1GoHome";
+aGlobalVariablesState.Grandma_1.NextState = "Grandma2GoHome";
+aGlobalVariablesState.Grandma_2.NextState = "Grandma3GoHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000793C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958972?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000793CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.Refresh = true;
+aGlobalVariablesState.Grandma_1.Refresh = true;
+aGlobalVariablesState.Grandma_2.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BA0
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959584?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BA0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Qingjiedashen.Action="OverMoveHome";
+aGlobalVariablesState.Player.Action="OverMoveHome"
+//清洁大婶、玩家移动到家里（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BA4
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959588?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BA4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Qingjiedashen.Action="StartMoveHome";
+aGlobalVariablesState.Player.Action="StartMoveHome"
+//清洁大婶、玩家向家里开始移动（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007BA8
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959592?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007BA8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Qingjiedashen.Expression="Xiaotuiche"
+//清洁大婶冒泡小推车
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B80
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959552?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B80Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Pidan.Expression="Angry"
+//皮蛋生气的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B2C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959468?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B2CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="MoveToPidan"
+//黑格尔跑到皮蛋处
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B30
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959472?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B30Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="MoveToXiaotu";
+//丽莎的狗跑向小兔姐姐家（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B34
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959476?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B34Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="MoveToXiaotu";
+//丽莎的狗跑向小兔姐姐家（位置X）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B38
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959480?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B38Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="Pace"
+//黑格尔左右跳动
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B3C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959484?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B3CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="Pace"
+//黑格尔左右跳动
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B40
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959488?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B40Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Action="Pace"
+//黑格尔左右跳动
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B44
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959492?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B44Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Expression="Frisbee"
+//黑格尔接飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B48
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959496?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B48Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Expression="Frisbee"
+//黑格尔接飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B4C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959500?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B4CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Hegel.Expression="Frisbee"
+//黑格尔接飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B64
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959524?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B64Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Action="LookFor"
+//丽莎到处找黑格尔
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B68
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959528?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B68Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Action="MoveToPlayground";
+aGlobalVariablesState.Hegel.Action="MoveToPlayground"
+//丽莎移动到空地（位置X），黑格尔移动丽莎对面（位置Y）
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B70
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959536?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B70Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Expression="Frisbee"
+//丽莎丢飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B74
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959540?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B74Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Expression="Frisbee"
+//丽莎丢飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B78
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959544?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B78Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Expression="Frisbee"
+//丽莎丢飞盘，冒泡飞盘
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B7C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959548?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B7CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Expression="Sleep"
+//丽莎休息，冒泡zzz
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007B6C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959532?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007B6CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Lisa.Expression="Amazed"
+//丽莎惊讶的表情
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CBF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959871?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CBFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.AFather.NextState = "FatherEducatingSon";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CC3
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959875?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CC3Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Ason.NextState ="FatherEducatingHisSon";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007928
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958952?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007928Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.AFather.NextState = "FatherGoBackHome";
+aGlobalVariablesState.Ason.NextState = "SonGoingHome";
+
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000792C
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958956?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000792CExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.AFather.Refresh = true;
+aGlobalVariablesState.Ason.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CD3
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959891?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CD3Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.NextState = "GrandpaChattingCrazily";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CD7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959895?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CD7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.NextState ="Grandpa1GoHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CDB
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959899?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CDBExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_1.NextState = "GrandpaChattingCrazily";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CDF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959903?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CDFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_1.NextState ="Grandpa2GoHome";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007948
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958984?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007948Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.NextState = "Grandpa1Playing";
+aGlobalVariablesState.Grandpa_1.NextState = "Grandpa2Playing";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007950
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958992?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007950Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.Refresh = true;
+aGlobalVariablesState.Grandpa_1.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CC7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959879?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CC7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.NextState = "GrandmomsChatting";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CCB
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959883?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CCBExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_1.NextState = "GrandmomsChatting";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007CCF
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959887?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007CCFExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_2.NextState= "GrandmomsChatting";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007938
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037958968?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007938Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandma_0.NextState = "Grandma1GoHome";
+aGlobalVariablesState.Grandma_1.NextState = "Grandma2GoHome";
+aGlobalVariablesState.Grandma_2.NextState = "Grandma3GoHome";
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D58
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960024?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D58Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.AFather.NextState = "FatherAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D5D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960029?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D5DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Ason.NextState = "SonAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D68
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960040?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D68Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_0.NextState = "TheOldAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D6D
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960045?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D6DExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Grandpa_1.NextState = "TheOldAtHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007D72
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960050?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007D72Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.Refresh = true;;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000007DC3
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960131?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000007DC3Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Wasang.NextState = "WasangGoToSecretPlaceAlone";
+        }
         #endregion
         
         #region Unity serialization
@@ -1295,124 +2879,276 @@ aGlobalVariablesState.Shihuangren.Refresh=true;
         {
             Conditions = new System.Collections.Generic.Dictionary<uint, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<uint, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
-            Conditions.Add(1u, this.Script_0x1000000000011A5Expression);
-            Conditions.Add(2u, this.Script_0x1000000000011AAExpression);
-            Instructions.Add(3u, this.Script_0x100000000006D81Expression);
-            Instructions.Add(4u, this.Script_0x100000000006D85Expression);
-            Instructions.Add(5u, this.Script_0x100000000006D79Expression);
-            Instructions.Add(6u, this.Script_0x100000000006D89Expression);
-            Instructions.Add(7u, this.Script_0x100000000006D7DExpression);
-            Instructions.Add(8u, this.Script_0x100000000006DB2Expression);
-            Instructions.Add(9u, this.Script_0x100000000006DB6Expression);
-            Instructions.Add(10u, this.Script_0x100000000006CD6Expression);
-            Instructions.Add(11u, this.Script_0x100000000006DAEExpression);
-            Instructions.Add(12u, this.Script_0x1000000000068C0Expression);
-            Instructions.Add(13u, this.Script_0x10000000000691FExpression);
-            Instructions.Add(14u, this.Script_0x100000000006924Expression);
-            Instructions.Add(15u, this.Script_0x100000000006929Expression);
-            Instructions.Add(16u, this.Script_0x10000000000692EExpression);
-            Instructions.Add(17u, this.Script_0x100000000006935Expression);
-            Instructions.Add(18u, this.Script_0x100000000006B96Expression);
-            Instructions.Add(19u, this.Script_0x100000000006BCDExpression);
-            Instructions.Add(20u, this.Script_0x100000000006846Expression);
-            Instructions.Add(21u, this.Script_0x10000000000684DExpression);
-            Instructions.Add(22u, this.Script_0x100000000006854Expression);
-            Instructions.Add(23u, this.Script_0x100000000006859Expression);
-            Instructions.Add(24u, this.Script_0x100000000006860Expression);
-            Instructions.Add(25u, this.Script_0x100000000006867Expression);
-            Instructions.Add(26u, this.Script_0x10000000000686EExpression);
-            Instructions.Add(27u, this.Script_0x100000000006902Expression);
-            Instructions.Add(28u, this.Script_0x100000000006BBFExpression);
-            Instructions.Add(29u, this.Script_0x100000000006811Expression);
-            Instructions.Add(30u, this.Script_0x10000000000681FExpression);
-            Instructions.Add(31u, this.Script_0x100000000006825Expression);
-            Instructions.Add(32u, this.Script_0x10000000000682CExpression);
-            Instructions.Add(33u, this.Script_0x100000000006839Expression);
-            Instructions.Add(34u, this.Script_0x100000000006841Expression);
-            Instructions.Add(35u, this.Script_0x100000000006BABExpression);
-            Instructions.Add(36u, this.Script_0x10000000000687EExpression);
-            Instructions.Add(37u, this.Script_0x100000000006888Expression);
-            Instructions.Add(38u, this.Script_0x100000000006892Expression);
-            Instructions.Add(39u, this.Script_0x100000000006897Expression);
-            Instructions.Add(40u, this.Script_0x10000000000689FExpression);
-            Instructions.Add(41u, this.Script_0x100000000006BC4Expression);
-            Instructions.Add(42u, this.Script_0x100000000006AE6Expression);
-            Instructions.Add(43u, this.Script_0x100000000006AEBExpression);
-            Instructions.Add(44u, this.Script_0x100000000006AF0Expression);
-            Instructions.Add(45u, this.Script_0x100000000006AF4Expression);
-            Instructions.Add(46u, this.Script_0x100000000006AFFExpression);
-            Instructions.Add(47u, this.Script_0x100000000006C10Expression);
-            Instructions.Add(48u, this.Script_0x100000000006C18Expression);
-            Instructions.Add(49u, this.Script_0x100000000006A26Expression);
-            Instructions.Add(50u, this.Script_0x100000000006A3FExpression);
-            Instructions.Add(51u, this.Script_0x100000000006A46Expression);
-            Instructions.Add(52u, this.Script_0x100000000006A4BExpression);
-            Instructions.Add(53u, this.Script_0x100000000006A4FExpression);
-            Instructions.Add(54u, this.Script_0x100000000006A55Expression);
-            Instructions.Add(55u, this.Script_0x100000000006A5BExpression);
-            Instructions.Add(56u, this.Script_0x100000000006A61Expression);
-            Instructions.Add(57u, this.Script_0x100000000006A66Expression);
-            Instructions.Add(58u, this.Script_0x100000000006A79Expression);
-            Instructions.Add(59u, this.Script_0x100000000006A7DExpression);
-            Instructions.Add(60u, this.Script_0x100000000006A81Expression);
-            Instructions.Add(61u, this.Script_0x100000000006A85Expression);
-            Instructions.Add(62u, this.Script_0x100000000006A9DExpression);
-            Instructions.Add(63u, this.Script_0x100000000006AA5Expression);
-            Instructions.Add(64u, this.Script_0x100000000006AAAExpression);
-            Instructions.Add(65u, this.Script_0x100000000006AB4Expression);
-            Instructions.Add(66u, this.Script_0x100000000006AB8Expression);
-            Instructions.Add(67u, this.Script_0x100000000006ABCExpression);
-            Instructions.Add(68u, this.Script_0x100000000006AC0Expression);
-            Instructions.Add(69u, this.Script_0x100000000006ACAExpression);
-            Instructions.Add(70u, this.Script_0x100000000006ADCExpression);
-            Instructions.Add(71u, this.Script_0x100000000006BFAExpression);
-            Instructions.Add(72u, this.Script_0x100000000006C06Expression);
-            Instructions.Add(73u, this.Script_0x100000000006C69Expression);
-            Instructions.Add(74u, this.Script_0x10000000000695AExpression);
-            Instructions.Add(75u, this.Script_0x100000000006969Expression);
-            Instructions.Add(76u, this.Script_0x10000000000696EExpression);
-            Instructions.Add(77u, this.Script_0x100000000006973Expression);
-            Instructions.Add(78u, this.Script_0x100000000006978Expression);
-            Instructions.Add(79u, this.Script_0x10000000000698BExpression);
-            Instructions.Add(80u, this.Script_0x100000000006990Expression);
-            Instructions.Add(81u, this.Script_0x100000000006995Expression);
-            Instructions.Add(82u, this.Script_0x1000000000069AFExpression);
-            Instructions.Add(83u, this.Script_0x1000000000069B5Expression);
-            Instructions.Add(84u, this.Script_0x1000000000069BAExpression);
-            Instructions.Add(85u, this.Script_0x1000000000069BFExpression);
-            Instructions.Add(86u, this.Script_0x1000000000069C5Expression);
-            Instructions.Add(87u, this.Script_0x1000000000069CAExpression);
-            Instructions.Add(88u, this.Script_0x1000000000069D7Expression);
-            Instructions.Add(89u, this.Script_0x1000000000069DCExpression);
-            Instructions.Add(90u, this.Script_0x1000000000069E1Expression);
-            Instructions.Add(91u, this.Script_0x1000000000069E6Expression);
-            Instructions.Add(92u, this.Script_0x1000000000069EAExpression);
-            Instructions.Add(93u, this.Script_0x1000000000069F0Expression);
-            Instructions.Add(94u, this.Script_0x1000000000069FDExpression);
-            Instructions.Add(95u, this.Script_0x100000000006A02Expression);
-            Instructions.Add(96u, this.Script_0x100000000006A07Expression);
-            Instructions.Add(97u, this.Script_0x100000000006A0BExpression);
-            Instructions.Add(98u, this.Script_0x100000000006A0FExpression);
-            Instructions.Add(99u, this.Script_0x100000000006A16Expression);
-            Instructions.Add(100u, this.Script_0x100000000006A1BExpression);
-            Instructions.Add(101u, this.Script_0x100000000006BDFExpression);
-            Instructions.Add(102u, this.Script_0x100000000006BF0Expression);
-            Instructions.Add(103u, this.Script_0x100000000006C5FExpression);
-            Instructions.Add(104u, this.Script_0x100000000006C92Expression);
-            Instructions.Add(105u, this.Script_0x100000000006CFEExpression);
-            Instructions.Add(106u, this.Script_0x100000000006CD1Expression);
-            Instructions.Add(107u, this.Script_0x100000000006CF7Expression);
-            Instructions.Add(108u, this.Script_0x100000000006B06Expression);
-            Instructions.Add(109u, this.Script_0x100000000006B0AExpression);
-            Instructions.Add(110u, this.Script_0x100000000006B17Expression);
-            Instructions.Add(111u, this.Script_0x100000000006B1CExpression);
-            Instructions.Add(112u, this.Script_0x100000000006B21Expression);
-            Instructions.Add(113u, this.Script_0x100000000006B26Expression);
-            Instructions.Add(114u, this.Script_0x100000000006B2AExpression);
-            Instructions.Add(115u, this.Script_0x100000000006B2FExpression);
-            Instructions.Add(116u, this.Script_0x100000000006B3AExpression);
-            Instructions.Add(117u, this.Script_0x100000000006C26Expression);
-            Instructions.Add(118u, this.Script_0x100000000006C6EExpression);
+            Conditions.Add(1u, this.Script_0x100000000007C1CExpression);
+            Conditions.Add(2u, this.Script_0x1000000000011A5Expression);
+            Conditions.Add(3u, this.Script_0x1000000000011AAExpression);
+            Conditions.Add(4u, this.Script_0x100000000007C17Expression);
+            Conditions.Add(5u, this.Script_0x100000000007DFBExpression);
+            Conditions.Add(6u, this.Script_0x1000000000078E3Expression);
+            Conditions.Add(7u, this.Script_0x100000000007DCAExpression);
+            Conditions.Add(8u, this.Script_0x100000000007DD1Expression);
+            Conditions.Add(9u, this.Script_0x100000000007DD8Expression);
+            Conditions.Add(10u, this.Script_0x1000000000078C5Expression);
+            Conditions.Add(11u, this.Script_0x100000000007DDFExpression);
+            Conditions.Add(12u, this.Script_0x100000000007C08Expression);
+            Conditions.Add(13u, this.Script_0x100000000007C0DExpression);
+            Conditions.Add(14u, this.Script_0x100000000007C12Expression);
+            Instructions.Add(15u, this.Script_0x100000000007B00Expression);
+            Instructions.Add(16u, this.Script_0x100000000007AECExpression);
+            Instructions.Add(17u, this.Script_0x100000000007AF4Expression);
+            Instructions.Add(18u, this.Script_0x100000000007AF8Expression);
+            Instructions.Add(19u, this.Script_0x100000000007B24Expression);
+            Instructions.Add(20u, this.Script_0x100000000007B1CExpression);
+            Instructions.Add(21u, this.Script_0x100000000007B20Expression);
+            Instructions.Add(22u, this.Script_0x100000000007B8CExpression);
+            Instructions.Add(23u, this.Script_0x100000000007B94Expression);
+            Instructions.Add(24u, this.Script_0x100000000007B9CExpression);
+            Instructions.Add(25u, this.Script_0x100000000006D81Expression);
+            Instructions.Add(26u, this.Script_0x100000000006D85Expression);
+            Instructions.Add(27u, this.Script_0x100000000007AC0Expression);
+            Instructions.Add(28u, this.Script_0x100000000007AC8Expression);
+            Instructions.Add(29u, this.Script_0x100000000007AD8Expression);
+            Instructions.Add(30u, this.Script_0x100000000007AE0Expression);
+            Instructions.Add(31u, this.Script_0x100000000007AE4Expression);
+            Instructions.Add(32u, this.Script_0x100000000007AF0Expression);
+            Instructions.Add(33u, this.Script_0x100000000007B08Expression);
+            Instructions.Add(34u, this.Script_0x100000000007B0CExpression);
+            Instructions.Add(35u, this.Script_0x100000000007B10Expression);
+            Instructions.Add(36u, this.Script_0x100000000007ABCExpression);
+            Instructions.Add(37u, this.Script_0x100000000007ACCExpression);
+            Instructions.Add(38u, this.Script_0x100000000007AD4Expression);
+            Instructions.Add(39u, this.Script_0x100000000007ADCExpression);
+            Instructions.Add(40u, this.Script_0x100000000007AE8Expression);
+            Instructions.Add(41u, this.Script_0x100000000007AFCExpression);
+            Instructions.Add(42u, this.Script_0x100000000007B04Expression);
+            Instructions.Add(43u, this.Script_0x100000000007B14Expression);
+            Instructions.Add(44u, this.Script_0x100000000007B18Expression);
+            Instructions.Add(45u, this.Script_0x100000000006D79Expression);
+            Instructions.Add(46u, this.Script_0x100000000007B28Expression);
+            Instructions.Add(47u, this.Script_0x100000000006D89Expression);
+            Instructions.Add(48u, this.Script_0x100000000006D7DExpression);
+            Instructions.Add(49u, this.Script_0x100000000007AC4Expression);
+            Instructions.Add(50u, this.Script_0x100000000007AD0Expression);
+            Instructions.Add(51u, this.Script_0x100000000007B84Expression);
+            Instructions.Add(52u, this.Script_0x100000000007B88Expression);
+            Instructions.Add(53u, this.Script_0x100000000007B90Expression);
+            Instructions.Add(54u, this.Script_0x100000000007B98Expression);
+            Instructions.Add(55u, this.Script_0x100000000006DB2Expression);
+            Instructions.Add(56u, this.Script_0x100000000006DB6Expression);
+            Instructions.Add(57u, this.Script_0x100000000006CD6Expression);
+            Instructions.Add(58u, this.Script_0x100000000006DAEExpression);
+            Instructions.Add(59u, this.Script_0x1000000000068C0Expression);
+            Instructions.Add(60u, this.Script_0x10000000000691FExpression);
+            Instructions.Add(61u, this.Script_0x100000000006924Expression);
+            Instructions.Add(62u, this.Script_0x100000000006929Expression);
+            Instructions.Add(63u, this.Script_0x10000000000692EExpression);
+            Instructions.Add(64u, this.Script_0x100000000006935Expression);
+            Instructions.Add(65u, this.Script_0x100000000006B96Expression);
+            Instructions.Add(66u, this.Script_0x100000000006BCDExpression);
+            Instructions.Add(67u, this.Script_0x100000000006846Expression);
+            Instructions.Add(68u, this.Script_0x10000000000684DExpression);
+            Instructions.Add(69u, this.Script_0x100000000006854Expression);
+            Instructions.Add(70u, this.Script_0x100000000006859Expression);
+            Instructions.Add(71u, this.Script_0x100000000006860Expression);
+            Instructions.Add(72u, this.Script_0x100000000006867Expression);
+            Instructions.Add(73u, this.Script_0x10000000000686EExpression);
+            Instructions.Add(74u, this.Script_0x100000000006902Expression);
+            Instructions.Add(75u, this.Script_0x100000000006BBFExpression);
+            Instructions.Add(76u, this.Script_0x100000000006811Expression);
+            Instructions.Add(77u, this.Script_0x10000000000681FExpression);
+            Instructions.Add(78u, this.Script_0x100000000006825Expression);
+            Instructions.Add(79u, this.Script_0x10000000000682CExpression);
+            Instructions.Add(80u, this.Script_0x100000000006839Expression);
+            Instructions.Add(81u, this.Script_0x100000000006841Expression);
+            Instructions.Add(82u, this.Script_0x100000000006BABExpression);
+            Instructions.Add(83u, this.Script_0x10000000000687EExpression);
+            Instructions.Add(84u, this.Script_0x100000000006888Expression);
+            Instructions.Add(85u, this.Script_0x100000000006892Expression);
+            Instructions.Add(86u, this.Script_0x100000000006897Expression);
+            Instructions.Add(87u, this.Script_0x10000000000689FExpression);
+            Instructions.Add(88u, this.Script_0x100000000006BC4Expression);
+            Instructions.Add(89u, this.Script_0x100000000006AE6Expression);
+            Instructions.Add(90u, this.Script_0x100000000006AEBExpression);
+            Instructions.Add(91u, this.Script_0x100000000006AF0Expression);
+            Instructions.Add(92u, this.Script_0x100000000006AF4Expression);
+            Instructions.Add(93u, this.Script_0x100000000006AFFExpression);
+            Instructions.Add(94u, this.Script_0x100000000006C10Expression);
+            Instructions.Add(95u, this.Script_0x100000000006C18Expression);
+            Instructions.Add(96u, this.Script_0x100000000006A26Expression);
+            Instructions.Add(97u, this.Script_0x100000000006A3FExpression);
+            Instructions.Add(98u, this.Script_0x100000000006A46Expression);
+            Instructions.Add(99u, this.Script_0x100000000006A4BExpression);
+            Instructions.Add(100u, this.Script_0x100000000006A4FExpression);
+            Instructions.Add(101u, this.Script_0x100000000006A55Expression);
+            Instructions.Add(102u, this.Script_0x100000000006A5BExpression);
+            Instructions.Add(103u, this.Script_0x100000000006A61Expression);
+            Instructions.Add(104u, this.Script_0x100000000006A66Expression);
+            Instructions.Add(105u, this.Script_0x100000000006A79Expression);
+            Instructions.Add(106u, this.Script_0x100000000006A7DExpression);
+            Instructions.Add(107u, this.Script_0x100000000006A81Expression);
+            Instructions.Add(108u, this.Script_0x100000000006A85Expression);
+            Instructions.Add(109u, this.Script_0x100000000006A9DExpression);
+            Instructions.Add(110u, this.Script_0x100000000006AA5Expression);
+            Instructions.Add(111u, this.Script_0x100000000006AAAExpression);
+            Instructions.Add(112u, this.Script_0x100000000006AB4Expression);
+            Instructions.Add(113u, this.Script_0x100000000006AB8Expression);
+            Instructions.Add(114u, this.Script_0x100000000006ABCExpression);
+            Instructions.Add(115u, this.Script_0x100000000006AC0Expression);
+            Instructions.Add(116u, this.Script_0x100000000006ACAExpression);
+            Instructions.Add(117u, this.Script_0x100000000006ADCExpression);
+            Instructions.Add(118u, this.Script_0x100000000006BFAExpression);
+            Instructions.Add(119u, this.Script_0x100000000006C06Expression);
+            Instructions.Add(120u, this.Script_0x100000000006C69Expression);
+            Instructions.Add(121u, this.Script_0x10000000000695AExpression);
+            Instructions.Add(122u, this.Script_0x100000000006969Expression);
+            Instructions.Add(123u, this.Script_0x10000000000696EExpression);
+            Instructions.Add(124u, this.Script_0x100000000006973Expression);
+            Instructions.Add(125u, this.Script_0x100000000006978Expression);
+            Instructions.Add(126u, this.Script_0x10000000000698BExpression);
+            Instructions.Add(127u, this.Script_0x100000000006990Expression);
+            Instructions.Add(128u, this.Script_0x100000000006995Expression);
+            Instructions.Add(129u, this.Script_0x1000000000069AFExpression);
+            Instructions.Add(130u, this.Script_0x1000000000069B5Expression);
+            Instructions.Add(131u, this.Script_0x1000000000069BAExpression);
+            Instructions.Add(132u, this.Script_0x1000000000069BFExpression);
+            Instructions.Add(133u, this.Script_0x1000000000069C5Expression);
+            Instructions.Add(134u, this.Script_0x1000000000069CAExpression);
+            Instructions.Add(135u, this.Script_0x1000000000069D7Expression);
+            Instructions.Add(136u, this.Script_0x1000000000069DCExpression);
+            Instructions.Add(137u, this.Script_0x1000000000069E1Expression);
+            Instructions.Add(138u, this.Script_0x1000000000069E6Expression);
+            Instructions.Add(139u, this.Script_0x1000000000069EAExpression);
+            Instructions.Add(140u, this.Script_0x1000000000069F0Expression);
+            Instructions.Add(141u, this.Script_0x1000000000069FDExpression);
+            Instructions.Add(142u, this.Script_0x100000000006A02Expression);
+            Instructions.Add(143u, this.Script_0x100000000006A07Expression);
+            Instructions.Add(144u, this.Script_0x100000000006A0BExpression);
+            Instructions.Add(145u, this.Script_0x100000000006A0FExpression);
+            Instructions.Add(146u, this.Script_0x100000000006A16Expression);
+            Instructions.Add(147u, this.Script_0x100000000006A1BExpression);
+            Instructions.Add(148u, this.Script_0x100000000006BDFExpression);
+            Instructions.Add(149u, this.Script_0x100000000006BF0Expression);
+            Instructions.Add(150u, this.Script_0x100000000006C5FExpression);
+            Instructions.Add(151u, this.Script_0x100000000006C92Expression);
+            Instructions.Add(152u, this.Script_0x100000000006CFEExpression);
+            Instructions.Add(153u, this.Script_0x100000000006CD1Expression);
+            Instructions.Add(154u, this.Script_0x100000000006CF7Expression);
+            Instructions.Add(155u, this.Script_0x100000000006B06Expression);
+            Instructions.Add(156u, this.Script_0x100000000006B0AExpression);
+            Instructions.Add(157u, this.Script_0x100000000006B17Expression);
+            Instructions.Add(158u, this.Script_0x100000000006B1CExpression);
+            Instructions.Add(159u, this.Script_0x100000000006B21Expression);
+            Instructions.Add(160u, this.Script_0x100000000006B26Expression);
+            Instructions.Add(161u, this.Script_0x100000000006B2AExpression);
+            Instructions.Add(162u, this.Script_0x100000000006B2FExpression);
+            Instructions.Add(163u, this.Script_0x100000000006B3AExpression);
+            Instructions.Add(164u, this.Script_0x100000000006C26Expression);
+            Instructions.Add(165u, this.Script_0x100000000006C6EExpression);
+            Instructions.Add(166u, this.Script_0x100000000007BD0Expression);
+            Instructions.Add(167u, this.Script_0x100000000007BF4Expression);
+            Instructions.Add(168u, this.Script_0x100000000007BACExpression);
+            Instructions.Add(169u, this.Script_0x100000000007BC0Expression);
+            Instructions.Add(170u, this.Script_0x100000000007BF8Expression);
+            Instructions.Add(171u, this.Script_0x100000000007BCCExpression);
+            Instructions.Add(172u, this.Script_0x100000000007BF0Expression);
+            Instructions.Add(173u, this.Script_0x100000000007B54Expression);
+            Instructions.Add(174u, this.Script_0x100000000007B5CExpression);
+            Instructions.Add(175u, this.Script_0x100000000007BB0Expression);
+            Instructions.Add(176u, this.Script_0x100000000007BB4Expression);
+            Instructions.Add(177u, this.Script_0x100000000007BB8Expression);
+            Instructions.Add(178u, this.Script_0x100000000007BBCExpression);
+            Instructions.Add(179u, this.Script_0x100000000007BC4Expression);
+            Instructions.Add(180u, this.Script_0x100000000007BD4Expression);
+            Instructions.Add(181u, this.Script_0x100000000007BE0Expression);
+            Instructions.Add(182u, this.Script_0x100000000007BE4Expression);
+            Instructions.Add(183u, this.Script_0x100000000007BE8Expression);
+            Instructions.Add(184u, this.Script_0x100000000007BFCExpression);
+            Instructions.Add(185u, this.Script_0x100000000007C04Expression);
+            Instructions.Add(186u, this.Script_0x100000000007B50Expression);
+            Instructions.Add(187u, this.Script_0x100000000007B58Expression);
+            Instructions.Add(188u, this.Script_0x100000000007B60Expression);
+            Instructions.Add(189u, this.Script_0x100000000007BC8Expression);
+            Instructions.Add(190u, this.Script_0x100000000007BD8Expression);
+            Instructions.Add(191u, this.Script_0x100000000007BDCExpression);
+            Instructions.Add(192u, this.Script_0x100000000007BECExpression);
+            Instructions.Add(193u, this.Script_0x100000000007C00Expression);
+            Instructions.Add(194u, this.Script_0x100000000007854Expression);
+            Instructions.Add(195u, this.Script_0x10000000000787CExpression);
+            Instructions.Add(196u, this.Script_0x10000000000785CExpression);
+            Instructions.Add(197u, this.Script_0x100000000007858Expression);
+            Instructions.Add(198u, this.Script_0x100000000007880Expression);
+            Instructions.Add(199u, this.Script_0x1000000000078A0Expression);
+            Instructions.Add(200u, this.Script_0x100000000007840Expression);
+            Instructions.Add(201u, this.Script_0x100000000007864Expression);
+            Instructions.Add(202u, this.Script_0x100000000007868Expression);
+            Instructions.Add(203u, this.Script_0x100000000007D38Expression);
+            Instructions.Add(204u, this.Script_0x100000000007D33Expression);
+            Instructions.Add(205u, this.Script_0x1000000000078B8Expression);
+            Instructions.Add(206u, this.Script_0x10000000000786CExpression);
+            Instructions.Add(207u, this.Script_0x100000000007D42Expression);
+            Instructions.Add(208u, this.Script_0x100000000007870Expression);
+            Instructions.Add(209u, this.Script_0x100000000007890Expression);
+            Instructions.Add(210u, this.Script_0x100000000007894Expression);
+            Instructions.Add(211u, this.Script_0x1000000000078B4Expression);
+            Instructions.Add(212u, this.Script_0x100000000007850Expression);
+            Instructions.Add(213u, this.Script_0x1000000000078ACExpression);
+            Instructions.Add(214u, this.Script_0x1000000000078A8Expression);
+            Instructions.Add(215u, this.Script_0x10000000000788CExpression);
+            Instructions.Add(216u, this.Script_0x100000000007874Expression);
+            Instructions.Add(217u, this.Script_0x100000000007D3DExpression);
+            Instructions.Add(218u, this.Script_0x1000000000078A4Expression);
+            Instructions.Add(219u, this.Script_0x1000000000078B0Expression);
+            Instructions.Add(220u, this.Script_0x100000000007848Expression);
+            Instructions.Add(221u, this.Script_0x10000000000784CExpression);
+            Instructions.Add(222u, this.Script_0x1000000000078BCExpression);
+            Instructions.Add(223u, this.Script_0x100000000007844Expression);
+            Instructions.Add(224u, this.Script_0x100000000007878Expression);
+            Instructions.Add(225u, this.Script_0x100000000007944Expression);
+            Instructions.Add(226u, this.Script_0x10000000000794CExpression);
+            Instructions.Add(227u, this.Script_0x100000000007934Expression);
+            Instructions.Add(228u, this.Script_0x100000000007940Expression);
+            Instructions.Add(229u, this.Script_0x100000000007930Expression);
+            Instructions.Add(230u, this.Script_0x10000000000793CExpression);
+            Instructions.Add(231u, this.Script_0x100000000007BA0Expression);
+            Instructions.Add(232u, this.Script_0x100000000007BA4Expression);
+            Instructions.Add(233u, this.Script_0x100000000007BA8Expression);
+            Instructions.Add(234u, this.Script_0x100000000007B80Expression);
+            Instructions.Add(235u, this.Script_0x100000000007B2CExpression);
+            Instructions.Add(236u, this.Script_0x100000000007B30Expression);
+            Instructions.Add(237u, this.Script_0x100000000007B34Expression);
+            Instructions.Add(238u, this.Script_0x100000000007B38Expression);
+            Instructions.Add(239u, this.Script_0x100000000007B3CExpression);
+            Instructions.Add(240u, this.Script_0x100000000007B40Expression);
+            Instructions.Add(241u, this.Script_0x100000000007B44Expression);
+            Instructions.Add(242u, this.Script_0x100000000007B48Expression);
+            Instructions.Add(243u, this.Script_0x100000000007B4CExpression);
+            Instructions.Add(244u, this.Script_0x100000000007B64Expression);
+            Instructions.Add(245u, this.Script_0x100000000007B68Expression);
+            Instructions.Add(246u, this.Script_0x100000000007B70Expression);
+            Instructions.Add(247u, this.Script_0x100000000007B74Expression);
+            Instructions.Add(248u, this.Script_0x100000000007B78Expression);
+            Instructions.Add(249u, this.Script_0x100000000007B7CExpression);
+            Instructions.Add(250u, this.Script_0x100000000007B6CExpression);
+            Instructions.Add(251u, this.Script_0x100000000007CBFExpression);
+            Instructions.Add(252u, this.Script_0x100000000007CC3Expression);
+            Instructions.Add(253u, this.Script_0x100000000007928Expression);
+            Instructions.Add(254u, this.Script_0x10000000000792CExpression);
+            Instructions.Add(255u, this.Script_0x100000000007CD3Expression);
+            Instructions.Add(256u, this.Script_0x100000000007CD7Expression);
+            Instructions.Add(257u, this.Script_0x100000000007CDBExpression);
+            Instructions.Add(258u, this.Script_0x100000000007CDFExpression);
+            Instructions.Add(259u, this.Script_0x100000000007948Expression);
+            Instructions.Add(260u, this.Script_0x100000000007950Expression);
+            Instructions.Add(261u, this.Script_0x100000000007CC7Expression);
+            Instructions.Add(262u, this.Script_0x100000000007CCBExpression);
+            Instructions.Add(263u, this.Script_0x100000000007CCFExpression);
+            Instructions.Add(264u, this.Script_0x100000000007938Expression);
+            Instructions.Add(265u, this.Script_0x100000000007D58Expression);
+            Instructions.Add(266u, this.Script_0x100000000007D5DExpression);
+            Instructions.Add(267u, this.Script_0x100000000007D68Expression);
+            Instructions.Add(268u, this.Script_0x100000000007D6DExpression);
+            Instructions.Add(269u, this.Script_0x100000000007D72Expression);
+            Instructions.Add(270u, this.Script_0x100000000007DC3Expression);
         }
         #endregion
         
