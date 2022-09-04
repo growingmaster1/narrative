@@ -9,6 +9,7 @@ public class MoveableEntity : MonoBehaviour
 
     private Vector3 lastPos;
     private Vector3 dis;
+    private Vector3 lastDis = Vector3.zero;
     private string lastMoveDir = "s";
 
     public Sprite idle_s;
@@ -27,32 +28,37 @@ public class MoveableEntity : MonoBehaviour
     {
         spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -1000);
         dis = transform.position - lastPos;
+        dis = dis.normalized;
         lastPos = transform.position;
         anim.enabled = true;
-        if(dis.sqrMagnitude>float.Epsilon)
+        if(dis.magnitude>float.Epsilon)
         {
-            if(dis.x>0.005f)
+            if(lastDis==Vector3.zero || Vector3.Angle(dis,lastDis) > 5)
             {
-                anim.Play(name + "_move_e");
-                lastMoveDir = "e";
-            }
-            else if(dis.x< -0.005f)
-            {
-                anim.Play(name + "_move_w");
-                lastMoveDir = "w";
-            }
-            else
-            {
-                if(dis.y> 0.005f)
+                if (dis.x > 0.5f)
                 {
-                    anim.Play(name + "_move_n");
-                    lastMoveDir = "n";
+                    anim.Play(name + "_move_e");
+                    lastMoveDir = "e";
                 }
-                else if(dis.y<-0.005f)
+                else if (dis.x < -0.5f)
                 {
-                    anim.Play(name + "_move_s");
-                    lastMoveDir = "s";
+                    anim.Play(name + "_move_w");
+                    lastMoveDir = "w";
                 }
+                else
+                {
+                    if (dis.y > 0.5f)
+                    {
+                        anim.Play(name + "_move_n");
+                        lastMoveDir = "n";
+                    }
+                    else if (dis.y < -0.5f)
+                    {
+                        anim.Play(name + "_move_s");
+                        lastMoveDir = "s";
+                    }
+                }
+                lastDis = dis;
             }
         }
         else
