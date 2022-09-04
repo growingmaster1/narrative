@@ -1,98 +1,75 @@
-﻿using UnityEngine;
-using System.Collections;
-using System;
+﻿using System;
 
-public interface IHeapItem<T> : IComparable<T>{
-	int heapIndex { get;set; }
-}
+namespace PolyNav
+{
 
-public class Heap<T> where T:IHeapItem<T> {
-	T[] items;
-	int currentItemCount;
+    public interface IHeapItem<T> : IComparable<T>
+    {
+        int heapIndex { get; set; }
+    }
 
-	public Heap(int maxHeapSize){
-		items = new T[maxHeapSize];
-	}
+    public class Heap<T> where T : IHeapItem<T>
+    {
+        T[] elements;
+        int elementsCount;
 
-	public void Add(T item){
-		item.heapIndex = currentItemCount;
-		items[currentItemCount] = item;
-		SortUp(item);
-		currentItemCount ++;
-	}
+        public int Count => elementsCount;
 
-	public T RemoveFirst(){
-		T firstItem = items[0];
-		currentItemCount --;
-		items[0] = items[currentItemCount];
-		items[0].heapIndex = 0;
-		SortDown(items[0]);
-		return firstItem;
-	}
+        public Heap(int maxHeapSize) => elements = new T[maxHeapSize];
+        public bool Contains(T item) => Equals(elements[item.heapIndex], item);
 
-	public bool Contains(T item){
-		return Equals(items[item.heapIndex], item);
-	}
+        public void Add(T item) {
+            item.heapIndex = elementsCount;
+            elements[elementsCount] = item;
+            SortUp(item);
+            elementsCount++;
+        }
 
-	public void UpdateItem(T item){
-		SortUp(item);
-	}
+        public T RemoveFirst() {
+            T firstItem = elements[0];
+            elementsCount--;
+            elements[0] = elements[elementsCount];
+            elements[0].heapIndex = 0;
+            SortDown(elements[0]);
+            return firstItem;
+        }
 
-	public int Count{
-		get { return currentItemCount; }
-	}
+        void SortUp(T item) {
+            int parentIndex = ( item.heapIndex - 1 ) / 2;
+            while ( true ) {
+                T parentItem = elements[parentIndex];
+                if ( item.CompareTo(parentItem) > 0 ) {
+                    Swap(item, parentItem);
+                } else { break; }
+                parentIndex = ( item.heapIndex - 1 ) / 2;
+            }
+        }
 
+        void SortDown(T item) {
+            while ( true ) {
+                int childIndexLeft = item.heapIndex * 2 + 1;
+                int childIndexRight = item.heapIndex * 2 + 2;
+                int swapIndex = 0;
+                if ( childIndexLeft < elementsCount ) {
+                    swapIndex = childIndexLeft;
+                    if ( childIndexRight < elementsCount ) {
+                        if ( elements[childIndexLeft].CompareTo(elements[childIndexRight]) < 0 ) {
+                            swapIndex = childIndexRight;
+                        }
+                    }
+                    if ( item.CompareTo(elements[swapIndex]) < 0 ) {
+                        Swap(item, elements[swapIndex]);
+                    } else { return; }
+                } else { return; }
+            }
+        }
 
-	void SortDown(T item){
-		while (true){
-			int childIndexLeft = item.heapIndex * 2 + 1;
-			int childIndexRight = item.heapIndex * 2 + 2;
-			int swapIndex = 0;
-
-			if (childIndexLeft < currentItemCount){
-				swapIndex = childIndexLeft;
-
-				if (childIndexRight < currentItemCount){
-					if (items[childIndexLeft].CompareTo(items[childIndexRight]) < 0 ){
-						swapIndex = childIndexRight;
-					}
-				}
-
-				if (item.CompareTo(items[swapIndex]) < 0 ){
-					Swap(item, items[swapIndex]);
-				}
-				else
-				{
-					return;
-				}
-			}
-			else
-			{
-				return;
-			}
-		}
-	}
-
-	void SortUp(T item){
-		int parentIndex = (item.heapIndex-1) /2;
-		while (true){
-			T parentItem = items[parentIndex];
-			if (item.CompareTo(parentItem) > 0){
-				Swap(item, parentItem);
-			}
-			else {
-				break;
-			}
-
-			parentIndex = (item.heapIndex-1) /2;
-		}
-	}
-
-	void Swap(T itemA, T itemB){
-		items[itemA.heapIndex] = itemB;
-		items[itemB.heapIndex] = itemA;
-		int itemAIndex = itemA.heapIndex;
-		itemA.heapIndex = itemB.heapIndex;
-		itemB.heapIndex = itemAIndex;
-	}
+        void Swap(T itemA, T itemB) {
+            elements[itemA.heapIndex] = itemB;
+            elements[itemB.heapIndex] = itemA;
+            int itemAIndex = itemA.heapIndex;
+            itemA.heapIndex = itemB.heapIndex;
+            itemB.heapIndex = itemAIndex;
+        }
+    }
 }

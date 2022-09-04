@@ -49,7 +49,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
 
     private void Move()
     {
-        if(moveable)
+        if (moveable)
         {
             float xMove = Input.GetAxisRaw("Horizontal");
             float yMove = Input.GetAxisRaw("Vertical");
@@ -57,27 +57,28 @@ public class Player : MonoBehaviour,IInit,IWithEntity
             xMove = xMove == 0 ? joystick.Horizontal : xMove;
             yMove = yMove == 0 ? joystick.Vertical : yMove;
 
-            transform.Translate(xMove * Time.deltaTime * 4, yMove * Time.deltaTime * 4, 0);
+            gameObject.GetComponent<Rigidbody2D>().MovePosition(
+                new Vector2(transform.position.x + xMove * Time.deltaTime * 4, transform.position.y + yMove * Time.deltaTime * 4));
 
             anim.enabled = true;
-            if(xMove > 0)
+            if (xMove > 0)
             {
                 anim.Play("player_move_e");
                 lastMoveDir = "e";
             }
-            else if(xMove<0)
+            else if (xMove < 0)
             {
                 anim.Play("player_move_w");
                 lastMoveDir = "w";
             }
             else
             {
-                if(yMove>0)
+                if (yMove > 0)
                 {
                     anim.Play("player_move_n");
                     lastMoveDir = "n";
                 }
-                else if(yMove<0)
+                else if (yMove < 0)
                 {
                     anim.Play("player_move_s");
                     lastMoveDir = "s";
@@ -85,7 +86,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
                 else
                 {
                     anim.enabled = false;
-                    switch(lastMoveDir)
+                    switch (lastMoveDir)
                     {
                         case "e":
                             {
