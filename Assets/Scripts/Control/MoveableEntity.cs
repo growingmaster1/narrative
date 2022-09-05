@@ -26,7 +26,7 @@ public class MoveableEntity : MonoBehaviour
 
     private void FixedUpdate()
     {
-        spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -1000);
+        spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
         dis = transform.position - lastPos;
         dis = dis.normalized;
         lastPos = transform.position;

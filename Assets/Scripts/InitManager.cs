@@ -6,7 +6,7 @@ public class InitManager : MonoBehaviour
 {
     private void Start()
     {
-        LayerSorter.instance.Init();
+        //LayerSorter.instance.Init();
         TimeManager.instance.Init();
         DialogManager.instance.Init();
         SoundingManager.instance.Init();

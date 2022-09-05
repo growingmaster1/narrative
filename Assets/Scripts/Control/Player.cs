@@ -45,6 +45,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
     void FixedUpdate()
     {
         Move();
+        spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
     }
 
     private void Move()
