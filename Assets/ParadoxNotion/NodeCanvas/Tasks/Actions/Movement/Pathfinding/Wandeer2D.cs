@@ -16,6 +16,8 @@ namespace NodeCanvas.Tasks.Actions
         public BBParameter<float> maxDisPerStep = 0.6f;
         public BBParameter<float> minDisPerStep = 0.4f;
         public BBParameter<float> maxMoveDis = 1.0f;
+        public BBParameter<float> maxWaitTime = 0.8f;
+        public BBParameter<float> minWaitTime = 0.4f;
 
         public BBParameter<float> speed = 4f;
 
@@ -40,19 +42,22 @@ namespace NodeCanvas.Tasks.Actions
             agent.position = curPos;
             Vector2 offSet2D;
             float rdm=Random.Range(minDisPerStep.value, maxDisPerStep.value);
-            // curPos + offSet2D * rdm
             while(true){
-                // rdm = Random.Range(minDisPerStep.value, maxDisPerStep.value);
                 offSet2D = Random.insideUnitCircle.normalized;
-                // targetPosition = curPos + offSet2D * rdm;
                 if(Vector2.Distance(orgPos,curPos + offSet2D * rdm)<maxMoveDis.value)
                 break;
             }
             targetPosition = curPos + offSet2D * rdm;
+            float waitTime=Random.Range(minWaitTime.value,maxWaitTime.value);
+            DoWalk2D();
+            // Invoke("DoWalok2D",waitTime);
+            Debug.Log(elapsedTime);
+        }
+
+        private void DoWalk2D(){
             if (!agent.SetDestination(targetPosition.value, (bool canGo) => { EndAction(canGo); }))
                 EndAction(false);
         }
-
         protected override void OnStop()
         {
             agent.Stop();   
