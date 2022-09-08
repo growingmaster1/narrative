@@ -7,7 +7,7 @@ using UnityEngine;
 public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 {
     private ArticyObject flow;
-    private string techName;
+    public string techName;
 
     public ArticyFlowPlayer flowPlayer { get; set; }
     public List<SmartEntity> speakers { get; set; }
