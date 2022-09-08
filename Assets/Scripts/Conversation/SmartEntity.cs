@@ -37,13 +37,13 @@ public class SmartEntity : GameEntity
         }
     }
 
-    //private void Update()
-    //{
-    //    if(sound!=null)
-    //    {
-    //        SoundingManager.instance.PutText(sound, soundPos.transform.position);
-    //    }
-    //}
+    private void Update()
+    {
+        if(sound!=null)
+        {
+            SoundingManager.instance.PutText(sound, soundPos.transform.position);
+        }
+    }
 
     //每次发出声音调用该函数，理论上每句话会调用一次
     public void ArouseSound(string text)
@@ -54,7 +54,7 @@ public class SmartEntity : GameEntity
         }
         soundText.text = text;
         lastText.Enqueue(text);
-        SoundingManager.instance.PutText(sound, soundPos.transform.position);
+        //SoundingManager.instance.PutText(sound, soundPos.transform.position);
         Invoke("TryFinishSound", 3);
     }
 
