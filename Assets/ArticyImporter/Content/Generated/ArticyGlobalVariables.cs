@@ -183,6 +183,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.CountTimes");
             variableNames.Add("Wasang.SelectTimes");
             variableNames.Add("Wasang.InsectTimes");
+            variableNames.Add("Wasang.GhostTimes");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");

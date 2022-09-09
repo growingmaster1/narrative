@@ -1320,6 +1320,19 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int GhostTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(7);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1330,6 +1343,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Wasang.CountTimes", 0);
             aStorage.RegisterVariable("Wasang.SelectTimes", 0);
             aStorage.RegisterVariable("Wasang.InsectTimes", 0);
+            aStorage.RegisterVariable("Wasang.GhostTimes", 0);
         }
     }
 }
@@ -1913,11 +1927,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(7);
+                return _VariableStorage.Internal_GetVariableValueInt32(8);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+                _VariableStorage.Internal_SetVariableValueInt32(8, value);
             }
         }
         
