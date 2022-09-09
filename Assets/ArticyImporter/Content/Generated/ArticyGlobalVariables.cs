@@ -100,6 +100,30 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Qingjiedashen mQingjiedashen = new Qingjiedashen();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private GlobalVariables mGlobalVariables = new GlobalVariables();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private PidanMom mPidanMom = new PidanMom();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private BigAunt mBigAunt = new BigAunt();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private TheWife mTheWife = new TheWife();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private TheHusband mTheHusband = new TheHusband();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Hebaodan mHebaodan = new Hebaodan();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -159,6 +183,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.CountTimes");
             variableNames.Add("Wasang.SelectTimes");
             variableNames.Add("Wasang.InsectTimes");
+            variableNames.Add("Wasang.GhostTimes");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -169,6 +194,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Lisa.Expression");
             variableNames.Add("Lisa.Intervene");
             variableNames.Add("Lisa.Choose");
+            variableNames.Add("Lisa.LisaReturnWithEase");
             variableNames.Add("Pidan.NextState");
             variableNames.Add("Pidan.Refresh");
             variableNames.Add("Pidan.Action");
@@ -181,6 +207,28 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Qingjiedashen.Refresh");
             variableNames.Add("Qingjiedashen.Action");
             variableNames.Add("Qingjiedashen.Expression");
+            variableNames.Add("GlobalVariables.Memo");
+            variableNames.Add("GlobalVariables.RandomNum");
+            variableNames.Add("PidanMom.NextState");
+            variableNames.Add("PidanMom.Refresh");
+            variableNames.Add("PidanMom.Action");
+            variableNames.Add("PidanMom.Expression");
+            variableNames.Add("BigAunt.NextState");
+            variableNames.Add("BigAunt.Refresh");
+            variableNames.Add("BigAunt.Action");
+            variableNames.Add("BigAunt.Expression");
+            variableNames.Add("TheWife.NextState");
+            variableNames.Add("TheWife.Refresh");
+            variableNames.Add("TheWife.Action");
+            variableNames.Add("TheWife.Expression");
+            variableNames.Add("TheHusband.NextState");
+            variableNames.Add("TheHusband.Refresh");
+            variableNames.Add("TheHusband.Action");
+            variableNames.Add("TheHusband.Expression");
+            variableNames.Add("Hebaodan.NextState");
+            variableNames.Add("Hebaodan.Refresh");
+            variableNames.Add("Hebaodan.Action");
+            variableNames.Add("Hebaodan.Expression");
         }
         #endregion
         
@@ -336,6 +384,54 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public GlobalVariables GlobalVariables
+        {
+            get
+            {
+                return mGlobalVariables;
+            }
+        }
+        
+        public PidanMom PidanMom
+        {
+            get
+            {
+                return mPidanMom;
+            }
+        }
+        
+        public BigAunt BigAunt
+        {
+            get
+            {
+                return mBigAunt;
+            }
+        }
+        
+        public TheWife TheWife
+        {
+            get
+            {
+                return mTheWife;
+            }
+        }
+        
+        public TheHusband TheHusband
+        {
+            get
+            {
+                return mTheHusband;
+            }
+        }
+        
+        public Hebaodan Hebaodan
+        {
+            get
+            {
+                return mHebaodan;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -365,6 +461,12 @@ namespace Articy.Littletown.GlobalVariables
             Pidan.RegisterVariables(this);
             Hegel.RegisterVariables(this);
             Qingjiedashen.RegisterVariables(this);
+            GlobalVariables.RegisterVariables(this);
+            PidanMom.RegisterVariables(this);
+            BigAunt.RegisterVariables(this);
+            TheWife.RegisterVariables(this);
+            TheHusband.RegisterVariables(this);
+            Hebaodan.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

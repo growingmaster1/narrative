@@ -7,7 +7,7 @@ using UnityEngine;
 public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 {
     private ArticyObject flow;
-    private string techName;
+    public string techName;
 
     public ArticyFlowPlayer flowPlayer { get; set; }
     public List<SmartEntity> speakers { get; set; }
@@ -54,6 +54,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         SmartEntity inEntity = EntityManager.EntitiesDic[entityName] as SmartEntity;
         if (speakers.Contains(inEntity))
         {
+            inEntity.StopSounding();
             speakers.Remove(inEntity);
         }
         if(speakers.Count==0)
@@ -137,7 +138,16 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
 
     public void PlayOnce()
     {
-        PlayChat();
+        playing = true;
+        if (flowPlayer.StartOn == null)
+        {
+            flowPlayer.StartOn = flow;
+            //flowPlayer.StartOn = flow;
+        }
+        else
+        {
+            PlayChat();
+        }
         playing = false;
     }
 

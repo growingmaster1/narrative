@@ -17,6 +17,8 @@ public class SmartEntity : GameEntity
     public GameObject soundPos;
     private GameObject sound;
 
+    public bool Sounding = false;
+
     [HideInInspector]
     public string givenTechnicalName;
     private Text soundText;
@@ -37,13 +39,13 @@ public class SmartEntity : GameEntity
         }
     }
 
-    //private void Update()
-    //{
-    //    if(sound!=null)
-    //    {
-    //        SoundingManager.instance.PutText(sound, soundPos.transform.position);
-    //    }
-    //}
+    private void Update()
+    {
+        if(sound!=null)
+        {
+            SoundingManager.instance.PutText(sound, soundPos.transform.position);
+        }
+    }
 
     //每次发出声音调用该函数，理论上每句话会调用一次
     public void ArouseSound(string text)
@@ -54,7 +56,7 @@ public class SmartEntity : GameEntity
         }
         soundText.text = text;
         lastText.Enqueue(text);
-        SoundingManager.instance.PutText(sound, soundPos.transform.position);
+        //SoundingManager.instance.PutText(sound, soundPos.transform.position);
         Invoke("TryFinishSound", 3);
     }
 
@@ -105,8 +107,19 @@ public class SmartEntity : GameEntity
         atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
+    public void StopSounding()
+    {
+        Sounding = false;
+    }
+
+    public void StartPlaying()
+    {
+        Sounding = true;
+    }
+
     public void StartSounding()
     {
+        Sounding = true;
         (atFlow as StatePlayer).StartSounding();
     }
 
@@ -120,6 +133,22 @@ public class SmartEntity : GameEntity
                 statePlayer.PlayDialog();
             }
         }
+    }
+
+    public void ContinueChat()
+    {
+        (atFlow as StatePlayer)?.ContinueChat();
+    }
+
+    public void PauseChat()
+    {
+        (atFlow as StatePlayer)?.PauseChat();
+    }
+
+    public void PlayOnce()
+    {
+        Sounding = true;
+        (atFlow as StatePlayer)?.PlayOnce();
     }
 
     private void OnBecameInvisible()
