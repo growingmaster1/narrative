@@ -17,6 +17,8 @@ public class SmartEntity : GameEntity
     public GameObject soundPos;
     private GameObject sound;
 
+    public bool Sounding = false;
+
     [HideInInspector]
     public string givenTechnicalName;
     private Text soundText;
@@ -105,8 +107,19 @@ public class SmartEntity : GameEntity
         atFlow = SoundingManager.instance.PutState(entityName, stateTechName);
     }
 
+    public void StopSounding()
+    {
+        Sounding = false;
+    }
+
+    public void StartPlaying()
+    {
+        Sounding = true;
+    }
+
     public void StartSounding()
     {
+        Sounding = true;
         (atFlow as StatePlayer).StartSounding();
     }
 
@@ -134,6 +147,7 @@ public class SmartEntity : GameEntity
 
     public void PlayOnce()
     {
+        Sounding = true;
         (atFlow as StatePlayer)?.PlayOnce();
     }
 
