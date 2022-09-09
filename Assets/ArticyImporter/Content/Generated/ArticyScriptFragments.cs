@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637983514878331335)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637983578243382871)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -3261,6 +3261,36 @@ aGlobalVariablesState.Hebaodan.NextState="EggsMakePeace";;
             aGlobalVariablesState.Pidan.NextState="EggsSwing";
 aGlobalVariablesState.Hebaodan.NextState="EggsSwing";;
         }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000008514
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037962004?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000008514Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Pidan.NextState = "EggsFight";
+aGlobalVariablesState.Hebaodan.NextState = "EggsFight";;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000851A
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037962010?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000851AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Pidan.NextState = "EggsGoHome";
+aGlobalVariablesState.Hebaodan.NextState = "EggsGoHome";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000851F
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037962015?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000851FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Pidan.NextState = "PidanAtHome";
+aGlobalVariablesState.Hebaodan.NextState = "PidanAtHome";
+        }
         #endregion
         
         #region Unity serialization
@@ -3586,6 +3616,9 @@ aGlobalVariablesState.Hebaodan.NextState="EggsSwing";;
             Instructions.Add(312u, this.Script_0x100000000007B80Expression);
             Instructions.Add(313u, this.Script_0x100000000007F0BExpression);
             Instructions.Add(314u, this.Script_0x100000000007F0FExpression);
+            Instructions.Add(315u, this.Script_0x100000000008514Expression);
+            Instructions.Add(316u, this.Script_0x10000000000851AExpression);
+            Instructions.Add(317u, this.Script_0x10000000000851FExpression);
         }
         #endregion
         

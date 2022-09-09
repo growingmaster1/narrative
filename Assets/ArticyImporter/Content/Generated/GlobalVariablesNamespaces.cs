@@ -1341,7 +1341,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Wasang.Action", "");
             aStorage.RegisterVariable("Wasang.Expression", "");
             aStorage.RegisterVariable("Wasang.CountTimes", 0);
-            aStorage.RegisterVariable("Wasang.SelectTimes", 0);
+            aStorage.RegisterVariable("Wasang.SelectTimes", 2);
             aStorage.RegisterVariable("Wasang.InsectTimes", 0);
             aStorage.RegisterVariable("Wasang.GhostTimes", 0);
         }

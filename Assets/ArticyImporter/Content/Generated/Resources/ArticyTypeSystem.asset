@@ -1,6 +1,65 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9022174871150220076
+--- !u!114 &-9081986719478976441
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SelectabilityModes.Selectable
+  m_EditorClassIdentifier: 
+  mTechnicalName: Selectable
+  mDisplayName: Selectable
+  mValue: 1
+--- !u!114 &-9034750130080078461
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImageViewBoxModes.FromAsset
+  m_EditorClassIdentifier: 
+  mTechnicalName: FromAsset
+  mDisplayName: FromAsset
+  mValue: 0
+--- !u!114 &-8976482215202560159
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShapeType
+  mDisplayName: ShapeType
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.ShapeType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -6128832120563936870}
+  - {fileID: 4719502564201201257}
+  - {fileID: 8283011314704119204}
+  - {fileID: -675427965735526814}
+  - {fileID: 5067433447186345492}
+  - {fileID: -8378515959200627656}
+  - {fileID: 427234783877116063}
+--- !u!114 &-8892471858463142594
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,16 +69,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineColor
+  m_Name: DisplayNameColor
   m_EditorClassIdentifier: 
-  mTechnicalName: OutlineColor
+  mTechnicalName: DisplayNameColor
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-8942595313904074245
+--- !u!114 &-8826432560841929052
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.Dash
+  m_EditorClassIdentifier: 
+  mTechnicalName: Dash
+  mDisplayName: Dash
+  mValue: 2
+--- !u!114 &-8823730664849394413
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29,33 +103,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultExtendedCharacterFeature.Habits
+  m_Name: CreatedBy
   m_EditorClassIdentifier: 
-  mTechnicalName: DefaultExtendedCharacterFeature.Habits
-  mDisplayName: "\u602A\u7656 / \u4E60\u60EF"
-  mIsTemplateProperty: 1
+  mTechnicalName: CreatedBy
+  mDisplayName: 
+  mIsTemplateProperty: 0
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - True
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &-8732904395170107429
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8608224990377997160
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.Solid
+  m_EditorClassIdentifier: 
+  mTechnicalName: Solid
+  mDisplayName: Solid
+  mValue: 0
+--- !u!114 &-8378515959200627656
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Polygon
+  m_EditorClassIdentifier: 
+  mTechnicalName: Polygon
+  mDisplayName: Polygon
+  mValue: 5
+--- !u!114 &-8088956637841886452
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,33 +151,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultExtendedCharacterFeature.Fears
+  m_Name: CachedImageWidth
   m_EditorClassIdentifier: 
-  mTechnicalName: DefaultExtendedCharacterFeature.Fears
-  mDisplayName: "\u5F31\u70B9"
-  mIsTemplateProperty: 1
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - True
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &-8550577032277822828
+  mTechnicalName: CachedImageWidth
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8029891827455420014
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,34 +168,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Appearance
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Jump
   m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Appearance
-  mDisplayName: "\u5916\u8C8C"
-  mIsTemplateProperty: 1
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - True
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &-8517440115539612253
+  mTechnicalName: Jump
+  mDisplayName: Jump
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Jump, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: 3599198336658552290}
+  - {fileID: -8010980749566321481}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-8010980749566321481
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,259 +216,7 @@ MonoBehaviour:
   mPropertyType: Articy.Littletown.UInt64, Assembly-CSharp
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-8340353078886831850
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutputPins
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutputPins
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-8296928454618715940
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.Disc
-  m_EditorClassIdentifier: 
-  mTechnicalName: Disc
-  mDisplayName: Disc
-  mValue: 6
---- !u!114 &-8155264699440294747
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Parent
-  m_EditorClassIdentifier: 
-  mTechnicalName: Parent
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-8097322302639053218
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ZIndex
-  m_EditorClassIdentifier: 
-  mTechnicalName: ZIndex
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-7911335356243460789
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ExternalId
-  m_EditorClassIdentifier: 
-  mTechnicalName: ExternalId
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-7613749454115266176
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ImageAsset
-  m_EditorClassIdentifier: 
-  mTechnicalName: ImageAsset
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-7496428355284041295
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Path
-  m_EditorClassIdentifier: 
-  mTechnicalName: Path
-  mDisplayName: Path
-  mValue: 4
---- !u!114 &-7465182520064558334
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DropShadow
-  m_EditorClassIdentifier: 
-  mTechnicalName: DropShadow
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-7388061429919869065
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutlineStyle
-  mDisplayName: OutlineStyle
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 5255038064223466613}
-  - {fileID: -817117213225668107}
-  - {fileID: -2588348662178208465}
-  - {fileID: 1981543485385074536}
-  - {fileID: 155775162672171426}
---- !u!114 &-7182803062523778238
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes.Invisible
-  m_EditorClassIdentifier: 
-  mTechnicalName: Invisible
-  mDisplayName: Invisible
-  mValue: 0
---- !u!114 &-6576236822901195674
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Document
-  m_EditorClassIdentifier: 
-  mTechnicalName: Document
-  mDisplayName: Document
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Document, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-6546219889503580485
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Position
-  m_EditorClassIdentifier: 
-  mTechnicalName: Position
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-6309861717092086142
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.None
-  m_EditorClassIdentifier: 
-  mTechnicalName: None
-  mDisplayName: None
-  mValue: 1
---- !u!114 &-6077774676449711608
+--- !u!114 &-7753390156944712773
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -415,61 +234,7 @@ MonoBehaviour:
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-5893126023672294498
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultMainCharacterTemplate
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultMainCharacterTemplate
-  mDisplayName: "\u4E3B\u89D2"
-  mBaseType: {fileID: 389336426349388906}
-  mCSharpType: Articy.Littletown.DefaultMainCharacterTemplate, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 1
-  mFeatures:
-  - DefaultExtendedCharacterFeature
-  - DefaultBasicCharacterFeature
-  mProperties:
-  - {fileID: -5194802968945521151}
-  - {fileID: -2518766270719020481}
-  - {fileID: 3971544219184565478}
-  - {fileID: -8732904395170107429}
-  - {fileID: -8942595313904074245}
-  - {fileID: -5632276452300757115}
-  - {fileID: 5296011656268357883}
-  - {fileID: 8676049539251932866}
-  - {fileID: 1143415976476636763}
-  - {fileID: 279832908786114018}
-  - {fileID: 6455225610315462877}
-  - {fileID: 345503569618180105}
-  - {fileID: 1044800418617992858}
-  - {fileID: -8550577032277822828}
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-5632276452300757115
+--- !u!114 &-7736976678781922627
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -505,7 +270,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &-5493162165900522842
+--- !u!114 &-7642136856063223124
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -519,35 +284,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTechnicalName: Link
   mDisplayName: Link
-  mBaseType: {fileID: 8398087741251515101}
+  mBaseType: {fileID: 5463833993489669106}
   mCSharpType: Articy.Littletown.Link, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 9072402861214593704}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: 140403606698670486}
-  - {fileID: -7465182520064558334}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: 3599198336658552290}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: -7355077185010509693}
+  - {fileID: -1425530042921248568}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &-5350883775894786378
+--- !u!114 &-7625010872331092374
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,16 +322,619 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Visibility
+  m_Name: Text
   m_EditorClassIdentifier: 
-  mTechnicalName: Visibility
+  mTechnicalName: Text
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-7413127332538704974
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DisplayName
+  m_EditorClassIdentifier: 
+  mTechnicalName: DisplayName
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-7355077185010509693
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Selectability
+  m_EditorClassIdentifier: 
+  mTechnicalName: Selectability
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-5307740349127141512
+--- !u!114 &-7307574618673573348
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize.Large
+  m_EditorClassIdentifier: 
+  mTechnicalName: Large
+  mDisplayName: Large
+  mValue: 2
+--- !u!114 &-6956961113196815473
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Filename
+  m_EditorClassIdentifier: 
+  mTechnicalName: Filename
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-6913873432419759737
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.DashDot
+  m_EditorClassIdentifier: 
+  mTechnicalName: DashDot
+  mDisplayName: DashDot
+  mValue: 3
+--- !u!114 &-6663996807964289804
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SplitHeight
+  m_EditorClassIdentifier: 
+  mTechnicalName: SplitHeight
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-6561327163764805291
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ZIndex
+  m_EditorClassIdentifier: 
+  mTechnicalName: ZIndex
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-6328344264522387810
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Instruction
+  m_EditorClassIdentifier: 
+  mTechnicalName: Instruction
+  mDisplayName: Instruction
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Instruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: -1596114203364988319}
+  - {fileID: -2581873574835108781}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-6221794487279063223
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Comment
+  m_EditorClassIdentifier: 
+  mTechnicalName: Comment
+  mDisplayName: Comment
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Comment, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -8823730664849394413}
+  - {fileID: 3781598712338074867}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-6128832120563936870
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Invalid
+  m_EditorClassIdentifier: 
+  mTechnicalName: Invalid
+  mDisplayName: Invalid
+  mValue: 0
+--- !u!114 &-5827293524661623197
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationImage
+  m_EditorClassIdentifier: 
+  mTechnicalName: LocationImage
+  mDisplayName: LocationImage
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.LocationImage, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -805321226913533579}
+  - {fileID: 3679563006901520743}
+  - {fileID: -4800976703569811858}
+  - {fileID: 748339776778795637}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: -7355077185010509693}
+  - {fileID: -1425530042921248568}
+  - {fileID: 1756650132764282991}
+  - {fileID: -5486468937865722314}
+  - {fileID: -3218387603988330436}
+  - {fileID: -8088956637841886452}
+  - {fileID: 2636427629453901913}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-5659207428108049153
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Location
+  m_EditorClassIdentifier: 
+  mTechnicalName: Location
+  mDisplayName: Location
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Location, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-5657133562013311254
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Path
+  m_EditorClassIdentifier: 
+  mTechnicalName: Path
+  mDisplayName: Path
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Path, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: 3679563006901520743}
+  - {fileID: -4800976703569811858}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: -7355077185010509693}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: -1425530042921248568}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: -4823029420166093910}
+  - {fileID: 342851021738642750}
+  - {fileID: 3764564980106283223}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-5645025447639644153
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Sex.Male
+  m_EditorClassIdentifier: 
+  mTechnicalName: Male
+  mDisplayName: Male
+  mValue: 0
+--- !u!114 &-5569303807428044148
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize
+  m_EditorClassIdentifier: 
+  mTechnicalName: LocationAnchorSize
+  mDisplayName: LocationAnchorSize
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.LocationAnchorSize, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -3276972543468621869}
+  - {fileID: -4893956019879195925}
+  - {fileID: -7307574618673573348}
+--- !u!114 &-5549761256055792336
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ParentId
+  m_EditorClassIdentifier: 
+  mTechnicalName: ParentId
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-5486468937865722314
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ImageOpacity
+  m_EditorClassIdentifier: 
+  mTechnicalName: ImageOpacity
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-5452513714342473109
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.Dot
+  m_EditorClassIdentifier: 
+  mTechnicalName: Dot
+  mDisplayName: Dot
+  mValue: 1
+--- !u!114 &-5304312866616975152
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: StageDirections
+  m_EditorClassIdentifier: 
+  mTechnicalName: StageDirections
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-5122598260992462276
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShortId
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShortId
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-5071283660617135773
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Attachments
+  m_EditorClassIdentifier: 
+  mTechnicalName: Attachments
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-4999171144126833587
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImageViewBoxModes.Custom
+  m_EditorClassIdentifier: 
+  mTechnicalName: Custom
+  mDisplayName: Custom
+  mValue: 1
+--- !u!114 &-4937601398988508542
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultBasicCharacterFeature.Sex
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultBasicCharacterFeature.Sex
+  mDisplayName: "\u6027\u522B"
+  mIsTemplateProperty: 1
+  mPropertyType: Articy.Littletown.Sex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - True
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - BySortIndex
+  - 
+--- !u!114 &-4893956019879195925
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize.Medium
+  m_EditorClassIdentifier: 
+  mTechnicalName: Medium
+  mDisplayName: Medium
+  mValue: 1
+--- !u!114 &-4823029420166093910
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: StartCap
+  m_EditorClassIdentifier: 
+  mTechnicalName: StartCap
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-4800976703569811858
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Transform
+  m_EditorClassIdentifier: 
+  mTechnicalName: Transform
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.Transformation, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-4304971493159346928
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -584,7 +952,7 @@ MonoBehaviour:
   mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-5228948919587069814
+--- !u!114 &-4197011043990347733
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -594,21 +962,108 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes
+  m_Name: LocationText
   m_EditorClassIdentifier: 
-  mTechnicalName: PreviewImageViewBoxModes
-  mDisplayName: PreviewImageViewBoxModes
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Unity.PreviewImageViewBoxModes, ArticyRuntime, Version=2.4.0.0,
+  mTechnicalName: LocationText
+  mDisplayName: LocationText
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.LocationText, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -805321226913533579}
+  - {fileID: 3679563006901520743}
+  - {fileID: -4800976703569811858}
+  - {fileID: 748339776778795637}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: -7355077185010509693}
+  - {fileID: 8328863351592147751}
+  - {fileID: 8287978686909494691}
+  - {fileID: -1425530042921248568}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-4144347391966309589
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Sex
+  m_EditorClassIdentifier: 
+  mTechnicalName: Sex
+  mDisplayName: "\u6027\u522B"
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.Sex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
   mProperties: []
   mEnumValues:
-  - {fileID: 6314348060982150816}
-  - {fileID: 1696140130748462589}
---- !u!114 &-5194802968945521151
+  - {fileID: -5645025447639644153}
+  - {fileID: 7459648095146425913}
+  - {fileID: 777953931275587554}
+--- !u!114 &-4063258432096281509
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Entity
+  m_EditorClassIdentifier: 
+  mTechnicalName: Entity
+  mDisplayName: Entity
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Entity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: 6955054171719364109}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-3861170496922439070
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -644,37 +1099,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &-5160486554432661157
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Link
-  m_EditorClassIdentifier: 
-  mTechnicalName: Link
-  mDisplayName: Link
-  mValue: 6
---- !u!114 &-5004030110340033050
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.Square
-  m_EditorClassIdentifier: 
-  mTechnicalName: Square
-  mDisplayName: Square
-  mValue: 5
---- !u!114 &-4957664541383478772
+--- !u!114 &-3732883615120359132
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -684,244 +1109,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Vertices
+  m_Name: Size
   m_EditorClassIdentifier: 
-  mTechnicalName: Vertices
+  mTechnicalName: Size
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4701718562307425112
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineSize
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutlineSize
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4417548206038755058
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CachedImageWidth
-  m_EditorClassIdentifier: 
-  mTechnicalName: CachedImageWidth
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4405582979574756871
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SplitHeight
-  m_EditorClassIdentifier: 
-  mTechnicalName: SplitHeight
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4380278000326550222
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: UserFolder
-  m_EditorClassIdentifier: 
-  mTechnicalName: UserFolder
-  mDisplayName: UserFolder
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.UserFolder, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: -7911335356243460789}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -8097322302639053218}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-4274429130401981997
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultSupportingCharacterTemplate
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultSupportingCharacterTemplate
-  mDisplayName: "\u914D\u89D2"
-  mBaseType: {fileID: 389336426349388906}
-  mCSharpType: Articy.Littletown.DefaultSupportingCharacterTemplate, Assembly-CSharp,
-    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 1
-  mFeatures:
-  - DefaultBasicCharacterFeature
-  mProperties:
-  - {fileID: 5296011656268357883}
-  - {fileID: 8676049539251932866}
-  - {fileID: 1143415976476636763}
-  - {fileID: 279832908786114018}
-  - {fileID: 6455225610315462877}
-  - {fileID: 345503569618180105}
-  - {fileID: 1044800418617992858}
-  - {fileID: -8550577032277822828}
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-4005654374318989330
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Transform
-  m_EditorClassIdentifier: 
-  mTechnicalName: Transform
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.Transformation, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-3637784605483429502
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps
-  m_EditorClassIdentifier: 
-  mTechnicalName: PathCaps
-  mDisplayName: PathCaps
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 8744019571131812111}
-  - {fileID: -6309861717092086142}
-  - {fileID: -802786565051379859}
-  - {fileID: -3183277818286949799}
-  - {fileID: 874213487805355720}
-  - {fileID: -5004030110340033050}
-  - {fileID: -8296928454618715940}
---- !u!114 &-3559661374195088695
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ForcedHeight
-  m_EditorClassIdentifier: 
-  mTechnicalName: ForcedHeight
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-3345108069890607603
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Sex.Male
-  m_EditorClassIdentifier: 
-  mTechnicalName: Male
-  mDisplayName: Male
-  mValue: 0
---- !u!114 &-3183277818286949799
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.FilledArrowHead
-  m_EditorClassIdentifier: 
-  mTechnicalName: FilledArrowHead
-  mDisplayName: FilledArrowHead
-  mValue: 3
---- !u!114 &-3181280937677277396
+--- !u!114 &-3473577385157861990
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -935,71 +1132,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTechnicalName: Zone
   mDisplayName: Zone
-  mBaseType: {fileID: 8398087741251515101}
+  mBaseType: {fileID: 5463833993489669106}
   mCSharpType: Articy.Littletown.Zone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: -4957664541383478772}
-  - {fileID: -4005654374318989330}
-  - {fileID: 8501469646828359460}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: -7465182520064558334}
-  - {fileID: 140403606698670486}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: 3679563006901520743}
+  - {fileID: -4800976703569811858}
+  - {fileID: 748339776778795637}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: -1425530042921248568}
+  - {fileID: -7355077185010509693}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &-3060834354694930959
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes.Selectable
-  m_EditorClassIdentifier: 
-  mTechnicalName: Selectable
-  mDisplayName: Selectable
-  mValue: 1
---- !u!114 &-3002980394624571160
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Medium
-  m_EditorClassIdentifier: 
-  mTechnicalName: Medium
-  mDisplayName: Medium
-  mValue: 1
---- !u!114 &-2785008789440326026
+--- !u!114 &-3453580123240607018
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1009,15 +1176,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CreatedBy
+  m_Name: ExternalId
   m_EditorClassIdentifier: 
-  mTechnicalName: CreatedBy
+  mTechnicalName: ExternalId
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-2598827181684462253
+--- !u!114 &-3336725261011205977
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  mTechnicalName: Dialogue
+  mDisplayName: Dialogue
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Dialogue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-3276972543468621869
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1027,27 +1234,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Sex.Female
+  m_Name: LocationAnchorSize.Small
   m_EditorClassIdentifier: 
-  mTechnicalName: Female
-  mDisplayName: Female
-  mValue: 1
---- !u!114 &-2588348662178208465
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Dash
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dash
-  mDisplayName: Dash
-  mValue: 2
---- !u!114 &-2558340171541775477
+  mTechnicalName: Small
+  mDisplayName: Small
+  mValue: 0
+--- !u!114 &-3218387603988330436
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1057,16 +1249,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: EndCap
+  m_Name: ImageAsset
   m_EditorClassIdentifier: 
-  mTechnicalName: EndCap
+  mTechnicalName: ImageAsset
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-2518766270719020481
+--- !u!114 &-2687453245606405058
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1076,10 +1268,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultExtendedCharacterFeature.InnerConflict
+  m_Name: DefaultBasicCharacterFeature.Appearance
   m_EditorClassIdentifier: 
-  mTechnicalName: DefaultExtendedCharacterFeature.InnerConflict
-  mDisplayName: "\u5185\u5728\u51B2\u7A81"
+  mTechnicalName: DefaultBasicCharacterFeature.Appearance
+  mDisplayName: "\u5916\u8C8C"
   mIsTemplateProperty: 1
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
@@ -1102,154 +1294,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &-2467681703696991816
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Jump
-  m_EditorClassIdentifier: 
-  mTechnicalName: Jump
-  mDisplayName: Jump
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Jump, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: 9072402861214593704}
-  - {fileID: -8517440115539612253}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-2311178393395287227
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Sex.Unknown
-  m_EditorClassIdentifier: 
-  mTechnicalName: Unknown
-  mDisplayName: Unknown
-  mValue: 2
---- !u!114 &-2170633593791561437
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Invalid
-  m_EditorClassIdentifier: 
-  mTechnicalName: Invalid
-  mDisplayName: Invalid
-  mValue: 0
---- !u!114 &-1729331585130351918
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Asset
-  m_EditorClassIdentifier: 
-  mTechnicalName: Asset
-  mDisplayName: Asset
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Asset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 3143505150818782029}
-  - {fileID: -322179529554720555}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-1710517838580043083
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Condition
-  m_EditorClassIdentifier: 
-  mTechnicalName: Condition
-  mDisplayName: Condition
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Condition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 6358359837732542057}
-  - {fileID: 588262795589986891}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &-1515756470031188041
+--- !u!114 &-2581873574835108781
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1259,16 +1304,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ClipRect
+  m_Name: Color
   m_EditorClassIdentifier: 
-  mTechnicalName: ClipRect
+  mTechnicalName: Color
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Rect, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-1494906273536525314
+--- !u!114 &-2578514744469959673
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1278,82 +1323,80 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ParentId
+  m_Name: DefaultExtendedCharacterFeature.Habits
   m_EditorClassIdentifier: 
-  mTechnicalName: ParentId
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-817117213225668107
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Dot
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dot
-  mDisplayName: Dot
-  mValue: 1
---- !u!114 &-802786565051379859
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.LineArrowHead
-  m_EditorClassIdentifier: 
-  mTechnicalName: LineArrowHead
-  mDisplayName: LineArrowHead
-  mValue: 2
---- !u!114 &-739278055934379943
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutlineStyle
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-617625967269635907
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayName
-  m_EditorClassIdentifier: 
-  mTechnicalName: DisplayName
-  mDisplayName: 
-  mIsTemplateProperty: 0
+  mTechnicalName: DefaultExtendedCharacterFeature.Habits
+  mDisplayName: "\u602A\u7656 / \u4E60\u60EF"
+  mIsTemplateProperty: 1
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-322179529554720555
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - True
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &-1865438983486696351
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultSupportingCharacterTemplate
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultSupportingCharacterTemplate
+  mDisplayName: "\u914D\u89D2"
+  mBaseType: {fileID: -4063258432096281509}
+  mCSharpType: Articy.Littletown.DefaultSupportingCharacterTemplate, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 1
+  mFeatures:
+  - DefaultBasicCharacterFeature
+  mProperties:
+  - {fileID: 7696978254883226208}
+  - {fileID: 3991915894069849603}
+  - {fileID: 3366852110994531836}
+  - {fileID: -4937601398988508542}
+  - {fileID: 4360271958269145934}
+  - {fileID: 7902773977494641103}
+  - {fileID: 7880216408004570604}
+  - {fileID: -2687453245606405058}
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: 6955054171719364109}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-1844325212394489829
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1363,33 +1406,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OriginalSource
+  m_Name: Position
   m_EditorClassIdentifier: 
-  mTechnicalName: OriginalSource
+  mTechnicalName: Position
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-239768246334165134
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LineWidth
-  m_EditorClassIdentifier: 
-  mTechnicalName: LineWidth
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-124079122347160971
+--- !u!114 &-1769300303120283525
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1403,39 +1429,190 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTechnicalName: Spot
   mDisplayName: Spot
-  mBaseType: {fileID: 8398087741251515101}
+  mBaseType: {fileID: 5463833993489669106}
   mCSharpType: Articy.Littletown.Spot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: -7465182520064558334}
-  - {fileID: 140403606698670486}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: 6955054171719364109}
+  - {fileID: -5122598260992462276}
+  - {fileID: 4863908982037537457}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: -1425530042921248568}
+  - {fileID: -7355077185010509693}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &-80984735624936056
+--- !u!114 &-1596114203364988319
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Expression
+  m_EditorClassIdentifier: 
+  mTechnicalName: Expression
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.ArticyScriptCondition, ArticyRuntime, Version=2.4.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1425530042921248568
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DropShadow
+  m_EditorClassIdentifier: 
+  mTechnicalName: DropShadow
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1357752449340523500
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.Diamond
+  m_EditorClassIdentifier: 
+  mTechnicalName: Diamond
+  mDisplayName: Diamond
+  mValue: 4
+--- !u!114 &-1147678745409108860
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.None
+  m_EditorClassIdentifier: 
+  mTechnicalName: None
+  mDisplayName: None
+  mValue: 1
+--- !u!114 &-861438526507762326
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultExtendedCharacterFeature.Fears
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultExtendedCharacterFeature.Fears
+  mDisplayName: "\u5F31\u70B9"
+  mIsTemplateProperty: 1
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - True
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &-805321226913533579
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Anchors
+  m_EditorClassIdentifier: 
+  mTechnicalName: Anchors
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-719595133523010189
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.FilledArrowHead
+  m_EditorClassIdentifier: 
+  mTechnicalName: FilledArrowHead
+  mDisplayName: FilledArrowHead
+  mValue: 3
+--- !u!114 &-675427965735526814
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Rectangle
+  m_EditorClassIdentifier: 
+  mTechnicalName: Rectangle
+  mDisplayName: Rectangle
+  mValue: 3
+--- !u!114 &-411187474361518419
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1445,20 +1622,127 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes
+  m_Name: Document
   m_EditorClassIdentifier: 
-  mTechnicalName: VisibilityModes
-  mDisplayName: VisibilityModes
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 1
+  mTechnicalName: Document
+  mDisplayName: Document
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Document, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -7182803062523778238}
-  - {fileID: 7718930512771545478}
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-185844041191568434
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Parent
+  m_EditorClassIdentifier: 
+  mTechnicalName: Parent
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-118638900183572999
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: TextObject
+  m_EditorClassIdentifier: 
+  mTechnicalName: TextObject
+  mDisplayName: TextObject
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.TextObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: -5071283660617135773}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &-117029849329507145
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Hub
+  m_EditorClassIdentifier: 
+  mTechnicalName: Hub
+  mDisplayName: Hub
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Hub, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,104 +1756,104 @@ MonoBehaviour:
   m_Name: ArticyTypeSystem
   m_EditorClassIdentifier: 
   mArticyTypes:
-  - {fileID: 8398087741251515101}
-  - {fileID: 9156663806927582581}
-  - {fileID: 4067445996443086459}
-  - {fileID: 3558290877455080921}
-  - {fileID: -80984735624936056}
-  - {fileID: -7388061429919869065}
-  - {fileID: -3637784605483429502}
-  - {fileID: 2275046607792483052}
-  - {fileID: -5228948919587069814}
-  - {fileID: 5892698965252060090}
-  - {fileID: 2355153763916216291}
-  - {fileID: 6051580178583462133}
-  - {fileID: 4971653450706204439}
-  - {fileID: 6597979543573718923}
-  - {fileID: -2467681703696991816}
-  - {fileID: 389336426349388906}
-  - {fileID: -4274429130401981997}
-  - {fileID: -5893126023672294498}
-  - {fileID: 7903375665617526561}
-  - {fileID: -124079122347160971}
-  - {fileID: -3181280937677277396}
-  - {fileID: 9153594720277765233}
-  - {fileID: -5493162165900522842}
-  - {fileID: -1729331585130351918}
-  - {fileID: -1710517838580043083}
-  - {fileID: 8140842792062179689}
-  - {fileID: 5963464322543838758}
-  - {fileID: 3339012921017552944}
-  - {fileID: -6576236822901195674}
-  - {fileID: 2877610970713838157}
-  - {fileID: -4380278000326550222}
+  - {fileID: 5463833993489669106}
+  - {fileID: -4144347391966309589}
+  - {fileID: -8976482215202560159}
+  - {fileID: 2869869521098025861}
+  - {fileID: 3032995134750114289}
+  - {fileID: 6245783017035302704}
+  - {fileID: 6782893045216835258}
+  - {fileID: -5569303807428044148}
+  - {fileID: 6724453728034366655}
+  - {fileID: 7470902695334151627}
+  - {fileID: -3336725261011205977}
+  - {fileID: 1191574046004173648}
+  - {fileID: -117029849329507145}
+  - {fileID: -6221794487279063223}
+  - {fileID: -8029891827455420014}
+  - {fileID: -4063258432096281509}
+  - {fileID: -1865438983486696351}
+  - {fileID: 2848653577231047262}
+  - {fileID: -5659207428108049153}
+  - {fileID: -1769300303120283525}
+  - {fileID: -3473577385157861990}
+  - {fileID: -5657133562013311254}
+  - {fileID: -7642136856063223124}
+  - {fileID: 417285799895362612}
+  - {fileID: 3512485245047994083}
+  - {fileID: -6328344264522387810}
+  - {fileID: -4197011043990347733}
+  - {fileID: -5827293524661623197}
+  - {fileID: -411187474361518419}
+  - {fileID: -118638900183572999}
+  - {fileID: 942202706248627501}
   mArticyPropertyInfos:
-  - {fileID: -1494906273536525314}
-  - {fileID: 7626444731061797930}
-  - {fileID: 8329600759109745790}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: 2416824055273311995}
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: 4103937592585389806}
-  - {fileID: 5290791231113058056}
-  - {fileID: 4906201631499543639}
-  - {fileID: -4405582979574756871}
-  - {fileID: -2785008789440326026}
-  - {fileID: 5671671832049344750}
-  - {fileID: 9072402861214593704}
-  - {fileID: -8517440115539612253}
-  - {fileID: 5296011656268357883}
-  - {fileID: 8676049539251932866}
-  - {fileID: 1143415976476636763}
-  - {fileID: 279832908786114018}
-  - {fileID: 6455225610315462877}
-  - {fileID: 345503569618180105}
-  - {fileID: 1044800418617992858}
-  - {fileID: -8550577032277822828}
-  - {fileID: -5194802968945521151}
-  - {fileID: -2518766270719020481}
-  - {fileID: 3971544219184565478}
-  - {fileID: -8732904395170107429}
-  - {fileID: -8942595313904074245}
-  - {fileID: -5632276452300757115}
-  - {fileID: -5350883775894786378}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: -7465182520064558334}
-  - {fileID: 140403606698670486}
-  - {fileID: -4957664541383478772}
-  - {fileID: -4005654374318989330}
-  - {fileID: 8501469646828359460}
-  - {fileID: 229366586041007619}
-  - {fileID: -2558340171541775477}
-  - {fileID: -239768246334165134}
-  - {fileID: 3143505150818782029}
-  - {fileID: -322179529554720555}
-  - {fileID: 6358359837732542057}
-  - {fileID: 1019396509863407897}
-  - {fileID: 1685504378761386138}
-  - {fileID: -3559661374195088695}
-  - {fileID: -1515756470031188041}
-  - {fileID: 7157256888021143412}
-  - {fileID: -7613749454115266176}
-  - {fileID: -4417548206038755058}
-  - {fileID: 536108084838738348}
+  - {fileID: -5549761256055792336}
+  - {fileID: 3022175987685448565}
+  - {fileID: 4877936250338623245}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: 1192728867717633083}
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: 8050080082073745465}
+  - {fileID: -5304312866616975152}
+  - {fileID: 6221140373162235861}
+  - {fileID: -6663996807964289804}
+  - {fileID: -8823730664849394413}
+  - {fileID: 3781598712338074867}
+  - {fileID: 3599198336658552290}
+  - {fileID: -8010980749566321481}
+  - {fileID: 7696978254883226208}
+  - {fileID: 3991915894069849603}
+  - {fileID: 3366852110994531836}
+  - {fileID: -4937601398988508542}
+  - {fileID: 4360271958269145934}
+  - {fileID: 7902773977494641103}
+  - {fileID: 7880216408004570604}
+  - {fileID: -2687453245606405058}
+  - {fileID: -3861170496922439070}
+  - {fileID: 8533563704327238464}
+  - {fileID: 2472842260517266871}
+  - {fileID: -861438526507762326}
+  - {fileID: -2578514744469959673}
+  - {fileID: -7736976678781922627}
+  - {fileID: 4863908982037537457}
+  - {fileID: 5930762585068954476}
+  - {fileID: -8892471858463142594}
+  - {fileID: 2104177965901195484}
+  - {fileID: 9044824107919093543}
+  - {fileID: 1069440006705776342}
+  - {fileID: 2285609753840620211}
+  - {fileID: -1425530042921248568}
+  - {fileID: -7355077185010509693}
+  - {fileID: 3679563006901520743}
+  - {fileID: -4800976703569811858}
+  - {fileID: 748339776778795637}
+  - {fileID: -4823029420166093910}
+  - {fileID: 342851021738642750}
+  - {fileID: 3764564980106283223}
+  - {fileID: -6956961113196815473}
+  - {fileID: 1076337474876021889}
+  - {fileID: -1596114203364988319}
+  - {fileID: -805321226913533579}
+  - {fileID: 8328863351592147751}
+  - {fileID: 8287978686909494691}
+  - {fileID: 1756650132764282991}
+  - {fileID: -5486468937865722314}
+  - {fileID: -3218387603988330436}
+  - {fileID: -8088956637841886452}
+  - {fileID: 2636427629453901913}
   mArticyTypeNames:
   - ArticyObject
   - Sex
@@ -1672,46 +1956,27 @@ MonoBehaviour:
   - DefaultExtendedCharacterFeature.Habits
   - DefaultExtendedCharacterFeature.FurtherDetails
   mFeaturePropInfos:
-  - {fileID: 5296011656268357883}
-  - {fileID: 8676049539251932866}
-  - {fileID: 1143415976476636763}
-  - {fileID: 279832908786114018}
-  - {fileID: 6455225610315462877}
-  - {fileID: 345503569618180105}
-  - {fileID: 1044800418617992858}
-  - {fileID: -8550577032277822828}
-  - {fileID: -5194802968945521151}
-  - {fileID: -2518766270719020481}
-  - {fileID: 3971544219184565478}
-  - {fileID: -8732904395170107429}
-  - {fileID: -8942595313904074245}
-  - {fileID: -5632276452300757115}
+  - {fileID: 7696978254883226208}
+  - {fileID: 3991915894069849603}
+  - {fileID: 3366852110994531836}
+  - {fileID: -4937601398988508542}
+  - {fileID: 4360271958269145934}
+  - {fileID: 7902773977494641103}
+  - {fileID: 7880216408004570604}
+  - {fileID: -2687453245606405058}
+  - {fileID: -3861170496922439070}
+  - {fileID: 8533563704327238464}
+  - {fileID: 2472842260517266871}
+  - {fileID: -861438526507762326}
+  - {fileID: -2578514744469959673}
+  - {fileID: -7736976678781922627}
   mFeatureTechnicalNames:
   - DefaultBasicCharacterFeature
   - DefaultExtendedCharacterFeature
   mFeatureDisplayNames:
   - "\u57FA\u672C\u5B57\u7B26\u5C5E\u6027"
   - "\u6269\u5C55\u5B57\u7B26\u5C5E\u6027"
---- !u!114 &140403606698670486
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Selectability
-  m_EditorClassIdentifier: 
-  mTechnicalName: Selectability
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &155775162672171426
+--- !u!114 &167064379289537076
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1721,12 +1986,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.DashDotDot
+  m_Name: VisibilityModes.Visible
   m_EditorClassIdentifier: 
-  mTechnicalName: DashDotDot
-  mDisplayName: DashDotDot
-  mValue: 4
---- !u!114 &229366586041007619
+  mTechnicalName: Visible
+  mDisplayName: Visible
+  mValue: 1
+--- !u!114 &342851021738642750
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1736,122 +2001,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: StartCap
+  m_Name: EndCap
   m_EditorClassIdentifier: 
-  mTechnicalName: StartCap
+  mTechnicalName: EndCap
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: Articy.Littletown.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &279832908786114018
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Sex
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Sex
-  mDisplayName: "\u6027\u522B"
-  mIsTemplateProperty: 1
-  mPropertyType: Articy.Littletown.Sex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - True
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - BySortIndex
-  - 
---- !u!114 &285319818407175417
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShowDisplayName
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShowDisplayName
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &345503569618180105
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Accent
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Accent
-  mDisplayName: "\u58F0\u97F3"
-  mIsTemplateProperty: 1
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &378434237154412198
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Spot
-  m_EditorClassIdentifier: 
-  mTechnicalName: Spot
-  mDisplayName: Spot
-  mValue: 1
---- !u!114 &389336426349388906
+--- !u!114 &417285799895362612
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1861,91 +2020,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Entity
+  m_Name: Asset
   m_EditorClassIdentifier: 
-  mTechnicalName: Entity
-  mDisplayName: Entity
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Entity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+  mTechnicalName: Asset
+  mDisplayName: Asset
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Asset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -7413127332538704974}
+  - {fileID: -6956961113196815473}
+  - {fileID: 1076337474876021889}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &536108084838738348
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CachedImageHeight
-  m_EditorClassIdentifier: 
-  mTechnicalName: CachedImageHeight
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &588262795589986891
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Color
-  m_EditorClassIdentifier: 
-  mTechnicalName: Color
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &694578765056219412
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayNameColor
-  m_EditorClassIdentifier: 
-  mTechnicalName: DisplayNameColor
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &874213487805355720
+--- !u!114 &427234783877116063
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1955,12 +2059,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.Diamond
+  m_Name: ShapeType.Link
   m_EditorClassIdentifier: 
-  mTechnicalName: Diamond
-  mDisplayName: Diamond
-  mValue: 4
---- !u!114 &1011134693130292910
+  mTechnicalName: Link
+  mDisplayName: Link
+  mValue: 6
+--- !u!114 &748339776778795637
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1970,124 +2074,63 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShortId
+  m_Name: ShapeType
   m_EditorClassIdentifier: 
-  mTechnicalName: ShortId
+  mTechnicalName: ShapeType
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &1019396509863407897
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Anchors
-  m_EditorClassIdentifier: 
-  mTechnicalName: Anchors
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &1044800418617992858
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Personality
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Personality
-  mDisplayName: "\u4EBA\u683C"
-  mIsTemplateProperty: 1
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - True
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &1143415976476636763
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.BornIn
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.BornIn
-  mDisplayName: "\u51FA\u751F\u5730"
-  mIsTemplateProperty: 1
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - True
-  - 2048
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &1431923477488631614
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImage
-  m_EditorClassIdentifier: 
-  mTechnicalName: PreviewImage
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.PreviewImage, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+  mPropertyType: Articy.Littletown.ShapeType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &1685504378761386138
+--- !u!114 &777953931275587554
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Sex.Unknown
+  m_EditorClassIdentifier: 
+  mTechnicalName: Unknown
+  mDisplayName: Unknown
+  mValue: 2
+--- !u!114 &942202706248627501
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: UserFolder
+  m_EditorClassIdentifier: 
+  mTechnicalName: UserFolder
+  mDisplayName: UserFolder
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.UserFolder, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -7413127332538704974}
+  - {fileID: -3453580123240607018}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -6561327163764805291}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &1069440006705776342
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2097,15 +2140,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ForcedWidth
+  m_Name: OutlineSize
   m_EditorClassIdentifier: 
-  mTechnicalName: ForcedWidth
+  mTechnicalName: OutlineSize
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &1696140130748462589
+--- !u!114 &1076337474876021889
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2114,28 +2157,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes.Custom
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OriginalSource
   m_EditorClassIdentifier: 
-  mTechnicalName: Custom
-  mDisplayName: Custom
-  mValue: 1
---- !u!114 &1981543485385074536
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.DashDot
-  m_EditorClassIdentifier: 
-  mTechnicalName: DashDot
-  mDisplayName: DashDot
-  mValue: 3
---- !u!114 &2275046607792483052
+  mTechnicalName: OriginalSource
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &1191574046004173648
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2145,62 +2176,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize
+  m_Name: DialogueFragment
   m_EditorClassIdentifier: 
-  mTechnicalName: LocationAnchorSize
-  mDisplayName: LocationAnchorSize
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.LocationAnchorSize, Assembly-CSharp, Version=0.0.0.0,
+  mTechnicalName: DialogueFragment
+  mDisplayName: DialogueFragment
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.DialogueFragment, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 5554175280356437042}
-  - {fileID: -3002980394624571160}
-  - {fileID: 6897482303940681596}
---- !u!114 &2355153763916216291
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dialogue
-  mDisplayName: Dialogue
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Dialogue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: 8050080082073745465}
+  - {fileID: -5304312866616975152}
+  - {fileID: 6221140373162235861}
+  - {fileID: -6663996807964289804}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &2416824055273311995
+--- !u!114 &1192728867717633083
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2219,7 +2226,7 @@ MonoBehaviour:
     PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &2877610970713838157
+--- !u!114 &1436951303989580580
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2228,36 +2235,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: TextObject
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.LineArrowHead
   m_EditorClassIdentifier: 
-  mTechnicalName: TextObject
-  mDisplayName: TextObject
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.TextObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 5073355405647463357}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &3143505150818782029
+  mTechnicalName: LineArrowHead
+  mDisplayName: LineArrowHead
+  mValue: 2
+--- !u!114 &1756650132764282991
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2267,15 +2251,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Filename
+  m_Name: ClipRect
   m_EditorClassIdentifier: 
-  mTechnicalName: Filename
+  mTechnicalName: ClipRect
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: UnityEngine.Rect, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &3339012921017552944
+--- !u!114 &1807109092297771341
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2284,52 +2269,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationImage
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.Square
   m_EditorClassIdentifier: 
-  mTechnicalName: LocationImage
-  mDisplayName: LocationImage
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.LocationImage, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1019396509863407897}
-  - {fileID: -4957664541383478772}
-  - {fileID: -4005654374318989330}
-  - {fileID: 8501469646828359460}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: 140403606698670486}
-  - {fileID: -7465182520064558334}
-  - {fileID: -1515756470031188041}
-  - {fileID: 7157256888021143412}
-  - {fileID: -7613749454115266176}
-  - {fileID: -4417548206038755058}
-  - {fileID: 536108084838738348}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &3558290877455080921
+  mTechnicalName: Square
+  mDisplayName: Square
+  mValue: 5
+--- !u!114 &2104177965901195484
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2338,22 +2284,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DisplayNameSize
   m_EditorClassIdentifier: 
-  mTechnicalName: SelectabilityModes
-  mDisplayName: SelectabilityModes
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
+  mTechnicalName: DisplayNameSize
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &2175321428050422156
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.ColoredDot
+  m_EditorClassIdentifier: 
+  mTechnicalName: ColoredDot
+  mDisplayName: ColoredDot
+  mValue: 0
+--- !u!114 &2285609753840620211
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle
+  m_EditorClassIdentifier: 
+  mTechnicalName: OutlineStyle
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 6403851561886643620}
-  - {fileID: -3060834354694930959}
---- !u!114 &3971544219184565478
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &2472842260517266871
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2389,36 +2363,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &4067445996443086459
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShapeType
-  mDisplayName: ShapeType
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.ShapeType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -2170633593791561437}
-  - {fileID: 378434237154412198}
-  - {fileID: 8001029636931852008}
-  - {fileID: 4688204098191348145}
-  - {fileID: -7496428355284041295}
-  - {fileID: 9163899809912830724}
-  - {fileID: -5160486554432661157}
---- !u!114 &4103937592585389806
+--- !u!114 &2636427629453901913
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2428,67 +2373,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: MenuText
+  m_Name: CachedImageHeight
   m_EditorClassIdentifier: 
-  mTechnicalName: MenuText
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &4632314530380683097
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayNameSize
-  m_EditorClassIdentifier: 
-  mTechnicalName: DisplayNameSize
+  mTechnicalName: CachedImageHeight
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &4688204098191348145
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Rectangle
-  m_EditorClassIdentifier: 
-  mTechnicalName: Rectangle
-  mDisplayName: Rectangle
-  mValue: 3
---- !u!114 &4906201631499543639
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Speaker
-  m_EditorClassIdentifier: 
-  mTechnicalName: Speaker
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &4971653450706204439
+--- !u!114 &2848653577231047262
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2498,174 +2391,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Hub
+  m_Name: DefaultMainCharacterTemplate
   m_EditorClassIdentifier: 
-  mTechnicalName: Hub
-  mDisplayName: Hub
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Hub, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
+  mTechnicalName: DefaultMainCharacterTemplate
+  mDisplayName: "\u4E3B\u89D2"
+  mBaseType: {fileID: -4063258432096281509}
+  mCSharpType: Articy.Littletown.DefaultMainCharacterTemplate, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
+  mHasTemplate: 1
+  mFeatures:
+  - DefaultExtendedCharacterFeature
+  - DefaultBasicCharacterFeature
   mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -3861170496922439070}
+  - {fileID: 8533563704327238464}
+  - {fileID: 2472842260517266871}
+  - {fileID: -861438526507762326}
+  - {fileID: -2578514744469959673}
+  - {fileID: -7736976678781922627}
+  - {fileID: 7696978254883226208}
+  - {fileID: 3991915894069849603}
+  - {fileID: 3366852110994531836}
+  - {fileID: -4937601398988508542}
+  - {fileID: 4360271958269145934}
+  - {fileID: 7902773977494641103}
+  - {fileID: 7880216408004570604}
+  - {fileID: -2687453245606405058}
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: 6955054171719364109}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &5073355405647463357
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Attachments
-  m_EditorClassIdentifier: 
-  mTechnicalName: Attachments
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5181580462743352627
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Size
-  m_EditorClassIdentifier: 
-  mTechnicalName: Size
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5255038064223466613
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Solid
-  m_EditorClassIdentifier: 
-  mTechnicalName: Solid
-  mDisplayName: Solid
-  mValue: 0
---- !u!114 &5290791231113058056
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: StageDirections
-  m_EditorClassIdentifier: 
-  mTechnicalName: StageDirections
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5296011656268357883
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Age
-  m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Age
-  mDisplayName: "\u5E74\u9F84"
-  mIsTemplateProperty: 1
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - False
-  - 0
-  - 0
-  - 0
-  - 3.40282346638529E+38
-  - 0
-  - -3.40282346638529E+38
-  - 
-  - 0
-  - 
-  - 
-  - 
---- !u!114 &5554175280356437042
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Small
-  m_EditorClassIdentifier: 
-  mTechnicalName: Small
-  mDisplayName: Small
-  mValue: 0
---- !u!114 &5671671832049344750
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CreatedOn
-  m_EditorClassIdentifier: 
-  mTechnicalName: CreatedOn
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5892698965252060090
+--- !u!114 &2869869521098025861
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2675,141 +2445,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: FlowFragment
+  m_Name: SelectabilityModes
   m_EditorClassIdentifier: 
-  mTechnicalName: FlowFragment
-  mDisplayName: FlowFragment
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.FlowFragment, Assembly-CSharp, Version=0.0.0.0,
+  mTechnicalName: SelectabilityModes
+  mDisplayName: SelectabilityModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
+  mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
-  mProperties:
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &5963464322543838758
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationText
-  m_EditorClassIdentifier: 
-  mTechnicalName: LocationText
-  mDisplayName: LocationText
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.LocationText, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 1019396509863407897}
-  - {fileID: -4957664541383478772}
-  - {fileID: -4005654374318989330}
-  - {fileID: 8501469646828359460}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: 140403606698670486}
-  - {fileID: 1685504378761386138}
-  - {fileID: -3559661374195088695}
-  - {fileID: -7465182520064558334}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &6051580178583462133
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DialogueFragment
-  m_EditorClassIdentifier: 
-  mTechnicalName: DialogueFragment
-  mDisplayName: DialogueFragment
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.DialogueFragment, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 4103937592585389806}
-  - {fileID: 5290791231113058056}
-  - {fileID: 4906201631499543639}
-  - {fileID: -4405582979574756871}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &6314348060982150816
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes.FromAsset
-  m_EditorClassIdentifier: 
-  mTechnicalName: FromAsset
-  mDisplayName: FromAsset
-  mValue: 0
---- !u!114 &6358359837732542057
+  mProperties: []
+  mEnumValues:
+  - {fileID: 5947821235551304236}
+  - {fileID: -9081986719478976441}
+--- !u!114 &3022175987685448565
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2819,16 +2469,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Expression
+  m_Name: Id
   m_EditorClassIdentifier: 
-  mTechnicalName: Expression
+  mTechnicalName: Id
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyScriptCondition, ArticyRuntime, Version=2.4.0.0,
-    Culture=neutral, PublicKeyToken=null
+  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &6403851561886643620
+--- !u!114 &3032995134750114289
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2837,13 +2486,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes.Unselectable
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: VisibilityModes
   m_EditorClassIdentifier: 
-  mTechnicalName: Unselectable
-  mDisplayName: Unselectable
-  mValue: 0
---- !u!114 &6455225610315462877
+  mTechnicalName: VisibilityModes
+  mDisplayName: VisibilityModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: 4279926546947851428}
+  - {fileID: 167064379289537076}
+--- !u!114 &3366852110994531836
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2853,10 +2511,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DefaultBasicCharacterFeature.Occupation
+  m_Name: DefaultBasicCharacterFeature.BornIn
   m_EditorClassIdentifier: 
-  mTechnicalName: DefaultBasicCharacterFeature.Occupation
-  mDisplayName: "\u804C\u4E1A"
+  mTechnicalName: DefaultBasicCharacterFeature.BornIn
+  mDisplayName: "\u51FA\u751F\u5730"
   mIsTemplateProperty: 1
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
@@ -2879,7 +2537,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &6597979543573718923
+--- !u!114 &3512485245047994083
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2889,34 +2547,36 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Comment
+  m_Name: Condition
   m_EditorClassIdentifier: 
-  mTechnicalName: Comment
-  mDisplayName: Comment
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Comment, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+  mTechnicalName: Condition
+  mDisplayName: Condition
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.Condition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: -2785008789440326026}
-  - {fileID: 5671671832049344750}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
+  - {fileID: -7413127332538704974}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: -1596114203364988319}
+  - {fileID: -2581873574835108781}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
   mEnumValues: []
---- !u!114 &6627862605746246265
+--- !u!114 &3599198336658552290
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2926,30 +2586,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text
+  m_Name: Target
   m_EditorClassIdentifier: 
-  mTechnicalName: Text
+  mTechnicalName: Target
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &6897482303940681596
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Large
-  m_EditorClassIdentifier: 
-  mTechnicalName: Large
-  mDisplayName: Large
-  mValue: 2
---- !u!114 &7157256888021143412
+--- !u!114 &3679563006901520743
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2959,15 +2605,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ImageOpacity
+  m_Name: Vertices
   m_EditorClassIdentifier: 
-  mTechnicalName: ImageOpacity
+  mTechnicalName: Vertices
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &3764564980106283223
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LineWidth
+  m_EditorClassIdentifier: 
+  mTechnicalName: LineWidth
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &7626444731061797930
+--- !u!114 &3781598712338074867
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2977,122 +2641,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Id
+  m_Name: CreatedOn
   m_EditorClassIdentifier: 
-  mTechnicalName: Id
+  mTechnicalName: CreatedOn
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &7718930512771545478
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes.Visible
-  m_EditorClassIdentifier: 
-  mTechnicalName: Visible
-  mDisplayName: Visible
-  mValue: 1
---- !u!114 &7903375665617526561
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Location
-  m_EditorClassIdentifier: 
-  mTechnicalName: Location
-  mDisplayName: Location
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Location, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5073355405647463357}
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &8001029636931852008
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Circle
-  m_EditorClassIdentifier: 
-  mTechnicalName: Circle
-  mDisplayName: Circle
-  mValue: 2
---- !u!114 &8140842792062179689
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Instruction
-  m_EditorClassIdentifier: 
-  mTechnicalName: Instruction
-  mDisplayName: Instruction
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Instruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -6546219889503580485}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: 6358359837732542057}
-  - {fileID: 588262795589986891}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -5307740349127141512}
-  - {fileID: -8340353078886831850}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &8329600759109745790
+--- !u!114 &3853041624662148750
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3102,62 +2659,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: InstanceId
+  m_Name: OutputPins
   m_EditorClassIdentifier: 
-  mTechnicalName: InstanceId
+  mTechnicalName: OutputPins
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.Littletown.List`1, Assembly-CSharp
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &8398087741251515101
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyObject
-  m_EditorClassIdentifier: 
-  mTechnicalName: ArticyObject
-  mDisplayName: 
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -1494906273536525314}
-  - {fileID: 7626444731061797930}
-  - {fileID: 8329600759109745790}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &8501469646828359460
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShapeType
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Littletown.ShapeType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &8676049539251932866
+--- !u!114 &3991915894069849603
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3193,7 +2703,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &8744019571131812111
+--- !u!114 &4279926546947851428
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3203,12 +2713,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.ColoredDot
+  m_Name: VisibilityModes.Invisible
   m_EditorClassIdentifier: 
-  mTechnicalName: ColoredDot
-  mDisplayName: ColoredDot
+  mTechnicalName: Invisible
+  mDisplayName: Invisible
   mValue: 0
---- !u!114 &9072402861214593704
+--- !u!114 &4360271958269145934
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3218,91 +2728,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Target
+  m_Name: DefaultBasicCharacterFeature.Occupation
   m_EditorClassIdentifier: 
-  mTechnicalName: Target
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &9153594720277765233
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Path
-  m_EditorClassIdentifier: 
-  mTechnicalName: Path
-  mDisplayName: Path
-  mBaseType: {fileID: 8398087741251515101}
-  mCSharpType: Articy.Littletown.Path, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -617625967269635907}
-  - {fileID: 1431923477488631614}
-  - {fileID: -4957664541383478772}
-  - {fileID: -4005654374318989330}
-  - {fileID: 588262795589986891}
-  - {fileID: 6627862605746246265}
-  - {fileID: -7911335356243460789}
-  - {fileID: -8097322302639053218}
-  - {fileID: 5181580462743352627}
-  - {fileID: 1011134693130292910}
-  - {fileID: -5350883775894786378}
-  - {fileID: 140403606698670486}
-  - {fileID: 285319818407175417}
-  - {fileID: 694578765056219412}
-  - {fileID: 4632314530380683097}
-  - {fileID: -7465182520064558334}
-  - {fileID: -9022174871150220076}
-  - {fileID: -4701718562307425112}
-  - {fileID: -739278055934379943}
-  - {fileID: 229366586041007619}
-  - {fileID: -2558340171541775477}
-  - {fileID: -239768246334165134}
-  - {fileID: 7626444731061797930}
-  - {fileID: -6077774676449711608}
-  - {fileID: -8155264699440294747}
-  - {fileID: -1494906273536525314}
-  - {fileID: 8329600759109745790}
-  - {fileID: 2416824055273311995}
-  mEnumValues: []
---- !u!114 &9156663806927582581
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Sex
-  m_EditorClassIdentifier: 
-  mTechnicalName: Sex
-  mDisplayName: "\u6027\u522B"
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Littletown.Sex, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -3345108069890607603}
-  - {fileID: -2598827181684462253}
-  - {fileID: -2311178393395287227}
---- !u!114 &9163899809912830724
+  mTechnicalName: DefaultBasicCharacterFeature.Occupation
+  mDisplayName: "\u804C\u4E1A"
+  mIsTemplateProperty: 1
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &4719502564201201257
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3312,8 +2764,556 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Polygon
+  m_Name: ShapeType.Spot
   m_EditorClassIdentifier: 
-  mTechnicalName: Polygon
-  mDisplayName: Polygon
-  mValue: 5
+  mTechnicalName: Spot
+  mDisplayName: Spot
+  mValue: 1
+--- !u!114 &4863908982037537457
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Visibility
+  m_EditorClassIdentifier: 
+  mTechnicalName: Visibility
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Littletown.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4877936250338623245
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: InstanceId
+  m_EditorClassIdentifier: 
+  mTechnicalName: InstanceId
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &5067433447186345492
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Path
+  m_EditorClassIdentifier: 
+  mTechnicalName: Path
+  mDisplayName: Path
+  mValue: 4
+--- !u!114 &5463833993489669106
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyObject
+  m_EditorClassIdentifier: 
+  mTechnicalName: ArticyObject
+  mDisplayName: 
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -5549761256055792336}
+  - {fileID: 3022175987685448565}
+  - {fileID: 4877936250338623245}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &5930762585068954476
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShowDisplayName
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShowDisplayName
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &5947821235551304236
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SelectabilityModes.Unselectable
+  m_EditorClassIdentifier: 
+  mTechnicalName: Unselectable
+  mDisplayName: Unselectable
+  mValue: 0
+--- !u!114 &6221140373162235861
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Speaker
+  m_EditorClassIdentifier: 
+  mTechnicalName: Speaker
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &6245783017035302704
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle
+  m_EditorClassIdentifier: 
+  mTechnicalName: OutlineStyle
+  mDisplayName: OutlineStyle
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -8608224990377997160}
+  - {fileID: -5452513714342473109}
+  - {fileID: -8826432560841929052}
+  - {fileID: -6913873432419759737}
+  - {fileID: 8612795996521545264}
+--- !u!114 &6724453728034366655
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImageViewBoxModes
+  m_EditorClassIdentifier: 
+  mTechnicalName: PreviewImageViewBoxModes
+  mDisplayName: PreviewImageViewBoxModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Unity.PreviewImageViewBoxModes, ArticyRuntime, Version=2.4.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -9034750130080078461}
+  - {fileID: -4999171144126833587}
+--- !u!114 &6782893045216835258
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps
+  m_EditorClassIdentifier: 
+  mTechnicalName: PathCaps
+  mDisplayName: PathCaps
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Littletown.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: 2175321428050422156}
+  - {fileID: -1147678745409108860}
+  - {fileID: 1436951303989580580}
+  - {fileID: -719595133523010189}
+  - {fileID: -1357752449340523500}
+  - {fileID: 1807109092297771341}
+  - {fileID: 8756856828274818544}
+--- !u!114 &6955054171719364109
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImage
+  m_EditorClassIdentifier: 
+  mTechnicalName: PreviewImage
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.PreviewImage, ArticyRuntime, Version=2.4.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &7459648095146425913
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Sex.Female
+  m_EditorClassIdentifier: 
+  mTechnicalName: Female
+  mDisplayName: Female
+  mValue: 1
+--- !u!114 &7470902695334151627
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: FlowFragment
+  m_EditorClassIdentifier: 
+  mTechnicalName: FlowFragment
+  mDisplayName: FlowFragment
+  mBaseType: {fileID: 5463833993489669106}
+  mCSharpType: Articy.Littletown.FlowFragment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -5071283660617135773}
+  - {fileID: -7413127332538704974}
+  - {fileID: 6955054171719364109}
+  - {fileID: -2581873574835108781}
+  - {fileID: -7625010872331092374}
+  - {fileID: -3453580123240607018}
+  - {fileID: -1844325212394489829}
+  - {fileID: -6561327163764805291}
+  - {fileID: -3732883615120359132}
+  - {fileID: -5122598260992462276}
+  - {fileID: 3022175987685448565}
+  - {fileID: -7753390156944712773}
+  - {fileID: -185844041191568434}
+  - {fileID: -4304971493159346928}
+  - {fileID: 3853041624662148750}
+  - {fileID: -5549761256055792336}
+  - {fileID: 4877936250338623245}
+  - {fileID: 1192728867717633083}
+  mEnumValues: []
+--- !u!114 &7696978254883226208
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultBasicCharacterFeature.Age
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultBasicCharacterFeature.Age
+  mDisplayName: "\u5E74\u9F84"
+  mIsTemplateProperty: 1
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - False
+  - 0
+  - 0
+  - 0
+  - 3.40282346638529E+38
+  - 0
+  - -3.40282346638529E+38
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &7880216408004570604
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultBasicCharacterFeature.Personality
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultBasicCharacterFeature.Personality
+  mDisplayName: "\u4EBA\u683C"
+  mIsTemplateProperty: 1
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - True
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &7902773977494641103
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultBasicCharacterFeature.Accent
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultBasicCharacterFeature.Accent
+  mDisplayName: "\u58F0\u97F3"
+  mIsTemplateProperty: 1
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &8050080082073745465
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: MenuText
+  m_EditorClassIdentifier: 
+  mTechnicalName: MenuText
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &8283011314704119204
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Circle
+  m_EditorClassIdentifier: 
+  mTechnicalName: Circle
+  mDisplayName: Circle
+  mValue: 2
+--- !u!114 &8287978686909494691
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ForcedHeight
+  m_EditorClassIdentifier: 
+  mTechnicalName: ForcedHeight
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &8328863351592147751
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ForcedWidth
+  m_EditorClassIdentifier: 
+  mTechnicalName: ForcedWidth
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &8533563704327238464
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DefaultExtendedCharacterFeature.InnerConflict
+  m_EditorClassIdentifier: 
+  mTechnicalName: DefaultExtendedCharacterFeature.InnerConflict
+  mDisplayName: "\u5185\u5728\u51B2\u7A81"
+  mIsTemplateProperty: 1
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - True
+  - 
+  - False
+  - True
+  - 2048
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - 
+  - 
+--- !u!114 &8612795996521545264
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.DashDotDot
+  m_EditorClassIdentifier: 
+  mTechnicalName: DashDotDot
+  mDisplayName: DashDotDot
+  mValue: 4
+--- !u!114 &8756856828274818544
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.Disc
+  m_EditorClassIdentifier: 
+  mTechnicalName: Disc
+  mDisplayName: Disc
+  mValue: 6
+--- !u!114 &9044824107919093543
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineColor
+  m_EditorClassIdentifier: 
+  mTechnicalName: OutlineColor
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
