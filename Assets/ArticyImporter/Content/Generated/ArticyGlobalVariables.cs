@@ -183,6 +183,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.CountTimes");
             variableNames.Add("Wasang.SelectTimes");
             variableNames.Add("Wasang.InsectTimes");
+            variableNames.Add("Wasang.GhostTimes");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -193,6 +194,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Lisa.Expression");
             variableNames.Add("Lisa.Intervene");
             variableNames.Add("Lisa.Choose");
+            variableNames.Add("Lisa.LisaReturnWithEase");
             variableNames.Add("Pidan.NextState");
             variableNames.Add("Pidan.Refresh");
             variableNames.Add("Pidan.Action");
@@ -206,6 +208,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Qingjiedashen.Action");
             variableNames.Add("Qingjiedashen.Expression");
             variableNames.Add("GlobalVariables.Memo");
+            variableNames.Add("GlobalVariables.RandomNum");
             variableNames.Add("PidanMom.NextState");
             variableNames.Add("PidanMom.Refresh");
             variableNames.Add("PidanMom.Action");
