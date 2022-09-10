@@ -54,6 +54,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         SmartEntity inEntity = EntityManager.EntitiesDic[entityName] as SmartEntity;
         if (speakers.Contains(inEntity))
         {
+            inEntity.StopSounding();
             speakers.Remove(inEntity);
         }
         if(speakers.Count==0)
