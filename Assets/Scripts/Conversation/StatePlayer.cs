@@ -136,6 +136,12 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         playing = false;
     }
 
+    public void StopChat()
+    {
+        playing = false;
+        flowPlayer.StartOn = null;
+    }
+
     public void PlayOnce()
     {
         playing = true;

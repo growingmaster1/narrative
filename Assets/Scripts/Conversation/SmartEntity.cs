@@ -145,6 +145,12 @@ public class SmartEntity : GameEntity
         (atFlow as StatePlayer)?.PauseChat();
     }
 
+    public void StopChat()
+    {
+        (atFlow as StatePlayer)?.StopChat();
+        StopSounding();
+    }
+
     public void PlayOnce()
     {
         Sounding = true;
