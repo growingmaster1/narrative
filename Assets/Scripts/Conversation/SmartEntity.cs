@@ -122,6 +122,21 @@ public class SmartEntity : GameEntity
         }
     }
 
+    public void ContinueChat()
+    {
+        (atFlow as StatePlayer)?.ContinueChat();
+    }
+
+    public void PauseChat()
+    {
+        (atFlow as StatePlayer)?.PauseChat();
+    }
+
+    public void PlayOnce()
+    {
+        (atFlow as StatePlayer)?.PlayOnce();
+    }
+
     private void OnBecameInvisible()
     {
         visible = false;
