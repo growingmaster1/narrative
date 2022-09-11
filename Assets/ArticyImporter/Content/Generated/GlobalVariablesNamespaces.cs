@@ -199,6 +199,19 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int TalkTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(0, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -206,6 +219,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Emily.Refresh", false);
             aStorage.RegisterVariable("Emily.Expression", "");
             aStorage.RegisterVariable("Emily.Action", "");
+            aStorage.RegisterVariable("Emily.TalkTimes", 0);
         }
     }
 }
@@ -337,11 +351,67 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public bool metEmily
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(3);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
+            }
+        }
+        
+        // 
+        public bool metKaka
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
+            }
+        }
+        
+        // 
+        public bool MissionLookForDog
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(5);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(5, value);
+            }
+        }
+        
+        // 
+        public bool MissionDogFound
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(6);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(6, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
             aStorage.RegisterVariable("Player.Action", "");
             aStorage.RegisterVariable("Player.Expression", "");
+            aStorage.RegisterVariable("Player.metEmily", false);
+            aStorage.RegisterVariable("Player.metKaka", false);
+            aStorage.RegisterVariable("Player.MissionLookForDog", false);
+            aStorage.RegisterVariable("Player.MissionDogFound", false);
         }
     }
 }
@@ -361,19 +431,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(0);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(0, value);
-            }
-        }
-        
-        // 
-        public int hours
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueInt32(1);
             }
             set
@@ -383,7 +440,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public int minutes
+        public int hours
         {
             get
             {
@@ -396,7 +453,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public int seconds
+        public int minutes
         {
             get
             {
@@ -405,6 +462,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueInt32(3, value);
+            }
+        }
+        
+        // 
+        public int seconds
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(4, value);
             }
         }
         
@@ -497,11 +567,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(3);
+                return _VariableStorage.Internal_GetVariableValueBoolean(7);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(7, value);
             }
         }
         
@@ -594,11 +664,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(4);
+                return _VariableStorage.Internal_GetVariableValueBoolean(8);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(4, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
             }
         }
         
@@ -628,11 +698,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(5);
+                return _VariableStorage.Internal_GetVariableValueBoolean(9);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(5, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
             }
         }
         
@@ -788,11 +858,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(6);
+                return _VariableStorage.Internal_GetVariableValueBoolean(10);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(6, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
             }
         }
         
@@ -885,11 +955,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(7);
+                return _VariableStorage.Internal_GetVariableValueBoolean(11);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(7, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(11, value);
             }
         }
         
@@ -982,11 +1052,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(8);
+                return _VariableStorage.Internal_GetVariableValueBoolean(12);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(12, value);
             }
         }
         
@@ -1079,11 +1149,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+                return _VariableStorage.Internal_GetVariableValueBoolean(13);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(13, value);
             }
         }
         
@@ -1176,11 +1246,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(10);
+                return _VariableStorage.Internal_GetVariableValueBoolean(14);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(14, value);
             }
         }
         
@@ -1231,11 +1301,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(11);
+                return _VariableStorage.Internal_GetVariableValueBoolean(15);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(11, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(15, value);
             }
         }
         
@@ -1286,19 +1356,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueInt32(4);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueInt32(4, value);
-            }
-        }
-        
-        // 
-        public int SelectTimes
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueInt32(5);
             }
             set
@@ -1308,7 +1365,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public int InsectTimes
+        public int SelectTimes
         {
             get
             {
@@ -1320,6 +1377,32 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int InsectTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(7);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+            }
+        }
+        
+        // 
+        public int GhostTimes
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(8);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(8, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1328,8 +1411,9 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Wasang.Action", "");
             aStorage.RegisterVariable("Wasang.Expression", "");
             aStorage.RegisterVariable("Wasang.CountTimes", 0);
-            aStorage.RegisterVariable("Wasang.SelectTimes", 0);
+            aStorage.RegisterVariable("Wasang.SelectTimes", 2);
             aStorage.RegisterVariable("Wasang.InsectTimes", 0);
+            aStorage.RegisterVariable("Wasang.GhostTimes", 0);
         }
     }
 }
@@ -1370,11 +1454,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(12);
+                return _VariableStorage.Internal_GetVariableValueBoolean(16);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(12, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(16, value);
             }
         }
         
@@ -1467,11 +1551,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(13);
+                return _VariableStorage.Internal_GetVariableValueBoolean(17);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(13, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(17, value);
             }
         }
         
@@ -1559,6 +1643,19 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public bool LisaReturnWithEase
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(18);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(18, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1568,6 +1665,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Lisa.Expression", "");
             aStorage.RegisterVariable("Lisa.Intervene", "");
             aStorage.RegisterVariable("Lisa.Choose", "");
+            aStorage.RegisterVariable("Lisa.LisaReturnWithEase", false);
         }
     }
 }
@@ -1608,11 +1706,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(14);
+                return _VariableStorage.Internal_GetVariableValueBoolean(19);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(14, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(19, value);
             }
         }
         
@@ -1705,11 +1803,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(15);
+                return _VariableStorage.Internal_GetVariableValueBoolean(20);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(15, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(20, value);
             }
         }
         
@@ -1755,6 +1853,19 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int Health
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(9);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(9, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -1762,6 +1873,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Hegel.Refresh", false);
             aStorage.RegisterVariable("Hegel.Action", "");
             aStorage.RegisterVariable("Hegel.Expression", "");
+            aStorage.RegisterVariable("Hegel.Health", 0);
         }
     }
 }
@@ -1802,11 +1914,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(16);
+                return _VariableStorage.Internal_GetVariableValueBoolean(21);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(16, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(21, value);
             }
         }
         
@@ -1894,10 +2006,24 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public int RandomNum
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(10);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(10, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
             aStorage.RegisterVariable("GlobalVariables.Memo", "");
+            aStorage.RegisterVariable("GlobalVariables.RandomNum", 0);
         }
     }
 }
@@ -1938,11 +2064,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(17);
+                return _VariableStorage.Internal_GetVariableValueBoolean(22);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(17, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(22, value);
             }
         }
         
@@ -2035,11 +2161,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(18);
+                return _VariableStorage.Internal_GetVariableValueBoolean(23);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(18, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(23, value);
             }
         }
         
@@ -2132,11 +2258,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(19);
+                return _VariableStorage.Internal_GetVariableValueBoolean(24);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(19, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(24, value);
             }
         }
         
@@ -2229,11 +2355,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(20);
+                return _VariableStorage.Internal_GetVariableValueBoolean(25);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(20, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(25, value);
             }
         }
         
@@ -2326,11 +2452,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(21);
+                return _VariableStorage.Internal_GetVariableValueBoolean(26);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(21, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(26, value);
             }
         }
         
@@ -2383,6 +2509,394 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Hebaodan.Refresh", false);
             aStorage.RegisterVariable("Hebaodan.Action", "");
             aStorage.RegisterVariable("Hebaodan.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class KakaMom : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(70, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(70, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(70, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(27);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(27, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(71, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(71, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(71, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(72, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(72, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(72, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("KakaMom.NextState", "");
+            aStorage.RegisterVariable("KakaMom.Refresh", false);
+            aStorage.RegisterVariable("KakaMom.Action", "");
+            aStorage.RegisterVariable("KakaMom.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Bunny : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(73, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(73, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(73, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(28);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(28, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(74, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(74, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(74, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(75, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(75, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(75, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Bunny.NextState", "");
+            aStorage.RegisterVariable("Bunny.Refresh", false);
+            aStorage.RegisterVariable("Bunny.Action", "");
+            aStorage.RegisterVariable("Bunny.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Police : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(76, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(76, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(76, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(29);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(29, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(77, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(77, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(77, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(78, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(78, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(78, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Police.NextState", "");
+            aStorage.RegisterVariable("Police.Refresh", false);
+            aStorage.RegisterVariable("Police.Action", "");
+            aStorage.RegisterVariable("Police.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class BunnyMom : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(79, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(79, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_NextState
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(79, false);
+            }
+        }
+        
+        // 
+        public bool Refresh
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(30);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(30, value);
+            }
+        }
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(80, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(80, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(80, false);
+            }
+        }
+        
+        public string Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(81, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(81, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Expression
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(81, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("BunnyMom.NextState", "");
+            aStorage.RegisterVariable("BunnyMom.Refresh", false);
+            aStorage.RegisterVariable("BunnyMom.Action", "");
+            aStorage.RegisterVariable("BunnyMom.Expression", "");
         }
     }
 }
