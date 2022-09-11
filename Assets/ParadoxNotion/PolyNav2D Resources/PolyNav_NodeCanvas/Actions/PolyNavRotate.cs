@@ -34,7 +34,7 @@ namespace narrative.Assets.ParadoxNotion.PolyNav2D_Resources.PolyNav_NodeCanvas.
             if (!agent.SetDestination(targetObject.value.transform.position+Random.Range(minDis.value,maxDis.value)*targetVec, (bool canGo) => { EndAction(canGo); }))
                 EndAction(false);
         }
-
+    
         protected override void OnStop()
         {
             agent.Stop();

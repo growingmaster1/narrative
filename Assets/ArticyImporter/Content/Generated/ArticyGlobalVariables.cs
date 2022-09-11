@@ -124,6 +124,22 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Hebaodan mHebaodan = new Hebaodan();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private KakaMom mKakaMom = new KakaMom();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Bunny mBunny = new Bunny();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Police mPolice = new Police();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private BunnyMom mBunnyMom = new BunnyMom();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -135,11 +151,21 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Refresh");
             variableNames.Add("Emily.Expression");
             variableNames.Add("Emily.Action");
+            variableNames.Add("Emily.TalkTimes");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
             variableNames.Add("Player.Action");
             variableNames.Add("Player.Expression");
+            variableNames.Add("Player.metEmily");
+            variableNames.Add("Player.metKaka");
+            variableNames.Add("Player.MissionLookForDog");
+            variableNames.Add("Player.MissionDogFound");
+            variableNames.Add("Player.MissionLookForDogResult");
+            variableNames.Add("Player.metLisa");
+            variableNames.Add("Player.heardHegel");
+            variableNames.Add("Player.knowHegel");
+            variableNames.Add("Player.knowLisa");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -195,6 +221,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Lisa.Intervene");
             variableNames.Add("Lisa.Choose");
             variableNames.Add("Lisa.LisaReturnWithEase");
+            variableNames.Add("Lisa.FollowPlayer");
             variableNames.Add("Pidan.NextState");
             variableNames.Add("Pidan.Refresh");
             variableNames.Add("Pidan.Action");
@@ -203,6 +230,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
             variableNames.Add("Hegel.Expression");
+            variableNames.Add("Hegel.Health");
             variableNames.Add("Qingjiedashen.NextState");
             variableNames.Add("Qingjiedashen.Refresh");
             variableNames.Add("Qingjiedashen.Action");
@@ -229,6 +257,22 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Hebaodan.Refresh");
             variableNames.Add("Hebaodan.Action");
             variableNames.Add("Hebaodan.Expression");
+            variableNames.Add("KakaMom.NextState");
+            variableNames.Add("KakaMom.Refresh");
+            variableNames.Add("KakaMom.Action");
+            variableNames.Add("KakaMom.Expression");
+            variableNames.Add("Bunny.NextState");
+            variableNames.Add("Bunny.Refresh");
+            variableNames.Add("Bunny.Action");
+            variableNames.Add("Bunny.Expression");
+            variableNames.Add("Police.NextState");
+            variableNames.Add("Police.Refresh");
+            variableNames.Add("Police.Action");
+            variableNames.Add("Police.Expression");
+            variableNames.Add("BunnyMom.NextState");
+            variableNames.Add("BunnyMom.Refresh");
+            variableNames.Add("BunnyMom.Action");
+            variableNames.Add("BunnyMom.Expression");
         }
         #endregion
         
@@ -432,6 +476,38 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public KakaMom KakaMom
+        {
+            get
+            {
+                return mKakaMom;
+            }
+        }
+        
+        public Bunny Bunny
+        {
+            get
+            {
+                return mBunny;
+            }
+        }
+        
+        public Police Police
+        {
+            get
+            {
+                return mPolice;
+            }
+        }
+        
+        public BunnyMom BunnyMom
+        {
+            get
+            {
+                return mBunnyMom;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -467,6 +543,10 @@ namespace Articy.Littletown.GlobalVariables
             TheWife.RegisterVariables(this);
             TheHusband.RegisterVariables(this);
             Hebaodan.RegisterVariables(this);
+            KakaMom.RegisterVariables(this);
+            Bunny.RegisterVariables(this);
+            Police.RegisterVariables(this);
+            BunnyMom.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
