@@ -161,6 +161,14 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.metKaka");
             variableNames.Add("Player.MissionLookForDog");
             variableNames.Add("Player.MissionDogFound");
+            variableNames.Add("Player.MissionLookForDogResult");
+            variableNames.Add("Player.metLisa");
+            variableNames.Add("Player.heardHegel");
+            variableNames.Add("Player.knowHegel");
+            variableNames.Add("Player.knowLisa");
+            variableNames.Add("Player.knowKaka");
+            variableNames.Add("Player.metWasang");
+            variableNames.Add("Player.knowWasang");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -209,6 +217,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
             variableNames.Add("Kaka.Expression");
+            variableNames.Add("Kaka.TalkEgg");
+            variableNames.Add("Kaka.TalkSelf");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -216,6 +226,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Lisa.Intervene");
             variableNames.Add("Lisa.Choose");
             variableNames.Add("Lisa.LisaReturnWithEase");
+            variableNames.Add("Lisa.FollowPlayer");
             variableNames.Add("Pidan.NextState");
             variableNames.Add("Pidan.Refresh");
             variableNames.Add("Pidan.Action");
