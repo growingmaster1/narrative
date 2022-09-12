@@ -217,8 +217,10 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
             variableNames.Add("Kaka.Expression");
-            variableNames.Add("Kaka.TalkEgg");
+            variableNames.Add("Kaka.EatEgg");
             variableNames.Add("Kaka.TalkSelf");
+            variableNames.Add("Kaka.introductionToTwo");
+            variableNames.Add("Kaka.TalkEgg");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");

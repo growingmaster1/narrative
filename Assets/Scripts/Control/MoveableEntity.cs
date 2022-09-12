@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PolyNav;
 
 public class MoveableEntity : MonoBehaviour
 {
     private Animator anim;
     private SpriteRenderer spRenderer;
+    private PolyNavAgent agent;
 
     private Vector3 lastPos;
     private Vector3 dis;
@@ -22,6 +24,7 @@ public class MoveableEntity : MonoBehaviour
         anim = GetComponent<Animator>();
         spRenderer = GetComponent<SpriteRenderer>();
         lastPos = transform.position;
+        agent = GetComponent<PolyNavAgent>();
     }
 
     private void FixedUpdate()
@@ -117,4 +120,10 @@ public class MoveableEntity : MonoBehaviour
         }
         lastMoveDir = dir;
     }
+
+    public void PolyNavSpeedChange(float newSpeed)
+    {
+        agent.maxSpeed = newSpeed;
+    }
+
 }
