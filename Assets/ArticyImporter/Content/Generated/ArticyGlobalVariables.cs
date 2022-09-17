@@ -166,12 +166,9 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.heardHegel");
             variableNames.Add("Player.knowHegel");
             variableNames.Add("Player.knowLisa");
-<<<<<<< HEAD
-=======
             variableNames.Add("Player.knowKaka");
             variableNames.Add("Player.metWasang");
             variableNames.Add("Player.knowWasang");
->>>>>>> 3fcf6ddbe3ffff6314ae28cfbfacf9a64a5aa387
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
