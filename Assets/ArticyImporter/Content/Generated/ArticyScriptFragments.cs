@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637990486810919518)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637990550709949769)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -5165,15 +5165,12 @@ aGlobalVariablesState.Grandma_2.NextState = "Grandma3GoHome";
         }
         
         /// <summary>
-        /// ObjectID: 0x100000000007BA0
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037959584?pane=selected&amp;tab=current
+        /// ObjectID: 0x10000000000A681
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037970561?pane=selected&amp;tab=current
         /// </summary>
-        public void Script_0x100000000007BA0Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_0x10000000000A681Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Qingjiedashen.Action="OverMoveHome";
-aGlobalVariablesState.Player.Action="OverMoveHome"
-//清洁大婶、玩家移动到家里（位置X）
-;
+            aGlobalVariablesState.Player.Action = "MoveToCart";
         }
         
         /// <summary>
@@ -5197,24 +5194,6 @@ aGlobalVariablesState.Player.Action="StartMoveHome"
             aGlobalVariablesState.Qingjiedashen.Expression="Xiaotuiche"
 //清洁大婶冒泡小推车
 ;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000007F23
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960483?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000007F23Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.BigAunt.NextState = "BigAuntRestAtHomeAfterShopping";;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x100000000007F27
-        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037960487?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000007F27Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.BigAunt.Refresh = true;;
         }
         
         /// <summary>
@@ -6235,62 +6214,60 @@ aGlobalVariablesState.TheHusband.Expression="!"
             Instructions.Add(508u, this.Script_0x100000000007FB4Expression);
             Instructions.Add(509u, this.Script_0x100000000008A43Expression);
             Instructions.Add(510u, this.Script_0x100000000007FB8Expression);
-            Instructions.Add(511u, this.Script_0x100000000007BA0Expression);
+            Instructions.Add(511u, this.Script_0x10000000000A681Expression);
             Instructions.Add(512u, this.Script_0x100000000007BA4Expression);
             Instructions.Add(513u, this.Script_0x100000000007BA8Expression);
-            Instructions.Add(514u, this.Script_0x100000000007F23Expression);
-            Instructions.Add(515u, this.Script_0x100000000007F27Expression);
-            Instructions.Add(516u, this.Script_0x100000000007FC4Expression);
-            Instructions.Add(517u, this.Script_0x100000000007FBCExpression);
-            Instructions.Add(518u, this.Script_0x100000000007FC8Expression);
-            Instructions.Add(519u, this.Script_0x100000000007FC0Expression);
-            Instructions.Add(520u, this.Script_0x100000000007B80Expression);
-            Instructions.Add(521u, this.Script_0x100000000007F0BExpression);
-            Instructions.Add(522u, this.Script_0x100000000007F0FExpression);
-            Instructions.Add(523u, this.Script_0x10000000000851AExpression);
-            Instructions.Add(524u, this.Script_0x100000000008514Expression);
-            Instructions.Add(525u, this.Script_0x10000000000851FExpression);
-            Instructions.Add(526u, this.Script_0x10000000000887FExpression);
-            Instructions.Add(527u, this.Script_0x10000000000888FExpression);
-            Instructions.Add(528u, this.Script_0x10000000000888BExpression);
-            Instructions.Add(529u, this.Script_0x100000000008883Expression);
-            Instructions.Add(530u, this.Script_0x100000000008887Expression);
-            Instructions.Add(531u, this.Script_0x100000000008917Expression);
-            Instructions.Add(532u, this.Script_0x10000000000891BExpression);
-            Instructions.Add(533u, this.Script_0x100000000008913Expression);
-            Instructions.Add(534u, this.Script_0x10000000000891FExpression);
-            Instructions.Add(535u, this.Script_0x100000000008943Expression);
-            Instructions.Add(536u, this.Script_0x100000000008947Expression);
-            Instructions.Add(537u, this.Script_0x10000000000893FExpression);
-            Instructions.Add(538u, this.Script_0x100000000009E21Expression);
-            Instructions.Add(539u, this.Script_0x100000000009E27Expression);
-            Instructions.Add(540u, this.Script_0x100000000009E5FExpression);
-            Instructions.Add(541u, this.Script_0x100000000009E63Expression);
-            Instructions.Add(542u, this.Script_0x100000000009E67Expression);
-            Instructions.Add(543u, this.Script_0x100000000009E6BExpression);
-            Instructions.Add(544u, this.Script_0x10000000000A113Expression);
-            Instructions.Add(545u, this.Script_0x10000000000A117Expression);
-            Instructions.Add(546u, this.Script_0x10000000000A11BExpression);
-            Instructions.Add(547u, this.Script_0x10000000000A11FExpression);
-            Instructions.Add(548u, this.Script_0x10000000000A123Expression);
-            Instructions.Add(549u, this.Script_0x10000000000A127Expression);
-            Instructions.Add(550u, this.Script_0x10000000000A12BExpression);
-            Instructions.Add(551u, this.Script_0x10000000000A12FExpression);
-            Instructions.Add(552u, this.Script_0x10000000000A133Expression);
-            Instructions.Add(553u, this.Script_0x10000000000A137Expression);
-            Instructions.Add(554u, this.Script_0x10000000000A13BExpression);
-            Instructions.Add(555u, this.Script_0x10000000000A13FExpression);
-            Instructions.Add(556u, this.Script_0x10000000000A143Expression);
-            Instructions.Add(557u, this.Script_0x10000000000A147Expression);
-            Instructions.Add(558u, this.Script_0x10000000000A14BExpression);
-            Instructions.Add(559u, this.Script_0x10000000000A14FExpression);
-            Instructions.Add(560u, this.Script_0x10000000000A153Expression);
-            Instructions.Add(561u, this.Script_0x10000000000A157Expression);
-            Instructions.Add(562u, this.Script_0x10000000000A15BExpression);
-            Instructions.Add(563u, this.Script_0x10000000000A15FExpression);
-            Instructions.Add(564u, this.Script_0x10000000000A5FCExpression);
-            Instructions.Add(565u, this.Script_0x10000000000A609Expression);
-            Instructions.Add(566u, this.Script_0x10000000000A611Expression);
+            Instructions.Add(514u, this.Script_0x100000000007FC4Expression);
+            Instructions.Add(515u, this.Script_0x100000000007FBCExpression);
+            Instructions.Add(516u, this.Script_0x100000000007FC8Expression);
+            Instructions.Add(517u, this.Script_0x100000000007FC0Expression);
+            Instructions.Add(518u, this.Script_0x100000000007B80Expression);
+            Instructions.Add(519u, this.Script_0x100000000007F0BExpression);
+            Instructions.Add(520u, this.Script_0x100000000007F0FExpression);
+            Instructions.Add(521u, this.Script_0x10000000000851AExpression);
+            Instructions.Add(522u, this.Script_0x100000000008514Expression);
+            Instructions.Add(523u, this.Script_0x10000000000851FExpression);
+            Instructions.Add(524u, this.Script_0x10000000000887FExpression);
+            Instructions.Add(525u, this.Script_0x10000000000888FExpression);
+            Instructions.Add(526u, this.Script_0x10000000000888BExpression);
+            Instructions.Add(527u, this.Script_0x100000000008883Expression);
+            Instructions.Add(528u, this.Script_0x100000000008887Expression);
+            Instructions.Add(529u, this.Script_0x100000000008917Expression);
+            Instructions.Add(530u, this.Script_0x10000000000891BExpression);
+            Instructions.Add(531u, this.Script_0x100000000008913Expression);
+            Instructions.Add(532u, this.Script_0x10000000000891FExpression);
+            Instructions.Add(533u, this.Script_0x100000000008943Expression);
+            Instructions.Add(534u, this.Script_0x100000000008947Expression);
+            Instructions.Add(535u, this.Script_0x10000000000893FExpression);
+            Instructions.Add(536u, this.Script_0x100000000009E21Expression);
+            Instructions.Add(537u, this.Script_0x100000000009E27Expression);
+            Instructions.Add(538u, this.Script_0x100000000009E5FExpression);
+            Instructions.Add(539u, this.Script_0x100000000009E63Expression);
+            Instructions.Add(540u, this.Script_0x100000000009E67Expression);
+            Instructions.Add(541u, this.Script_0x100000000009E6BExpression);
+            Instructions.Add(542u, this.Script_0x10000000000A113Expression);
+            Instructions.Add(543u, this.Script_0x10000000000A117Expression);
+            Instructions.Add(544u, this.Script_0x10000000000A11BExpression);
+            Instructions.Add(545u, this.Script_0x10000000000A11FExpression);
+            Instructions.Add(546u, this.Script_0x10000000000A123Expression);
+            Instructions.Add(547u, this.Script_0x10000000000A127Expression);
+            Instructions.Add(548u, this.Script_0x10000000000A12BExpression);
+            Instructions.Add(549u, this.Script_0x10000000000A12FExpression);
+            Instructions.Add(550u, this.Script_0x10000000000A133Expression);
+            Instructions.Add(551u, this.Script_0x10000000000A137Expression);
+            Instructions.Add(552u, this.Script_0x10000000000A13BExpression);
+            Instructions.Add(553u, this.Script_0x10000000000A13FExpression);
+            Instructions.Add(554u, this.Script_0x10000000000A143Expression);
+            Instructions.Add(555u, this.Script_0x10000000000A147Expression);
+            Instructions.Add(556u, this.Script_0x10000000000A14BExpression);
+            Instructions.Add(557u, this.Script_0x10000000000A14FExpression);
+            Instructions.Add(558u, this.Script_0x10000000000A153Expression);
+            Instructions.Add(559u, this.Script_0x10000000000A157Expression);
+            Instructions.Add(560u, this.Script_0x10000000000A15BExpression);
+            Instructions.Add(561u, this.Script_0x10000000000A15FExpression);
+            Instructions.Add(562u, this.Script_0x10000000000A5FCExpression);
+            Instructions.Add(563u, this.Script_0x10000000000A609Expression);
+            Instructions.Add(564u, this.Script_0x10000000000A611Expression);
         }
         #endregion
         
