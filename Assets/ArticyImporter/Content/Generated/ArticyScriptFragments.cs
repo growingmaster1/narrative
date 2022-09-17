@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637990475717527508)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637990486810919518)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -5566,7 +5566,7 @@ aGlobalVariablesState.TheWife.Action = "SpeedUp";;
         /// </summary>
         public void Script_0x10000000000A137Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Husband.Expression="Cute"
+            aGlobalVariablesState.TheHusband.Expression="Cute"
 //丈夫卖萌
 ;
         }
@@ -5577,7 +5577,7 @@ aGlobalVariablesState.TheWife.Action = "SpeedUp";;
         /// </summary>
         public void Script_0x10000000000A13BExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Husband.Expression="Cute"
+            aGlobalVariablesState.TheHusband.Expression="Cute"
 //丈夫卖萌
 ;
         }
@@ -5683,7 +5683,7 @@ aGlobalVariablesState.TheHusband.Expression="!"
         /// </summary>
         public void Script_0x10000000000A15FExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Wife.Expression="Happy"
+            aGlobalVariablesState.TheWife.Expression="Happy"
 //妻子开心
 ;
         }
