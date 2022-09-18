@@ -110,6 +110,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             flowPlayer.FinishCurrentPausedObject();
             flowPlayer.StartOn = null;
+            foreach(SmartEntity entity in speakers)
+            {
+                entity.StopSounding();
+            }
         }
         else
         {
