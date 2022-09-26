@@ -74,9 +74,12 @@ public class SingleBranch : MonoBehaviour
 
     public void SelectBranch()
     {
-        if(branch!=null)
+        if(DialogBox.instance.continuable)
         {
-            DialogManager.FlowPlayer.Play(branch);
+            if (branch != null)
+            {
+                DialogManager.FlowPlayer.Play(branch);
+            }
         }
     }
 }
