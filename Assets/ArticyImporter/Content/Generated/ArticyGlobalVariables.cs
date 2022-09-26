@@ -170,6 +170,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.metWasang");
             variableNames.Add("Player.knowWasang");
             variableNames.Add("Player.knowAlex");
+            variableNames.Add("Player.haveBean");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -178,6 +179,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Alex.Expression");
             variableNames.Add("Alex.NextState");
             variableNames.Add("Alex.Refresh");
+            variableNames.Add("Alex.InterFereTimes");
             variableNames.Add("AFather.Action");
             variableNames.Add("AFather.Expression");
             variableNames.Add("AFather.NextState");
@@ -223,6 +225,10 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.introductionToTwo");
             variableNames.Add("Kaka.TalkEgg");
             variableNames.Add("Kaka.RocketTimes");
+            variableNames.Add("Kaka.DoubtKaka");
+            variableNames.Add("Kaka.AskedSmell");
+            variableNames.Add("Kaka.DoubtSmell");
+            variableNames.Add("Kaka.Opinion");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
