@@ -111,7 +111,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public string DefineText(IFlowObject aObject)
     {
-        return (aObject as IObjectWithText)?.Text;
+        return ((aObject as IObjectWithText)?.Text) ?? "";
     }
 
     public void SetStart(IArticyObject start)
