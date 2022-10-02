@@ -32,7 +32,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
     private Vector3 basePos;
 
     private bool arrived = false;
-    private bool continuable = false;
+    public bool continuable = false;
 
     private float speekSpeed = 0.05f;
 
@@ -163,7 +163,6 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
 
     public void Paused()
     {
-        continuable = true;
         if(buttonHolder.transform.childCount != 0)
         {
             Sequence fadingSeq = DOTween.Sequence().SetUpdate(true);
@@ -172,10 +171,11 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
                 fadingSeq.Append(buttonHolder.GetComponentsInChildren<Image>()[i].DOFade(1, 0.1f));
                 fadingSeq.Append(buttonHolder.GetComponentsInChildren<Text>()[i].DOFade(1, 0.1f));
             }
-            fadingSeq.Play();
+            fadingSeq.Play().OnComplete(()=> { continuable = true; });
         }
         else
         {
+            continuable = true;
             continueButton.SetActive(true);
         }
         TimeManager.instance.PauseTime();

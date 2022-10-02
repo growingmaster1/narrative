@@ -7,6 +7,7 @@ using DG.Tweening;
 public class MemoManager : MonoBehaviour,IInit
 {
     public static MemoManager instance;
+    public string newMemo;
 
     public GameObject greyPanel;
     public List<GameObject> toHideUI;
@@ -52,6 +53,17 @@ public class MemoManager : MonoBehaviour,IInit
         AddMemo("迷迭小镇-我住在A区");
         ReadAchievements();
         hidUI = new List<GameObject>();
+    }
+
+    private void Update()
+    {
+        newMemo = ArticyReader.instance.GetString("GlobalVariables", "Memo");
+        if(newMemo != "")
+        {
+            AddMemo(newMemo);
+            newMemo = "";
+            ArticyReader.instance.SetString("GlobalVariables", "Memo","");
+        }
     }
 
     public void OpenPanel()
