@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(638005931726435882)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(638005997826424688)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -6607,7 +6607,7 @@ aGlobalVariablesState.Wasang.Action="StepBack"
         /// </summary>
         public void Script_0x10000000000C3A7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.Emily.Expression="!"
+            aGlobalVariablesState.Emily.Expression="Amazed"
 //艾米莉惊讶
 ;
         }
@@ -8018,8 +8018,8 @@ aGlobalVariablesState.TheWife.Refresh = true;
         /// </summary>
         public void Script_0x10000000000C6B4Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.TheHusband.NextState = "LittleCoupleDiscuss";
-aGlobalVariablesState.TheWife.NextState = "LittleCoupleDiscuss";
+            aGlobalVariablesState.TheHusband.NextState = "LittleCoupleWaitting";
+aGlobalVariablesState.TheWife.NextState = "LittleCoupleWaitting";
         }
         
         /// <summary>
@@ -8476,6 +8476,42 @@ aGlobalVariablesState.Hebaodan.NextState = "PidanAtHome";
         public void Script_0x10000000000D3C8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.Wasang.NextState = "WasangStealHairBeforeBitten";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000D6A7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037982887?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000D6A7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.NextState = "AlexGoFromLittleForest";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000D6AD
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037982893?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000D6ADExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Refresh = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000D6B2
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037982898?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000D6B2Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.NextState = "AlexGoFromLittleForest";
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000D6B7
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037982903?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000D6B7Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Alex.Refresh = true;
         }
         #endregion
         
@@ -9352,6 +9388,10 @@ aGlobalVariablesState.Hebaodan.NextState = "PidanAtHome";
             Instructions.Add(862u, this.Script_0x10000000000D3B3Expression);
             Instructions.Add(863u, this.Script_0x10000000000D3B9Expression);
             Instructions.Add(864u, this.Script_0x10000000000D3C8Expression);
+            Instructions.Add(865u, this.Script_0x10000000000D6A7Expression);
+            Instructions.Add(866u, this.Script_0x10000000000D6ADExpression);
+            Instructions.Add(867u, this.Script_0x10000000000D6B2Expression);
+            Instructions.Add(868u, this.Script_0x10000000000D6B7Expression);
         }
         #endregion
         

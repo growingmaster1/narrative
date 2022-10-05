@@ -19,6 +19,8 @@ public class MoveableEntity : MonoBehaviour
     public Sprite idle_e;
     public Sprite idle_n;
 
+    public bool turnable = true;
+
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -30,65 +32,68 @@ public class MoveableEntity : MonoBehaviour
     private void FixedUpdate()
     {
         spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
-        dis = transform.position - lastPos;
-        dis = dis.normalized;
-        lastPos = transform.position;
-        anim.enabled = true;
-        if(dis.magnitude>float.Epsilon)
+        if(turnable)
         {
-            if(lastDis==Vector3.zero || Vector3.Angle(dis,lastDis) > 5)
+            dis = transform.position - lastPos;
+            dis = dis.normalized;
+            lastPos = transform.position;
+            anim.enabled = true;
+            if (dis.magnitude > float.Epsilon)
             {
-                if (dis.x > 0.5f)
+                if (lastDis == Vector3.zero || Vector3.Angle(dis, lastDis) > 5)
                 {
-                    anim.Play(name + "_move_e");
-                    lastMoveDir = "e";
-                }
-                else if (dis.x < -0.5f)
-                {
-                    anim.Play(name + "_move_w");
-                    lastMoveDir = "w";
-                }
-                else
-                {
-                    if (dis.y > 0.5f)
+                    if (dis.x > 0.5f)
                     {
-                        anim.Play(name + "_move_n");
-                        lastMoveDir = "n";
+                        anim.Play(name + "_move_e");
+                        lastMoveDir = "e";
                     }
-                    else if (dis.y < -0.5f)
+                    else if (dis.x < -0.5f)
                     {
-                        anim.Play(name + "_move_s");
-                        lastMoveDir = "s";
+                        anim.Play(name + "_move_w");
+                        lastMoveDir = "w";
                     }
+                    else
+                    {
+                        if (dis.y > 0.5f)
+                        {
+                            anim.Play(name + "_move_n");
+                            lastMoveDir = "n";
+                        }
+                        else if (dis.y < -0.5f)
+                        {
+                            anim.Play(name + "_move_s");
+                            lastMoveDir = "s";
+                        }
+                    }
+                    lastDis = dis;
                 }
-                lastDis = dis;
             }
-        }
-        else
-        {
-            anim.enabled = false;
-            switch (lastMoveDir)
+            else
             {
-                case "e":
-                    {
-                        spRenderer.sprite = idle_e;
-                        break;
-                    }
-                case "s":
-                    {
-                        spRenderer.sprite = idle_s;
-                        break;
-                    }
-                case "w":
-                    {
-                        spRenderer.sprite = idle_w;
-                        break;
-                    }
-                case "n":
-                    {
-                        spRenderer.sprite = idle_n;
-                        break;
-                    }
+                anim.enabled = false;
+                switch (lastMoveDir)
+                {
+                    case "e":
+                        {
+                            spRenderer.sprite = idle_e;
+                            break;
+                        }
+                    case "s":
+                        {
+                            spRenderer.sprite = idle_s;
+                            break;
+                        }
+                    case "w":
+                        {
+                            spRenderer.sprite = idle_w;
+                            break;
+                        }
+                    case "n":
+                        {
+                            spRenderer.sprite = idle_n;
+                            break;
+                        }
+                }
             }
         }
     }
