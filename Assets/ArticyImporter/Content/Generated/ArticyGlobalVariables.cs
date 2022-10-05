@@ -156,6 +156,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Expression");
             variableNames.Add("Emily.Action");
             variableNames.Add("Emily.TalkTimes");
+            variableNames.Add("Emily.Favorability");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -189,6 +190,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.MissionLookForDogResult");
             variableNames.Add("Player.haveRadio");
             variableNames.Add("Player.haveBean");
+            variableNames.Add("Player.haveHelpedBigAunt");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -318,6 +320,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("BigUncle.haveFinishedShenguangbang");
             variableNames.Add("BigUncle.AttentionNumberAlex");
             variableNames.Add("BigUncle.AttentionNumberKaka");
+            variableNames.Add("BigUncle.feelHappy");
         }
         #endregion
         
