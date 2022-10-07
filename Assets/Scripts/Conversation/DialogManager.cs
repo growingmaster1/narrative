@@ -20,6 +20,8 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public static DialogManager instance;
     public static ArticyFlowPlayer FlowPlayer;
+    public static bool playing;
+
     public ArticyFlowPlayer flowPlayer
     {
         get
@@ -60,6 +62,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
             return;
         }
 
+        playing = true;
         //确定说话人
         speaker = DefineSpeaker(aObject);
         SmartEntity speakEntity = speaker as SmartEntity;
@@ -111,14 +114,21 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
 
     public string DefineText(IFlowObject aObject)
     {
-        return (aObject as IObjectWithText)?.Text;
+        return ((aObject as IObjectWithText)?.Text) ?? "";
     }
 
     public void SetStart(IArticyObject start)
     {
         flowPlayer.StartOn = start;
         flowPlayer.StartOn = start;
-        DialogBox.instance.startDialog();
+        if(playing)
+        {
+            DialogBox.instance.startDialog();
+        }
+        else
+        {
+            CompleteDialog();
+        }
     }
 
     public void CompleteDialog()
@@ -130,6 +140,7 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
         speakers.Clear();
         Player.instance.atDialog = false;
         Player.instance.moveable = true;
+        playing = false;
         flowPlayer.FinishCurrentPausedObject();
     }
 }

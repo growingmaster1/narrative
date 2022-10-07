@@ -177,7 +177,8 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             playing = false;
             Player.instance.atDialog = true;
-            foreach(SmartEntity entity in speakers)
+            Player.instance.moveable = false;
+            foreach (SmartEntity entity in speakers)
             {
                 entity.ReturnText();
                 entity.atDialog = true;
@@ -188,8 +189,6 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
             {
                 attachTalkPlace++;
             }
-
-            Player.instance.moveable = false;
         }
     }
 
