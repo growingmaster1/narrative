@@ -140,6 +140,10 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private BunnyMom mBunnyMom = new BunnyMom();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private BigUncle mBigUncle = new BigUncle();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -152,23 +156,43 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Expression");
             variableNames.Add("Emily.Action");
             variableNames.Add("Emily.TalkTimes");
+            variableNames.Add("Emily.Favorability");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
             variableNames.Add("Player.Action");
             variableNames.Add("Player.Expression");
+            variableNames.Add("Player.haveBread");
+            variableNames.Add("Player.haveWater");
+            variableNames.Add("Player.knowRosmontis");
+            variableNames.Add("Player.haveBadge");
+            variableNames.Add("Player.haveMagicWand");
+            variableNames.Add("Player.haveRosmontis");
+            variableNames.Add("Player.haveShenguangbang");
+            variableNames.Add("Player.haveTurtle");
+            variableNames.Add("Player.haveUFO");
+            variableNames.Add("Player.knowTownMayor");
+            variableNames.Add("Player.haveBall");
+            variableNames.Add("Player.knowRebuild");
+            variableNames.Add("Player.metBigUncle");
+            variableNames.Add("Player.heardHegel");
+            variableNames.Add("Player.knowAlex");
+            variableNames.Add("Player.knowHegel");
+            variableNames.Add("Player.knowKaka");
+            variableNames.Add("Player.knowLisa");
+            variableNames.Add("Player.knowWasang");
             variableNames.Add("Player.metEmily");
             variableNames.Add("Player.metKaka");
-            variableNames.Add("Player.MissionLookForDog");
-            variableNames.Add("Player.MissionDogFound");
-            variableNames.Add("Player.MissionLookForDogResult");
             variableNames.Add("Player.metLisa");
-            variableNames.Add("Player.heardHegel");
-            variableNames.Add("Player.knowHegel");
-            variableNames.Add("Player.knowLisa");
-            variableNames.Add("Player.knowKaka");
             variableNames.Add("Player.metWasang");
-            variableNames.Add("Player.knowWasang");
+            variableNames.Add("Player.MissionDogFound");
+            variableNames.Add("Player.MissionLookForDog");
+            variableNames.Add("Player.MissionLookForDogResult");
+            variableNames.Add("Player.haveRadio");
+            variableNames.Add("Player.haveBean");
+            variableNames.Add("Player.haveHelpedBigAunt");
+            variableNames.Add("Player.haveCheatedToLittleCouple");
+            variableNames.Add("Player.haveFinishedRadio");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -177,6 +201,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Alex.Expression");
             variableNames.Add("Alex.NextState");
             variableNames.Add("Alex.Refresh");
+            variableNames.Add("Alex.InterFereTimes");
             variableNames.Add("AFather.Action");
             variableNames.Add("AFather.Expression");
             variableNames.Add("AFather.NextState");
@@ -221,6 +246,14 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.TalkSelf");
             variableNames.Add("Kaka.introductionToTwo");
             variableNames.Add("Kaka.TalkEgg");
+            variableNames.Add("Kaka.RocketTimes");
+            variableNames.Add("Kaka.DoubtKaka");
+            variableNames.Add("Kaka.AskedSmell");
+            variableNames.Add("Kaka.DoubtSmell");
+            variableNames.Add("Kaka.Opinion");
+            variableNames.Add("Kaka.Happiness");
+            variableNames.Add("Kaka.Likeability");
+            variableNames.Add("Kaka.DistubedTimes");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -260,6 +293,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("TheHusband.Refresh");
             variableNames.Add("TheHusband.Action");
             variableNames.Add("TheHusband.Expression");
+            variableNames.Add("TheHusband.InterferedWork");
             variableNames.Add("Hebaodan.NextState");
             variableNames.Add("Hebaodan.Refresh");
             variableNames.Add("Hebaodan.Action");
@@ -280,6 +314,15 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("BunnyMom.Refresh");
             variableNames.Add("BunnyMom.Action");
             variableNames.Add("BunnyMom.Expression");
+            variableNames.Add("BigUncle.NextState");
+            variableNames.Add("BigUncle.Refresh");
+            variableNames.Add("BigUncle.Action");
+            variableNames.Add("BigUncle.Expression");
+            variableNames.Add("BigUncle.talkChance");
+            variableNames.Add("BigUncle.haveFinishedShenguangbang");
+            variableNames.Add("BigUncle.AttentionNumberAlex");
+            variableNames.Add("BigUncle.AttentionNumberKaka");
+            variableNames.Add("BigUncle.feelHappy");
         }
         #endregion
         
@@ -515,6 +558,14 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public BigUncle BigUncle
+        {
+            get
+            {
+                return mBigUncle;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -554,6 +605,7 @@ namespace Articy.Littletown.GlobalVariables
             Bunny.RegisterVariables(this);
             Police.RegisterVariables(this);
             BunnyMom.RegisterVariables(this);
+            BigUncle.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

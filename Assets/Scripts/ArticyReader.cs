@@ -8,10 +8,15 @@ using Sirenix.OdinInspector;
 
 public class ArticyReader : MonoBehaviour
 {
+    public static ArticyReader instance;
     private ArticyGlobalVariables globalVariables;
 
-    private void Start()
+    private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
         globalVariables = ArticyGlobalVariables.Default;
     }
 
