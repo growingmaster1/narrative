@@ -34,8 +34,6 @@ public class SmartEntity : GameEntity
         if(givenState!=null&&givenState.GetObject()!=null)
         {
             givenTechnicalName = givenState.GetObject().TechnicalName;
-            //atFlow = SoundingManager.instance.PutState(entityName, givenTechnicalName);
-            //(atFlow as StatePlayer).StartSounding();
         }
     }
 
