@@ -26,7 +26,7 @@ public class ExpressionController : MonoBehaviour
 
     public void PlayExpression(string expression)
     {
-        GameObject signal = GetType().GetField(expression).GetValue(this) as GameObject;
+        GameObject signal = GetType().GetField(expression)?.GetValue(this) as GameObject;
         if(signal!=null)
         {
             signal.SetActive(true);
@@ -39,7 +39,7 @@ public class ExpressionController : MonoBehaviour
 
     public void PlayEmoji(string expression)
     {
-        Sprite signal = GetType().GetField(expression).GetValue(this) as Sprite;
+        Sprite signal = GetType().GetField(expression)?.GetValue(this) as Sprite;
         if(signal != null)
         {
             Emoji.GetComponent<SpriteRenderer>().sprite = signal;
