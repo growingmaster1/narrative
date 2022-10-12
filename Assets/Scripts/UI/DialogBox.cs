@@ -107,7 +107,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         {
             GameObject btn = Instantiate<GameObject>(branchButton);
             btn.transform.SetParent(buttonHolder.transform);
-
+            btn.transform.localScale = new Vector3(1, 1, 1);
             btn.GetComponent<SingleBranch>().AssignBranch(aBranches[i]);
             btn.GetComponentInChildren<Image>().DOFade(0, 0);
             btn.GetComponentInChildren<Text>().DOFade(0, 0);

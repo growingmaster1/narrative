@@ -62,6 +62,14 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
             return;
         }
 
+        IDialogueFragment DFTest = aObject as IDialogueFragment;
+        if(DFTest == null)
+        {
+            Debug.Log("Not a Dialogue Fragment");
+            flowPlayer.Play();
+            return;
+        }
+
         playing = true;
         //确定说话人
         speaker = DefineSpeaker(aObject);
