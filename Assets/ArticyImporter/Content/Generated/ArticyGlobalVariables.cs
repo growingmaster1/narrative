@@ -165,6 +165,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Action");
             variableNames.Add("Emily.TalkTimes");
             variableNames.Add("Emily.Favorability");
+            variableNames.Add("Emily.TalkTimesWithPlayerFindingAlex");
+            variableNames.Add("Emily.Flavorability");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -214,7 +216,16 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.knowEmilyKnowSlavojNearDeath");
             variableNames.Add("Player.AccompanyWasangToApologize");
             variableNames.Add("Player.knowWasangApologize");
+            variableNames.Add("Player.knowKakaHaveRadio");
+            variableNames.Add("Player.knowWasangsPosion");
+            variableNames.Add("Player.knowWasangCanSeeGhosts");
+            variableNames.Add("Player.knowWasangCanTalkWithGhosts");
+            variableNames.Add("Player.haveSuspectedKaka");
             variableNames.Add("Player.haveFinishedRadio");
+            variableNames.Add("Player.haveMetAlexInForest");
+            variableNames.Add("Player.haveMetAlexInLane");
+            variableNames.Add("Player.knowPidan");
+            variableNames.Add("Player.knowHebaodan");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
