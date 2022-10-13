@@ -152,6 +152,10 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Slavoj mSlavoj = new Slavoj();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private CatGG mCatGG = new CatGG();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -377,6 +381,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Slavoj.Died");
             variableNames.Add("Slavoj.BeHidden");
             variableNames.Add("Slavoj.NearDeath");
+            variableNames.Add("CatGG.Action");
         }
         #endregion
         
@@ -636,6 +641,14 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public CatGG CatGG
+        {
+            get
+            {
+                return mCatGG;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -678,6 +691,7 @@ namespace Articy.Littletown.GlobalVariables
             BigUncle.RegisterVariables(this);
             Dialogue.RegisterVariables(this);
             Slavoj.RegisterVariables(this);
+            CatGG.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()

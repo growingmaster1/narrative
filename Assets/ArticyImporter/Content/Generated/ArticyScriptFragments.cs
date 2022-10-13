@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(638012135974781585)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(638012740718916269)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -9599,6 +9599,16 @@ aGlobalVariablesState.Hebaodan.NextState="EggsGoHome";
         {
             aGlobalVariablesState.Pidan.NextState="EmilyPidanCountGarbage";;
         }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000E839
+        /// Articy Object ref: articy://localhost/view/2268d930-7d19-44b4-b43c-9b9130bf4733/72057594037987385?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x10000000000E839Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.Ason.Action = "CatchCat";
+aGlobalVariablesState.CatGG.Action = "RunAway";;
+        }
         #endregion
         
         #region Unity serialization
@@ -10589,6 +10599,7 @@ aGlobalVariablesState.Hebaodan.NextState="EggsGoHome";
             Instructions.Add(977u, this.Script_0x10000000000DC33Expression);
             Instructions.Add(978u, this.Script_0x10000000000DC37Expression);
             Instructions.Add(979u, this.Script_0x10000000000DC2FExpression);
+            Instructions.Add(980u, this.Script_0x10000000000E839Expression);
         }
         #endregion
         

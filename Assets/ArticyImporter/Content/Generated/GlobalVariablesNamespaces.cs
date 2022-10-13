@@ -4347,3 +4347,42 @@ namespace Articy.Littletown.GlobalVariables
         }
     }
 }
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class CatGG : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        public string Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(85, true);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueString(85, value);
+            }
+        }
+        
+        // 
+        public string Unresolved_Action
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueString(85, false);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("CatGG.Action", "");
+        }
+    }
+}
