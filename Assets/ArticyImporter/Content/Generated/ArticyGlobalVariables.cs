@@ -191,6 +191,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.haveRadio");
             variableNames.Add("Player.haveBean");
             variableNames.Add("Player.haveHelpedBigAunt");
+            variableNames.Add("Player.haveCheatedToLittleCouple");
+            variableNames.Add("Player.haveFinishedRadio");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
