@@ -144,6 +144,18 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private BigUncle mBigUncle = new BigUncle();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Dialogue mDialogue = new Dialogue();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private Slavoj mSlavoj = new Slavoj();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private CatGG mCatGG = new CatGG();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -157,6 +169,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Action");
             variableNames.Add("Emily.TalkTimes");
             variableNames.Add("Emily.Favorability");
+            variableNames.Add("Emily.TalkTimesWithPlayerFindingAlex");
+            variableNames.Add("Emily.Flavorability");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -192,7 +206,30 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.haveBean");
             variableNames.Add("Player.haveHelpedBigAunt");
             variableNames.Add("Player.haveCheatedToLittleCouple");
+            variableNames.Add("Player.knowPoliceOffice");
+            variableNames.Add("Player.knowWasangsPurpose");
+            variableNames.Add("Player.WantToHelpWasang");
+            variableNames.Add("Player.haveTalkedWithWasangBeforeEmilyHome");
+            variableNames.Add("Player.haveTalkedWithWasangBeforeBitten");
+            variableNames.Add("Player.haveHair");
+            variableNames.Add("Player.haveBeenBittenBySlavoj");
+            variableNames.Add("Player.haveGivenHairToWasang");
+            variableNames.Add("Player.haveFoundHair");
+            variableNames.Add("Player.knowSlavojNearDeath");
+            variableNames.Add("Player.haveAttendedWasang");
+            variableNames.Add("Player.knowEmilyKnowSlavojNearDeath");
+            variableNames.Add("Player.AccompanyWasangToApologize");
+            variableNames.Add("Player.knowWasangApologize");
+            variableNames.Add("Player.knowKakaHaveRadio");
+            variableNames.Add("Player.knowWasangsPosion");
+            variableNames.Add("Player.knowWasangCanSeeGhosts");
+            variableNames.Add("Player.knowWasangCanTalkWithGhosts");
+            variableNames.Add("Player.haveSuspectedKaka");
             variableNames.Add("Player.haveFinishedRadio");
+            variableNames.Add("Player.haveMetAlexInForest");
+            variableNames.Add("Player.haveMetAlexInLane");
+            variableNames.Add("Player.knowPidan");
+            variableNames.Add("Player.knowHebaodan");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -202,6 +239,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Alex.NextState");
             variableNames.Add("Alex.Refresh");
             variableNames.Add("Alex.InterFereTimes");
+            variableNames.Add("Alex.Disappear");
             variableNames.Add("AFather.Action");
             variableNames.Add("AFather.Expression");
             variableNames.Add("AFather.NextState");
@@ -238,6 +276,13 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.SelectTimes");
             variableNames.Add("Wasang.InsectTimes");
             variableNames.Add("Wasang.GhostTimes");
+            variableNames.Add("Wasang.GiveUpLookingForHair");
+            variableNames.Add("Wasang.LookingForHairWithPlayer");
+            variableNames.Add("Wasang.haveHair");
+            variableNames.Add("Wasang.haveBeenBittenBySlavoj");
+            variableNames.Add("Wasang.knowSlavojNearDeath");
+            variableNames.Add("Wasang.ApologizeWithPlayerTogether");
+            variableNames.Add("Wasang.ApologizeAlone");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -254,6 +299,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.Happiness");
             variableNames.Add("Kaka.Likeability");
             variableNames.Add("Kaka.DistubedTimes");
+            variableNames.Add("Kaka.Disappear");
+            variableNames.Add("Kaka.haveWrappedWasang");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -289,11 +336,13 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("TheWife.Refresh");
             variableNames.Add("TheWife.Action");
             variableNames.Add("TheWife.Expression");
+            variableNames.Add("TheWife.RadioState");
             variableNames.Add("TheHusband.NextState");
             variableNames.Add("TheHusband.Refresh");
             variableNames.Add("TheHusband.Action");
             variableNames.Add("TheHusband.Expression");
             variableNames.Add("TheHusband.InterferedWork");
+            variableNames.Add("TheHusband.RadioState");
             variableNames.Add("Hebaodan.NextState");
             variableNames.Add("Hebaodan.Refresh");
             variableNames.Add("Hebaodan.Action");
@@ -323,6 +372,16 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("BigUncle.AttentionNumberAlex");
             variableNames.Add("BigUncle.AttentionNumberKaka");
             variableNames.Add("BigUncle.feelHappy");
+            variableNames.Add("Dialogue.fromWhoIsEmily1");
+            variableNames.Add("Dialogue.fromWhoIsEmily2");
+            variableNames.Add("Dialogue.fromWantToHelpWasang1");
+            variableNames.Add("Dialogue.fromWhoIsEmily3");
+            variableNames.Add("Slavoj.BeKilled");
+            variableNames.Add("Slavoj.BeThrewAway");
+            variableNames.Add("Slavoj.Died");
+            variableNames.Add("Slavoj.BeHidden");
+            variableNames.Add("Slavoj.NearDeath");
+            variableNames.Add("CatGG.Action");
         }
         #endregion
         
@@ -566,6 +625,30 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Dialogue Dialogue
+        {
+            get
+            {
+                return mDialogue;
+            }
+        }
+        
+        public Slavoj Slavoj
+        {
+            get
+            {
+                return mSlavoj;
+            }
+        }
+        
+        public CatGG CatGG
+        {
+            get
+            {
+                return mCatGG;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -606,6 +689,9 @@ namespace Articy.Littletown.GlobalVariables
             Police.RegisterVariables(this);
             BunnyMom.RegisterVariables(this);
             BigUncle.RegisterVariables(this);
+            Dialogue.RegisterVariables(this);
+            Slavoj.RegisterVariables(this);
+            CatGG.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
