@@ -62,7 +62,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         if (dialog!=null)
         {
             Player.instance.atDialog = true;
-            Player.instance.moveable = false;
+            Player.instance.StopMoving();
             DialogManager.instance.SetStart(dialog as IArticyObject);
             //DialogManager.flowPlayer.Play();
         }

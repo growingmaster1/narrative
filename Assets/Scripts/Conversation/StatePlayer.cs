@@ -181,7 +181,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             playing = false;
             Player.instance.atDialog = true;
-            Player.instance.moveable = false;
+            Player.instance.StopMoving();
             foreach (SmartEntity entity in speakers)
             {
                 entity.ReturnText();

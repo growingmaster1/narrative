@@ -6,6 +6,8 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine.EventSystems;
+using NodeCanvas.Framework;
+using NodeCanvas.BehaviourTrees;
 
 /// <summary>
 /// 所有游戏中具有行为树的，有行为安排的个体
@@ -34,6 +36,10 @@ public class SmartEntity : GameEntity
         if(givenState!=null&&givenState.GetObject()!=null)
         {
             givenTechnicalName = givenState.GetObject().TechnicalName;
+            if(GetComponent<BehaviourTreeOwner>()==null)
+            {
+                SetState(givenTechnicalName);
+            }
         }
     }
 
