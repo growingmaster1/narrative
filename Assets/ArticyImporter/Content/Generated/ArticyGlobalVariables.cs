@@ -230,6 +230,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.haveMetAlexInLane");
             variableNames.Add("Player.knowPidan");
             variableNames.Add("Player.knowHebaodan");
+            variableNames.Add("Player.haveSkull");
+            variableNames.Add("Player.knowBunnyLonely");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -283,6 +285,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.knowSlavojNearDeath");
             variableNames.Add("Wasang.ApologizeWithPlayerTogether");
             variableNames.Add("Wasang.ApologizeAlone");
+            variableNames.Add("Wasang.BeFriendWithEmily");
+            variableNames.Add("Wasang.CompleteCollection");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -313,6 +317,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.Refresh");
             variableNames.Add("Pidan.Action");
             variableNames.Add("Pidan.Expression");
+            variableNames.Add("Pidan.Present");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
@@ -382,6 +387,9 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Slavoj.BeHidden");
             variableNames.Add("Slavoj.NearDeath");
             variableNames.Add("CatGG.Action");
+            variableNames.Add("CatGG.State");
+            variableNames.Add("CatGG.Expression");
+            variableNames.Add("CatGG.Refresh");
         }
         #endregion
         
