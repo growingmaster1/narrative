@@ -15,4 +15,12 @@ public class PrologueController : MonoBehaviour
             SceneManager.LoadScene(2);
         }
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.name == "Player")
+        {
+            blackPanel.SetActive(true);
+            SceneManager.LoadScene(2);
+        }
+    }
 }

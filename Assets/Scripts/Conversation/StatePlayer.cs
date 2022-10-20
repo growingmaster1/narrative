@@ -47,6 +47,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             speakers.Add(inEntity);
         }
+        if(attachedDialog.Count > 0)
+        {
+            
+        }
     }
 
     public void RemoveEntity(string entityName)

@@ -92,4 +92,10 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
             entityName = (entity as ArticyObject)?.TechnicalName;
         }
     }
+
+    public void SetOutline(Color outlineColor, float outlineWidth)
+    {
+        gameObject.GetComponent<Renderer>().material.SetFloat("_outlineOffset", outlineWidth);
+        gameObject.GetComponent<Renderer>().material.SetColor("_outlineColor", outlineColor);
+    }
 }
