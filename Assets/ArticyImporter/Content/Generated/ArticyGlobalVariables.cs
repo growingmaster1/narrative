@@ -154,7 +154,7 @@ namespace Articy.Littletown.GlobalVariables
         
         [SerializeField()]
         [HideInInspector()]
-        private CatGG mCatGG = new CatGG();
+        private Lacan mLacan = new Lacan();
         
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
@@ -170,7 +170,9 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.TalkTimes");
             variableNames.Add("Emily.Favorability");
             variableNames.Add("Emily.TalkTimesWithPlayerFindingAlex");
+            variableNames.Add("Emily.knowSlavojNearDeath");
             variableNames.Add("Emily.Flavorability");
+            variableNames.Add("Emily.FromState");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -230,8 +232,13 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.haveMetAlexInLane");
             variableNames.Add("Player.knowPidan");
             variableNames.Add("Player.knowHebaodan");
-            variableNames.Add("Player.haveSkull");
-            variableNames.Add("Player.knowBunnyLonely");
+            variableNames.Add("Player.haveFinishedTalkingWithEmilyInForest");
+            variableNames.Add("Player.haveFinishedEmilyAndPidan");
+            variableNames.Add("Player.haveTalkedWithEmilyAboutFindingAlex");
+            variableNames.Add("Player.talkTimesInUselessCare");
+            variableNames.Add("Player.haveKilledSlavoj");
+            variableNames.Add("Player.attitudeToCureSlavoj");
+            variableNames.Add("Player.talkTimesPhysicalExam");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -305,6 +312,9 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.DistubedTimes");
             variableNames.Add("Kaka.Disappear");
             variableNames.Add("Kaka.haveWrappedWasang");
+            variableNames.Add("Kaka.knowPlayer");
+            variableNames.Add("Kaka.TrashMorningState");
+            variableNames.Add("Kaka.BackHomeEarly");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -381,15 +391,19 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Dialogue.fromWhoIsEmily2");
             variableNames.Add("Dialogue.fromWantToHelpWasang1");
             variableNames.Add("Dialogue.fromWhoIsEmily3");
+            variableNames.Add("Dialogue.fromKakaCallRB");
+            variableNames.Add("Dialogue.fromKakaAbourAlien");
+            variableNames.Add("Dialogue.fromKakaPickGarbage");
+            variableNames.Add("Dialogue.fromKakaAndEmily");
             variableNames.Add("Slavoj.BeKilled");
             variableNames.Add("Slavoj.BeThrewAway");
             variableNames.Add("Slavoj.Died");
             variableNames.Add("Slavoj.BeHidden");
             variableNames.Add("Slavoj.NearDeath");
-            variableNames.Add("CatGG.Action");
-            variableNames.Add("CatGG.State");
-            variableNames.Add("CatGG.Expression");
-            variableNames.Add("CatGG.Refresh");
+            variableNames.Add("Lacan.NextState");
+            variableNames.Add("Lacan.Refresh");
+            variableNames.Add("Lacan.Action");
+            variableNames.Add("Lacan.Expression");
         }
         #endregion
         
@@ -649,11 +663,11 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        public CatGG CatGG
+        public Lacan Lacan
         {
             get
             {
-                return mCatGG;
+                return mLacan;
             }
         }
         
@@ -699,7 +713,7 @@ namespace Articy.Littletown.GlobalVariables
             BigUncle.RegisterVariables(this);
             Dialogue.RegisterVariables(this);
             Slavoj.RegisterVariables(this);
-            CatGG.RegisterVariables(this);
+            Lacan.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
