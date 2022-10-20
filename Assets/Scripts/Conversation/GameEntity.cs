@@ -55,11 +55,16 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
 
     public virtual void RaiseDialog()
     {
-        if(dialog!=null)
+        if (Player.instance.atDialog)
         {
+            return;
+        }
+        if (dialog!=null)
+        {
+            Player.instance.atDialog = true;
+            Player.instance.moveable = false;
             DialogManager.instance.SetStart(dialog as IArticyObject);
             //DialogManager.flowPlayer.Play();
-            Player.instance.moveable = false;
         }
     }
 

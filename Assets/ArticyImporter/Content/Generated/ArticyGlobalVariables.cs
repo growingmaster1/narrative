@@ -156,6 +156,18 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private Lacan mLacan = new Lacan();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Scavenger mScavenger = new Scavenger();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private GarbageStaff mGarbageStaff = new GarbageStaff();
+        
+        [SerializeField()]
+        [HideInInspector()]
+        private CatGG mCatGG = new CatGG();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -239,6 +251,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.haveKilledSlavoj");
             variableNames.Add("Player.attitudeToCureSlavoj");
             variableNames.Add("Player.talkTimesPhysicalExam");
+            variableNames.Add("Player.knowBunnyLonely");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -328,6 +341,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.Action");
             variableNames.Add("Pidan.Expression");
             variableNames.Add("Pidan.Present");
+            variableNames.Add("Pidan.TrashTimes");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
@@ -404,6 +418,18 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Lacan.Refresh");
             variableNames.Add("Lacan.Action");
             variableNames.Add("Lacan.Expression");
+            variableNames.Add("Scavenger.NextState");
+            variableNames.Add("Scavenger.Refresh");
+            variableNames.Add("Scavenger.Action");
+            variableNames.Add("Scavenger.Expression");
+            variableNames.Add("GarbageStaff.NextState");
+            variableNames.Add("GarbageStaff.Refresh");
+            variableNames.Add("GarbageStaff.Action");
+            variableNames.Add("GarbageStaff.Expression");
+            variableNames.Add("CatGG.NextState");
+            variableNames.Add("CatGG.Refresh");
+            variableNames.Add("CatGG.Action");
+            variableNames.Add("CatGG.Expression");
         }
         #endregion
         
@@ -671,6 +697,30 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Scavenger Scavenger
+        {
+            get
+            {
+                return mScavenger;
+            }
+        }
+        
+        public GarbageStaff GarbageStaff
+        {
+            get
+            {
+                return mGarbageStaff;
+            }
+        }
+        
+        public CatGG CatGG
+        {
+            get
+            {
+                return mCatGG;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -714,6 +764,9 @@ namespace Articy.Littletown.GlobalVariables
             Dialogue.RegisterVariables(this);
             Slavoj.RegisterVariables(this);
             Lacan.RegisterVariables(this);
+            Scavenger.RegisterVariables(this);
+            GarbageStaff.RegisterVariables(this);
+            CatGG.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
