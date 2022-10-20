@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class ThunderController : MonoBehaviour
 {
-    Light thunder;
-    float thunderTime = 1.0f;
-    bool isThunderOk = true;
-
+    PlayableDirector ThunderPD;
+    public PlayableAsset Thunder1, Thunder2;
+    public float thunderDuration = 1.2f;
+    public bool isThunderOK = true, isThunderING = false;
+    int thunderPAselector;
     private void Awake()
     {
-        thunder = GetComponent<Light>();
+        ThunderPD = GetComponent<PlayableDirector>();
+        ThunderPD.playOnAwake = false;
+        thunderPAselector = Random.Range(1, 3);
     }
     // Start is called before the first frame update
     void Start()
@@ -19,21 +23,39 @@ public class ThunderController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if(isThunderOK&&!isThunderING)
+        {
+            thunderDuration -= 0.02f;
+            if(thunderDuration<=0.02f)
+            {
+                if(thunderPAselector==1)
+                {
+                    ThunderPD.Play(Thunder1);
+                    isThunderING = true;
+                }
+                else
+                {
+                    ThunderPD.Play(Thunder2);
+                    isThunderING = true;
+                }
+                ThunderPD.stopped += ThunderReset;
+            }
+        }
     }
 
-    private void FixedUpdate()
+    void ThunderReset(PlayableDirector Whatever)
     {
-        if(thunderTime>0.06f)
-        {
-            thunderTime -= 0.02f;
-        }
-        else if(isThunderOk&&thunderTime>0.02f)
-        {
-            thunderTime -= 0.02f;
-            thunder.intensity = 1.2f;
-        }
+        thunderDuration = Random.Range(5.8f, 8.4f);
+        thunderPAselector= Random.Range(1, 3);
+        isThunderING = false;
+        ThunderPD.stopped -= ThunderReset;
+    }
+
+    public void SetThunder(bool isThunder, float duration)
+    {
+        isThunderOK = isThunder;
+        thunderDuration = duration;
     }
 }
