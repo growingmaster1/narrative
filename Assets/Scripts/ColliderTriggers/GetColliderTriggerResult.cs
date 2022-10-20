@@ -7,10 +7,6 @@ public class GetColliderTriggerResult : MonoBehaviour
     public TeleBoothCon teleBoothCon;
     public FatherSonCon fatherSonCon;
 
-    private void Awake()
-    {
-       
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +16,7 @@ public class GetColliderTriggerResult : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public bool GetFatherSonColliderResult()
