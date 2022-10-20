@@ -55,11 +55,16 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
 
     public virtual void RaiseDialog()
     {
-        if(dialog!=null)
+        if (Player.instance.atDialog)
         {
+            return;
+        }
+        if (dialog!=null)
+        {
+            Player.instance.atDialog = true;
+            Player.instance.StopMoving();
             DialogManager.instance.SetStart(dialog as IArticyObject);
             //DialogManager.flowPlayer.Play();
-            Player.instance.moveable = false;
         }
     }
 
@@ -86,5 +91,11 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         {
             entityName = (entity as ArticyObject)?.TechnicalName;
         }
+    }
+
+    public void SetOutline(Color outlineColor, float outlineWidth)
+    {
+        gameObject.GetComponent<Renderer>().material.SetFloat("_outlineOffset", outlineWidth);
+        gameObject.GetComponent<Renderer>().material.SetColor("_outlineColor", outlineColor);
     }
 }
