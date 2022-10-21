@@ -35,10 +35,10 @@ public class Player : MonoBehaviour,IInit,IWithEntity
     public void Init()
     {
         entity = givenEntity.GetObject();
-        entityName = "玩家";
+        entityName = "我";
         anim = GetComponent<Animator>();
         spRenderer = GetComponent<SpriteRenderer>();
-        EntityManager.EntitiesDic.Add("玩家", this);
+        EntityManager.EntitiesDic.Add("我", this);
     }
 
     // Update is called once per frame
@@ -113,6 +113,35 @@ public class Player : MonoBehaviour,IInit,IWithEntity
                 }
             }
 
+        }
+    }
+
+    public void StopMoving()
+    {
+        moveable = false;
+        anim.enabled = false;
+        switch (lastMoveDir)
+        {
+            case "e":
+                {
+                    spRenderer.sprite = idle_e;
+                    break;
+                }
+            case "s":
+                {
+                    spRenderer.sprite = idle_s;
+                    break;
+                }
+            case "w":
+                {
+                    spRenderer.sprite = idle_w;
+                    break;
+                }
+            case "n":
+                {
+                    spRenderer.sprite = idle_n;
+                    break;
+                }
         }
     }
 }

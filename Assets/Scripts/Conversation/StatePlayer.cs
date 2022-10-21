@@ -47,6 +47,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             speakers.Add(inEntity);
         }
+        if(attachedDialog.Count > 0)
+        {
+            
+        }
     }
 
     public void RemoveEntity(string entityName)
@@ -177,7 +181,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
         {
             playing = false;
             Player.instance.atDialog = true;
-            Player.instance.moveable = false;
+            Player.instance.StopMoving();
             foreach (SmartEntity entity in speakers)
             {
                 entity.ReturnText();
