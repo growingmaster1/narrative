@@ -137,6 +137,8 @@ public class SmartEntity : GameEntity
                 statePlayer.PlayDialog();
             }
         }
+        beingTraced = false;
+        PlayerAgent.OnDestinationReached -= RaiseDialog;
     }
 
     public void ContinueChat()
