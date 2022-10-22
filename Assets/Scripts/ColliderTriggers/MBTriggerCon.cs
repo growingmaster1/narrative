@@ -19,9 +19,10 @@ public class MBTriggerCon : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name == "Player")
+        if (collision.transform.name == "Player"&&!isCollided)
         {
             isCollided = true;
+            Player.instance.StopMoving();
             MysteryBlack.SetActive(true);
         }
     }

@@ -35,6 +35,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
             attachedDialog = attached.Attachments;
             attachTalkPlace = 0;
         }
+        else
+        {
+            Debug.LogError("Articy don't have state \"" + inTechName + "\"");
+        }
         playing = false;
         flowPlayer.StartOn = flow;
         flowPlayer.StartOn = null;

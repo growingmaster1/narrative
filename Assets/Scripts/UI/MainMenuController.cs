@@ -13,17 +13,14 @@ public class MainMenuController : MonoBehaviour
     public GameObject allWhitePanel;
     public GameObject headphonePanel;
     public GameObject loadingPanel;
-    public Slider processIndiSlider;
     CanvasGroup headphonePanelCG;
     UnityEngine.UI.Image allWhiteaPanelBG;
-    bool isAWPFin = false, isHPFin = false, isStopTime1Fin = false, isStopTime2Fin = false, isHPFinFin=false, onLoading=false, isOKforTransition=false;
-    float realProgress = 0.0f;
+    bool isAWPFin = false, isHPFin = false, isStopTime1Fin = false, isStopTime2Fin = false, isHPFinFin=false;
 
     private void Awake()
     {
         headphonePanelCG = headphonePanel.GetComponent<CanvasGroup>();
         allWhiteaPanelBG = allWhitePanel.GetComponent<UnityEngine.UI.Image>();
-        processIndiSlider = loadingPanel.transform.GetChild(1).GetComponent<Slider>();
     }
 
     // Start is called before the first frame update
@@ -84,21 +81,6 @@ public class MainMenuController : MonoBehaviour
                 isHPFinFin = true;
             }
         }
-        if(onLoading==true)
-        {
-            if(processIndiSlider.value<0.88f)
-            {
-                processIndiSlider.value += 0.006f;
-            }
-            else if(realProgress>=0.88f)
-            {
-                processIndiSlider.value += 0.006f;
-                if(processIndiSlider.value>=0.95f)
-                {
-                    isOKforTransition = true;
-                }
-            }
-        }
     }
 
     public void StartGame()
@@ -107,15 +89,14 @@ public class MainMenuController : MonoBehaviour
         StartCoroutine(LoadGame());
     }
 
+
+
     IEnumerator LoadGame()
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(1);
-
-        onLoading = true;
         while(!operation.isDone)
         {
-            realProgress = operation.progress;
-            operation.allowSceneActivation = isOKforTransition;
+            operation.allowSceneActivation = true;
             //Debug.Log(operation.progress);
             yield return null;
         }

@@ -328,6 +328,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.knowPlayer");
             variableNames.Add("Kaka.TrashMorningState");
             variableNames.Add("Kaka.BackHomeEarly");
+            variableNames.Add("Kaka.CollectBottles");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -342,6 +343,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.Expression");
             variableNames.Add("Pidan.Present");
             variableNames.Add("Pidan.TrashTimes");
+            variableNames.Add("Pidan.knowPlayer");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");

@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class TeleBoothCon : MonoBehaviour
 {
+
     public bool isCollided = false;
+    public SmartEntity telephoneBoothSE;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +20,10 @@ public class TeleBoothCon : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name == "Player")
+        if (collision.transform.name == "Player"&&!isCollided)
         {
             isCollided = true;
+            telephoneBoothSE.StartSounding();
         }
     }
 }
