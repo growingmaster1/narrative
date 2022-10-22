@@ -252,6 +252,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.attitudeToCureSlavoj");
             variableNames.Add("Player.talkTimesPhysicalExam");
             variableNames.Add("Player.knowBunnyLonely");
+            variableNames.Add("Player.knowLisaLoveBook");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -329,6 +330,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.TrashMorningState");
             variableNames.Add("Kaka.BackHomeEarly");
             variableNames.Add("Kaka.CollectBottles");
+            variableNames.Add("Kaka.Delay");
+            variableNames.Add("Kaka.PatienceofWorker");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -411,6 +414,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Dialogue.fromKakaAbourAlien");
             variableNames.Add("Dialogue.fromKakaPickGarbage");
             variableNames.Add("Dialogue.fromKakaAndEmily");
+            variableNames.Add("Dialogue.fromPidanCareHegel");
+            variableNames.Add("Dialogue.fromDontHit");
             variableNames.Add("Slavoj.BeKilled");
             variableNames.Add("Slavoj.BeThrewAway");
             variableNames.Add("Slavoj.Died");

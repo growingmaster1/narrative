@@ -21,6 +21,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
 
     public Text speaker;
     public Text text;
+    private string textContent;
 
     private Tweener textPrinter;
 
@@ -33,6 +34,7 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
 
     private bool arrived = false;
     public bool continuable = false;
+    public bool dialogPaused = false;
 
     private float speekSpeed = 0.05f;
 
@@ -154,11 +156,25 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         {
             textPrinter.Kill();
         }
+        textContent = content;
         continuable = false;
         TimeManager.instance.ContinueTime();
         continueButton.SetActive(false);
         text.text = "";
         textPrinter = text.DOText("¡¡¡¡" + content, content.Length * speekSpeed).SetEase(Ease.Linear).OnComplete(Paused);
+    }
+
+    public void PauseDialog()
+    {
+        dialogPaused = true;
+        textPrinter.Pause();
+        text.text = "";
+    }
+
+    public void ContinueDialog()
+    {
+        dialogPaused = false;
+        textPrinter.Restart();
     }
 
     public void Paused()
