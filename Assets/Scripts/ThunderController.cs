@@ -7,7 +7,7 @@ public class ThunderController : MonoBehaviour
 {
     PlayableDirector ThunderPD;
     public PlayableAsset Thunder1, Thunder2;
-    public float thunderDuration = 1.2f;
+    public float thunderDuration = 4.0f;
     public bool isThunderOK = true, isThunderING = false;
     int thunderPAselector;
     private void Awake()
