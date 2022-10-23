@@ -26,12 +26,13 @@ public class SmartEntity : GameEntity
     private Text soundText;
     private Queue<string> lastText;
 
-    [HideInInspector]
-    public bool visible;
-
     public override void Init()
     {
         base.Init();
+        if(dialog != null)
+        {
+            Debug.LogWarning("SmartEntity\"" + entityName + "\"存在Dialog，请检查是否正常。若想达成干预效果，请使用State进行管理");
+        }
         lastText = new Queue<string>();
         if(givenState!=null&&givenState.GetObject()!=null)
         {
@@ -137,6 +138,7 @@ public class SmartEntity : GameEntity
                 statePlayer.PlayDialog();
             }
         }
+        Player.instance.StopTrace();
     }
 
     public void ContinueChat()
@@ -159,15 +161,5 @@ public class SmartEntity : GameEntity
     {
         Sounding = true;
         (atFlow as StatePlayer)?.PlayOnce();
-    }
-
-    private void OnBecameInvisible()
-    {
-        visible = false;
-    }
-
-    private void OnBecameVisible()
-    {
-        visible = true;
     }
 }

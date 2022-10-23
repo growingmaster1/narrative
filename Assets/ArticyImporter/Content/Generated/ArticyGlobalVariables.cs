@@ -185,6 +185,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.knowSlavojNearDeath");
             variableNames.Add("Emily.Flavorability");
             variableNames.Add("Emily.FromState");
+            variableNames.Add("Emily.AddLollipop");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -252,6 +253,14 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.attitudeToCureSlavoj");
             variableNames.Add("Player.talkTimesPhysicalExam");
             variableNames.Add("Player.knowBunnyLonely");
+            variableNames.Add("Player.ReprimandPidan");
+            variableNames.Add("Player.ComfortPidan");
+            variableNames.Add("Player.SavedHegel");
+            variableNames.Add("Player.knowEmilysResponce");
+            variableNames.Add("Player.knowEmilyNeedHelp");
+            variableNames.Add("Player.knowPidanWantAskEmilyForHelp");
+            variableNames.Add("Player.FindPidanHelpEmily");
+            variableNames.Add("Player.knowWasangLostMaterial");
             variableNames.Add("Player.knowLisaLoveBook");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
@@ -347,6 +356,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.Present");
             variableNames.Add("Pidan.TrashTimes");
             variableNames.Add("Pidan.knowPlayer");
+            variableNames.Add("Pidan.Likeability");
+            variableNames.Add("Pidan.disappear");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
@@ -416,6 +427,12 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Dialogue.fromKakaAndEmily");
             variableNames.Add("Dialogue.fromPidanCareHegel");
             variableNames.Add("Dialogue.fromDontHit");
+            variableNames.Add("Dialogue.toSpeakIllofKaka");
+            variableNames.Add("Dialogue.toDpntHit");
+            variableNames.Add("Dialogue.toDontHit");
+            variableNames.Add("Dialogue.toFightFinished");
+            variableNames.Add("Dialogue.playerFinishedChocolateWafer");
+            variableNames.Add("Dialogue.fromPidanHitAlex");
             variableNames.Add("Slavoj.BeKilled");
             variableNames.Add("Slavoj.BeThrewAway");
             variableNames.Add("Slavoj.Died");
