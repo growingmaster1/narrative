@@ -35,6 +35,10 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
             attachedDialog = attached.Attachments;
             attachTalkPlace = 0;
         }
+        else
+        {
+            Debug.LogError("Articy don't have state \"" + inTechName + "\"");
+        }
         playing = false;
         flowPlayer.StartOn = flow;
         flowPlayer.StartOn = null;
@@ -43,13 +47,21 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
     public void AddEntity(string entityName)
     {
         SmartEntity inEntity = EntityManager.EntitiesDic[entityName] as SmartEntity;
+        if(inEntity == null)
+        {
+            Debug.LogError("Entity" + "\"" + entityName + "\"²»´æÔÚ");
+        }
         if (!speakers.Contains(inEntity))
         {
             speakers.Add(inEntity);
         }
         if(attachedDialog.Count > 0)
         {
-            
+            inEntity.SetOutline(0.01f);
+        }
+        else
+        {
+            inEntity.SetOutline(0f);
         }
     }
 

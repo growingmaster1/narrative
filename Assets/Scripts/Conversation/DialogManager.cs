@@ -139,6 +139,16 @@ public class DialogManager : MonoBehaviour,IMyFlowPlayer,IInit
         }
     }
 
+    public void PauseDialog()
+    {
+        DialogBox.instance.PauseDialog();
+    }
+
+    public void ContinueDialog()
+    {
+        DialogBox.instance.ContinueDialog();
+    }
+
     public void CompleteDialog()
     {
         foreach(IWithEntity entity in speakers)
