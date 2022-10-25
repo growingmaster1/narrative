@@ -186,9 +186,12 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.Flavorability");
             variableNames.Add("Emily.FromState");
             variableNames.Add("Emily.AddLollipop");
+            variableNames.Add("Emily.Present");
+            variableNames.Add("Emily.Absence");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
+            variableNames.Add("Shihuangren.BeDrivenAway");
             variableNames.Add("Player.Action");
             variableNames.Add("Player.Expression");
             variableNames.Add("Player.haveBread");
@@ -262,6 +265,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.FindPidanHelpEmily");
             variableNames.Add("Player.knowWasangLostMaterial");
             variableNames.Add("Player.knowLisaLoveBook");
+            variableNames.Add("Player.knowEmilyNeedLisaHelp");
+            variableNames.Add("Player.FindWasangHelpEmily");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -317,6 +322,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.ApologizeAlone");
             variableNames.Add("Wasang.BeFriendWithEmily");
             variableNames.Add("Wasang.CompleteCollection");
+            variableNames.Add("Wasang.Absence");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -341,6 +347,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.CollectBottles");
             variableNames.Add("Kaka.Delay");
             variableNames.Add("Kaka.PatienceofWorker");
+            variableNames.Add("Kaka.Present");
+            variableNames.Add("Kaka.Absence");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -358,6 +366,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.knowPlayer");
             variableNames.Add("Pidan.Likeability");
             variableNames.Add("Pidan.disappear");
+            variableNames.Add("Pidan.CurrentState");
+            variableNames.Add("Pidan.Absence");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
