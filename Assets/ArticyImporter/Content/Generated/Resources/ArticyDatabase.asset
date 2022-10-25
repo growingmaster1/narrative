@@ -1,6 +1,71 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5355051384618914110
+--- !u!114 &-6856659400950264209
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Littletown
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
+--- !u!114 &-3310431304164024341
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: -6856659400950264209}
+  mLocalization: {fileID: -3310431304164024341}
+  mInternalProject:
+    mName: littleTown
+    mDetailName: 
+    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
+    mTechnicalName: Littletown
+  mImportedAssets: []
+  mDefaultGlobalVariables: {fileID: 8379266027575966928}
+  mScriptFragments: {fileID: 1222853447426897070}
+  mPackages:
+  - PackageName: "\u6240\u6709\u5BF9\u8C61"
+    PackagePath: "\u6240\u6709\u5BF9\u8C61"
+    mIsDefaultPackage: 1
+--- !u!114 &1222853447426897070
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
   m_Name: ArticyScriptFragments
   m_EditorClassIdentifier: 
---- !u!114 &-3076306257597283322
+--- !u!114 &8379266027575966928
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +105,7 @@ MonoBehaviour:
   - mFullQualifiedName: Emily.Present
     mVar:
       values: 00
-  - mFullQualifiedName: Emily.Absence
+  - mFullQualifiedName: Emily.Disappear
     mVar:
       values: 00
   - mFullQualifiedName: Shihuangren.Refresh
@@ -310,7 +375,7 @@ MonoBehaviour:
   - mFullQualifiedName: Wasang.CompleteCollection
     mVar:
       values: 00
-  - mFullQualifiedName: Wasang.Absence
+  - mFullQualifiedName: Wasang.Disappear
     mVar:
       values: 00
   - mFullQualifiedName: Kaka.Refresh
@@ -355,9 +420,6 @@ MonoBehaviour:
   - mFullQualifiedName: Kaka.Present
     mVar:
       values: 00
-  - mFullQualifiedName: Kaka.Absence
-    mVar:
-      values: 00
   - mFullQualifiedName: Lisa.Refresh
     mVar:
       values: 00
@@ -377,9 +439,6 @@ MonoBehaviour:
     mVar:
       values: 00
   - mFullQualifiedName: Pidan.disappear
-    mVar:
-      values: 00
-  - mFullQualifiedName: Pidan.Absence
     mVar:
       values: 00
   - mFullQualifiedName: Hegel.Refresh
@@ -1010,139 +1069,74 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mEmily:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mShihuangren:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mPlayer:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mDay_and_time:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mAlex:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mAFather:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mAson:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGrandma_0:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGrandma_1:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGrandma_2:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGrandpa_0:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGrandpa_1:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mWasang:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mKaka:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mLisa:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mPidan:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mHegel:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mQingjiedashen:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGlobalVariables:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mPidanMom:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mBigAunt:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mTheWife:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mTheHusband:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mHebaodan:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mKakaMom:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mBunny:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mPolice:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mBunnyMom:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mBigUncle:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mDialogue:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mSlavoj:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mLacan:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mScavenger:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mGarbageStaff:
-    _VariableStorage: {fileID: -3076306257597283322}
+    _VariableStorage: {fileID: 8379266027575966928}
   mCatGG:
-    _VariableStorage: {fileID: -3076306257597283322}
---- !u!114 &-1527141986811659210
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes:
-  - id: 72057594037927937
-    parent: 0
-    technicalName: Littletown
-    articyType: Project
-    childCount: 0
-    indexOfFirstChild: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -1527141986811659210}
-  mLocalization: {fileID: 8641481457091146730}
-  mInternalProject:
-    mName: littleTown
-    mDetailName: 
-    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
-    mTechnicalName: Littletown
-  mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -3076306257597283322}
-  mScriptFragments: {fileID: -5355051384618914110}
-  mPackages:
-  - PackageName: "\u6240\u6709\u5BF9\u8C61"
-    PackagePath: "\u6240\u6709\u5BF9\u8C61"
-    mIsDefaultPackage: 1
---- !u!114 &8641481457091146730
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
+    _VariableStorage: {fileID: 8379266027575966928}
