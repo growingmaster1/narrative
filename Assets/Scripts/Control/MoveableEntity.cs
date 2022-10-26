@@ -10,7 +10,7 @@ public class MoveableEntity : MonoBehaviour
     private PolyNavAgent agent;
 
     private Vector3 lastPos;
-    private Vector3 dis;
+    public Vector3 dis;
     private Vector3 lastDis = Vector3.zero;
     private string lastMoveDir = "s";
 
