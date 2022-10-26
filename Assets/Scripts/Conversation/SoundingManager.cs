@@ -74,7 +74,10 @@ public class SoundingManager : MonoBehaviour,IInit
 
     public void RemoveState(string stateTechName)
     {
-        statePool.ReturnPool(states[stateTechName].gameObject);
-        states.Remove(stateTechName);
+        if(states.ContainsKey(stateTechName))
+        {
+            statePool.ReturnPool(states[stateTechName].gameObject);
+            states.Remove(stateTechName);
+        }
     }
 }
