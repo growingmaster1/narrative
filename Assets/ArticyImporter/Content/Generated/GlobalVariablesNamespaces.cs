@@ -102,6 +102,19 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public bool disappear
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(1);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -109,6 +122,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Harry.Refresh", false);
             aStorage.RegisterVariable("Harry.Action", "");
             aStorage.RegisterVariable("Harry.Expression", "");
+            aStorage.RegisterVariable("Harry.disappear", false);
         }
     }
 }
@@ -149,11 +163,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(1);
+                return _VariableStorage.Internal_GetVariableValueBoolean(2);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(1, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
             }
         }
         
@@ -243,11 +257,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(2);
+                return _VariableStorage.Internal_GetVariableValueBoolean(3);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(2, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
             }
         }
         
@@ -290,19 +304,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(3);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(3, value);
-            }
-        }
-        
-        // 
-        public bool Present
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(4);
             }
             set
@@ -312,7 +313,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool Disappear
+        public bool Present
         {
             get
             {
@@ -325,7 +326,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool Absence
+        public bool Disappear
         {
             get
             {
@@ -338,7 +339,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool SummonLacanSuccess
+        public bool Absence
         {
             get
             {
@@ -347,6 +348,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(7, value);
+            }
+        }
+        
+        // 
+        public bool SummonLacanSuccess
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(8);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
             }
         }
         
@@ -422,11 +436,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(8);
+                return _VariableStorage.Internal_GetVariableValueBoolean(9);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
             }
         }
         
@@ -456,11 +470,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+                return _VariableStorage.Internal_GetVariableValueBoolean(10);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
             }
         }
         
@@ -532,19 +546,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(10);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
-            }
-        }
-        
-        // 
-        public bool haveWater
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(11);
             }
             set
@@ -554,7 +555,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowRosmontis
+        public bool haveWater
         {
             get
             {
@@ -567,7 +568,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveBadge
+        public bool knowRosmontis
         {
             get
             {
@@ -580,7 +581,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveMagicWand
+        public bool haveBadge
         {
             get
             {
@@ -593,7 +594,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveRosmontis
+        public bool haveMagicWand
         {
             get
             {
@@ -606,7 +607,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveShenguangbang
+        public bool haveRosmontis
         {
             get
             {
@@ -619,7 +620,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveTurtle
+        public bool haveShenguangbang
         {
             get
             {
@@ -632,7 +633,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveUFO
+        public bool haveTurtle
         {
             get
             {
@@ -645,7 +646,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowTownMayor
+        public bool haveUFO
         {
             get
             {
@@ -658,7 +659,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveBall
+        public bool knowTownMayor
         {
             get
             {
@@ -671,7 +672,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowRebuild
+        public bool haveBall
         {
             get
             {
@@ -684,7 +685,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool metBigUncle
+        public bool knowRebuild
         {
             get
             {
@@ -697,7 +698,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool heardHegel
+        public bool metBigUncle
         {
             get
             {
@@ -710,7 +711,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowAlex
+        public bool heardHegel
         {
             get
             {
@@ -723,7 +724,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowHegel
+        public bool knowAlex
         {
             get
             {
@@ -736,7 +737,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowKaka
+        public bool knowHegel
         {
             get
             {
@@ -749,7 +750,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowLisa
+        public bool knowKaka
         {
             get
             {
@@ -762,7 +763,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasang
+        public bool knowLisa
         {
             get
             {
@@ -775,7 +776,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool metEmily
+        public bool knowWasang
         {
             get
             {
@@ -788,7 +789,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool metKaka
+        public bool metEmily
         {
             get
             {
@@ -801,7 +802,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool metLisa
+        public bool metKaka
         {
             get
             {
@@ -814,7 +815,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool metWasang
+        public bool metLisa
         {
             get
             {
@@ -827,7 +828,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool MissionDogFound
+        public bool metWasang
         {
             get
             {
@@ -836,6 +837,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(33, value);
+            }
+        }
+        
+        // 
+        public bool MissionDogFound
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(34);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(34, value);
             }
         }
         
@@ -870,19 +884,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(34);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(34, value);
-            }
-        }
-        
-        // 
-        public bool haveBean
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(35);
             }
             set
@@ -892,7 +893,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveHelpedBigAunt
+        public bool haveBean
         {
             get
             {
@@ -905,7 +906,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveCheatedToLittleCouple
+        public bool haveHelpedBigAunt
         {
             get
             {
@@ -918,7 +919,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowPoliceOffice
+        public bool haveCheatedToLittleCouple
         {
             get
             {
@@ -931,7 +932,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangsPurpose
+        public bool knowPoliceOffice
         {
             get
             {
@@ -943,8 +944,8 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        // 愿意和瓦桑一同进入艾米丽的小屋
-        public bool WantToHelpWasang
+        // 
+        public bool knowWasangsPurpose
         {
             get
             {
@@ -956,8 +957,8 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        // 玩家是否在艾米丽家门口干预瓦桑
-        public bool haveTalkedWithWasangBeforeEmilyHome
+        // 愿意和瓦桑一同进入艾米丽的小屋
+        public bool WantToHelpWasang
         {
             get
             {
@@ -969,8 +970,8 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        // 在瓦桑被咬前与之对话
-        public bool haveTalkedWithWasangBeforeBitten
+        // 玩家是否在艾米丽家门口干预瓦桑
+        public bool haveTalkedWithWasangBeforeEmilyHome
         {
             get
             {
@@ -982,8 +983,8 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
-        // 
-        public bool haveHair
+        // 在瓦桑被咬前与之对话
+        public bool haveTalkedWithWasangBeforeBitten
         {
             get
             {
@@ -996,7 +997,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveBeenBittenBySlavoj
+        public bool haveHair
         {
             get
             {
@@ -1009,7 +1010,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveGivenHairToWasang
+        public bool haveBeenBittenBySlavoj
         {
             get
             {
@@ -1022,7 +1023,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveFoundHair
+        public bool haveGivenHairToWasang
         {
             get
             {
@@ -1035,7 +1036,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowSlavojNearDeath
+        public bool haveFoundHair
         {
             get
             {
@@ -1048,7 +1049,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveAttendedWasang
+        public bool knowSlavojNearDeath
         {
             get
             {
@@ -1061,7 +1062,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowEmilyKnowSlavojNearDeath
+        public bool haveAttendedWasang
         {
             get
             {
@@ -1074,7 +1075,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool AccompanyWasangToApologize
+        public bool knowEmilyKnowSlavojNearDeath
         {
             get
             {
@@ -1087,7 +1088,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangApologize
+        public bool AccompanyWasangToApologize
         {
             get
             {
@@ -1100,7 +1101,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowKakaHaveRadio
+        public bool knowWasangApologize
         {
             get
             {
@@ -1113,7 +1114,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangsPosion
+        public bool knowKakaHaveRadio
         {
             get
             {
@@ -1126,7 +1127,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangCanSeeGhosts
+        public bool knowWasangsPosion
         {
             get
             {
@@ -1139,7 +1140,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangCanTalkWithGhosts
+        public bool knowWasangCanSeeGhosts
         {
             get
             {
@@ -1152,7 +1153,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveSuspectedKaka
+        public bool knowWasangCanTalkWithGhosts
         {
             get
             {
@@ -1165,7 +1166,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveFinishedRadio
+        public bool haveSuspectedKaka
         {
             get
             {
@@ -1178,7 +1179,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveMetAlexInForest
+        public bool haveFinishedRadio
         {
             get
             {
@@ -1191,7 +1192,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveMetAlexInLane
+        public bool haveMetAlexInForest
         {
             get
             {
@@ -1204,7 +1205,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowPidan
+        public bool haveMetAlexInLane
         {
             get
             {
@@ -1217,7 +1218,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowHebaodan
+        public bool knowPidan
         {
             get
             {
@@ -1230,7 +1231,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveFinishedTalkingWithEmilyInForest
+        public bool knowHebaodan
         {
             get
             {
@@ -1243,7 +1244,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveFinishedEmilyAndPidan
+        public bool haveFinishedTalkingWithEmilyInForest
         {
             get
             {
@@ -1256,7 +1257,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveTalkedWithEmilyAboutFindingAlex
+        public bool haveFinishedEmilyAndPidan
         {
             get
             {
@@ -1265,6 +1266,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(64, value);
+            }
+        }
+        
+        // 
+        public bool haveTalkedWithEmilyAboutFindingAlex
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(65);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(65, value);
             }
         }
         
@@ -1286,11 +1300,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(65);
+                return _VariableStorage.Internal_GetVariableValueBoolean(66);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(65, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(66, value);
             }
         }
         
@@ -1325,19 +1339,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(66);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(66, value);
-            }
-        }
-        
-        // 
-        public bool ReprimandPidan
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(67);
             }
             set
@@ -1347,7 +1348,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool ComfortPidan
+        public bool ReprimandPidan
         {
             get
             {
@@ -1360,7 +1361,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool SavedHegel
+        public bool ComfortPidan
         {
             get
             {
@@ -1373,7 +1374,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowEmilysResponce
+        public bool SavedHegel
         {
             get
             {
@@ -1386,7 +1387,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowEmilyNeedHelp
+        public bool knowEmilysResponce
         {
             get
             {
@@ -1399,7 +1400,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowPidanWantAskEmilyForHelp
+        public bool knowEmilyNeedHelp
         {
             get
             {
@@ -1412,7 +1413,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool FindPidanHelpEmily
+        public bool knowPidanWantAskEmilyForHelp
         {
             get
             {
@@ -1425,7 +1426,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowWasangLostMaterial
+        public bool FindPidanHelpEmily
         {
             get
             {
@@ -1438,7 +1439,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowLisaLoveBook
+        public bool knowWasangLostMaterial
         {
             get
             {
@@ -1451,7 +1452,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowEmilyNeedLisaHelp
+        public bool knowLisaLoveBook
         {
             get
             {
@@ -1464,7 +1465,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool FindWasangHelpEmily
+        public bool knowEmilyNeedLisaHelp
         {
             get
             {
@@ -1477,7 +1478,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveWasangsMaterial
+        public bool FindWasangHelpEmily
         {
             get
             {
@@ -1486,6 +1487,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(78, value);
+            }
+        }
+        
+        // 
+        public bool haveWasangsMaterial
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(79);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(79, value);
             }
         }
         
@@ -1507,19 +1521,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(79);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(79, value);
-            }
-        }
-        
-        // 
-        public bool interveneKakaPickGarbage
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(80);
             }
             set
@@ -1529,7 +1530,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool interveneKakaCantCollectEnoughBottle
+        public bool interveneKakaPickGarbage
         {
             get
             {
@@ -1542,7 +1543,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool interveneLittleCoupleAndRadio
+        public bool interveneKakaCantCollectEnoughBottle
         {
             get
             {
@@ -1555,7 +1556,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveAskedPoetsFrom
+        public bool interveneLittleCoupleAndRadio
         {
             get
             {
@@ -1568,7 +1569,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowBunny
+        public bool haveAskedPoetsFrom
         {
             get
             {
@@ -1577,6 +1578,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(84, value);
+            }
+        }
+        
+        // 
+        public bool knowBunny
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(85);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(85, value);
             }
         }
         
@@ -1821,11 +1835,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(85);
+                return _VariableStorage.Internal_GetVariableValueBoolean(86);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(85, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(86, value);
             }
         }
         
@@ -1847,11 +1861,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(86);
+                return _VariableStorage.Internal_GetVariableValueBoolean(87);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(86, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(87, value);
             }
         }
         
@@ -1946,11 +1960,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(87);
+                return _VariableStorage.Internal_GetVariableValueBoolean(88);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(87, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(88, value);
             }
         }
         
@@ -1980,11 +1994,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(88);
+                return _VariableStorage.Internal_GetVariableValueBoolean(89);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(88, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(89, value);
             }
         }
         
@@ -2140,11 +2154,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(89);
+                return _VariableStorage.Internal_GetVariableValueBoolean(90);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(89, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(90, value);
             }
         }
         
@@ -2237,11 +2251,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(90);
+                return _VariableStorage.Internal_GetVariableValueBoolean(91);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(90, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(91, value);
             }
         }
         
@@ -2334,11 +2348,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(91);
+                return _VariableStorage.Internal_GetVariableValueBoolean(92);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(91, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(92, value);
             }
         }
         
@@ -2431,11 +2445,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(92);
+                return _VariableStorage.Internal_GetVariableValueBoolean(93);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(92, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(93, value);
             }
         }
         
@@ -2528,11 +2542,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(93);
+                return _VariableStorage.Internal_GetVariableValueBoolean(94);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(93, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(94, value);
             }
         }
         
@@ -2583,11 +2597,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(94);
+                return _VariableStorage.Internal_GetVariableValueBoolean(95);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(94, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(95, value);
             }
         }
         
@@ -2690,19 +2704,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(95);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(95, value);
-            }
-        }
-        
-        // 
-        public bool LookingForHairWithPlayer
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(96);
             }
             set
@@ -2712,7 +2713,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveHair
+        public bool LookingForHairWithPlayer
         {
             get
             {
@@ -2725,7 +2726,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool haveBeenBittenBySlavoj
+        public bool haveHair
         {
             get
             {
@@ -2738,7 +2739,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowSlavojNearDeath
+        public bool haveBeenBittenBySlavoj
         {
             get
             {
@@ -2751,7 +2752,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool ApologizeWithPlayerTogether
+        public bool knowSlavojNearDeath
         {
             get
             {
@@ -2764,7 +2765,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool ApologizeAlone
+        public bool ApologizeWithPlayerTogether
         {
             get
             {
@@ -2777,7 +2778,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool BeFriendWithEmily
+        public bool ApologizeAlone
         {
             get
             {
@@ -2790,7 +2791,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool CompleteCollection
+        public bool BeFriendWithEmily
         {
             get
             {
@@ -2803,7 +2804,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool Disappear
+        public bool CompleteCollection
         {
             get
             {
@@ -2816,7 +2817,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool Absence
+        public bool Disappear
         {
             get
             {
@@ -2825,6 +2826,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(105, value);
+            }
+        }
+        
+        // 
+        public bool Absence
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(106);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(106, value);
             }
         }
         
@@ -2890,11 +2904,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(106);
+                return _VariableStorage.Internal_GetVariableValueBoolean(107);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(106, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(107, value);
             }
         }
         
@@ -2945,19 +2959,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(107);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(107, value);
-            }
-        }
-        
-        // 
-        public bool TalkSelf
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(108);
             }
             set
@@ -2967,7 +2968,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool introductionToTwo
+        public bool TalkSelf
         {
             get
             {
@@ -2980,7 +2981,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool TalkEgg
+        public bool introductionToTwo
         {
             get
             {
@@ -2989,6 +2990,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(110, value);
+            }
+        }
+        
+        // 
+        public bool TalkEgg
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(111);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(111, value);
             }
         }
         
@@ -3010,19 +3024,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(111);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(111, value);
-            }
-        }
-        
-        // 
-        public bool AskedSmell
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(112);
             }
             set
@@ -3032,7 +3033,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool DoubtSmell
+        public bool AskedSmell
         {
             get
             {
@@ -3041,6 +3042,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(113, value);
+            }
+        }
+        
+        // 
+        public bool DoubtSmell
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(114);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(114, value);
             }
         }
         
@@ -3101,19 +3115,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(114);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(114, value);
-            }
-        }
-        
-        // 
-        public bool haveWrappedWasang
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(115);
             }
             set
@@ -3123,7 +3124,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool knowPlayer
+        public bool haveWrappedWasang
         {
             get
             {
@@ -3132,6 +3133,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(116, value);
+            }
+        }
+        
+        // 
+        public bool knowPlayer
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(117);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(117, value);
             }
         }
         
@@ -3153,11 +3167,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(117);
+                return _VariableStorage.Internal_GetVariableValueBoolean(118);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(117, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(118, value);
             }
         }
         
@@ -3166,11 +3180,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(118);
+                return _VariableStorage.Internal_GetVariableValueBoolean(119);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(118, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(119, value);
             }
         }
         
@@ -3205,19 +3219,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(119);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(119, value);
-            }
-        }
-        
-        // 
-        public bool Absence
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(120);
             }
             set
@@ -3227,7 +3228,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool CollectEnoughBottles
+        public bool Absence
         {
             get
             {
@@ -3240,7 +3241,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool BottlesFarFromEnough
+        public bool CollectEnoughBottles
         {
             get
             {
@@ -3253,7 +3254,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool BottlesNotEnough
+        public bool BottlesFarFromEnough
         {
             get
             {
@@ -3262,6 +3263,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(123, value);
+            }
+        }
+        
+        // 
+        public bool BottlesNotEnough
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(124);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(124, value);
             }
         }
         
@@ -3296,19 +3310,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(124);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(124, value);
-            }
-        }
-        
-        // 
-        public bool haveRadio
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(125);
             }
             set
@@ -3318,7 +3319,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool SellWasteSuccess
+        public bool haveRadio
         {
             get
             {
@@ -3327,6 +3328,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(126, value);
+            }
+        }
+        
+        // 
+        public bool SellWasteSuccess
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(127);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(127, value);
             }
         }
         
@@ -3407,11 +3421,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(127);
+                return _VariableStorage.Internal_GetVariableValueBoolean(128);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(127, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(128, value);
             }
         }
         
@@ -3504,11 +3518,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(128);
+                return _VariableStorage.Internal_GetVariableValueBoolean(129);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(128, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(129, value);
             }
         }
         
@@ -3517,11 +3531,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(129);
+                return _VariableStorage.Internal_GetVariableValueBoolean(130);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(129, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(130, value);
             }
         }
         
@@ -3576,11 +3590,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(130);
+                return _VariableStorage.Internal_GetVariableValueBoolean(131);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(130, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(131, value);
             }
         }
         
@@ -3631,11 +3645,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(131);
+                return _VariableStorage.Internal_GetVariableValueBoolean(132);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(131, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(132, value);
             }
         }
         
@@ -3657,11 +3671,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(132);
+                return _VariableStorage.Internal_GetVariableValueBoolean(133);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(132, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(133, value);
             }
         }
         
@@ -3683,11 +3697,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(133);
+                return _VariableStorage.Internal_GetVariableValueBoolean(134);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(133, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(134, value);
             }
         }
         
@@ -3717,19 +3731,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(134);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(134, value);
-            }
-        }
-        
-        // 
-        public bool Absence
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(135);
             }
             set
@@ -3739,7 +3740,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool doGood
+        public bool Absence
         {
             get
             {
@@ -3752,7 +3753,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool lost
+        public bool doGood
         {
             get
             {
@@ -3761,6 +3762,19 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(137, value);
+            }
+        }
+        
+        // 
+        public bool lost
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(138);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(138, value);
             }
         }
         
@@ -3821,11 +3835,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(138);
+                return _VariableStorage.Internal_GetVariableValueBoolean(139);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(138, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(139, value);
             }
         }
         
@@ -3932,11 +3946,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(139);
+                return _VariableStorage.Internal_GetVariableValueBoolean(140);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(139, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(140, value);
             }
         }
         
@@ -4082,11 +4096,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(140);
+                return _VariableStorage.Internal_GetVariableValueBoolean(141);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(140, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(141, value);
             }
         }
         
@@ -4179,11 +4193,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(141);
+                return _VariableStorage.Internal_GetVariableValueBoolean(142);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(141, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(142, value);
             }
         }
         
@@ -4276,11 +4290,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(142);
+                return _VariableStorage.Internal_GetVariableValueBoolean(143);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(142, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(143, value);
             }
         }
         
@@ -4387,11 +4401,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(143);
+                return _VariableStorage.Internal_GetVariableValueBoolean(144);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(143, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(144, value);
             }
         }
         
@@ -4442,11 +4456,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(144);
+                return _VariableStorage.Internal_GetVariableValueBoolean(145);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(144, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(145, value);
             }
         }
         
@@ -4512,11 +4526,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(145);
+                return _VariableStorage.Internal_GetVariableValueBoolean(146);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(145, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(146, value);
             }
         }
         
@@ -4609,11 +4623,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(146);
+                return _VariableStorage.Internal_GetVariableValueBoolean(147);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(146, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(147, value);
             }
         }
         
@@ -4706,11 +4720,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(147);
+                return _VariableStorage.Internal_GetVariableValueBoolean(148);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(147, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(148, value);
             }
         }
         
@@ -4803,11 +4817,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(148);
+                return _VariableStorage.Internal_GetVariableValueBoolean(149);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(148, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(149, value);
             }
         }
         
@@ -4900,11 +4914,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(149);
+                return _VariableStorage.Internal_GetVariableValueBoolean(150);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(149, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(150, value);
             }
         }
         
@@ -4997,11 +5011,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(150);
+                return _VariableStorage.Internal_GetVariableValueBoolean(151);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(150, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(151, value);
             }
         }
         
@@ -5065,11 +5079,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(151);
+                return _VariableStorage.Internal_GetVariableValueBoolean(152);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(151, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(152, value);
             }
         }
         
@@ -5104,11 +5118,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(152);
+                return _VariableStorage.Internal_GetVariableValueBoolean(153);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(152, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(153, value);
             }
         }
         
@@ -5143,19 +5157,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(153);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(153, value);
-            }
-        }
-        
-        // 
-        public bool fromWhoIsEmily2
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(154);
             }
             set
@@ -5165,7 +5166,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromWantToHelpWasang1
+        public bool fromWhoIsEmily2
         {
             get
             {
@@ -5178,7 +5179,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromWhoIsEmily3
+        public bool fromWantToHelpWasang1
         {
             get
             {
@@ -5191,7 +5192,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromKakaCallRB
+        public bool fromWhoIsEmily3
         {
             get
             {
@@ -5204,7 +5205,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromKakaAbourAlien
+        public bool fromKakaCallRB
         {
             get
             {
@@ -5217,7 +5218,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromKakaPickGarbage
+        public bool fromKakaAbourAlien
         {
             get
             {
@@ -5230,7 +5231,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromKakaAndEmily
+        public bool fromKakaPickGarbage
         {
             get
             {
@@ -5243,7 +5244,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromPidanCareHegel
+        public bool fromKakaAndEmily
         {
             get
             {
@@ -5256,7 +5257,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromDontHit
+        public bool fromPidanCareHegel
         {
             get
             {
@@ -5269,7 +5270,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool toSpeakIllofKaka
+        public bool fromDontHit
         {
             get
             {
@@ -5282,7 +5283,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool toDpntHit
+        public bool toSpeakIllofKaka
         {
             get
             {
@@ -5295,7 +5296,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool toDontHit
+        public bool toDpntHit
         {
             get
             {
@@ -5308,7 +5309,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool toFightFinished
+        public bool toDontHit
         {
             get
             {
@@ -5321,7 +5322,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool playerFinishedChocolateWafer
+        public bool toFightFinished
         {
             get
             {
@@ -5334,7 +5335,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromPidanHitAlex
+        public bool playerFinishedChocolateWafer
         {
             get
             {
@@ -5347,7 +5348,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromKakaGoToEmilyHome
+        public bool fromPidanHitAlex
         {
             get
             {
@@ -5360,7 +5361,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool fromSeeSprite
+        public bool fromKakaGoToEmilyHome
         {
             get
             {
@@ -5369,6 +5370,32 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(170, value);
+            }
+        }
+        
+        // 
+        public bool fromSeeSprite
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(171);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(171, value);
+            }
+        }
+        
+        // 
+        public bool fromBeforeKakaSellGarbage
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(172);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(172, value);
             }
         }
         
@@ -5393,6 +5420,7 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Dialogue.fromPidanHitAlex", false);
             aStorage.RegisterVariable("Dialogue.fromKakaGoToEmilyHome", false);
             aStorage.RegisterVariable("Dialogue.fromSeeSprite", false);
+            aStorage.RegisterVariable("Dialogue.fromBeforeKakaSellGarbage", false);
         }
     }
 }
@@ -5412,32 +5440,6 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(171);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(171, value);
-            }
-        }
-        
-        // 
-        public bool BeThrewAway
-        {
-            get
-            {
-                return _VariableStorage.Internal_GetVariableValueBoolean(172);
-            }
-            set
-            {
-                _VariableStorage.Internal_SetVariableValueBoolean(172, value);
-            }
-        }
-        
-        // 
-        public bool Died
-        {
-            get
-            {
                 return _VariableStorage.Internal_GetVariableValueBoolean(173);
             }
             set
@@ -5447,7 +5449,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool BeHidden
+        public bool BeThrewAway
         {
             get
             {
@@ -5460,7 +5462,7 @@ namespace Articy.Littletown.GlobalVariables
         }
         
         // 
-        public bool NearDeath
+        public bool Died
         {
             get
             {
@@ -5469,6 +5471,32 @@ namespace Articy.Littletown.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(175, value);
+            }
+        }
+        
+        // 
+        public bool BeHidden
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(176);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(176, value);
+            }
+        }
+        
+        // 
+        public bool NearDeath
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(177);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(177, value);
             }
         }
         
@@ -5542,11 +5570,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(176);
+                return _VariableStorage.Internal_GetVariableValueBoolean(178);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(176, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(178, value);
             }
         }
         
@@ -5639,11 +5667,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(177);
+                return _VariableStorage.Internal_GetVariableValueBoolean(179);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(177, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(179, value);
             }
         }
         
@@ -5736,11 +5764,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(178);
+                return _VariableStorage.Internal_GetVariableValueBoolean(180);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(178, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(180, value);
             }
         }
         
@@ -5791,11 +5819,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(179);
+                return _VariableStorage.Internal_GetVariableValueBoolean(181);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(179, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(181, value);
             }
         }
         
@@ -5875,11 +5903,11 @@ namespace Articy.Littletown.GlobalVariables
         {
             get
             {
-                return _VariableStorage.Internal_GetVariableValueBoolean(180);
+                return _VariableStorage.Internal_GetVariableValueBoolean(182);
             }
             set
             {
-                _VariableStorage.Internal_SetVariableValueBoolean(180, value);
+                _VariableStorage.Internal_SetVariableValueBoolean(182, value);
             }
         }
         
@@ -5932,6 +5960,149 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("CatGG.Refresh", false);
             aStorage.RegisterVariable("CatGG.Action", "");
             aStorage.RegisterVariable("CatGG.Expression", "");
+        }
+    }
+}
+namespace Articy.Littletown.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class Memo : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // 
+        public bool AlexLoveBean
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(183);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(183, value);
+            }
+        }
+        
+        // 
+        public bool AlexTameCat
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(184);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(184, value);
+            }
+        }
+        
+        // 
+        public bool KnowAlex
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(185);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(185, value);
+            }
+        }
+        
+        // 
+        public bool KnowDeveloper
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(186);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(186, value);
+            }
+        }
+        
+        // 
+        public bool HerryEmilyArgue
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(187);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(187, value);
+            }
+        }
+        
+        // 
+        public bool HerryHitBottle
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(188);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(188, value);
+            }
+        }
+        
+        // 
+        public bool HerryEatRotApple
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(189);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(189, value);
+            }
+        }
+        
+        // 
+        public bool HerryEatIron
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(190);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(190, value);
+            }
+        }
+        
+        // 
+        public bool HerryDisappear
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(191);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(191, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("Memo.AlexLoveBean", false);
+            aStorage.RegisterVariable("Memo.AlexTameCat", false);
+            aStorage.RegisterVariable("Memo.KnowAlex", false);
+            aStorage.RegisterVariable("Memo.KnowDeveloper", false);
+            aStorage.RegisterVariable("Memo.HerryEmilyArgue", false);
+            aStorage.RegisterVariable("Memo.HerryHitBottle", false);
+            aStorage.RegisterVariable("Memo.HerryEatRotApple", false);
+            aStorage.RegisterVariable("Memo.HerryEatIron", false);
+            aStorage.RegisterVariable("Memo.HerryDisappear", false);
         }
     }
 }
