@@ -1063,6 +1063,25 @@ MonoBehaviour:
     _VariableStorage: {fileID: -8039314578929050849}
   mCatGG:
     _VariableStorage: {fileID: -8039314578929050849}
+--- !u!114 &-4992102130357726549
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: Littletown
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
 --- !u!114 &-3310431304164024341
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1083,19 +1102,6 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-2902012144364683302
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1114,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -2902012144364683302}
+  mHierarchy: {fileID: -4992102130357726549}
   mLocalization: {fileID: -3310431304164024341}
   mInternalProject:
     mName: littleTown
@@ -1118,10 +1124,7 @@ MonoBehaviour:
   mImportedAssets: []
   mDefaultGlobalVariables: {fileID: -8039314578929050849}
   mScriptFragments: {fileID: 405917986107090311}
-  mPackages:
-  - PackageName: "\u6240\u6709\u5BF9\u8C61"
-    PackagePath: "\u6240\u6709\u5BF9\u8C61"
-    mIsDefaultPackage: 1
+  mPackages: []
 --- !u!114 &405917986107090311
 MonoBehaviour:
   m_ObjectHideFlags: 3
