@@ -10,6 +10,8 @@ public class Floating : MonoBehaviour
     public float offset;
     private Tweener tweener;
 
+    public bool isHorizontal;
+
     private void OnEnable()
     {
         if(tweener!=null)
@@ -21,6 +23,13 @@ public class Floating : MonoBehaviour
             startPos = transform.position;
         }
         transform.position = startPos;
-        tweener = transform.DOMove(startPos + new Vector3(0, offset, 0), duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
+        if(!isHorizontal)
+        {
+            tweener = transform.DOMove(startPos + new Vector3(0, offset, 0), duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
+        }
+        else
+        {
+            tweener = transform.DOMove(startPos + new Vector3(offset, 0, 0), duration).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo).SetUpdate(true);
+        }
     }
 }
