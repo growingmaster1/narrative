@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5658680342392568793
+--- !u!114 &-2119369159707927021
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,9 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
-  m_Name: ArticyScriptFragments
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
   m_EditorClassIdentifier: 
+  serializedNodes: []
 --- !u!114 &-1298603905865802558
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 7238351522062135360}
+  mHierarchy: {fileID: -2119369159707927021}
   mLocalization: {fileID: -1298603905865802558}
   mInternalProject:
     mName: littleTown
@@ -52,13 +53,25 @@ MonoBehaviour:
     mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
     mTechnicalName: Littletown
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: 4522863888943571746}
-  mScriptFragments: {fileID: -5658680342392568793}
+  mDefaultGlobalVariables: {fileID: 6160451725296283490}
+  mScriptFragments: {fileID: 528674571580584480}
   mPackages:
   - PackageName: "\u6240\u6709\u5BF9\u8C61"
     PackagePath: "\u6240\u6709\u5BF9\u8C61"
     mIsDefaultPackage: 1
---- !u!114 &4522863888943571746
+--- !u!114 &528674571580584480
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &6160451725296283490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1144,93 +1157,74 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mEmily:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mShihuangren:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mPlayer:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mDay_and_time:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mAlex:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mAFather:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mAson:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGrandma_0:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGrandma_1:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGrandma_2:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGrandpa_0:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGrandpa_1:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mWasang:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mKaka:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mLisa:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mPidan:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mHegel:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mQingjiedashen:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGlobalVariables:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mPidanMom:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mBigAunt:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mTheWife:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mTheHusband:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mHebaodan:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mKakaMom:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mBunny:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mPolice:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mBunnyMom:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mBigUncle:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mDialogue:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mSlavoj:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mLacan:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mScavenger:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mGarbageStaff:
-    _VariableStorage: {fileID: 4522863888943571746}
+    _VariableStorage: {fileID: 6160451725296283490}
   mCatGG:
-    _VariableStorage: {fileID: 4522863888943571746}
---- !u!114 &7238351522062135360
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes:
-  - id: 72057594037927937
-    parent: 0
-    technicalName: Littletown
-    articyType: Project
-    childCount: 0
-    indexOfFirstChild: 1
+    _VariableStorage: {fileID: 6160451725296283490}
