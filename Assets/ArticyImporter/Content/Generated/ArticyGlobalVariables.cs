@@ -168,6 +168,10 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private CatGG mCatGG = new CatGG();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Memo mMemo = new Memo();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -175,6 +179,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Harry.Refresh");
             variableNames.Add("Harry.Action");
             variableNames.Add("Harry.Expression");
+            variableNames.Add("Harry.disappear");
             variableNames.Add("Emily.NextState");
             variableNames.Add("Emily.Refresh");
             variableNames.Add("Emily.Expression");
@@ -468,6 +473,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Dialogue.fromPidanHitAlex");
             variableNames.Add("Dialogue.fromKakaGoToEmilyHome");
             variableNames.Add("Dialogue.fromSeeSprite");
+            variableNames.Add("Dialogue.fromBeforeKakaSellGarbage");
             variableNames.Add("Slavoj.BeKilled");
             variableNames.Add("Slavoj.BeThrewAway");
             variableNames.Add("Slavoj.Died");
@@ -493,6 +499,15 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("CatGG.Refresh");
             variableNames.Add("CatGG.Action");
             variableNames.Add("CatGG.Expression");
+            variableNames.Add("Memo.AlexLoveBean");
+            variableNames.Add("Memo.AlexTameCat");
+            variableNames.Add("Memo.KnowAlex");
+            variableNames.Add("Memo.KnowDeveloper");
+            variableNames.Add("Memo.HerryEmilyArgue");
+            variableNames.Add("Memo.HerryHitBottle");
+            variableNames.Add("Memo.HerryEatRotApple");
+            variableNames.Add("Memo.HerryEatIron");
+            variableNames.Add("Memo.HerryDisappear");
         }
         #endregion
         
@@ -784,6 +799,14 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Memo Memo
+        {
+            get
+            {
+                return mMemo;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -830,6 +853,7 @@ namespace Articy.Littletown.GlobalVariables
             Scavenger.RegisterVariables(this);
             GarbageStaff.RegisterVariables(this);
             CatGG.RegisterVariables(this);
+            Memo.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
