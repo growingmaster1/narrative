@@ -20,7 +20,7 @@ namespace Articy.Littletown.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(638025945602433614)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(638025954566976466)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
