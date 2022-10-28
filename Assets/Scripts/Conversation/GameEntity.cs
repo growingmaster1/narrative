@@ -22,11 +22,19 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
     public string entityName { get; set; }
     public bool atDialog { get; set; }
 
+    [HideInInspector]
+    public bool visible;
+
     public IMyFlowPlayer atFlow = null;
 
     public virtual void Init()
     {
         dialog = givenDialog.GetObject();
+        if(dialog != null)
+        {
+            SetOutline(0.01f);
+        }
+        
         PlayerAgent = Player.instance.GetComponent<PolyNavAgent>();
         for(int i=0;i<givenEntity.Count;++i)
         {
@@ -59,7 +67,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
 
     private void FixedUpdate()
     {
-        if(beingTraced)
+        if(beingTraced && visible)
         {
             PlayerAgent.SetDestination(transform.position);
         }
@@ -79,8 +87,7 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
             DialogManager.instance.SetStart(dialog as IArticyObject);
             //DialogManager.flowPlayer.Play();
         }
-        beingTraced = false;
-        PlayerAgent.OnDestinationReached -= RaiseDialog;
+        Player.instance.StopTrace();
     }
 
     public virtual void OnPointerClick(PointerEventData eventData)
@@ -94,10 +101,8 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
         }
         else
         {
-            Player.instance.TracedTarget = gameObject;
-            Player.instance.GetComponent<Animator>().enabled = true;
+            Player.instance.TraceTarget(gameObject);
             beingTraced = true;
-            PlayerAgent.OnDestinationReached += RaiseDialog;
         }
         /*
         float dis = (transform.position - Player.instance.transform.position).magnitude;
@@ -127,5 +132,28 @@ public class GameEntity : MonoBehaviour, ITalkable,IInit,IPointerClickHandler,IW
     {
         gameObject.GetComponent<Renderer>().material.SetFloat("_outlineOffset", outlineWidth);
         gameObject.GetComponent<Renderer>().material.SetColor("_outlineColor", outlineColor);
+    }
+
+    public void SetOutline(float outlineWidth)
+    {
+        gameObject.GetComponent<Renderer>().material.SetFloat("_outlineOffset", outlineWidth);
+    }
+
+    public void SetDialog(IArticyObject inDialog)
+    {
+        dialog = inDialog;
+        if (inDialog!=null)
+        {
+            SetOutline(0.01f);
+        }
+    }
+    private void OnBecameInvisible()
+    {
+        visible = false;
+    }
+
+    private void OnBecameVisible()
+    {
+        visible = true;
     }
 }
