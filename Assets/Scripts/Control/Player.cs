@@ -3,12 +3,14 @@ using Articy.Unity.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PolyNav;
 
 public class Player : MonoBehaviour,IInit,IWithEntity
 {
     public static Player instance;
     public bool moveable = true;
     public FixedJoystick joystick;
+    public GameObject TracedTarget;
 
     private SpriteRenderer spRenderer;
     private Animator anim;
@@ -35,10 +37,10 @@ public class Player : MonoBehaviour,IInit,IWithEntity
     public void Init()
     {
         entity = givenEntity.GetObject();
-        entityName = "我";
+        entityName = "玩家";
         anim = GetComponent<Animator>();
         spRenderer = GetComponent<SpriteRenderer>();
-        EntityManager.EntitiesDic.Add("我", this);
+        EntityManager.EntitiesDic.Add("玩家", this);
     }
 
     // Update is called once per frame
@@ -61,16 +63,22 @@ public class Player : MonoBehaviour,IInit,IWithEntity
             gameObject.GetComponent<Rigidbody2D>().MovePosition(
                 new Vector2(transform.position.x + xMove * Time.deltaTime * 4, transform.position.y + yMove * Time.deltaTime * 4));
 
-            anim.enabled = true;
+            //anim.enabled = true;
             if (xMove > 0)
             {
                 anim.Play("player_move_e");
                 lastMoveDir = "e";
+                GetComponent<PolyNavAgent>().Stop();
+                TracedTarget.GetComponent<GameEntity>().beingTraced = false;
+                GetComponent<PolyNavAgent>().OnDestinationReached -= TracedTarget.GetComponent<GameEntity>().RaiseDialog;
             }
             else if (xMove < 0)
             {
                 anim.Play("player_move_w");
                 lastMoveDir = "w";
+                GetComponent<PolyNavAgent>().Stop();
+                TracedTarget.GetComponent<GameEntity>().beingTraced = false;
+                GetComponent<PolyNavAgent>().OnDestinationReached -= TracedTarget.GetComponent<GameEntity>().RaiseDialog;
             }
             else
             {
@@ -78,15 +86,21 @@ public class Player : MonoBehaviour,IInit,IWithEntity
                 {
                     anim.Play("player_move_n");
                     lastMoveDir = "n";
+                    GetComponent<PolyNavAgent>().Stop();
+                    TracedTarget.GetComponent<GameEntity>().beingTraced = false;
+                    GetComponent<PolyNavAgent>().OnDestinationReached -= TracedTarget.GetComponent<GameEntity>().RaiseDialog;
                 }
                 else if (yMove < 0)
                 {
                     anim.Play("player_move_s");
                     lastMoveDir = "s";
+                    GetComponent<PolyNavAgent>().Stop();
+                    TracedTarget.GetComponent<GameEntity>().beingTraced = false;
+                    GetComponent<PolyNavAgent>().OnDestinationReached -= TracedTarget.GetComponent<GameEntity>().RaiseDialog;
                 }
                 else
                 {
-                    anim.enabled = false;
+                    /*anim.enabled = false;
                     switch (lastMoveDir)
                     {
                         case "e":
@@ -109,7 +123,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
                                 spRenderer.sprite = idle_n;
                                 break;
                             }
-                    }
+                    }*/
                 }
             }
 
