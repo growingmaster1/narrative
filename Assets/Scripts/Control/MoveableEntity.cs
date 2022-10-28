@@ -10,7 +10,7 @@ public class MoveableEntity : MonoBehaviour
     private PolyNavAgent agent;
 
     private Vector3 lastPos;
-    private Vector3 dis;
+    public Vector3 dis;
     private Vector3 lastDis = Vector3.zero;
     private string lastMoveDir = "s";
 
@@ -35,7 +35,7 @@ public class MoveableEntity : MonoBehaviour
         if(turnable)
         {
             dis = transform.position - lastPos;
-            dis = dis.normalized;
+            //dis = dis.normalized;
             lastPos = transform.position;
             anim.enabled = true;
             if (dis.magnitude > float.Epsilon)
@@ -71,29 +71,7 @@ public class MoveableEntity : MonoBehaviour
             else
             {
                 anim.enabled = false;
-                switch (lastMoveDir)
-                {
-                    case "e":
-                        {
-                            spRenderer.sprite = idle_e;
-                            break;
-                        }
-                    case "s":
-                        {
-                            spRenderer.sprite = idle_s;
-                            break;
-                        }
-                    case "w":
-                        {
-                            spRenderer.sprite = idle_w;
-                            break;
-                        }
-                    case "n":
-                        {
-                            spRenderer.sprite = idle_n;
-                            break;
-                        }
-                }
+                Turn(lastMoveDir);
             }
         }
     }

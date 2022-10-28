@@ -19,7 +19,6 @@ public class MainMenuController : MonoBehaviour
     public Image allAllWhitePanelBG;
     public SpriteRenderer NPC1, NPC2, NPC3, NPC4, NPC5;
     public PlayableDirector cutScenePD;
-    AsyncOperation async;
     [SerializeField]
     bool isAWPFin = false, isHPFin = false, isStopTime1Fin = false, isStopTime2Fin = false, isHPFinFin = false, isCutsceneFin = true, isCutsceneWaitFin = true, isCutsceneEndFin = true;
 
@@ -76,49 +75,6 @@ public class MainMenuController : MonoBehaviour
                 isHPFinFin = true;
             }
         }
-
-        if(!isCutsceneFin)
-        {
-            allAllWhitePanelBG.color = new Color(allAllWhitePanelBG.color.r, allAllWhitePanelBG.color.g, allAllWhitePanelBG.color.b, allAllWhitePanelBG.color.a - 0.02f);
-            NPC1.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a + 0.02f);
-            NPC2.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a + 0.02f);
-            NPC3.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a + 0.02f);
-            NPC4.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a + 0.02f);
-            NPC5.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a + 0.02f);
-            if (allAllWhitePanelBG.color.a<=0.02f)
-            {
-                isCutsceneFin = true;
-                isCutsceneWaitFin = false;
-            }
-        }
-
-        if(!isCutsceneWaitFin)
-        {
-            cutScenePir -= 0.02f;
-            if(cutScenePir<=0.02f)
-            {
-                isCutsceneWaitFin = true;
-                isCutsceneEndFin = false;
-                allWhitePanel.SetActive(true);
-                allAllWhitePanelBG.gameObject.SetActive(false);
-                allWhiteaPanelBG.color = new Color(allWhiteaPanelBG.color.r, allWhiteaPanelBG.color.g, allWhiteaPanelBG.color.b, 0.0f);
-            }
-        }
-        
-        if(!isCutsceneEndFin)
-        {
-            NPC1.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a - 0.02f);
-            NPC2.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a - 0.02f);
-            NPC3.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a - 0.02f);
-            NPC4.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a - 0.02f);
-            NPC5.color = new Color(NPC1.color.r, NPC1.color.g, NPC1.color.b, NPC1.color.a - 0.02f);
-            allWhiteaPanelBG.color = new Color(allWhiteaPanelBG.color.r, allWhiteaPanelBG.color.g, allWhiteaPanelBG.color.b, allWhiteaPanelBG.color.a + 0.02f);
-            if (allWhiteaPanelBG.color.a>=0.98f)
-            {
-                isCutsceneEndFin = true;
-                StartCoroutine(LoadGame());
-            }
-        }
     }
 
     public void StartGame()
@@ -130,15 +86,8 @@ public class MainMenuController : MonoBehaviour
     void EnterLoading(PlayableDirector whatever)
     {
         cutScenePD.stopped -= EnterLoading;
-        loadingPanel.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         //StartCoroutine(LoadGame());
-        isCutsceneFin = false;
-    }
 
-    IEnumerator LoadGame()
-    {
-        //yield return new WaitForEndOfFrame();
-        async = SceneManager.LoadSceneAsync(1);
-        yield return null;
     }
 }
