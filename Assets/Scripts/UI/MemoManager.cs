@@ -34,6 +34,9 @@ public class MemoManager : MonoBehaviour,IInit
     public MemoTheme onTheme;
     public MemoTheme onAchieve;
 
+    public string latestTheme;
+    public int read;
+
     public GameObject memoMessage;
     private Queue<string> messages = new Queue<string>();
     private bool messageOn = false;
@@ -53,6 +56,8 @@ public class MemoManager : MonoBehaviour,IInit
         AddMemo("迷迭小镇-我住在A区");
         ReadAchievements();
         hidUI = new List<GameObject>();
+        read = 2;
+        MemoButton.instance.ShakeNew();
     }
 
     private void Update()
@@ -100,6 +105,16 @@ public class MemoManager : MonoBehaviour,IInit
         }
         greyPanel.SetActive(false);
         memoView.SetActive(false);
+
+        if(read == 0)
+        {
+            MemoButton.instance.StopShake();
+        }
+        else
+        {
+            MemoButton.instance.ShakeNew();
+        }
+
         TimeManager.instance.ContinueTime();
     }
 
@@ -136,7 +151,7 @@ public class MemoManager : MonoBehaviour,IInit
             GameObject theme = Instantiate(memoTheme);
             theme.transform.SetParent(memoThemeContainer.transform);
             theme.GetComponent<MemoTheme>().AssignData(onDic[item]);
-            if (item == onKeys[0])
+            if (item == latestTheme)
             {
                 theme.GetComponent<MemoTheme>().Select();
                 onTheme = theme.GetComponent<MemoTheme>();
@@ -172,8 +187,16 @@ public class MemoManager : MonoBehaviour,IInit
             memos[theme].name = theme;
         }
         memos[theme].memos.Add(memo);
-        memos[theme].read = false;
+        if(memos[theme].read)
+        {
+            read++;
+            memos[theme].read = false;
+        }
+        
         messages.Enqueue("您在\"" + theme + "\"下有新的备忘录");
+        MemoButton.instance.ShakeNew();
+        latestTheme = theme;
+        
         if(!messageOn)
         {
             ShowMessage();
@@ -187,7 +210,12 @@ public class MemoManager : MonoBehaviour,IInit
         {
             onTheme.UnSelect();
             onTheme = theme;
-            onDic[onTheme.themeName].read = true;
+            if(!onDic[onTheme.themeName].read)
+            {
+                read--;
+                onDic[onTheme.themeName].read = true;
+            }
+            
             ReadContents();
         }
     }
