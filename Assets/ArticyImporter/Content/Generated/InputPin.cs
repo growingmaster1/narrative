@@ -22,7 +22,7 @@ namespace Articy.Littletown
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(638020576460681920)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(638021284483444375)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         

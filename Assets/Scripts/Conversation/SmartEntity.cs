@@ -6,6 +6,8 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Sirenix.OdinInspector;
 using UnityEngine.EventSystems;
+using NodeCanvas.Framework;
+using NodeCanvas.BehaviourTrees;
 
 /// <summary>
 /// 所有游戏中具有行为树的，有行为安排的个体
@@ -34,6 +36,10 @@ public class SmartEntity : GameEntity
         if(givenState!=null&&givenState.GetObject()!=null)
         {
             givenTechnicalName = givenState.GetObject().TechnicalName;
+            if(GetComponent<BehaviourTreeOwner>()==null)
+            {
+                SetState(givenTechnicalName);
+            }
         }
     }
 
@@ -93,7 +99,7 @@ public class SmartEntity : GameEntity
     public void SetState(string stateTechName)
     {
         StatePlayer statePlayer = atFlow as StatePlayer;
-        if(statePlayer!=null && SoundingManager.instance.states.ContainsKey(stateTechName) && SoundingManager.instance.states[stateTechName]!=statePlayer)
+        if(statePlayer!=null && (!SoundingManager.instance.states.ContainsKey(stateTechName)||(SoundingManager.instance.states.ContainsKey(stateTechName) && SoundingManager.instance.states[stateTechName]!=statePlayer)))
         {
             statePlayer.RemoveEntity(entityName);
         }
@@ -131,6 +137,8 @@ public class SmartEntity : GameEntity
                 statePlayer.PlayDialog();
             }
         }
+        beingTraced = false;
+        PlayerAgent.OnDestinationReached -= RaiseDialog;
     }
 
     public void ContinueChat()
