@@ -168,6 +168,10 @@ namespace Articy.Littletown.GlobalVariables
         [HideInInspector()]
         private CatGG mCatGG = new CatGG();
         
+        [SerializeField()]
+        [HideInInspector()]
+        private Memo mMemo = new Memo();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
@@ -175,6 +179,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Harry.Refresh");
             variableNames.Add("Harry.Action");
             variableNames.Add("Harry.Expression");
+            variableNames.Add("Harry.disappear");
             variableNames.Add("Emily.NextState");
             variableNames.Add("Emily.Refresh");
             variableNames.Add("Emily.Expression");
@@ -188,6 +193,9 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Emily.AddLollipop");
             variableNames.Add("Emily.Present");
             variableNames.Add("Emily.Disappear");
+            variableNames.Add("Emily.Absence");
+            variableNames.Add("Emily.SummonLacanSuccess");
+            variableNames.Add("Emily.CheckTime");
             variableNames.Add("Shihuangren.NextState");
             variableNames.Add("Shihuangren.Refresh");
             variableNames.Add("Shihuangren.Action");
@@ -267,6 +275,14 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Player.knowLisaLoveBook");
             variableNames.Add("Player.knowEmilyNeedLisaHelp");
             variableNames.Add("Player.FindWasangHelpEmily");
+            variableNames.Add("Player.haveWasangsMaterial");
+            variableNames.Add("Player.DriveAwayPidanTalkTimes");
+            variableNames.Add("Player.haveMedicine");
+            variableNames.Add("Player.interveneKakaPickGarbage");
+            variableNames.Add("Player.interveneKakaCantCollectEnoughBottle");
+            variableNames.Add("Player.interveneLittleCoupleAndRadio");
+            variableNames.Add("Player.haveAskedPoetsFrom");
+            variableNames.Add("Player.knowBunny");
             variableNames.Add("day_and_time.days");
             variableNames.Add("day_and_time.hours");
             variableNames.Add("day_and_time.minutes");
@@ -323,6 +339,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.BeFriendWithEmily");
             variableNames.Add("Wasang.CompleteCollection");
             variableNames.Add("Wasang.Disappear");
+            variableNames.Add("Wasang.Absence");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");
@@ -348,6 +365,15 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Kaka.Delay");
             variableNames.Add("Kaka.PatienceofWorker");
             variableNames.Add("Kaka.Present");
+            variableNames.Add("Kaka.Absence");
+            variableNames.Add("Kaka.CollectEnoughBottles");
+            variableNames.Add("Kaka.BottlesFarFromEnough");
+            variableNames.Add("Kaka.BottlesNotEnough");
+            variableNames.Add("Kaka.goSellHours");
+            variableNames.Add("Kaka.goSellMinutes");
+            variableNames.Add("Kaka.goSell");
+            variableNames.Add("Kaka.haveRadio");
+            variableNames.Add("Kaka.SellWasteSuccess");
             variableNames.Add("Lisa.NextState");
             variableNames.Add("Lisa.Refresh");
             variableNames.Add("Lisa.Action");
@@ -366,6 +392,10 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Pidan.Likeability");
             variableNames.Add("Pidan.disappear");
             variableNames.Add("Pidan.CurrentState");
+            variableNames.Add("Pidan.FindBunny");
+            variableNames.Add("Pidan.Absence");
+            variableNames.Add("Pidan.doGood");
+            variableNames.Add("Pidan.lost");
             variableNames.Add("Hegel.NextState");
             variableNames.Add("Hegel.Refresh");
             variableNames.Add("Hegel.Action");
@@ -441,11 +471,15 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Dialogue.toFightFinished");
             variableNames.Add("Dialogue.playerFinishedChocolateWafer");
             variableNames.Add("Dialogue.fromPidanHitAlex");
+            variableNames.Add("Dialogue.fromKakaGoToEmilyHome");
+            variableNames.Add("Dialogue.fromSeeSprite");
+            variableNames.Add("Dialogue.fromBeforeKakaSellGarbage");
             variableNames.Add("Slavoj.BeKilled");
             variableNames.Add("Slavoj.BeThrewAway");
             variableNames.Add("Slavoj.Died");
             variableNames.Add("Slavoj.BeHidden");
             variableNames.Add("Slavoj.NearDeath");
+            variableNames.Add("Slavoj.NextState");
             variableNames.Add("Lacan.NextState");
             variableNames.Add("Lacan.Refresh");
             variableNames.Add("Lacan.Action");
@@ -458,10 +492,22 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("GarbageStaff.Refresh");
             variableNames.Add("GarbageStaff.Action");
             variableNames.Add("GarbageStaff.Expression");
+            variableNames.Add("GarbageStaff.atWork");
+            variableNames.Add("GarbageStaff.offHours");
+            variableNames.Add("GarbageStaff.offMinutes");
             variableNames.Add("CatGG.NextState");
             variableNames.Add("CatGG.Refresh");
             variableNames.Add("CatGG.Action");
             variableNames.Add("CatGG.Expression");
+            variableNames.Add("Memo.AlexLoveBean");
+            variableNames.Add("Memo.AlexTameCat");
+            variableNames.Add("Memo.KnowAlex");
+            variableNames.Add("Memo.KnowDeveloper");
+            variableNames.Add("Memo.HerryEmilyArgue");
+            variableNames.Add("Memo.HerryHitBottle");
+            variableNames.Add("Memo.HerryEatRotApple");
+            variableNames.Add("Memo.HerryEatIron");
+            variableNames.Add("Memo.HerryDisappear");
         }
         #endregion
         
@@ -753,6 +799,14 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        public Memo Memo
+        {
+            get
+            {
+                return mMemo;
+            }
+        }
+        
         public static ArticyGlobalVariables Default
         {
             get
@@ -799,6 +853,7 @@ namespace Articy.Littletown.GlobalVariables
             Scavenger.RegisterVariables(this);
             GarbageStaff.RegisterVariables(this);
             CatGG.RegisterVariables(this);
+            Memo.RegisterVariables(this);
         }
         
         public static ArticyGlobalVariables CreateGlobalVariablesClone()
