@@ -52,7 +52,6 @@ public class DialogBox : MonoBehaviour,IInit,IPointerClickHandler
         scrollRect = scrollRegion.GetComponent<RectTransform>();
         contentRect = scrollContent.GetComponent<RectTransform>();
         basePos = dialogBox.transform.position;
-        gameObject.SetActive(false);
     }
 
     public void Update()
