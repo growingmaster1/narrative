@@ -100,7 +100,7 @@ public class SmartEntity : GameEntity
     public void SetState(string stateTechName)
     {
         StatePlayer statePlayer = atFlow as StatePlayer;
-        if(SoundingManager.instance.states.ContainsKey(stateTechName) && SoundingManager.instance.states[stateTechName].techName != statePlayer.techName)
+        if(SoundingManager.instance.states.ContainsKey(stateTechName) && SoundingManager.instance.states[stateTechName].techName == statePlayer.techName)
         {
             return;
         }
