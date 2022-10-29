@@ -52,8 +52,9 @@ public class MemoManager : MonoBehaviour,IInit
     public void Init()
     {
         panelOn = "memo";
-        AddMemo("我想交朋友-好想交朋友啊");
-        AddMemo("迷迭小镇-我住在A区");
+        AddMemo("迷迭小镇-我一个人来到了这个陌生的小镇，爸妈工作很忙没时间来陪我上学。我住在小镇A区最东边角落的那个房子里。");
+        AddMemo("我想交朋友-一个人的生活毕竟还是很不习惯，如果能在小镇上交个朋友，可能会好一点吧。妈妈说，嘴巴甜一点，会来事就可以交到好朋友……交朋友真的有那么简单吗？");
+        
         ReadAchievements();
         hidUI = new List<GameObject>();
         read = 2;
@@ -106,7 +107,9 @@ public class MemoManager : MonoBehaviour,IInit
         greyPanel.SetActive(false);
         memoView.SetActive(false);
 
-        if(read == 0)
+        latestTheme = onTheme.themeName;
+
+        if(read <= 0)
         {
             MemoButton.instance.StopShake();
         }
@@ -153,6 +156,11 @@ public class MemoManager : MonoBehaviour,IInit
             theme.GetComponent<MemoTheme>().AssignData(onDic[item]);
             if (item == latestTheme)
             {
+                if(memos[item].read == false)
+                {
+                    read--;
+                }
+                onDic[item].read = true;
                 theme.GetComponent<MemoTheme>().Select();
                 onTheme = theme.GetComponent<MemoTheme>();
             }
@@ -185,6 +193,7 @@ public class MemoManager : MonoBehaviour,IInit
             memos.Add(theme, new MemoThemeData());
             memoKeys.Add(theme);
             memos[theme].name = theme;
+            read++;
         }
         memos[theme].memos.Add(memo);
         if(memos[theme].read)

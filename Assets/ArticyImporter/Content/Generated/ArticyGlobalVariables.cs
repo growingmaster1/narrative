@@ -508,6 +508,8 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Memo.HerryEatRotApple");
             variableNames.Add("Memo.HerryEatIron");
             variableNames.Add("Memo.HerryDisappear");
+            variableNames.Add("Memo.KnowEmilyFirst");
+            variableNames.Add("Memo.FindAlex");
         }
         #endregion
         

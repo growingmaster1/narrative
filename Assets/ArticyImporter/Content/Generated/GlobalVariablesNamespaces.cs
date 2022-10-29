@@ -6091,6 +6091,32 @@ namespace Articy.Littletown.GlobalVariables
             }
         }
         
+        // 
+        public bool KnowEmilyFirst
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(192);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(192, value);
+            }
+        }
+        
+        // 
+        public bool FindAlex
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(193);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(193, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -6103,6 +6129,8 @@ namespace Articy.Littletown.GlobalVariables
             aStorage.RegisterVariable("Memo.HerryEatRotApple", false);
             aStorage.RegisterVariable("Memo.HerryEatIron", false);
             aStorage.RegisterVariable("Memo.HerryDisappear", false);
+            aStorage.RegisterVariable("Memo.KnowEmilyFirst", false);
+            aStorage.RegisterVariable("Memo.FindAlex", false);
         }
     }
 }
