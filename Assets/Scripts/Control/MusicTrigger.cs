@@ -16,7 +16,7 @@ public class MusicTrigger : MonoBehaviour,IInit
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(triggerable)
+        if(triggerable && collision.CompareTag("Player"))
         {
             MusicController.instance.SwitchMusic(clip);
         }

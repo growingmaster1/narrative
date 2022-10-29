@@ -50,16 +50,18 @@ public class MusicController : MonoBehaviour,IInit
             {
                 source2.DOFade(0, 1);
             }
-            musicPlayer[onPlayer].DOFade(0, 2);
+            musicPlayer[onPlayer].DOFade(0, 2).SetEase(Ease.Linear);
             source2.clip = music;
-            source2.DOFade(1, 2).OnComplete(() => { onPlayer = 1 - nowPlayer; });
+            source2.DOFade(1, 2).SetEase(Ease.Linear).OnComplete(() => { onPlayer = 1 - nowPlayer; });
+            source2.time = 0;
+            source2.Play();
         }
         else
         {
             if (source1.volume < 1) 
             {
-                source1.DOFade(1, 2 * (1 - source1.volume)).OnComplete(()=> { onPlayer = nowPlayer; });
-                source2.DOFade(0, 2 * source2.volume).SetDelay(1);
+                source1.DOFade(1, 2 * (1 - source1.volume)).SetEase(Ease.Linear).OnComplete(()=> { onPlayer = nowPlayer; });
+                source2.DOFade(0, 2 * source2.volume).SetEase(Ease.Linear);
             }
         }
     }
