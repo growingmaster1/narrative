@@ -39,6 +39,7 @@ public class MemoButton : MonoBehaviour,IInit
         {
             redPoint.SetActive(false);
             anim.enabled = false;
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
         }
     }
 }
