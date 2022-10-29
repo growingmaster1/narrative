@@ -35,11 +35,11 @@ public class MoveableEntity : MonoBehaviour
         if(turnable)
         {
             dis = transform.position - lastPos;
-            //dis = dis.normalized;
             lastPos = transform.position;
             anim.enabled = true;
             if (dis.magnitude > float.Epsilon)
             {
+                dis = dis.normalized;
                 if (lastDis == Vector3.zero || Vector3.Angle(dis, lastDis) > 5)
                 {
                     if (dis.x > 0.5f)

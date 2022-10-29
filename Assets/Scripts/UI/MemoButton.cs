@@ -20,6 +20,7 @@ public class MemoButton : MonoBehaviour,IInit
     public void Init()
     {
         anim = GetComponent<Animator>();
+        anim.enabled = false;
     }
 
     public void ShakeNew()
