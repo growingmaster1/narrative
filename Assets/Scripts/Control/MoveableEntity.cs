@@ -29,17 +29,17 @@ public class MoveableEntity : MonoBehaviour
         agent = GetComponent<PolyNavAgent>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);
         if(turnable)
         {
             dis = transform.position - lastPos;
+            dis = dis.normalized;
             lastPos = transform.position;
             anim.enabled = true;
             if (dis.magnitude > float.Epsilon)
             {
-                dis = dis.normalized;
                 if (lastDis == Vector3.zero || Vector3.Angle(dis, lastDis) > 5)
                 {
                     if (dis.x > 0.5f)

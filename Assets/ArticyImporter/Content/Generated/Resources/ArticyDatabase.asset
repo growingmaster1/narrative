@@ -1,64 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5651402319266892136
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 7862862463393964144}
-  mLocalization: {fileID: 1819800426865241112}
-  mInternalProject:
-    mName: littleTown
-    mDetailName: 
-    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
-    mTechnicalName: Littletown
-  mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: 3036399963256543587}
-  mScriptFragments: {fileID: -5651402319266892136}
-  mPackages:
-  - PackageName: "\u6240\u6709\u5BF9\u8C61"
-    PackagePath: "\u6240\u6709\u5BF9\u8C61"
-    mIsDefaultPackage: 1
---- !u!114 &1819800426865241112
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
---- !u!114 &3036399963256543587
+--- !u!114 &-5814376552471942491
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -704,16 +646,19 @@ MonoBehaviour:
       values: 01000000
   - mFullQualifiedName: Wasang.CountTimes
     mVar:
-      values: 00000000
+      values: 01000000
   - mFullQualifiedName: Wasang.SelectTimes
     mVar:
-      values: 02000000
+      values: 01000000
   - mFullQualifiedName: Wasang.InsectTimes
     mVar:
-      values: 00000000
+      values: 01000000
   - mFullQualifiedName: Wasang.GhostTimes
     mVar:
-      values: 00000000
+      values: 01000000
+  - mFullQualifiedName: Wasang.GuaTimes
+    mVar:
+      values: 01000000
   - mFullQualifiedName: Kaka.RocketTimes
     mVar:
       values: 00000000
@@ -1180,483 +1125,121 @@ MonoBehaviour:
       - 
   LiveBoolVariableCache: []
   LiveIntVariableCache: []
-  LiveStringVariableCache:
-  - mFullQualifiedName: Harry.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Harry.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Harry.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Emily.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Emily.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Emily.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Emily.FromState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Shihuangren.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Shihuangren.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Player.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Player.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Alex.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Alex.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Alex.NextState
-    mVar:
-      values:
-      - AlexAtCanteen
-  - mFullQualifiedName: AFather.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: AFather.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: AFather.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Ason.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Ason.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Ason.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_0.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_0.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_0.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_1.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_1.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_1.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_2.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_2.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandma_2.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_0.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_0.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_0.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_1.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_1.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Grandpa_1.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Wasang.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Wasang.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Wasang.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Kaka.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Kaka.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Kaka.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lisa.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lisa.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lisa.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lisa.Intervene
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lisa.Choose
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Pidan.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Pidan.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Pidan.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Pidan.CurrentState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Hegel.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Hegel.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Hegel.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Qingjiedashen.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Qingjiedashen.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Qingjiedashen.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: GlobalVariables.Memo
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: PidanMom.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: PidanMom.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: PidanMom.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigAunt.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigAunt.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigAunt.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheWife.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheWife.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheWife.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheHusband.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheHusband.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: TheHusband.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Hebaodan.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Hebaodan.Action
-    mVar:
-      values:
-      - EggsStartPlay
-  - mFullQualifiedName: Hebaodan.Expression
-    mVar:
-      values:
-      - Paper
-  - mFullQualifiedName: KakaMom.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: KakaMom.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: KakaMom.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Bunny.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Bunny.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Bunny.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Police.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Police.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Police.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BunnyMom.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BunnyMom.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BunnyMom.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigUncle.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigUncle.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: BigUncle.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Slavoj.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lacan.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lacan.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Lacan.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Scavenger.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Scavenger.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: Scavenger.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: GarbageStaff.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: GarbageStaff.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: GarbageStaff.Expression
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: CatGG.NextState
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: CatGG.Action
-    mVar:
-      values:
-      - 
-  - mFullQualifiedName: CatGG.Expression
-    mVar:
-      values:
-      - 
+  LiveStringVariableCache: []
   isInitialized: 1
   mHarry:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mEmily:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mShihuangren:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mPlayer:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mDay_and_time:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mAlex:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mAFather:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mAson:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGrandma_0:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGrandma_1:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGrandma_2:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGrandpa_0:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGrandpa_1:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mWasang:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mKaka:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mLisa:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mPidan:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mHegel:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mQingjiedashen:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGlobalVariables:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mPidanMom:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mBigAunt:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mTheWife:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mTheHusband:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mHebaodan:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mKakaMom:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mBunny:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mPolice:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mBunnyMom:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mBigUncle:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mDialogue:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mSlavoj:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mLacan:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mScavenger:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mGarbageStaff:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mCatGG:
-    _VariableStorage: {fileID: 3036399963256543587}
+    _VariableStorage: {fileID: -5814376552471942491}
   mMemo:
-    _VariableStorage: {fileID: 3036399963256543587}
---- !u!114 &7862862463393964144
+    _VariableStorage: {fileID: -5814376552471942491}
+--- !u!114 &-3708657788541069797
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567e97bbb18767644a61f31ae62460fb, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: 189094129642443245}
+  mLocalization: {fileID: 1819800426865241112}
+  mInternalProject:
+    mName: littleTown
+    mDetailName: 
+    mId: 2268d930-7d19-44b4-b43c-9b9130bf4733
+    mTechnicalName: Littletown
+  mImportedAssets: []
+  mDefaultGlobalVariables: {fileID: -5814376552471942491}
+  mScriptFragments: {fileID: -3708657788541069797}
+  mPackages:
+  - PackageName: "\u6240\u6709\u5BF9\u8C61"
+    PackagePath: "\u6240\u6709\u5BF9\u8C61"
+    mIsDefaultPackage: 1
+--- !u!114 &189094129642443245
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1669,3 +1252,23 @@ MonoBehaviour:
   m_Name: HierarchyManager
   m_EditorClassIdentifier: 
   serializedNodes: []
+--- !u!114 &1819800426865241112
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en

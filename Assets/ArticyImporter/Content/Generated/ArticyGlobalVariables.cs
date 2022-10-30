@@ -340,6 +340,7 @@ namespace Articy.Littletown.GlobalVariables
             variableNames.Add("Wasang.CompleteCollection");
             variableNames.Add("Wasang.Disappear");
             variableNames.Add("Wasang.Absence");
+            variableNames.Add("Wasang.GuaTimes");
             variableNames.Add("Kaka.NextState");
             variableNames.Add("Kaka.Refresh");
             variableNames.Add("Kaka.Action");

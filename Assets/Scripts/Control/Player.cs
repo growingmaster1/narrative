@@ -55,7 +55,7 @@ public class Player : MonoBehaviour,IInit,IWithEntity
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         Move();
         spRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -100);

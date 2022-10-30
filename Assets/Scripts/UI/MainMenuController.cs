@@ -19,6 +19,8 @@ public class MainMenuController : MonoBehaviour
     public Image allAllWhitePanelBG;
     public SpriteRenderer NPC1, NPC2, NPC3, NPC4, NPC5;
     public PlayableDirector cutScenePD;
+
+    public AudioSource audioSource;
     [SerializeField]
     bool isAWPFin = false, isHPFin = false, isStopTime1Fin = false, isStopTime2Fin = false, isHPFinFin = false, isCutsceneFin = true, isCutsceneWaitFin = true, isCutsceneEndFin = true;
 
@@ -51,6 +53,7 @@ public class MainMenuController : MonoBehaviour
         else if(isHPFin==false)
         {
             allWhiteaPanelBG.color = new Color(allWhiteaPanelBG.color.r, allWhiteaPanelBG.color.g, allWhiteaPanelBG.color.b, allWhiteaPanelBG.color.a + fadeInSpeed);
+            audioSource.Play();
             if (allWhiteaPanelBG.color.a >= 0.99f)
             {
                 headphonePanel.SetActive(false);
