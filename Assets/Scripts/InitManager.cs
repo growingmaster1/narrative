@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class InitManager : MonoBehaviour
 {
+    public static InitManager instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
     public bool timeManager;
     public bool musicController;
     public bool dialogManager;

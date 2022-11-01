@@ -16,7 +16,7 @@ public class StatePlayer :  MonoBehaviour,IMyFlowPlayer
     private bool playing;
     private SmartEntity speaker;
 
-    private List<ArticyObject> attachedDialog;
+    private List<ArticyObject> attachedDialog = new List<ArticyObject>();
     private int attachTalkPlace;
 
     public void Awake()

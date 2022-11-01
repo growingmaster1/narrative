@@ -58,7 +58,11 @@ public class MemoManager : MonoBehaviour,IInit
         ReadAchievements();
         hidUI = new List<GameObject>();
         read = 2;
-        MemoButton.instance.ShakeNew();
+
+        if(InitManager.instance.memoButton)
+        {
+            MemoButton.instance.ShakeNew();
+        }
     }
 
     private void Update()
@@ -203,7 +207,11 @@ public class MemoManager : MonoBehaviour,IInit
         }
         
         messages.Enqueue("您在\"" + theme + "\"下有新的备忘录");
-        MemoButton.instance.ShakeNew();
+        if(InitManager.instance.memoButton)
+        {
+            MemoButton.instance.ShakeNew();
+        }
+        
         latestTheme = theme;
         
         if(!messageOn)
